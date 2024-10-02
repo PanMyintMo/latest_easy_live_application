@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+apply from: "dependencies.gradle"
+buildscript {
+    repositories {
+        // 1.添加MobSDK Maven地址
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/public"
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/google"
+        }
+        maven {
+            url "https://www.jitpack.io"
+        }
+        maven { url 'https://developer.huawei.com/repo/' }
+
+
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.2'
+        // 2.注册MobSDK
+        classpath "com.mob.sdk:MobSDK2:+"
+        classpath 'com.huawei.agconnect:agcp:1.6.0.300'
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
+    }
+}
+
+allprojects {
+    repositories {
+        // 1.添加MobSDK Maven地址
+        maven {
+            url "https://mvn.mob.com/android"
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/public"
+        }
+        maven {
+            url "https://maven.aliyun.com/repository/google"
+        }
+        maven {
+            url "https://www.jitpack.io"
+        }
+        maven { url 'https://developer.huawei.com/repo/' }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

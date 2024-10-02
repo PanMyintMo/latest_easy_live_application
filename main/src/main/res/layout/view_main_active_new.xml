@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="258dp">
+
+        <FrameLayout
+                android:id="@+id/fl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="19dp"/>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/view_new_head_bg"/>
+
+        <RelativeLayout
+                android:id="@+id/llHead"
+                android:layout_width="match_parent"
+                android:layout_below="@id/fl_top"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_active"
+                        android:textColor="#ffffffff"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_43"
+                        android:textColor="#ccffffff"
+                        android:textSize="11sp"
+                        android:layout_marginStart="11dp"
+                        />
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@+id/btn_msg"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:onClick="mainClick"
+                    android:layout_alignParentRight="true"
+                    android:padding="3dp"
+                    android:src="@mipmap/ic_new_msg"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/llHead"
+                android:layout_marginTop="13dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_height="wrap_content">
+
+            <com.hjq.shape.view.ShapeTextView
+                    android:id="@+id/btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="31.5dp"
+                    android:layout_toLeftOf="@id/tvPush"
+                    android:layout_marginEnd="13dp"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    app:shape_radius="3dp"
+                    android:textSize="13sp"
+                    android:hint="@string/active_topic_01"
+                    android:paddingHorizontal="@dimen/dp_14"
+                    android:drawableLeft="@mipmap/ic_new_search"
+                    app:shape_solidColor="@android:color/white"
+                    />
+
+            <com.hjq.shape.view.ShapeTextView
+                    android:id="@+id/tvPush"
+                    android:layout_width="wrap_content"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="5.5dp"
+                    app:shape_radius="3dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_alignParentRight="true"
+                    app:shape_solidColor="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publish"
+                    />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.hjq.shape.layout.ShapeLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:shape_topLeftRadius="12dp"
+            android:layout_marginTop="-130dp"
+            app:shape_topRightRadius="12dp"
+            app:shape_solidColor="@android:color/white">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:background="@mipmap/ic_hot_ht_bg"
+                        android:layout_height="195dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/active_topic_08"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="16dp"
+                            android:textColor="#ff333333"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            />
+
+                    <TextView
+                            android:id="@+id/btn_all_topic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/chat_minimalist_pop_more"
+                            android:drawablePadding="6dp"
+                            android:drawableRight="@mipmap/ic_new_more"
+                            android:layout_alignParentRight="true"
+                            android:textColor="#ffaab0bb"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:textSize="11sp"
+                            />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView_topic"
+                            android:layout_below="@id/btn_all_topic"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="@dimen/dp_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clipToPadding="false"
+                            app:spanCount="2"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            android:overScrollMode="never"
+                            />
+                </RelativeLayout>
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        />
+                <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.hjq.shape.layout.ShapeLinearLayout>
+</LinearLayout>
