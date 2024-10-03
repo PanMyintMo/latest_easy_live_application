@@ -130,7 +130,7 @@ public class LoginTipDialogFragment extends AbsDialogFragment implements View.On
         if (id == R.id.btn_cancel) {
             dismiss();
             if (mContext != null) {
-                ((RegisterActivity) mContext).finish();
+              //  ((RegisterActivity) mContext).finish();
             }
         } else if (id == R.id.btn_confirm) {
             dismiss();

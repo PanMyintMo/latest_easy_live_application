@@ -17,7 +17,8 @@ buildscript {
             url "https://www.jitpack.io"
         }
         maven { url 'https://developer.huawei.com/repo/' }
-
+        //edit by pan
+        maven { url 'https://jitpack.io' }
 
         google()
     }
@@ -47,6 +48,8 @@ allprojects {
             url "https://www.jitpack.io"
         }
         maven { url 'https://developer.huawei.com/repo/' }
+        //edit by pan
+        maven { url 'https://jitpack.io' }
         google()
     }
 }

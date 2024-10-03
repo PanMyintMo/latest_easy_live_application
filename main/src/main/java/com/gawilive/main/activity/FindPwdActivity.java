@@ -157,7 +157,7 @@ public class FindPwdActivity extends AbsActivity {
             register();
         } else if (i == R.id.btn_choose_country) {
             if (mUseCountryCode) {
-                startActivityForResult(new Intent(mContext, ChooseCountryActivity.class), 101);
+              //  startActivityForResult(new Intent(mContext, ChooseCountryActivity.class), 101);
             }
         }
     }

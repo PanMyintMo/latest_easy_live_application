@@ -245,13 +245,13 @@ public class LoginActivity extends AbsActivity implements OnItemClickListener<Mo
         Intent intent = new Intent(mContext, FindPwdActivity.class);
         intent.putExtra(Constants.FROM_LOGIN, true);
         intent.putExtra(Constants.TIP, mUseCountryCode);
-        startActivity(intent);
+     //   startActivity(intent);
     }
 
     //选择国家代号
     private void chooseCountryCode() {
         if (mUseCountryCode) {
-            startActivityForResult(new Intent(mContext, ChooseCountryActivity.class), 101);
+           // startActivityForResult(new Intent(mContext, ChooseCountryActivity.class), 101);
         }
     }
 

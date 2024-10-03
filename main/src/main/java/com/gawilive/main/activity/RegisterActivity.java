@@ -68,7 +68,7 @@ public class RegisterActivity extends AbsActivity {
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.reg_register));
-        mUseCountryCode = getIntent().getBooleanExtra(Constants.TIP, false);
+       // mUseCountryCode = getIntent().getBooleanExtra(Constants.TIP, false);
         mEditPhone = (EditText) findViewById(R.id.edit_phone);
         mEditCode = (EditText) findViewById(R.id.edit_code);
         mEditPwd1 = (EditText) findViewById(R.id.edit_pwd_1);
@@ -77,7 +77,7 @@ public class RegisterActivity extends AbsActivity {
         mBtnRegister = findViewById(R.id.btn_register);
         mGetCode = WordUtil.getString(R.string.reg_get_code);
         mGetCodeAgain = WordUtil.getString(R.string.reg_get_code_again);
-        mCountryCode = findViewById(R.id.country_code);
+       // mCountryCode = findViewById(R.id.country_code);
         mEditPhone.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -137,7 +137,7 @@ public class RegisterActivity extends AbsActivity {
                 }
             }
         };
-        mDialog = DialogUitl.loadingDialog(mContext, getString(R.string.reg_register_ing));
+        //mDialog = DialogUitl.loadingDialog(mContext, getString(R.string.reg_register_ing));
         EventBus.getDefault().register(this);
 
         LoginTipDialogFragment fragment = new LoginTipDialogFragment();
@@ -160,7 +160,8 @@ public class RegisterActivity extends AbsActivity {
         } else if (i == R.id.btn_register) {
             register();
 
-        } else if (i == R.id.btn_choose_country) {
+        }
+        else if (i == R.id.btn_choose_country) {
             if (mUseCountryCode) {
                 ActivityResultUtil.startActivityForResult(this, new Intent(mContext, ChooseCountryActivity.class),
                         new ActivityResultCallback() {
@@ -343,7 +344,7 @@ public class RegisterActivity extends AbsActivity {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onRegSuccessEvent(RegSuccessEvent e) {
-        finish();
+        //finish();
     }
 
     @Override
