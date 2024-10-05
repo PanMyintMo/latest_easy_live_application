@@ -14,7 +14,7 @@ import com.gawilive.mall.bean.BuyerOrderBean;
  */
 public class BuyerOrderRefundAdapter extends BuyerOrderBaseAdapter {
 
-    private View.OnClickListener mRefundClickListener;
+    private final View.OnClickListener mRefundClickListener;
 
     public BuyerOrderRefundAdapter(Context context) {
         super(context);

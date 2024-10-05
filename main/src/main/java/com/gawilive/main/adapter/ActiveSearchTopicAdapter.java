@@ -14,7 +14,7 @@ import com.gawilive.main.bean.ActiveTopicBean;
 
 public class ActiveSearchTopicAdapter extends RefreshAdapter<ActiveTopicBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ActiveSearchTopicAdapter(Context context) {
         super(context);

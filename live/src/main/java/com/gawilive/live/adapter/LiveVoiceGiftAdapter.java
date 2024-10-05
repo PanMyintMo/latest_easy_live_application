@@ -20,13 +20,13 @@ import java.util.List;
 
 public class LiveVoiceGiftAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private LayoutInflater mInflater;
-    private List<LiveVoiceGiftBean> mList;
-    private Drawable mBgDrawable;
-    private Drawable mBgDrawableQm1;
-    private Drawable mBgDrawableQm0;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final LayoutInflater mInflater;
+    private final List<LiveVoiceGiftBean> mList;
+    private final Drawable mBgDrawable;
+    private final Drawable mBgDrawableQm1;
+    private final Drawable mBgDrawableQm0;
+    private final View.OnClickListener mOnClickListener;
 
     public LiveVoiceGiftAdapter(Context context, List<LiveVoiceGiftBean> list) {
         mContext = context;

@@ -21,16 +21,16 @@ public class MyRelativeLayout1 extends RelativeLayout {
     private int mWidth;
     private int mHeight;
     private Paint mPaint;
-    private int mRadius;
-    private int mBgColor;
-    private int mInnerWidth;
-    private int mInnerHeight;
-    private int mInnerRadius;
-    private int mInnerX;
-    private int mInnerY;
-    private int mLineMargin;
-    private int mLineMarginTop;
-    private int mLineHeight;
+    private final int mRadius;
+    private final int mBgColor;
+    private final int mInnerWidth;
+    private final int mInnerHeight;
+    private final int mInnerRadius;
+    private final int mInnerX;
+    private final int mInnerY;
+    private final int mLineMargin;
+    private final int mLineMarginTop;
+    private final int mLineHeight;
 
     public MyRelativeLayout1(Context context) {
         this(context, null);

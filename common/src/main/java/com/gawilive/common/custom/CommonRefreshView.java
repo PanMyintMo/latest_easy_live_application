@@ -30,17 +30,17 @@ import java.util.List;
 
 public class CommonRefreshView extends FrameLayout implements View.OnClickListener {
 
-    private Context mContext;
+    private final Context mContext;
     private DataHelper mDataHelper;
-    private int mLayoutRes;
+    private final int mLayoutRes;
     private View mContentView;
     private SmartRefreshLayout mSmartRefreshLayout;
 
     private RecyclerView mRecyclerView;
     private FrameLayout mEmptyLayout;//没有数据的View
     private View mLoadFailureView;//加载失败View
-    private boolean mRefreshEnable;//下拉刷新是否可用
-    private boolean mLoadMoreEnable;//上拉加载是否可用
+    private final boolean mRefreshEnable;//下拉刷新是否可用
+    private final boolean mLoadMoreEnable;//上拉加载是否可用
     private int mPageCount;//页数
     private int mItemCount;//每页的Item个数
 
@@ -70,13 +70,13 @@ public class CommonRefreshView extends FrameLayout implements View.OnClickListen
         View view = inflater.inflate(mLayoutRes, this, false);
         mContentView = view;
         addView(view);
-        mSmartRefreshLayout = (SmartRefreshLayout) view.findViewById(R.id.refreshLayout);
+        mSmartRefreshLayout = view.findViewById(R.id.refreshLayout);
         mSmartRefreshLayout.setEnableLoadMoreWhenContentNotFull(true);//是否在列表不满一页时候开启上拉加载功能
         mSmartRefreshLayout.setEnableFooterFollowWhenLoadFinished(true);//是否在全部加载结束之后Footer跟随内容
         mSmartRefreshLayout.setEnableOverScrollBounce(false);//设置是否开启越界回弹功能（默认true）
-        mEmptyLayout = (FrameLayout) view.findViewById(R.id.no_data_container);
+        mEmptyLayout = view.findViewById(R.id.no_data_container);
         mLoadFailureView = view.findViewById(R.id.load_failure);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        mRecyclerView = view.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mSmartRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
@@ -101,7 +101,7 @@ public class CommonRefreshView extends FrameLayout implements View.OnClickListen
 
     }
 
-    private HttpCallback mRefreshCallback = new HttpCallback() {
+    private final HttpCallback mRefreshCallback = new HttpCallback() {
 
         private int mDataCount;
 
@@ -197,7 +197,7 @@ public class CommonRefreshView extends FrameLayout implements View.OnClickListen
         }
     };
 
-    private HttpCallback mLoadMoreCallback = new HttpCallback() {
+    private final HttpCallback mLoadMoreCallback = new HttpCallback() {
 
         private int mDataCount;
 

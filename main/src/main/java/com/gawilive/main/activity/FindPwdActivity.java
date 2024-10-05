@@ -69,11 +69,11 @@ public class FindPwdActivity extends AbsActivity {
         Intent intent=getIntent();
         mUseCountryCode =intent .getBooleanExtra(Constants.TIP, false);
         mFromLogin=intent.getBooleanExtra(Constants.FROM_LOGIN,false);
-        mEditPhone = (EditText) findViewById(R.id.edit_phone);
-        mEditCode = (EditText) findViewById(R.id.edit_code);
-        mEditPwd1 = (EditText) findViewById(R.id.edit_pwd_1);
-        mEditPwd2 = (EditText) findViewById(R.id.edit_pwd_2);
-        mBtnCode = (TextView) findViewById(R.id.btn_code);
+        mEditPhone = findViewById(R.id.edit_phone);
+        mEditCode = findViewById(R.id.edit_code);
+        mEditPwd1 = findViewById(R.id.edit_pwd_1);
+        mEditPwd2 = findViewById(R.id.edit_pwd_2);
+        mBtnCode = findViewById(R.id.btn_code);
         mBtnRegister = findViewById(R.id.btn_register);
         mGetCode = WordUtil.getString(R.string.reg_get_code);
         mGetCodeAgain = WordUtil.getString(R.string.reg_get_code_again);
@@ -157,7 +157,7 @@ public class FindPwdActivity extends AbsActivity {
             register();
         } else if (i == R.id.btn_choose_country) {
             if (mUseCountryCode) {
-              //  startActivityForResult(new Intent(mContext, ChooseCountryActivity.class), 101);
+                startActivityForResult(new Intent(mContext, ChooseCountryActivity.class), 101);
             }
         }
     }
@@ -185,7 +185,7 @@ public class FindPwdActivity extends AbsActivity {
         MainHttpUtil.getFindPwdCode(phoneNum, countryCode, mGetCodeCallback);
     }
 
-    private HttpCallback mGetCodeCallback = new HttpCallback() {
+    private final HttpCallback mGetCodeCallback = new HttpCallback() {
         @Override
         public void onSuccess(int code, String msg, String[] info) {
             if (code == 0) {

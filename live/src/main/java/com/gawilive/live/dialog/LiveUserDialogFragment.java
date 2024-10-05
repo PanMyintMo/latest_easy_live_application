@@ -135,23 +135,23 @@ public class LiveUserDialogFragment extends AbsDialogFragment implements View.On
         }
         mStream = bundle.getString(Constants.STREAM);
         mBottomContainer = mRootView.findViewById(R.id.bottom_container);
-        mAvatar = (ImageView) mRootView.findViewById(R.id.avatar);
-        mLevelAnchor = (ImageView) mRootView.findViewById(R.id.anchor_level);
-        mLevel = (ImageView) mRootView.findViewById(R.id.level);
+        mAvatar = mRootView.findViewById(R.id.avatar);
+        mLevelAnchor = mRootView.findViewById(R.id.anchor_level);
+        mLevel = mRootView.findViewById(R.id.level);
         mLevelText = mRootView.findViewById(R.id.level_text);
         mLevelAnchorText = mRootView.findViewById(R.id.level_anchor_text);
-        mSex = (ImageView) mRootView.findViewById(R.id.sex);
-        mName = (TextView) mRootView.findViewById(R.id.name);
-        mID = (TextView) mRootView.findViewById(R.id.id_val);
-        mCity = (TextView) mRootView.findViewById(R.id.city);
+        mSex = mRootView.findViewById(R.id.sex);
+        mName = mRootView.findViewById(R.id.name);
+        mID = mRootView.findViewById(R.id.id_val);
+        mCity = mRootView.findViewById(R.id.city);
         mSign = mRootView.findViewById(R.id.sign);
-        mImpressGroup = (LinearLayout) mRootView.findViewById(R.id.impress_group);
-        mFollow = (TextView) mRootView.findViewById(R.id.follow);
-        mFans = (TextView) mRootView.findViewById(R.id.fans);
-        mConsume = (TextView) mRootView.findViewById(R.id.consume);
-        mVotes = (TextView) mRootView.findViewById(R.id.votes);
-        mConsumeTip = (TextView) mRootView.findViewById(R.id.consume_tip);
-        mVotesTip = (TextView) mRootView.findViewById(R.id.votes_tip);
+        mImpressGroup = mRootView.findViewById(R.id.impress_group);
+        mFollow = mRootView.findViewById(R.id.follow);
+        mFans = mRootView.findViewById(R.id.fans);
+        mConsume = mRootView.findViewById(R.id.consume);
+        mVotes = mRootView.findViewById(R.id.votes);
+        mConsumeTip = mRootView.findViewById(R.id.consume_tip);
+        mVotesTip = mRootView.findViewById(R.id.votes_tip);
         // mRootView.findViewById(R.id.btn_close).setOnClickListener(this);
         getType();
         if (mType == TYPE_AUD_ANC || mType == TYPE_ANC_SELF) {
@@ -176,7 +176,7 @@ public class LiveUserDialogFragment extends AbsDialogFragment implements View.On
             mUnFollowDrawable = ContextCompat.getDrawable(mContext, R.mipmap.icon_user_home_follow_0);
             mBottomContainer.addView(bottomView);
             mFollowText = bottomView.findViewById(R.id.follow_text);
-            mFollowImage = (ImageView) findViewById(R.id.follow_img);
+            mFollowImage = findViewById(R.id.follow_img);
             View btnFollow = bottomView.findViewById(R.id.btn_follow);
             if (btnFollow != null) {
                 btnFollow.setOnClickListener(this);
@@ -382,7 +382,7 @@ public class LiveUserDialogFragment extends AbsDialogFragment implements View.On
         CommonHttpUtil.setAttention(mToUid, mAttentionCallback);
     }
 
-    private CommonCallback<Integer> mAttentionCallback = new CommonCallback<Integer>() {
+    private final CommonCallback<Integer> mAttentionCallback = new CommonCallback<Integer>() {
 
         @Override
         public void callback(Integer isAttention) {
@@ -453,7 +453,7 @@ public class LiveUserDialogFragment extends AbsDialogFragment implements View.On
         DialogUitl.showStringArrayDialog(mContext, list.toArray(new Integer[list.size()]), mArrayDialogCallback);
     }
 
-    private DialogUitl.StringArrayDialogCallback mArrayDialogCallback = new DialogUitl.StringArrayDialogCallback() {
+    private final DialogUitl.StringArrayDialogCallback mArrayDialogCallback = new DialogUitl.StringArrayDialogCallback() {
         @Override
         public void onItemClick(String text, int tag) {
             if (tag == R.string.live_setting_kick) {
@@ -600,7 +600,7 @@ public class LiveUserDialogFragment extends AbsDialogFragment implements View.On
         LiveHttpUtil.superCloseRoom(mLiveUid, 2, null, mSuperCloseRoomCallback);
     }
 
-    private HttpCallback mSuperCloseRoomCallback = new HttpCallback() {
+    private final HttpCallback mSuperCloseRoomCallback = new HttpCallback() {
         @Override
         public void onSuccess(int code, String msg, String[] info) {
             if (code == 0) {

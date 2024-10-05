@@ -16,7 +16,7 @@ import com.gawilive.common.utils.DpUtil;
 
 public class ChatMoreDialog extends PopupWindow {
 
-    private View mParent;
+    private final View mParent;
     private View mContentView;
     private ActionListener mActionListener;
 

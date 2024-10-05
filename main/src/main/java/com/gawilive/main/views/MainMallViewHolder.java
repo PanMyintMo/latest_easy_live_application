@@ -151,7 +151,7 @@ public class MainMallViewHolder extends AbsMainViewHolder implements OnItemClick
 
         //edit by pp remove empty banner
      //  mBannerWrap = headView.findViewById(R.id.banner_wrap);
-        mBanner = (Banner) headView.findViewById(R.id.banner);
+        mBanner = headView.findViewById(R.id.banner);
     /*    mBanner.setImageLoader(new ImageLoader() {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {
@@ -301,16 +301,43 @@ public class MainMallViewHolder extends AbsMainViewHolder implements OnItemClick
     /**
      * 我的小店 商城
      */
-    private void forwardMall() {
+    /*private void forwardMall() {
         UserBean u = CommonAppConfig.getInstance().getUserBean();
+
         if (u != null) {
+            Log.e("IN", "Information for user bean: " + u.toString()); // Ensure u has a proper toString() method.
+
             if (u.getIsOpenShop() == 0) {
                 BuyerActivity.forward(mContext);
             } else {
                 SellerActivity.forward(mContext);
             }
         }
+        else {
+            Log.e("IN", "UserBean is null.");
+        }
 
+    }*/
+
+
+    private void forwardMall() {
+        UserBean u = CommonAppConfig.getInstance().getUserBean();
+
+        // Correct log statement using concatenation
+        if (u != null) {
+            Log.e("IN", "Information for user bean: " + u.toString());
+        } else {
+            Log.e("IN", "UserBean is null.");
+        }
+
+        // Navigation logic
+        if (u != null) {
+            if (u.getIsOpenShop() == 0) {
+                BuyerActivity.forward(mContext); // Navigate to BuyerActivity
+            } else {
+                SellerActivity.forward(mContext); // Navigate to SellerActivity
+            }
+        }
     }
 
     public void showMyShopAvatar() {

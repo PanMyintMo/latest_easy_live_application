@@ -91,7 +91,7 @@ public class CashActivity extends AbsActivity implements View.OnClickListener, C
 
     private void addAccount() {
         if (mCashAccountViewHolder == null) {
-            mCashAccountViewHolder = new CashAccountViewHolder(mContext, (ViewGroup) findViewById(R.id.root));
+            mCashAccountViewHolder = new CashAccountViewHolder(mContext, findViewById(R.id.root));
         }
         mCashAccountViewHolder.addToParent();
     }

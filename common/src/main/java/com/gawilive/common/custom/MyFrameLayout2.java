@@ -16,8 +16,8 @@ import com.gawilive.common.R;
 
 public class MyFrameLayout2 extends FrameLayout {
 
-    private float mRatio;
-    private float mOffestY;
+    private final float mRatio;
+    private final float mOffestY;
 
     public MyFrameLayout2(@NonNull Context context) {
         this(context, null);

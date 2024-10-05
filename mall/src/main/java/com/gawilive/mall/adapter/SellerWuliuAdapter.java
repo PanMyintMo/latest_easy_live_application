@@ -17,7 +17,7 @@ import java.util.List;
 
 public class SellerWuliuAdapter extends RefreshAdapter<WuliuBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
 
     public SellerWuliuAdapter(Context context, List<WuliuBean> list) {

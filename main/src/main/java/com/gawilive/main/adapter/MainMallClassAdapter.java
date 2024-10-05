@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainMallClassAdapter extends RefreshAdapter<GoodsHomeClassBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public MainMallClassAdapter(Context context, List<GoodsHomeClassBean> list) {
         super(context, list);

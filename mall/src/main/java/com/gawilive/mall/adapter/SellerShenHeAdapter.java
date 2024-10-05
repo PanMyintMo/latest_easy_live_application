@@ -18,14 +18,14 @@ import com.gawilive.mall.bean.GoodsManageBean;
 
 public class SellerShenHeAdapter extends RefreshAdapter<GoodsManageBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mEditClickListener;
-    private View.OnClickListener mDeleteClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mEditClickListener;
+    private final View.OnClickListener mDeleteClickListener;
     private ActionListener mActionListener;
-    private String mSaleString;
-    private String mMoneySymbol;
-    private String mStatusShenHe;//审核中
-    private String mStatusRefuse;//已拒绝
+    private final String mSaleString;
+    private final String mMoneySymbol;
+    private final String mStatusShenHe;//审核中
+    private final String mStatusRefuse;//已拒绝
 
 
     public SellerShenHeAdapter(Context context) {

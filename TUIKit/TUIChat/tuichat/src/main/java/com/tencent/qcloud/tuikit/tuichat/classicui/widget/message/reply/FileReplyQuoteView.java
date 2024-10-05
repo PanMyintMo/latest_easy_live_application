@@ -12,9 +12,9 @@ import com.tencent.qcloud.tuikit.tuichat.R;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.reply.FileReplyQuoteBean;
 
 public class FileReplyQuoteView extends TUIReplyQuoteView {
-    private View fileMsgLayout;
-    private ImageView fileMsgIcon;
-    private TextView fileMsgTv;
+    private final View fileMsgLayout;
+    private final ImageView fileMsgIcon;
+    private final TextView fileMsgTv;
     
     @Override
     public int getLayoutResourceId() {

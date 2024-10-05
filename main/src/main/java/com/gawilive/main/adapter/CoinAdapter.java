@@ -26,14 +26,14 @@ import java.util.List;
 
 public class CoinAdapter extends RecyclerView.Adapter {
 
-    private String mCoinName;
-    private List<CoinBean> mList;
-    private String mGiveString;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final String mCoinName;
+    private final List<CoinBean> mList;
+    private final String mGiveString;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<CoinBean> mOnItemClickListener;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
     private int mCheckedPosition = 0;
     private boolean mIsPaypal;
 

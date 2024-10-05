@@ -27,17 +27,17 @@ public class SellerAddPlatAdapter extends RefreshAdapter<GoodsPlatBean> {
 
     private static final int LEFT = 1;
     private static final int RIGHT = 2;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mAddOnClickListener;
-    private String mSaleString;
-    private String mMoneySymbol;
-    private String mStringYong;
-    private int mAddColor;
-    private int mUnAddColor;
-    private Drawable mAddBg;
-    private Drawable mUnAddBg;
-    private String mAddString;
-    private String mUnAddString;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mAddOnClickListener;
+    private final String mSaleString;
+    private final String mMoneySymbol;
+    private final String mStringYong;
+    private final int mAddColor;
+    private final int mUnAddColor;
+    private final Drawable mAddBg;
+    private final Drawable mUnAddBg;
+    private final String mAddString;
+    private final String mUnAddString;
 
 
     public SellerAddPlatAdapter(Context context) {

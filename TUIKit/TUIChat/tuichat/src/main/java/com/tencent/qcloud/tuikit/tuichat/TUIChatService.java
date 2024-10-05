@@ -227,7 +227,7 @@ public class TUIChatService implements TUIInitializer, ITUIService, ITUINotifica
     private void handleOfflineRingEvent(String subKey, Map<String, Object> param) {
         if (TextUtils.equals(subKey, TUIChatConstants.EVENT_SUB_KEY_OFFLINE_MESSAGE_PRIVATE_RING)) {
             Boolean isPrivateRing = (Boolean) param.get(TUIChatConstants.OFFLINE_MESSAGE_PRIVATE_RING);
-            TUIChatConfigs.getConfigs().getGeneralConfig().setEnableAndroidPrivateRing(isPrivateRing);
+            TUIChatConfigs.getGeneralConfig().setEnableAndroidPrivateRing(isPrivateRing);
 
             Map<String, Object> paramRing = new HashMap<>();
             paramRing.put(TUIConstants.TIMPush.CONFIG_FCM_CHANNEL_ID_KEY, OfflinePushInfoUtils.FCM_PUSH_CHANNEL_ID);
@@ -321,19 +321,19 @@ public class TUIChatService implements TUIInitializer, ITUIService, ITUINotifica
             // Set whether to open the floating window for voice and video calls
             Map<String, Object> enableFloatWindowParam = new HashMap<>();
             enableFloatWindowParam.put(
-                TUIConstants.TUICalling.PARAM_NAME_ENABLE_FLOAT_WINDOW, TUIChatConfigs.getConfigs().getGeneralConfig().isEnableFloatWindowForCall());
+                TUIConstants.TUICalling.PARAM_NAME_ENABLE_FLOAT_WINDOW, TUIChatConfigs.getGeneralConfig().isEnableFloatWindowForCall());
             TUICore.callService(TUIConstants.TUICalling.SERVICE_NAME, TUIConstants.TUICalling.METHOD_NAME_ENABLE_FLOAT_WINDOW, enableFloatWindowParam);
 
             // Set Whether to enable multi-terminal login function for audio and video calls
             Map<String, Object> enableMultiDeviceParam = new HashMap<>();
             enableMultiDeviceParam.put(
-                TUIConstants.TUICalling.PARAM_NAME_ENABLE_MULTI_DEVICE, TUIChatConfigs.getConfigs().getGeneralConfig().isEnableMultiDeviceForCall());
+                TUIConstants.TUICalling.PARAM_NAME_ENABLE_MULTI_DEVICE, TUIChatConfigs.getGeneralConfig().isEnableMultiDeviceForCall());
             TUICore.callService(TUIConstants.TUICalling.SERVICE_NAME, TUIConstants.TUICalling.METHOD_NAME_ENABLE_MULTI_DEVICE, enableMultiDeviceParam);
 
             // Set whether to enable incoming banner when user received audio and video calls
             Map<String, Object> incomingBannerParam = new HashMap<>();
             incomingBannerParam.put(
-                TUIConstants.TUICalling.PARAM_NAME_ENABLE_INCOMING_BANNER, TUIChatConfigs.getConfigs().getGeneralConfig().isEnableIncomingBanner());
+                TUIConstants.TUICalling.PARAM_NAME_ENABLE_INCOMING_BANNER, TUIChatConfigs.getGeneralConfig().isEnableIncomingBanner());
             TUICore.callService(TUIConstants.TUICalling.SERVICE_NAME, TUIConstants.TUICalling.METHOD_NAME_ENABLE_INCOMING_BANNER, incomingBannerParam);
         }
     }

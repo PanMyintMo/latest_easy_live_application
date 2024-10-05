@@ -23,11 +23,11 @@ import java.io.File;
 
 public class ActiveVoiceLayout extends FrameLayout implements View.OnClickListener {
 
-    private Context mContext;
-    private float mScale;
+    private final Context mContext;
+    private final float mScale;
     private ImageView mImageView;
     private TextView mTextView;
-    private Drawable[] mDrawables;
+    private final Drawable[] mDrawables;
     private boolean mPlaying;
     private Handler mHandler;
     private int mSeconds;

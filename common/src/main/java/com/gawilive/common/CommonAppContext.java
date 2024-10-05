@@ -60,8 +60,8 @@ public class CommonAppContext extends MultiDexApplication {
         if (sInstance == null) {
             try {
                 Class clazz = Class.forName("android.app.ActivityThread");
-                Method method = clazz.getMethod("currentApplication", new Class[]{});
-                Object obj = method.invoke(null, new Object[]{});
+                Method method = clazz.getMethod("currentApplication");
+                Object obj = method.invoke(null);
                 if (obj != null && obj instanceof CommonAppContext) {
                     sInstance = (CommonAppContext) obj;
                 }

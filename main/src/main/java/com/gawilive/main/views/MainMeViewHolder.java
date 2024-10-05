@@ -107,18 +107,18 @@ public class MainMeViewHolder extends AbsMainViewHolder implements OnItemClickLi
     @Override
     public void init() {
         setStatusHeight();
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mSex = (ImageView) findViewById(R.id.sex);
-        mLevelAnchor = (ImageView) findViewById(R.id.level_anchor);
-        mLevel = (ImageView) findViewById(R.id.level);
-        mID = (TextView) findViewById(R.id.id_val);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mSex = findViewById(R.id.sex);
+        mLevelAnchor = findViewById(R.id.level_anchor);
+        mLevel = findViewById(R.id.level);
+        mID = findViewById(R.id.id_val);
         mFollowNum = findViewById(R.id.follow_num);
         mFansNum = findViewById(R.id.fans_num);
         mCollectNum = findViewById(R.id.collect_num);
-        mRedPoint = (TextView) findViewById(R.id.red_point);
-        mCoin = (TextView) findViewById(R.id.coin);
-        TextView tvCoinName = (TextView) findViewById(R.id.coin_name);
+        mRedPoint = findViewById(R.id.red_point);
+        mCoin = findViewById(R.id.coin);
+        TextView tvCoinName = findViewById(R.id.coin_name);
         ConfigBean configBean = CommonAppConfig.getInstance().getConfig();
         if (configBean != null) {
             tvCoinName.setText(configBean.getCoinName());
@@ -188,7 +188,7 @@ public class MainMeViewHolder extends AbsMainViewHolder implements OnItemClickLi
         }
     }
 
-    private CommonCallback<UserBean> mCallback = new CommonCallback<UserBean>() {
+    private final CommonCallback<UserBean> mCallback = new CommonCallback<UserBean>() {
         @Override
         public void callback(UserBean bean) {
             showData();

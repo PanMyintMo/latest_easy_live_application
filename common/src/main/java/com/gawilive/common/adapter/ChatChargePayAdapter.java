@@ -25,12 +25,12 @@ import java.util.List;
 
 public class ChatChargePayAdapter extends RecyclerView.Adapter<ChatChargePayAdapter.Vh> {
 
-    private Context mContext;
-    private List<CoinPayBean> mList;
-    private LayoutInflater mInflater;
-    private Drawable mCheckedDrawable;
+    private final Context mContext;
+    private final List<CoinPayBean> mList;
+    private final LayoutInflater mInflater;
+    private final Drawable mCheckedDrawable;
     private int mCheckedPosition;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<CoinPayBean> mOnItemClickListener;
 
     public ChatChargePayAdapter(Context context, List<CoinPayBean> list) {

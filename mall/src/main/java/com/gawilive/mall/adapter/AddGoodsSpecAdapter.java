@@ -25,10 +25,10 @@ import java.io.File;
 
 public class AddGoodsSpecAdapter extends RefreshAdapter<AddGoodsSpecBean> {
 
-    private String mSpecString;
-    private View.OnClickListener mImageClickListener;
-    private View.OnClickListener mDeleteClickListener;
-    private View.OnClickListener mDeleteSpecClickListener;
+    private final String mSpecString;
+    private final View.OnClickListener mImageClickListener;
+    private final View.OnClickListener mDeleteClickListener;
+    private final View.OnClickListener mDeleteSpecClickListener;
 
     public AddGoodsSpecAdapter(Context context) {
         super(context);

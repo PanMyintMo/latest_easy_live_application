@@ -54,10 +54,10 @@ public class VideoEditMusicViewHolder extends AbsViewHolder implements View.OnCl
     @Override
     public void init() {
         mCutGroup = findViewById(R.id.cut_group);
-        mStartTime = (TextView) findViewById(R.id.start_time);
-        mMusicName = (TextView) findViewById(R.id.music_name);
-        mEndTime = (TextView) findViewById(R.id.end_time);
-        mRangeSlider = (RangeSlider) findViewById(R.id.range_slider);
+        mStartTime = findViewById(R.id.start_time);
+        mMusicName = findViewById(R.id.music_name);
+        mEndTime = findViewById(R.id.end_time);
+        mRangeSlider = findViewById(R.id.range_slider);
         mRangeSlider.setRangeChangeListener(new RangeSlider.OnRangeChangeListener() {
             @Override
             public void onKeyDown(int type) {
@@ -78,8 +78,8 @@ public class VideoEditMusicViewHolder extends AbsViewHolder implements View.OnCl
         });
         findViewById(R.id.root).setOnClickListener(this);
         findViewById(R.id.btn_cancel).setOnClickListener(this);
-        mOriginSeekBar = (TextSeekBar) findViewById(R.id.btn_origin);
-        mBgmSeekBar = (TextSeekBar) findViewById(R.id.seek_bgm);
+        mOriginSeekBar = findViewById(R.id.btn_origin);
+        mBgmSeekBar = findViewById(R.id.seek_bgm);
         TextSeekBar.OnSeekChangeListener seekChangeListener = new TextSeekBar.OnSeekChangeListener() {
             @Override
             public void onProgressChanged(View v, int progress) {

@@ -16,9 +16,9 @@ import com.gawilive.live.R;
 
 public class LiveLinkMicPkSearchDialog extends PopupWindow {
 
-    private View mParent;
+    private final View mParent;
     private View mContentView;
-    private ActionListener mActionListener;
+    private final ActionListener mActionListener;
 
     public LiveLinkMicPkSearchDialog(View parent, View contentView, ActionListener actionListener) {
         mParent = parent;

@@ -329,10 +329,7 @@ public class MessageReceiptDetailActivity extends BaseLightActivity {
         int lastPosition = linearLayoutManager.findLastCompletelyVisibleItemPosition();
         int childCount = linearLayoutManager.getChildCount();
         int firstPosition = linearLayoutManager.findFirstVisibleItemPosition();
-        if (lastPosition >= firstPosition + childCount - 1) {
-            return true;
-        }
-        return false;
+        return lastPosition >= firstPosition + childCount - 1;
     }
 
     static class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberViewHolder> {

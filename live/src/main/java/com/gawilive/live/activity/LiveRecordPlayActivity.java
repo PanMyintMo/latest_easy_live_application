@@ -77,10 +77,10 @@ public class LiveRecordPlayActivity extends AbsActivity implements
         if (TextUtils.isEmpty(url)) {
             return;
         }
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mLevelAnchor = (ImageView) findViewById(R.id.level_anchor);
-        mName = (TextView) findViewById(R.id.name);
-        mID = (TextView) findViewById(R.id.id_val);
+        mAvatar = findViewById(R.id.avatar);
+        mLevelAnchor = findViewById(R.id.level_anchor);
+        mName = findViewById(R.id.name);
+        mID = findViewById(R.id.id_val);
         mBtnFollow = findViewById(R.id.btn_follow);
         ImgLoader.displayAvatar(mContext,mUserBean.getAvatar(), mAvatar);
         LevelBean levelBean = CommonAppConfig.getInstance().getAnchorLevel(mUserBean.getLevelAnchor());
@@ -108,7 +108,7 @@ public class LiveRecordPlayActivity extends AbsActivity implements
         findViewById(R.id.btn_share).setOnClickListener(this);
         mBtnPlay = findViewById(R.id.btn_play);
         mBtnPlay.setOnClickListener(this);
-        mSeekBar = (SeekBar) findViewById(R.id.seek_bar);
+        mSeekBar = findViewById(R.id.seek_bar);
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -129,7 +129,7 @@ public class LiveRecordPlayActivity extends AbsActivity implements
         });
         mCurTimeTextView = findViewById(R.id.cur_time);
         mDurationTextView = findViewById(R.id.duration);
-        ViewGroup container = (ViewGroup) findViewById(R.id.container);
+        ViewGroup container = findViewById(R.id.container);
         mLiveRecordPlayViewHolder = new LiveRecordPlayViewHolder(mContext, container);
         mLiveRecordPlayViewHolder.setActionListener(this);
         mLiveRecordPlayViewHolder.subscribeActivityLifeCycle();

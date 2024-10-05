@@ -24,15 +24,15 @@ import java.util.List;
 
 public class SuspensionDecoration extends RecyclerView.ItemDecoration {
     private List<? extends ISuspensionInterface> mDatas;
-    private Paint mPaint;
-    private Rect mBounds;//用于存放测量文字Rect
+    private final Paint mPaint;
+    private final Rect mBounds;//用于存放测量文字Rect
 
 //    private LayoutInflater mInflater;
 
     private int mTitleHeight;//title的高
     private int COLOR_TITLE_BG;
     private int COLOR_TITLE_FONT;
-    private int mTitleFontSize;//title字体大小
+    private final int mTitleFontSize;//title字体大小
 
     private int mHeaderViewCount = 0;
     private ActionListener mActionListener;

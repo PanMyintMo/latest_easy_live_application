@@ -70,7 +70,7 @@ public class LiveInputDialogFragment extends AbsDialogFragment implements View.O
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-        mInput = (EditText) mRootView.findViewById(R.id.input);
+        mInput = mRootView.findViewById(R.id.input);
         mInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -89,11 +89,7 @@ public class LiveInputDialogFragment extends AbsDialogFragment implements View.O
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.length() == 0) {
-                    mMyRadioButton.doChecked(false);
-                } else {
-                    mMyRadioButton.doChecked(true);
-                }
+                mMyRadioButton.doChecked(s.length() != 0);
             }
 
             @Override
@@ -109,8 +105,8 @@ public class LiveInputDialogFragment extends AbsDialogFragment implements View.O
                 imm.showSoftInput(mInput, InputMethodManager.SHOW_FORCED);
             }
         }, 200);
-        mCheckBox = (CheckBox) mRootView.findViewById(R.id.danmu);
-        mMyRadioButton = (MyRadioButton) mRootView.findViewById(R.id.btn_send);
+        mCheckBox = mRootView.findViewById(R.id.danmu);
+        mMyRadioButton = mRootView.findViewById(R.id.btn_send);
         mMyRadioButton.setOnClickListener(this);
         Bundle bundle = getArguments();
         if (bundle == null) {

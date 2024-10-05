@@ -20,7 +20,7 @@ import java.util.List;
 
 public class GoodsEditSpecAdapter extends RefreshAdapter<AddGoodsSpecBean> {
 
-    private String mSpecString;
+    private final String mSpecString;
 
     public GoodsEditSpecAdapter(Context context, List<AddGoodsSpecBean> list) {
         super(context, list);

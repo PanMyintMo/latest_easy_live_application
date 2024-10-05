@@ -451,7 +451,7 @@
     <string name="recomment_to_you">recommend</string>
     <string name="sex_male">Male</string>
     <string name="sex_female">Female</string>
-    <string name="setting">Set</string>
+    <string name="setting">Setting</string>
     <string name="setting_exit">Log out</string>
     <string name="setting_clear_cache_ing">Clearing</string>
     <string name="setting_clear_cache">The cache has been cleared</string>
@@ -736,10 +736,10 @@
     <string name="mall_004">Account balance</string>
     <string name="mall_005">My Order</string>
     <string name="mall_006">View all orders</string>
-    <string name="mall_007">To be paid</string>
-    <string name="mall_008">To be shipped</string>
-    <string name="mall_009">Goods to be received</string>
-    <string name="mall_010">To be evaluated</string>
+    <string name="mall_007">Paid</string>
+    <string name="mall_008">Shipped</string>
+    <string name="mall_009">Received</string>
+    <string name="mall_010">Evaluated</string>
     <string name="mall_011">Refund</string>
     <string name="mall_012">I want to open a store</string>
     <string name="mall_013">Open small stores to make money</string>
@@ -1250,7 +1250,7 @@
     <string name="goods_tip_32_1">View Details</string>
     <string name="goods_tip_32_2">Invalid advertising link</string>
     <string name="mall_117">Under review</string>
-    <string name="active_topic_08">hot topic</string>
+    <string name="active_topic_08">Hot topic</string>
     <string name="active_topic_09">View more</string>
     <string name="mall_413">Sharing commission settings</string>
     <string name="mall_414">Commission (Ks)</string>
@@ -1400,7 +1400,7 @@
     <string name="string_fkmoney">Payment amount (Ks)</string>
     <string name="string_qr_fk">Confirm payment</string>
     <string name="string_scan_code_exception">The QR code is abnormal, please scan it again</string>
-    <string name="string_grzl">personal data</string>
+    <string name="string_grzl">Profile</string>
 
     <string name="new_01">My income</string>
     <string name="new_02">My certification</string>
@@ -1439,7 +1439,7 @@
     <string name="new_37">Prize list</string>
 
     <string name="new_38">Points lottery</string>
-    <string name="new_39">My shop</string>
+    <string name="new_39">Shop</string>
     <string name="new_40">Red points</string>
     <string name="new_41">Green points</string>
     <string name="new_42">Open membership to get exclusive gifts</string>

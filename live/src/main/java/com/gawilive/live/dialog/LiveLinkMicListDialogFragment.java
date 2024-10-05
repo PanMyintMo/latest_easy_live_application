@@ -157,7 +157,7 @@ public class LiveLinkMicListDialogFragment extends AbsDialogFragment implements 
     private View initSearchView() {
         imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
         View v = LayoutInflater.from(mContext).inflate(R.layout.dialog_live_pk_search, null);
-        mEditText = (EditText) v.findViewById(R.id.edit);
+        mEditText = v.findViewById(R.id.edit);
         mEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {

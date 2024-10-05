@@ -18,9 +18,9 @@ public class HttpClients {
 
     private static HttpClients sInstance;
     private String mLanguage;//语言
-    private String mUrl;
-    private OkHttpClient mOkHttpClient;
-    private OkHttpBuilder mBuilder;
+    private final String mUrl;
+    private final OkHttpClient mOkHttpClient;
+    private final OkHttpBuilder mBuilder;
 
     private HttpClients() {
         mUrl = CommonAppConfig.HOST + "/api.php?act=";

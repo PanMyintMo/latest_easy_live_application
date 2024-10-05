@@ -32,7 +32,7 @@ import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
 
 public class QuoteMessageHolder extends TextMessageHolder {
     private final TextView senderNameTv;
-    private FrameLayout quoteContentFrameLayout;
+    private final FrameLayout quoteContentFrameLayout;
 
     // text/merge
     private final FrameLayout textFrame;

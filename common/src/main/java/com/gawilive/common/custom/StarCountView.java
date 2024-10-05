@@ -17,12 +17,12 @@ import com.gawilive.common.R;
 
 public class StarCountView extends AppCompatTextView {
 
-    private Drawable mCheckDrawable;
-    private Drawable mUnCheckDrawable;
-    private int mDrawableSize;
-    private int mTotalCount;
-    private int mFillCount;
-    private String mContent;
+    private final Drawable mCheckDrawable;
+    private final Drawable mUnCheckDrawable;
+    private final int mDrawableSize;
+    private final int mTotalCount;
+    private final int mFillCount;
+    private final String mContent;
     private SpannableStringBuilder mBuilder;
 
     public StarCountView(Context context) {
@@ -48,7 +48,7 @@ public class StarCountView extends AppCompatTextView {
         }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < mTotalCount; i++) {
-            sb.append(String.valueOf(i));
+            sb.append(i);
             if (i < mTotalCount - 1) {
                 sb.append(" ");
             }

@@ -14,7 +14,7 @@ import com.gawilive.common.R;
 
 public class RatioImageView extends AppCompatImageView {
 
-    private float mRatio;
+    private final float mRatio;
 
     public RatioImageView(Context context) {
         this(context, null);

@@ -106,7 +106,7 @@ public class ActiveVideoRecordActivity extends AbsActivity implements View.OnCli
         findViewById(R.id.btn_use).setOnClickListener(this);
 
         //按钮动画相关
-        mVideoRecordBtnView = (VideoRecordBtnView) findViewById(com.gawilive.video.R.id.record_btn_view);
+        mVideoRecordBtnView = findViewById(com.gawilive.video.R.id.record_btn_view);
         mRecordView = findViewById(com.gawilive.video.R.id.record_view);
         mUnRecordDrawable = ContextCompat.getDrawable(mContext, com.gawilive.video.R.drawable.bg_btn_record_1);
         mRecordDrawable = ContextCompat.getDrawable(mContext, com.gawilive.video.R.drawable.bg_btn_record_2);

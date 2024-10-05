@@ -143,7 +143,7 @@ public class LiveAnchorActivity extends LiveActivity implements LiveFunctionClic
         mVoiceChatRoom = intent.getBooleanExtra(Constants.VOICE_CHAT_ROOM, false);
 
         L.e(TAG, "直播sdk----->" + (mLiveSDK == Constants.LIVE_SDK_KSY ? "金山云" : "腾讯云"));
-        mRoot = (ViewGroup) findViewById(R.id.root);
+        mRoot = findViewById(R.id.root);
         mSocketUserType = Constants.SOCKET_USER_TYPE_ANCHOR;
         UserBean u = CommonAppConfig.getInstance().getUserBean();
         mLiveUid = u.getId();
@@ -157,7 +157,7 @@ public class LiveAnchorActivity extends LiveActivity implements LiveFunctionClic
         mLiveBean.setCity(u.getCity());
 
         if (isVoiceChatRoom()) {
-            mLiveVoicePushTxViewHolder = new LiveVoicePushTxViewHolder(mContext, (ViewGroup) findViewById(R.id.preview_container));
+            mLiveVoicePushTxViewHolder = new LiveVoicePushTxViewHolder(mContext, findViewById(R.id.preview_container));
             mLiveVoiceLinkMicViewHolder = new LiveVoiceLinkMicViewHolder(mContext, mLiveVoicePushTxViewHolder.getContainer());
             mLiveVoiceLinkMicViewHolder.addToParent();
             mLiveVoiceLinkMicViewHolder.subscribeActivityLifeCycle();
@@ -165,9 +165,9 @@ public class LiveAnchorActivity extends LiveActivity implements LiveFunctionClic
         } else {
             if (mLiveSDK == Constants.LIVE_SDK_TX) {
                 //添加推流预览控件
-                mLivePushViewHolder = new LivePushTxViewHolder(mContext, (ViewGroup) findViewById(R.id.preview_container), mLiveConfigBean);
+                mLivePushViewHolder = new LivePushTxViewHolder(mContext, findViewById(R.id.preview_container), mLiveConfigBean);
             } else {
-                mLivePushViewHolder = new LivePushKsyViewHolder(mContext, (ViewGroup) findViewById(R.id.preview_container), mLiveConfigBean);
+                mLivePushViewHolder = new LivePushKsyViewHolder(mContext, findViewById(R.id.preview_container), mLiveConfigBean);
             }
         }
 
@@ -192,8 +192,8 @@ public class LiveAnchorActivity extends LiveActivity implements LiveFunctionClic
         });
         mLivePushViewHolder.addToParent();
         mLivePushViewHolder.subscribeActivityLifeCycle();
-        mContainerWrap = (ViewGroup) findViewById(R.id.container_wrap);
-        mContainer = (ViewGroup) findViewById(R.id.container);
+        mContainerWrap = findViewById(R.id.container_wrap);
+        mContainer = findViewById(R.id.container);
         //添加开播前设置控件
         mLiveReadyViewHolder = new LiveReadyViewHolder(mContext, mContainer, mLiveSDK, haveStore, forbidLiveTip);
         mLiveReadyViewHolder.addToParent();
@@ -471,7 +471,7 @@ public class LiveAnchorActivity extends LiveActivity implements LiveFunctionClic
         }
         mLiveReadyViewHolder = null;
         if (mLiveRoomViewHolder == null) {
-            mLiveRoomViewHolder = new LiveRoomViewHolder(mContext, mContainer, (GifImageView) findViewById(R.id.gift_gif), (SVGAImageView) findViewById(R.id.gift_svga), mContainerWrap);
+            mLiveRoomViewHolder = new LiveRoomViewHolder(mContext, mContainer, findViewById(R.id.gift_gif), findViewById(R.id.gift_svga), mContainerWrap);
             mLiveRoomViewHolder.addToParent();
             mLiveRoomViewHolder.subscribeActivityLifeCycle();
             mLiveRoomViewHolder.setLiveInfo(mLiveUid, mStream, obj.getIntValue("userlist_time") * 1000);

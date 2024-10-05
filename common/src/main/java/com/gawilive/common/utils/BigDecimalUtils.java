@@ -1,6 +1,7 @@
 package com.gawilive.common.utils;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * description ： TODO:计算工具类
@@ -23,7 +24,7 @@ public class BigDecimalUtils {
         }
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
-        return b1.add(b2).setScale(scale, BigDecimal.ROUND_HALF_UP).toString();
+        return b1.add(b2).setScale(scale, RoundingMode.HALF_UP).toString();
     }
 
     /**
@@ -40,7 +41,7 @@ public class BigDecimalUtils {
         }
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
-        return b1.subtract(b2).setScale(scale, BigDecimal.ROUND_HALF_UP).toString();
+        return b1.subtract(b2).setScale(scale, RoundingMode.HALF_UP).toString();
     }
 
     /**
@@ -57,7 +58,7 @@ public class BigDecimalUtils {
         }
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
-        return b1.multiply(b2).setScale(scale, BigDecimal.ROUND_HALF_UP).toString();
+        return b1.multiply(b2).setScale(scale, RoundingMode.HALF_UP).toString();
     }
 
     /**
@@ -74,7 +75,7 @@ public class BigDecimalUtils {
         }
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
-        return b1.divide(b2, scale, BigDecimal.ROUND_HALF_UP).toString();
+        return b1.divide(b2, scale, RoundingMode.HALF_UP).toString();
     }
 
     /**
@@ -89,7 +90,7 @@ public class BigDecimalUtils {
             throw new IllegalArgumentException("保留的小数位数不能小于零");
         }
         BigDecimal b = new BigDecimal(v);
-        return b.setScale(scale, BigDecimal.ROUND_HALF_UP).toString();
+        return b.setScale(scale, RoundingMode.HALF_UP).toString();
     }
 
     /**
@@ -106,7 +107,7 @@ public class BigDecimalUtils {
         }
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
-        return b1.remainder(b2).setScale(scale, BigDecimal.ROUND_HALF_UP).toString();
+        return b1.remainder(b2).setScale(scale, RoundingMode.HALF_UP).toString();
     }
 
     /**
@@ -120,9 +121,6 @@ public class BigDecimalUtils {
         BigDecimal b1 = new BigDecimal(v1);
         BigDecimal b2 = new BigDecimal(v2);
         int bj = b1.compareTo(b2);
-        if (bj == 0)
-            return true;
-        else
-            return false;
+        return bj == 0;
     }
 }

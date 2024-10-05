@@ -32,14 +32,14 @@ public class RangeSlider extends ViewGroup {
     private final Paint mLinePaint, mBgPaint;
     private final ThumbView mLeftThumb, mRightThumb;
 
-    private int mTouchSlop;
+    private final int mTouchSlop;
     private int mOriginalX, mLastX;
 
     private int mThumbWidth;
 
-    private int mTickStart = DEFAULT_TICK_START;
+    private final int mTickStart = DEFAULT_TICK_START;
     private int mTickEnd = DEFAULT_TICK_END;
-    private int mTickInterval = DEFAULT_TICK_INTERVAL;
+    private final int mTickInterval = DEFAULT_TICK_INTERVAL;
     private int mTickCount = (mTickEnd - mTickStart) / mTickInterval;
 
     private float mLineSize;

@@ -360,7 +360,7 @@ public class ChatProvider {
         v2TIMOfflinePushInfo.setExt(new Gson().toJson(offlinePushExtInfo).getBytes());
         // OPPO must set a ChannelID to receive push messages. This channelID needs to be the same as the console.
         v2TIMOfflinePushInfo.setAndroidOPPOChannelID("tuikit");
-        if (TUIChatConfigs.getConfigs().getGeneralConfig().isEnableAndroidPrivateRing()) {
+        if (TUIChatConfigs.getGeneralConfig().isEnableAndroidPrivateRing()) {
             v2TIMOfflinePushInfo.setAndroidSound(OfflinePushInfoUtils.PRIVATE_RING_NAME);
             v2TIMOfflinePushInfo.setAndroidFCMChannelID(OfflinePushInfoUtils.FCM_PUSH_CHANNEL_ID);
         }
@@ -390,8 +390,8 @@ public class ChatProvider {
 
         V2TIMOfflinePushInfo v2TIMOfflinePushInfo = createOfflinePushInfo(message, chatInfo);
 
-        v2TIMMessage.setExcludedFromUnreadCount(TUIChatConfigs.getConfigs().getGeneralConfig().isExcludedFromUnreadCount());
-        v2TIMMessage.setExcludedFromLastMessage(TUIChatConfigs.getConfigs().getGeneralConfig().isExcludedFromLastMessage());
+        v2TIMMessage.setExcludedFromUnreadCount(TUIChatConfigs.getGeneralConfig().isExcludedFromUnreadCount());
+        v2TIMMessage.setExcludedFromLastMessage(TUIChatConfigs.getGeneralConfig().isExcludedFromLastMessage());
 
         String msgID = V2TIMManager.getMessageManager().sendMessage(v2TIMMessage, isGroup ? null : userID, isGroup ? groupID : null,
             V2TIMMessage.V2TIM_PRIORITY_DEFAULT, onlineUserOnly, v2TIMOfflinePushInfo, new V2TIMSendCallback<V2TIMMessage>() {
@@ -425,8 +425,8 @@ public class ChatProvider {
     public String sendMessage(
         TUIMessageBean messageInfo, boolean isGroup, String id, OfflinePushInfo offlinePushInfo, IUIKitCallback<TUIMessageBean> callBack) {
         V2TIMMessage forwardMessage = messageInfo.getV2TIMMessage();
-        forwardMessage.setExcludedFromUnreadCount(TUIChatConfigs.getConfigs().getGeneralConfig().isExcludedFromUnreadCount());
-        forwardMessage.setExcludedFromLastMessage(TUIChatConfigs.getConfigs().getGeneralConfig().isExcludedFromLastMessage());
+        forwardMessage.setExcludedFromUnreadCount(TUIChatConfigs.getGeneralConfig().isExcludedFromUnreadCount());
+        forwardMessage.setExcludedFromLastMessage(TUIChatConfigs.getGeneralConfig().isExcludedFromLastMessage());
 
         V2TIMOfflinePushInfo v2TIMOfflinePushInfo = OfflinePushInfoUtils.convertOfflinePushInfoToV2PushInfo(offlinePushInfo);
         String msgId = V2TIMManager.getMessageManager().sendMessage(forwardMessage, isGroup ? null : id, isGroup ? id : null,
@@ -579,11 +579,7 @@ public class ChatProvider {
             return true;
         }
         V2TIMMessage v2TIMMessage = message.getV2TIMMessage();
-        if (v2TIMMessage.getStatus() == V2TIM_MSG_STATUS_SEND_FAIL) {
-            return true;
-        } else {
-            return false;
-        }
+        return v2TIMMessage.getStatus() == V2TIM_MSG_STATUS_SEND_FAIL;
     }
 
     public void getFriendName(String id, IUIKitCallback<String[]> callback) {

@@ -24,9 +24,9 @@ import java.util.List;
 
 public class AddGoodsDetailAdapter extends RefreshAdapter<AddGoodsImageBean> {
 
-    private String mTip0;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mDeleteClickListener;
+    private final String mTip0;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mDeleteClickListener;
     private List<AddGoodsImageBean> mPreviewList;
 
     public AddGoodsDetailAdapter(Context context) {

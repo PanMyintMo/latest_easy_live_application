@@ -22,19 +22,19 @@ import com.gawilive.common.R;
 
 public class TabButton extends LinearLayout {
 
-    private Context mContext;
-    private float mScale;
-    private String mTip;
-    private int mIconSize;
-    private int mTextSize;
-    private int mTextColorChecked;
-    private int mTextColorUnChecked;
+    private final Context mContext;
+    private final float mScale;
+    private final String mTip;
+    private final int mIconSize;
+    private final int mTextSize;
+    private final int mTextColorChecked;
+    private final int mTextColorUnChecked;
     private boolean mChecked;
     private ImageView mImg;
     private TextView mText;
     private Drawable[] mDrawables;
     private int mDrawaleArrayLength;
-    private ValueAnimator mAnimator;
+    private final ValueAnimator mAnimator;
     private int mDrawableIndex;
 
     public TabButton(Context context) {

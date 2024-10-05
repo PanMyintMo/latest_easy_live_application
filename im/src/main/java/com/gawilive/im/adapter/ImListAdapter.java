@@ -35,14 +35,14 @@ public class ImListAdapter extends RecyclerView.Adapter implements ItemSlideHelp
 
     private static final int HEAD = -1;
     private static final int ANCHOR = -2;
-    private Context mContext;
+    private final Context mContext;
     private RecyclerView mRecyclerView;
-    private List<ImUserBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mOnDeleteClickListener;
+    private final List<ImUserBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnDeleteClickListener;
     private ActionListener mActionListener;
-    private View mHeadView;
+    private final View mHeadView;
 
     public ImListAdapter(Context context) {
         mContext = context;
@@ -241,13 +241,13 @@ public class ImListAdapter extends RecyclerView.Adapter implements ItemSlideHelp
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
-            mMsg = (TextView) itemView.findViewById(R.id.msg);
-            mTime = (TextView) itemView.findViewById(R.id.time);
-            mRedPoint = (TextView) itemView.findViewById(R.id.red_point);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
+            mMsg = itemView.findViewById(R.id.msg);
+            mTime = itemView.findViewById(R.id.time);
+            mRedPoint = itemView.findViewById(R.id.red_point);
             mBtnDelete = itemView.findViewById(R.id.btn_delete);
             itemView.setOnClickListener(mOnClickListener);
             mBtnDelete.setOnClickListener(mOnDeleteClickListener);
@@ -298,13 +298,13 @@ public class ImListAdapter extends RecyclerView.Adapter implements ItemSlideHelp
 
         public AnchorVh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
-            mMsg = (TextView) itemView.findViewById(R.id.msg);
-            mTime = (TextView) itemView.findViewById(R.id.time);
-            mRedPoint = (TextView) itemView.findViewById(R.id.red_point);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
+            mMsg = itemView.findViewById(R.id.msg);
+            mTime = itemView.findViewById(R.id.time);
+            mRedPoint = itemView.findViewById(R.id.red_point);
             mBtnPriChat = itemView.findViewById(R.id.btn_pri_chat);
             itemView.setOnClickListener(mOnClickListener);
         }

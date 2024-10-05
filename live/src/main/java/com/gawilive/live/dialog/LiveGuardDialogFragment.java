@@ -81,7 +81,7 @@ public class LiveGuardDialogFragment extends AbsDialogFragment implements View.O
         }
         mIsAnchor = bundle.getBoolean(Constants.ANCHOR, false);
         mLiveUid = bundle.getString(Constants.LIVE_UID);
-        mGuardNum = (TextView) mRootView.findViewById(R.id.guard_num);
+        mGuardNum = mRootView.findViewById(R.id.guard_num);
         mBottom = mRootView.findViewById(R.id.bottom);
         if (mIsAnchor) {
             mBottom.setVisibility(View.GONE);
@@ -89,8 +89,8 @@ public class LiveGuardDialogFragment extends AbsDialogFragment implements View.O
                 mGuardNum.setText(WordUtil.getString(R.string.guard_guard) + "(" + mLiveGuardInfo.getGuardNum() + ")");
             }
         } else {
-            mTip = (TextView) mRootView.findViewById(R.id.tip);
-            mBtnBuy = (TextView) mRootView.findViewById(R.id.btn_buy);
+            mTip = mRootView.findViewById(R.id.tip);
+            mBtnBuy = mRootView.findViewById(R.id.btn_buy);
             mBtnBuy.setOnClickListener(this);
             if (mLiveGuardInfo != null) {
                 mGuardNum.setText(WordUtil.getString(R.string.guard_guard) + "(" + mLiveGuardInfo.getGuardNum() + ")");

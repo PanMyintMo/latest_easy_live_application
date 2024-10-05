@@ -271,7 +271,6 @@ public class SellerOrderDetailActivity extends AbsActivity {
      */
     private void forwardChat() {
         if (TextUtils.isEmpty(mOrderId) || mOrderInfo == null) {
-            return;
         }
 //        ImHttpUtil.getImUserInfo(mOrderInfo.getString("uid"), new HttpCallback() {
 //            @Override

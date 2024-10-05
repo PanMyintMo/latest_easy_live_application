@@ -142,8 +142,8 @@ public class VideoPublishActivity extends AbsActivity implements ITXVodPlayListe
                 }
             }
         });
-        mNum = (TextView) findViewById(R.id.num);
-        mInput = (EditText) findViewById(R.id.input);
+        mNum = findViewById(R.id.num);
+        mInput = findViewById(R.id.input);
         mInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

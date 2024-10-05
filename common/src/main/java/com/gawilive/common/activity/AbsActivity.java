@@ -86,7 +86,7 @@ public abstract class AbsActivity extends AppCompatActivity {
 
 
     protected void setTitle(String title) {
-        TextView titleView = (TextView) findViewById(R.id.titleView);
+        TextView titleView = findViewById(R.id.titleView);
         if (titleView != null) {
             titleView.setText(title);
         }

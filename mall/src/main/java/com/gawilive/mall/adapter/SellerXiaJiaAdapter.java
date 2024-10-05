@@ -18,13 +18,13 @@ import com.gawilive.mall.bean.GoodsManageBean;
 
 public class SellerXiaJiaAdapter extends RefreshAdapter<GoodsManageBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mEditClickListener;
-    private View.OnClickListener mDeleteClickListener;
-    private View.OnClickListener mShangJiaClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mEditClickListener;
+    private final View.OnClickListener mDeleteClickListener;
+    private final View.OnClickListener mShangJiaClickListener;
     private ActionListener mActionListener;
-    private String mSaleString;
-    private String mMoneySymbol;
+    private final String mSaleString;
+    private final String mMoneySymbol;
 
     public SellerXiaJiaAdapter(Context context) {
         super(context);

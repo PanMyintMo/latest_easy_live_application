@@ -27,13 +27,13 @@ import java.util.HashMap;
 public class MainMallAdapter extends RefreshAdapter<GoodsSimpleBean> {
 
     private static final int HEAD = -1;
-    private View.OnClickListener mOnClickListener;
-    private View mHeadView;
-    private String mSaleString;
+    private final View.OnClickListener mOnClickListener;
+    private final View mHeadView;
+    private final String mSaleString;
     //    private String mMoneySymbol;
-    private int mThumbWidth;
-    private int mThumbHeightMax;
-    private HashMap<String, Integer> mMap;
+    private final int mThumbWidth;
+    private final int mThumbHeightMax;
+    private final HashMap<String, Integer> mMap;
     private boolean mNeedRefreshData;
 
 

@@ -25,11 +25,11 @@ public class LiveLightAnimPresenter {
 
     private Context mContext;
     private ViewGroup mContainer;
-    private int mStartX;
-    private int mStartY;
+    private final int mStartX;
+    private final int mStartY;
     private PathMeasure[] mPathMeasures;
-    private List<LiveLightView> mViewList;
-    private TimeInterpolator mInterpolator;
+    private final List<LiveLightView> mViewList;
+    private final TimeInterpolator mInterpolator;
     private boolean mEnd;
 
 

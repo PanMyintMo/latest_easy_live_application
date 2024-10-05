@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ChooseImageUtil {
 
-    private ContentResolver mContentResolver;
+    private final ContentResolver mContentResolver;
     private CommonCallback<List<ChooseImageBean>> mCallback;
     private boolean mStop;
 

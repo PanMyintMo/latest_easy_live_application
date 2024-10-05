@@ -27,9 +27,9 @@ import java.util.List;
 
 public class LiveAdminListAdapter extends RecyclerView.Adapter<LiveAdminListAdapter.Vh> {
 
-    private Context mContext;
+    private final Context mContext;
     private List<UserBean> mList;
-    private LayoutInflater mInflater;
+    private final LayoutInflater mInflater;
     private View.OnClickListener mOnClickListener;
     private OnItemClickListener<UserBean> mOnItemClickListener;
 
@@ -92,10 +92,10 @@ public class LiveAdminListAdapter extends RecyclerView.Adapter<LiveAdminListAdap
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar =(ImageView) itemView.findViewById(R.id.avatar);
-            mName =(TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel =(ImageView)  itemView.findViewById(R.id.level);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
             mBtnDel = itemView.findViewById(R.id.btn_delete);
             mBtnDel.setOnClickListener(mOnClickListener);
         }

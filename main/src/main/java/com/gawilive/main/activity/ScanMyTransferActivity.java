@@ -88,11 +88,7 @@ public class ScanMyTransferActivity extends AbsActivity {
             @Override
             public void onItemClick(RecyclerView recyclerView, View itemView, int position) {
                 for (int i = 0; i < adapter.getCount(); i++) {
-                    if (i == position) {
-                        adapter.getItem(i).setSelect(true);
-                    } else {
-                        adapter.getItem(i).setSelect(false);
-                    }
+                    adapter.getItem(i).setSelect(i == position);
                 }
                 adapter.notifyDataSetChanged();
             }

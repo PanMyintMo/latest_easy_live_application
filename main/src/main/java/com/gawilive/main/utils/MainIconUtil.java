@@ -10,7 +10,7 @@ import com.gawilive.main.R;
  */
 
 public class MainIconUtil {
-    private static SparseIntArray sLiveTypeMap;//直播间类型图标
+    private static final SparseIntArray sLiveTypeMap;//直播间类型图标
 
     static {
         sLiveTypeMap = new SparseIntArray();

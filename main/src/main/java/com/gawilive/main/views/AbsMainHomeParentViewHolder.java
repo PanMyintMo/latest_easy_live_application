@@ -92,7 +92,7 @@ public abstract class AbsMainHomeParentViewHolder extends AbsMainViewHolder {
             mViewList.add(frameLayout);
         }
         mViewHolders = new AbsMainHomeChildViewHolder[pageCount];
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (pageCount > 1) {
             mViewPager.setOffscreenPageLimit(pageCount - 1);
         }
@@ -113,7 +113,7 @@ public abstract class AbsMainHomeParentViewHolder extends AbsMainViewHolder {
 
             }
         });
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = getTitles();
         CommonNavigator commonNavigator = new CommonNavigator(mContext);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
@@ -140,7 +140,7 @@ public abstract class AbsMainHomeParentViewHolder extends AbsMainViewHolder {
         });
         mIndicator.setNavigator(commonNavigator);
         ViewPagerHelper.bind(mIndicator, mViewPager);
-        mRedPoint = (TextView) findViewById(R.id.red_point);
+        mRedPoint = findViewById(R.id.red_point);
         String[] unReadCountArr = ImMessageUtil.getInstance().getAllUnReadMsgCount();
         String unReadCount =
                 unReadCountArr != null && unReadCountArr.length > 0 ? unReadCountArr[0] : "0";

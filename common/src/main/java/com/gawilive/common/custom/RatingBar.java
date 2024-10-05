@@ -23,14 +23,14 @@ import com.gawilive.common.R;
 
 public class RatingBar extends FrameLayout implements SeekBar.OnSeekBarChangeListener {
 
-    private Context mContext;
-    private int mStarCount;
+    private final Context mContext;
+    private final int mStarCount;
     private int mFillCount;
-    private int mStarWidth;
-    private int mStarHeight;
-    private int mStarSpace;
-    private Drawable mNormalDrawable;
-    private Drawable mFillDrawable;
+    private final int mStarWidth;
+    private final int mStarHeight;
+    private final int mStarSpace;
+    private final Drawable mNormalDrawable;
+    private final Drawable mFillDrawable;
     private SeekBar mSeekBar;
     private ImageView[] mImageViews;
     private OnRatingChangedListener mOnRatingChangedListener;

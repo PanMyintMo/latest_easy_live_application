@@ -31,11 +31,11 @@ public class PrizeDetailsAdapter extends AppAdapter<PrizeDetailsModel> {
 
 
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
-        private ImageView mImgIcon;
-        private TextView mTvTitle;
-        private TextView mTvNumber;
-        private TextView mTvStatus;
-        private TextView mTvTime;
+        private final ImageView mImgIcon;
+        private final TextView mTvTitle;
+        private final TextView mTvNumber;
+        private final TextView mTvStatus;
+        private final TextView mTvTime;
 
         private ViewHolder() {
             super(R.layout.item_prize_details);

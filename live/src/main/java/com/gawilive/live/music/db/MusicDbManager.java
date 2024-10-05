@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MusicDbManager {
     private static MusicDbManager sInstace;
-    private MusicDbHelper mDbHelper;
+    private final MusicDbHelper mDbHelper;
 
     private MusicDbManager() {
         mDbHelper = new MusicDbHelper();

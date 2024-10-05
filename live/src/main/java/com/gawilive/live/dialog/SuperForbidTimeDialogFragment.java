@@ -57,7 +57,7 @@ public class SuperForbidTimeDialogFragment extends AbsDialogFragment implements 
         super.onActivityCreated(savedInstanceState);
         findViewById(R.id.btn_cancel).setOnClickListener(this);
         findViewById(R.id.btn_confirm).setOnClickListener(this);
-        mWheelView = (WheelView<SuperForbidTimeBean>) findViewById(R.id.wheelview);
+        mWheelView = findViewById(R.id.wheelview);
 
         LiveHttpUtil.getSuperForbidTime(new HttpCallback() {
             @Override

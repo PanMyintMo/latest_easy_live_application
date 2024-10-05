@@ -30,7 +30,7 @@ import java.util.List;
 
 public class LiveAdminListViewHolder extends AbsLivePageViewHolder implements OnItemClickListener<UserBean> {
 
-    private String mLiveUid;
+    private final String mLiveUid;
     private TextView mTextView;
     private RecyclerView mRecyclerView;
     private LiveAdminListAdapter mLiveAdminListAdapter;
@@ -51,10 +51,10 @@ public class LiveAdminListViewHolder extends AbsLivePageViewHolder implements On
     @Override
     public void init() {
         super.init();
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        mTextView = (TextView) findViewById(R.id.text);
+        mTextView = findViewById(R.id.text);
         mHttpCallback = new HttpCallback() {
             @Override
             public void onSuccess(int code, String msg, String[] info) {

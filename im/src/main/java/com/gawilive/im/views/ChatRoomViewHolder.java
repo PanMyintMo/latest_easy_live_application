@@ -92,11 +92,11 @@ public class ChatRoomViewHolder extends AbsViewHolder implements View.OnClickLis
 
     @Override
     public void init() {
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false);
         linearLayoutManager.setStackFromEnd(true);
         mRecyclerView.setLayoutManager(linearLayoutManager);
-        mTitleView = (TextView) findViewById(R.id.titleView);
+        mTitleView = findViewById(R.id.titleView);
         mFollowGroup = findViewById(R.id.btn_follow_group);
         if (!mFollowing) {
             mFollowGroup.setVisibility(View.VISIBLE);
@@ -116,7 +116,7 @@ public class ChatRoomViewHolder extends AbsViewHolder implements View.OnClickLis
         findViewById(R.id.btn_user_home).setOnClickListener(this);
 
         mInputViewHolder = new InputViewHolder(mContext,
-                (ViewGroup) findViewById(R.id.input_container),
+                findViewById(R.id.input_container),
                 false, R.layout.view_input_top_msg, R.layout.view_input_face
         );
         mInputViewHolder.addToParent();

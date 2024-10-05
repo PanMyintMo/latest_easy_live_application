@@ -21,12 +21,12 @@ import com.gawilive.mall.http.MallHttpUtil;
 
 public class SellerDaimaiAdapter extends RefreshAdapter<GoodsManageBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mCancelClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mCancelClickListener;
     private ActionListener mActionListener;
-    private String mSaleString;
-    private String mMoneySymbol;
-    private String mStringYong;
+    private final String mSaleString;
+    private final String mMoneySymbol;
+    private final String mStringYong;
 
 
     public SellerDaimaiAdapter(Context context) {

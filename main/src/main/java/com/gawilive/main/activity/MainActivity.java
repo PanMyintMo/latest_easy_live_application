@@ -133,8 +133,8 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
         mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
         Intent intent = getIntent();
         mFirstLogin = intent.getBooleanExtra(Constants.FIRST_LOGIN, false);
-        mRootView = (ViewGroup) findViewById(R.id.rootView);
-        mTabButtonGroup = (TabButtonGroup) findViewById(R.id.tab_group);
+        mRootView = findViewById(R.id.rootView);
+        mTabButtonGroup = findViewById(R.id.tab_group);
         mTabButtonGroup.setClickIntercepter(new TabButtonGroup.ClickIntercepter() {
             @Override
             public boolean needIntercept(int position) {
@@ -145,7 +145,7 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
                 return false;
             }
         });
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         mViewPager.setOffscreenPageLimit(4);
         mViewList = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
@@ -293,12 +293,14 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
         if (!FloatWindowHelper.checkVoice(false)) {
             return;
         }
+
+        //need to edit for live
         MainStartDialogFragment dialogFragment = new MainStartDialogFragment();
         dialogFragment.setMainStartChooseCallback(mMainStartChooseCallback);
         dialogFragment.show(getSupportFragmentManager(), "MainStartDialogFragment");
     }
 
-    private MainStartChooseCallback mMainStartChooseCallback = new MainStartChooseCallback() {
+    private final MainStartChooseCallback mMainStartChooseCallback = new MainStartChooseCallback() {
         @Override
         public void onLiveClick() {
 

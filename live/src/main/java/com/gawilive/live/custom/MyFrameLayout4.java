@@ -13,7 +13,7 @@ import android.widget.FrameLayout;
 
 public class MyFrameLayout4 extends FrameLayout {
 
-    private int mWidth;
+    private final int mWidth;
 
     public MyFrameLayout4(@NonNull Context context) {
         this(context, null);

@@ -10,7 +10,7 @@ import java.util.List;
  */
 
 public class VideoIconUtil {
-    private static List<Integer> sVideoLikeAnim;//视频点赞动画
+    private static final List<Integer> sVideoLikeAnim;//视频点赞动画
 
     static {
         sVideoLikeAnim = Arrays.asList(

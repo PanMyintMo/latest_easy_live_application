@@ -16,10 +16,10 @@ import com.gawilive.mall.bean.SellerOrderBean;
  */
 public class SellerOrderAllRefundAdapter extends SellerOrderBaseAdapter {
 
-    private View.OnClickListener mDeleteClickListener;
-    private String mRefundString;
-    private String mRefundString0;
-    private String mRefundString1;
+    private final View.OnClickListener mDeleteClickListener;
+    private final String mRefundString;
+    private final String mRefundString0;
+    private final String mRefundString1;
 
     public SellerOrderAllRefundAdapter(Context context) {
         super(context);

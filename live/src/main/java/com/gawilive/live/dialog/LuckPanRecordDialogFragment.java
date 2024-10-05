@@ -61,7 +61,7 @@ public class LuckPanRecordDialogFragment extends AbsDialogFragment implements Vi
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         findViewById(R.id.btn_confirm).setOnClickListener(this);
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRefreshView.setDataHelper(new CommonRefreshView.DataHelper<LuckPanBean>() {
             @Override

@@ -84,7 +84,7 @@ public class SellerManageGoodsActivity extends AbsActivity implements View.OnCli
             frameLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             mViewList.add(frameLayout);
         }
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (PAGE_COUNT > 1) {
             mViewPager.setOffscreenPageLimit(PAGE_COUNT - 1);
         }
@@ -106,7 +106,7 @@ public class SellerManageGoodsActivity extends AbsActivity implements View.OnCli
             }
         });
         mViewHolders = new AbsCommonViewHolder[PAGE_COUNT];
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = new String[]{
                 mZaiShouString, mDaimaiString, mShenHeString, mXiaJiaString};
         CommonNavigator commonNavigator = new CommonNavigator(mContext);

@@ -22,7 +22,7 @@ import java.util.List;
 public class ImMessageUtil {
 
     private static ImMessageUtil sInstance;
-    private ImClient mImClient;
+    private final ImClient mImClient;
 
     private ImMessageUtil() {
         mImClient = null;

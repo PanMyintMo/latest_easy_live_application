@@ -29,7 +29,7 @@ public class LuckPanView extends View {
     private int mImgWidth;
     private int mImgHeight;
     private static final int COUNT = 20;
-    private float mScale;
+    private final float mScale;
     private Rect mDst;
 
     public LuckPanView(Context context) {
@@ -104,8 +104,8 @@ public class LuckPanView extends View {
     }
 
     private class ImgHolder {
-        private Bitmap mBitmap;
-        private Rect mRect;
+        private final Bitmap mBitmap;
+        private final Rect mRect;
 
         public ImgHolder(Bitmap bitmap) {
             mBitmap = bitmap;

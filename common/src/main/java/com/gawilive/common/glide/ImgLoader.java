@@ -30,8 +30,8 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 public class ImgLoader {
     private static final boolean SKIP_MEMORY_CACHE = false;
 
-    private static BlurTransformation sBlurTransformation;
-    private static Headers sHeaders;
+    private static final BlurTransformation sBlurTransformation;
+    private static final Headers sHeaders;
 
     static {
         sBlurTransformation = new BlurTransformation(25);

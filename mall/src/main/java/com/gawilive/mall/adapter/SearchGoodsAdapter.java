@@ -21,8 +21,8 @@ import java.util.List;
 
 public class SearchGoodsAdapter extends RefreshAdapter<SearchGoodsBean> {
 
-    private Drawable mCheckedDrawable;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
 
     public SearchGoodsAdapter(Context context) {

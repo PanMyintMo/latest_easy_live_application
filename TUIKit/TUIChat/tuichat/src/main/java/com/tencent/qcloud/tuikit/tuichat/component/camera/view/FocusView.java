@@ -9,11 +9,11 @@ import androidx.annotation.Nullable;
 import com.tencent.qcloud.tuikit.timcommon.util.ScreenUtil;
 
 public class FocusView extends View {
-    private int size;
+    private final int size;
     private int centerX;
     private int centerY;
     private int length;
-    private Paint mPaint;
+    private final Paint mPaint;
 
     public FocusView(Context context) {
         this(context, null);

@@ -21,13 +21,13 @@ import java.util.List;
 
 public class MhHaHaAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<HaHaBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final List<HaHaBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
-    private Drawable mCheckedDrawable;
-    private int mColor0;
-    private int mColor1;
+    private final Drawable mCheckedDrawable;
+    private final int mColor0;
+    private final int mColor1;
     private OnItemClickListener<HaHaBean> mOnItemClickListener;
 
     public MhHaHaAdapter(Context context, List<HaHaBean> list) {

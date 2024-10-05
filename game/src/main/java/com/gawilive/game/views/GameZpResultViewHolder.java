@@ -42,7 +42,7 @@ public class GameZpResultViewHolder extends AbsViewHolder {
 
     @Override
     public void init() {
-        mImg = (ImageView) findViewById(R.id.img);
+        mImg = findViewById(R.id.img);
         mFlash = findViewById(R.id.flash);
         mRotateAnimation = new RotateAnimation(0, 359, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         mRotateAnimation.setDuration(5000);

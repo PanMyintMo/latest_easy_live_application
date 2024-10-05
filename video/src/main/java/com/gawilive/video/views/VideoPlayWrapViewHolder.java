@@ -81,16 +81,16 @@ public class VideoPlayWrapViewHolder extends AbsViewHolder implements View.OnCli
     @Override
     public void init() {
         mTag = this.toString();
-        mVideoContainer = (ViewGroup) findViewById(R.id.video_container);
-        mCover = (ImageView) findViewById(R.id.cover);
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mTitle = (TextView) findViewById(R.id.title);
-        mBtnLike = (ImageView) findViewById(R.id.btn_like);
-        mLikeNum = (TextView) findViewById(R.id.like_num);
-        mCommentNum = (TextView) findViewById(R.id.comment_num);
-        mShareNum = (TextView) findViewById(R.id.share_num);
-        mBtnFollow = (ImageView) findViewById(R.id.btn_follow);
+        mVideoContainer = findViewById(R.id.video_container);
+        mCover = findViewById(R.id.cover);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mTitle = findViewById(R.id.title);
+        mBtnLike = findViewById(R.id.btn_like);
+        mLikeNum = findViewById(R.id.like_num);
+        mCommentNum = findViewById(R.id.comment_num);
+        mShareNum = findViewById(R.id.share_num);
+        mBtnFollow = findViewById(R.id.btn_follow);
         mAd = findViewById(R.id.ad);
         mFollowDrawable = ContextCompat.getDrawable(mContext, R.mipmap.icon_video_follow_1);
         mUnFollowDrawable = ContextCompat.getDrawable(mContext, R.mipmap.icon_video_follow_0);

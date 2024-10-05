@@ -80,10 +80,10 @@ public class ChatRoomDialogViewHolder extends AbsViewHolder implements
 
     @Override
     public void init() {
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        mTitleView = (TextView) findViewById(R.id.titleView);
+        mTitleView = findViewById(R.id.titleView);
         mFollowGroup = findViewById(R.id.btn_follow_group);
         if (!mFollowing) {
             mFollowGroup.setVisibility(View.VISIBLE);
@@ -111,7 +111,7 @@ public class ChatRoomDialogViewHolder extends AbsViewHolder implements
         EventBus.getDefault().register(this);
 
         mInputViewHolder = new InputViewHolder(mContext,
-                (ViewGroup) findViewById(R.id.input_container),
+                findViewById(R.id.input_container),
                 true, R.layout.view_input_top_live, R.layout.view_input_face
         );
         mInputViewHolder.addToParent();

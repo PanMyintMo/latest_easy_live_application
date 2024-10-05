@@ -16,10 +16,10 @@ public class SoftHideKeyBoardUtil {
         new SoftHideKeyBoardUtil(activity);
     }
 
-    private Activity activity;
-    private View mChildOfContent;
+    private final Activity activity;
+    private final View mChildOfContent;
     private int usableHeightPrevious;
-    private FrameLayout.LayoutParams frameLayoutParams;
+    private final FrameLayout.LayoutParams frameLayoutParams;
     private int contentHeight;//获取setContentView本来view的高度
     private boolean isfirst = true;//只用获取一次
     private int statusBarHeight;//状态栏高度
@@ -27,7 +27,7 @@ public class SoftHideKeyBoardUtil {
     private SoftHideKeyBoardUtil(Activity activity) {
         this.activity = activity;
         //1､找到Activity的最外层布局控件，它其实是一个DecorView,它所用的控件就是FrameLayout
-        FrameLayout content = (FrameLayout) activity.findViewById(android.R.id.content);
+        FrameLayout content = activity.findViewById(android.R.id.content);
         //2､获取到setContentView放进去的View
         mChildOfContent = content.getChildAt(0);
         //3､给Activity的xml布局设置View树监听，当布局有变化，如键盘弹出或收起时，都会回调此监听

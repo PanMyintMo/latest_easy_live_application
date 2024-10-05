@@ -87,7 +87,7 @@ public class BuyerCommentActivity extends AbsActivity implements View.OnClickLis
     private int mTargetPosition;
     private Runnable mPremissionVideoCallback;//选择视频
     private Dialog mLoading;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

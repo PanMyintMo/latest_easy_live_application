@@ -76,7 +76,7 @@ public class FaceListAdapter extends RecyclerView.Adapter<FaceListAdapter.FaceVi
     }
 
     static class FaceViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imageView;
+        private final ImageView imageView;
 
         public FaceViewHolder(@NonNull View itemView) {
             super(itemView);

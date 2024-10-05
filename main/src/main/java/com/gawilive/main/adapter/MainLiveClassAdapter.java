@@ -20,11 +20,11 @@ import java.util.List;
 
 public class MainLiveClassAdapter extends RefreshAdapter<LiveClassBean> {
 
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private Drawable mCheckedBg;
-    private Drawable mUnCheckedBg;
-    private View.OnClickListener mOnClickListener;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final Drawable mCheckedBg;
+    private final Drawable mUnCheckedBg;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
 
     public MainLiveClassAdapter(Context context) {

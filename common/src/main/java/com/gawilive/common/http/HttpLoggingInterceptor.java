@@ -6,6 +6,7 @@ import com.gawilive.common.utils.L;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -23,11 +24,11 @@ import okio.Buffer;
 
 public class HttpLoggingInterceptor implements Interceptor {
 
-    private static final Charset UTF8 = Charset.forName("UTF-8");
+    private static final Charset UTF8 = StandardCharsets.UTF_8;
 
     private volatile Level printLevel = Level.NONE;
     private java.util.logging.Level colorLevel;
-    private Logger logger;
+    private final Logger logger;
 
     public enum Level {
         NONE,       //不打印log
@@ -183,8 +184,8 @@ public class HttpLoggingInterceptor implements Interceptor {
         String subtype = mediaType.subtype();
         if (subtype != null) {
             subtype = subtype.toLowerCase();
-            if (subtype.contains("x-www-form-urlencoded") || subtype.contains("json") || subtype.contains("xml") || subtype.contains("html")) //
-                return true;
+            //
+            return subtype.contains("x-www-form-urlencoded") || subtype.contains("json") || subtype.contains("xml") || subtype.contains("html");
         }
         return false;
     }

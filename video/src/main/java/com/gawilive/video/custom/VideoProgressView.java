@@ -23,7 +23,7 @@ import java.util.List;
 
 public class VideoProgressView extends FrameLayout {
 
-    private Context mContext;
+    private final Context mContext;
     private View mRootView;
     private RecyclerView mRecyclerView;
     private ThumbnailAdapter mThumbnailAdapter;
@@ -45,7 +45,7 @@ public class VideoProgressView extends FrameLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
         mRootView = LayoutInflater.from(mContext).inflate(R.layout.layout_video_progress, this, false);
-        mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.rv_video_thumbnail);
+        mRecyclerView = mRootView.findViewById(R.id.rv_video_thumbnail);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         mThumbnailAdapter = new ThumbnailAdapter(mContext);

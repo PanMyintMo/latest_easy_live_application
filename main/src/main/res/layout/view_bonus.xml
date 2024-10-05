@@ -22,7 +22,7 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@mipmap/icon_bouns_6"
+        android:background="@mipmap/icon_bonus_i"
         android:clickable="true"
         app:mfl_ratio="1.2639">
 
@@ -35,10 +35,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="110dp"
+                android:layout_marginTop="115dp"
                 android:text="@string/bonus_sign_2"
                 android:textColor="@color/global"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/day_total"

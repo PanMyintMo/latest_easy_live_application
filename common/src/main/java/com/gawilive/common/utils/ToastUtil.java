@@ -16,7 +16,7 @@ import com.gawilive.common.R;
 
 public class ToastUtil {
 
-    private static Toast sToast;
+    private static final Toast sToast;
     private static long sLastTime;
     private static String sLastString;
 

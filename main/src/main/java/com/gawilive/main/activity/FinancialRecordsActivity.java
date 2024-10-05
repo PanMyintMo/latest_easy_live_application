@@ -76,7 +76,7 @@ public class FinancialRecordsActivity extends AbsActivity {
 
     private int page = 0;
 
-    private int size = 10;
+    private final int size = 10;
 
     private void getData() {
         Map<String, String> map = new HashMap<>();

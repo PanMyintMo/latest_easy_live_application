@@ -34,7 +34,7 @@ public class RankActivity extends AbsActivity {
     @Override
     protected void main() {
         int position = getIntent().getIntExtra(Constants.LIVE_POSITION, 0);
-        MainListViewHolder viewHolder = new MainListViewHolder(mContext, (ViewGroup) findViewById(R.id.container));
+        MainListViewHolder viewHolder = new MainListViewHolder(mContext, findViewById(R.id.container));
         viewHolder.addToParent();
         viewHolder.subscribeActivityLifeCycle();
         viewHolder.loadData(position);

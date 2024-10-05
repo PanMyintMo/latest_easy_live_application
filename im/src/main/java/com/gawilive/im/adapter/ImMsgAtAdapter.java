@@ -31,10 +31,10 @@ import com.gawilive.video.http.VideoHttpUtil;
  */
 public class ImMsgAtAdapter extends RefreshAdapter<VideoImMsgBean> {
 
-    private String mTip;
-    private int mColor;
-    private View.OnClickListener mAvatarClickListener;
-    private View.OnClickListener mOnClickListener;
+    private final String mTip;
+    private final int mColor;
+    private final View.OnClickListener mAvatarClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ImMsgAtAdapter(Context context) {
         super(context);

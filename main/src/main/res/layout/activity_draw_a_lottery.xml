@@ -30,10 +30,10 @@
                 <ImageView
                         android:id="@+id/img_bt"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="25.5dp"
-                        android:src="@mipmap/ic_cj_bt"/>
+                        android:layout_marginTop="20dp"
+                        android:src="@mipmap/green_point"/>
 
                 <TextView
                         android:id="@+id/tvDjs"
@@ -50,87 +50,90 @@
                         android:textStyle="bold"/>
 
                 <ImageView
-                        android:id="@+id/btn_cj"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="346.5dp"
-                        android:src="@mipmap/ic_cy_cj"/>
+                    android:id="@+id/btn_cj"
+                    android:layout_width="157dp"
+                    android:layout_height="42dp"
+                    android:layout_below="@+id/linearLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="124dp"
+                    android:src="@mipmap/participate" />
 
                 <LinearLayout
-                        android:layout_width="match_parent"
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="235dp"
+                    android:orientation="horizontal">
+
+                    <com.gawilive.common.views.NumberDanceTextView
+                        android:id="@+id/tvNo1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="60dp"
-                        android:layout_marginTop="235dp"
-                        android:orientation="horizontal">
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_cj_sz_bj"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#62269C"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <com.gawilive.common.views.NumberDanceTextView
-                            android:id="@+id/tvNo1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="3dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/ic_cj_sz_bj"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="#62269C"
-                            android:textSize="24sp"
-                            android:textStyle="bold"/>
+                        android:id="@+id/tvNo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_cj_sz_bj"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#62269C"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <com.gawilive.common.views.NumberDanceTextView
-                            android:id="@+id/tvNo2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/ic_cj_sz_bj"
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="#62269C"
-                            android:textSize="24sp"
-                            android:textStyle="bold"/>
+                        android:id="@+id/tvNo3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_cj_sz_bj"
+
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#62269C"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <com.gawilive.common.views.NumberDanceTextView
-                            android:id="@+id/tvNo3"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/ic_cj_sz_bj"
+                        android:id="@+id/tvNo4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_cj_sz_bj"
 
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="#62269C"
-                            android:textSize="24sp"
-                            android:textStyle="bold"/>
-
-                    <com.gawilive.common.views.NumberDanceTextView
-                            android:id="@+id/tvNo4"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="9dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/ic_cj_sz_bj"
-
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="#62269C"
-                            android:textSize="24sp"
-                            android:textStyle="bold"/>
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#62269C"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                     <com.gawilive.common.views.NumberDanceTextView
-                            android:id="@+id/tvNo5"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="7dp"
-                            android:layout_weight="1"
-                            android:background="@mipmap/ic_cj_sz_bj"
+                        android:id="@+id/tvNo5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_cj_sz_bj"
 
-                            android:gravity="center"
-                            android:text="0"
-                            android:textColor="#62269C"
-                            android:textSize="24sp"
-                            android:textStyle="bold"/>
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="#62269C"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
 

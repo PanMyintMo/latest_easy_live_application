@@ -18,12 +18,12 @@ import com.gawilive.common.R;
 
 public class ImagePreviewAdapter extends RecyclerView.Adapter<ImagePreviewAdapter.Vh> {
 
-    private LayoutInflater mInflater;
+    private final LayoutInflater mInflater;
     private ActionListener mActionListener;
-    private int mPageCount;
+    private final int mPageCount;
     private LinearLayoutManager mLayoutManager;
     private int mCurPosition;
-    private View.OnLongClickListener mLongClickListener;
+    private final View.OnLongClickListener mLongClickListener;
 
 
     public ImagePreviewAdapter(final Context context, int pageCount) {

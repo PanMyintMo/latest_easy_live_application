@@ -1207,7 +1207,7 @@ public class BaseDialog extends AppCompatDialog implements LifecycleOwner,
 
         @SuppressWarnings("unchecked")
         @Override
-        public final void onClick(View view) {
+        public void onClick(View view) {
             if (mListener == null) {
                 return;
             }

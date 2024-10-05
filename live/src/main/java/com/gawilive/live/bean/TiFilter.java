@@ -15,10 +15,10 @@ import com.ksyun.media.streamer.util.gles.GLRender;
 
 public class TiFilter extends ImgTexFilter {
 
-    private SrcPin<ImgTexFrame> mSrcPin;
-    private GLRender mGLRender;
+    private final SrcPin<ImgTexFrame> mSrcPin;
+    private final GLRender mGLRender;
     private int mOutTexture = ImgTexFrame.NO_TEXTURE;
-    private SinkPin<ImgTexFrame> mTexSinkPin;
+    private final SinkPin<ImgTexFrame> mTexSinkPin;
     private final Object BUF_LOCK = new Object();
 
 

@@ -38,7 +38,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/daily_task_02" />
+                android:src="@mipmap/daily_task_icon" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/daily_task_01" />
+                    android:src="@mipmap/daily_task_icon_i" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"

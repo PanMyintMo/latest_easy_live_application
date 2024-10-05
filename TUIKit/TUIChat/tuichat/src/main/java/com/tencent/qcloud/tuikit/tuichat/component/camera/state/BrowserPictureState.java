@@ -9,7 +9,7 @@ import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
 
 public class BrowserPictureState implements State {
     private static final String TAG = BrowserPictureState.class.getSimpleName();
-    private CameraMachine machine;
+    private final CameraMachine machine;
     private String dataPath;
 
     public BrowserPictureState(CameraMachine machine) {

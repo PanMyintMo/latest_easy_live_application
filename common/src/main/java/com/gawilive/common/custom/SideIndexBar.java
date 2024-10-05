@@ -19,16 +19,16 @@ import java.util.Map;
  */
 public class SideIndexBar extends View {
 
-    private float mTextSpace;
-    private int mTextSize;
+    private final float mTextSpace;
+    private final int mTextSize;
     private List<String> mIndexList;
     private Map<String, Integer> mMap;
 
     private int mSelectionPosition;
     private float mIndexHeight;
 
-    private Paint mUnCheckPaint;
-    private Paint mCheckPaint;
+    private final Paint mUnCheckPaint;
+    private final Paint mCheckPaint;
 
     private ActionListener mActionListener;
 

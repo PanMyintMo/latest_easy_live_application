@@ -346,7 +346,7 @@ public class TUIConfig {
                         while ((len = is.read(buffer)) != -1) {
                             message.write(buffer, 0, len);
                         }
-                        String msg = new String(message.toByteArray());
+                        String msg = message.toString();
                         Log.d("setSceneOptimizParams", "msg:" + msg);
                         is.close();
                         message.close();

@@ -68,13 +68,13 @@ public class LiveChargePayDialogFragment extends AbsDialogFragment implements Vi
         super.onActivityCreated(savedInstanceState);
         findViewById(R.id.btn_charge).setOnClickListener(this);
         findViewById(R.id.btn_close).setOnClickListener(this);
-        mTvCoin = (TextView) findViewById(R.id.coin);
-        mTvMoneySymbol = (TextView) findViewById(R.id.money_symbol);
-        TextView money = (TextView) findViewById(R.id.money);
+        mTvCoin = findViewById(R.id.coin);
+        mTvMoneySymbol = findViewById(R.id.money_symbol);
+        TextView money = findViewById(R.id.money);
         if (mCoinBean != null) {
             money.setText(mCoinBean.getMoney());
         }
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         if (mPayList != null) {

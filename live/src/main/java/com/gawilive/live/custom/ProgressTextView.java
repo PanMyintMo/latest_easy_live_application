@@ -18,9 +18,9 @@ import com.gawilive.live.R;
 public class ProgressTextView extends AppCompatTextView {
 
     public static final int MAX_PROGRESS = 10;
-    private int mBgColor;
-    private int mFgColor;
-    private int mStrokeWidth;
+    private final int mBgColor;
+    private final int mFgColor;
+    private final int mStrokeWidth;
     private RectF mRectF;
     private int mRadius;
     private int mX;

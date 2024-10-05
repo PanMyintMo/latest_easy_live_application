@@ -36,16 +36,16 @@ public class MusicAdapter extends RefreshAdapter<MusicBean> {
     private static final int NORMAL = 0;
     private ImageView mStarView;
     private MusicBean mCollectMusicBean;
-    private Drawable mStarDrawable;//收藏图标
-    private Drawable mUnStarDrawable;//取消收藏图标
-    private Drawable mPlayDrawable;//播放按钮
-    private Drawable mPauseDrawable;//暂停按钮
-    private Animation mAnimation;
+    private final Drawable mStarDrawable;//收藏图标
+    private final Drawable mUnStarDrawable;//取消收藏图标
+    private final Drawable mPlayDrawable;//播放按钮
+    private final Drawable mPauseDrawable;//暂停按钮
+    private final Animation mAnimation;
     private int mCheckedPosition = -1;
     private VideoMusicActionListener mActionListener;
-    private View.OnClickListener mOnStarClickListener;
-    private View.OnClickListener mOnUseClickListener;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnStarClickListener;
+    private final View.OnClickListener mOnUseClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public MusicAdapter(Context context) {
         super(context);
@@ -266,12 +266,12 @@ public class MusicAdapter extends RefreshAdapter<MusicBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mImg = (ImageView) itemView.findViewById(R.id.img);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mAuthor = (TextView) itemView.findViewById(R.id.author);
-            mLength = (TextView) itemView.findViewById(R.id.length);
-            mBtnPlay = (ImageView) itemView.findViewById(R.id.btn_play);
-            mBtnCollect = (ImageView) itemView.findViewById(R.id.btn_collect);
+            mImg = itemView.findViewById(R.id.img);
+            mTitle = itemView.findViewById(R.id.title);
+            mAuthor = itemView.findViewById(R.id.author);
+            mLength = itemView.findViewById(R.id.length);
+            mBtnPlay = itemView.findViewById(R.id.btn_play);
+            mBtnCollect = itemView.findViewById(R.id.btn_collect);
             mBtnUse = itemView.findViewById(R.id.btn_use);
             mBtnCollect.setOnClickListener(mOnStarClickListener);
             mBtnUse.setOnClickListener(mOnUseClickListener);

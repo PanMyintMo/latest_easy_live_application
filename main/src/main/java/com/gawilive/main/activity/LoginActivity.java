@@ -31,6 +31,7 @@ import com.alibaba.fastjson.JSONObject;
 //import com.umeng.analytics.MobclickAgent;
 import com.gawilive.common.CommonAppConfig;
 import com.gawilive.common.Constants;
+import com.gawilive.common.HtmlConfig;
 import com.gawilive.common.activity.AbsActivity;
 import com.gawilive.common.activity.WebViewActivity;
 import com.gawilive.common.bean.UserBean;
@@ -127,8 +128,8 @@ public class LoginActivity extends AbsActivity implements OnItemClickListener<Mo
             }
         });
         mCountryCode = findViewById(R.id.country_code);
-        mEditPhone = (EditText) findViewById(R.id.edit_phone);
-        mEditPwd = (EditText) findViewById(R.id.edit_pwd);
+        mEditPhone = findViewById(R.id.edit_phone);
+        mEditPwd = findViewById(R.id.edit_pwd);
         mBtnLogin = findViewById(R.id.btn_login);
         TextWatcher textWatcher = new TextWatcher() {
             @Override
@@ -164,11 +165,15 @@ public class LoginActivity extends AbsActivity implements OnItemClickListener<Mo
                     String[] loginTypeArray = JSON.parseObject(obj.getString("login_type"), String[].class);
                     if (loginTypeArray != null && loginTypeArray.length > 0) {
                         List<MobBean> list = MobBean.getLoginTypeList(loginTypeArray);
+
+
                         View otherLoginTip = findViewById(R.id.other_login_tip);
                         if (otherLoginTip != null) {
                             otherLoginTip.setVisibility(View.VISIBLE);
                         }
-                        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
+
+                        mRecyclerView = findViewById(R.id.recyclerView);
                         mRecyclerView.setHasFixedSize(true);
                         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
                         LoginTypeAdapter adapter = new LoginTypeAdapter(mContext, list);
@@ -294,7 +299,7 @@ public class LoginActivity extends AbsActivity implements OnItemClickListener<Mo
 
     //登录即代表同意服务和隐私条款
     private void forwardTip() {
-//        WebViewActivity.forward(mContext, HtmlConfig.LOGIN_PRIVCAY);
+       WebViewActivity.forward(mContext, HtmlConfig.LOGIN_PRIVCAY);
     }
 
     //登录成功！

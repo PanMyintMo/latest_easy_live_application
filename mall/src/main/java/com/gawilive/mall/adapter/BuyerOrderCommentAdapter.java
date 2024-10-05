@@ -14,7 +14,7 @@ import com.gawilive.mall.bean.BuyerOrderBean;
  */
 public class BuyerOrderCommentAdapter extends BuyerOrderBaseAdapter {
 
-    private View.OnClickListener mCommentClickListener;
+    private final View.OnClickListener mCommentClickListener;
 
     public BuyerOrderCommentAdapter(Context context) {
         super(context);

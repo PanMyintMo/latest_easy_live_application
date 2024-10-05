@@ -447,7 +447,7 @@
                         <ImageView
                             android:layout_width="25dp"
                             android:layout_height="25dp"
-                            android:src="@mipmap/buyer_09" />
+                            android:src="@mipmap/buyer_i" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -501,7 +501,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="@string/mall_012"
                 android:textColor="@color/textColor"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
 
             <ImageView
                 android:layout_width="13dp"
@@ -514,10 +514,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
-                android:layout_marginRight="18dp"
+                android:layout_marginRight="20dp"
                 android:text="@string/mall_013"
                 android:textColor="@color/gray3"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </FrameLayout>
 
     </LinearLayout>

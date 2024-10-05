@@ -25,10 +25,10 @@ import java.util.List;
 
 public class GoodsRecordAdapter extends RefreshAdapter<GoodsRecordBean> {
 
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
     private boolean mEdit;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private ActionListener mActionListener;
 
     public GoodsRecordAdapter(Context context) {

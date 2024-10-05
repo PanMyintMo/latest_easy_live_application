@@ -27,9 +27,9 @@ import java.util.List;
 
 public class GoodsShareAdapter extends RefreshAdapter<GoodsShareUserBean> {
 
-    private View.OnClickListener mClickListener;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final View.OnClickListener mClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
 
 
     public GoodsShareAdapter(Context context) {
@@ -76,13 +76,13 @@ public class GoodsShareAdapter extends RefreshAdapter<GoodsShareUserBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mImgCheck = (ImageView) itemView.findViewById(R.id.img_check);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSign = (TextView) itemView.findViewById(R.id.sign);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevelAnchor = (ImageView) itemView.findViewById(R.id.level_anchor);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
+            mImgCheck = itemView.findViewById(R.id.img_check);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSign = itemView.findViewById(R.id.sign);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevelAnchor = itemView.findViewById(R.id.level_anchor);
+            mLevel = itemView.findViewById(R.id.level);
             itemView.setOnClickListener(mClickListener);
         }
 

@@ -73,7 +73,7 @@ public class ChatPopMenu {
     private final ChatPopMenu chatPopMenu;
     private OnEmptySpaceClickListener mEmptySpaceClickListener;
 
-    private FrameLayout reactFrameLayout;
+    private final FrameLayout reactFrameLayout;
     private View anchorView;
     private int minY;
     private final int indicatorHeight;
@@ -83,7 +83,7 @@ public class ChatPopMenu {
 
     private boolean isShowFaces = false;
 
-    private C2CChatEventListener chatEventListener;
+    private final C2CChatEventListener chatEventListener;
 
     public ChatPopMenu(Context context) {
         chatPopMenu = this;

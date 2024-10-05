@@ -61,17 +61,17 @@ public class CashAccountViewHolder extends AbsViewHolder implements View.OnClick
         mInflater = LayoutInflater.from(mContext);
         findViewById(R.id.root).setOnClickListener(this);
         findViewById(R.id.btn_confirm).setOnClickListener(this);
-        mBtnChooseType = (TextView) findViewById(R.id.btn_choose_type);
+        mBtnChooseType = findViewById(R.id.btn_choose_type);
         mBtnChooseType.setOnClickListener(this);
         mGroup1 = findViewById(R.id.input_group_1);
         mGroup2 = findViewById(R.id.input_group_2);
         mGroup3 = findViewById(R.id.input_group_3);
-        mEditAliAccount = (EditText) findViewById(R.id.input_ali_account);
-        mEditAliName = (EditText) findViewById(R.id.input_ali_name);
-        mEditWxAccount = (EditText) findViewById(R.id.input_wx_account);
-        mEditBankName = (EditText) findViewById(R.id.input_bank_name);
-        mEditBankAccount = (EditText) findViewById(R.id.input_bank_account);
-        mEditBankUserName = (EditText) findViewById(R.id.input_bank_user_name);
+        mEditAliAccount = findViewById(R.id.input_ali_account);
+        mEditAliName = findViewById(R.id.input_ali_name);
+        mEditWxAccount = findViewById(R.id.input_wx_account);
+        mEditBankName = findViewById(R.id.input_bank_name);
+        mEditBankAccount = findViewById(R.id.input_bank_account);
+        mEditBankUserName = findViewById(R.id.input_bank_user_name);
         mAddAccountCallback = new HttpCallback() {
             @Override
             public void onSuccess(int code, String msg, String[] info) {

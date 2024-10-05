@@ -29,14 +29,14 @@ public class BuyerOrderAllAdapter extends BuyerOrderBaseAdapter {
     private static final int ITEM_COMMENT_APPEND = 4;//已评价 可追评
     private static final int ITEM_REFUND = 5;//退款
 
-    private View.OnClickListener mDeleteClickListener;//删除订单
-    private View.OnClickListener mWuliuClickListener;//物流
-    private View.OnClickListener mAppendClickListener;//追评
-    private View.OnClickListener mCancelClickListener;//取消订单
-    private View.OnClickListener mPayClickListener;//支付
-    private View.OnClickListener mConfirmClickListener;//确认收货
-    private View.OnClickListener mCommentClickListener;//评价
-    private View.OnClickListener mRefundClickListener;//退款
+    private final View.OnClickListener mDeleteClickListener;//删除订单
+    private final View.OnClickListener mWuliuClickListener;//物流
+    private final View.OnClickListener mAppendClickListener;//追评
+    private final View.OnClickListener mCancelClickListener;//取消订单
+    private final View.OnClickListener mPayClickListener;//支付
+    private final View.OnClickListener mConfirmClickListener;//确认收货
+    private final View.OnClickListener mCommentClickListener;//评价
+    private final View.OnClickListener mRefundClickListener;//退款
 
     public BuyerOrderAllAdapter(Context context) {
         super(context);

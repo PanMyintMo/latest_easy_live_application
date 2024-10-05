@@ -25,8 +25,8 @@ import com.gawilive.mall.bean.OrderMsgBean;
 
 public class OrderMessageAdapter extends RefreshAdapter<OrderMsgBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private SpannableString mSpan;
+    private final View.OnClickListener mOnClickListener;
+    private final SpannableString mSpan;
 
     public OrderMessageAdapter(Context context) {
         super(context);

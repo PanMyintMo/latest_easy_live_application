@@ -317,7 +317,7 @@ public class MyCoinActivity extends AbsActivity implements View.OnClickListener 
         MainHttpUtil.getBaseInfo(mCallback);
     }
 
-    private CommonCallback<UserBean> mCallback = new CommonCallback<UserBean>() {
+    private final CommonCallback<UserBean> mCallback = new CommonCallback<UserBean>() {
         @Override
         public void callback(UserBean bean) {
             Map<String, String> map = new HashMap<>();

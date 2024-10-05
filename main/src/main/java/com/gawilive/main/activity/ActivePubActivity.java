@@ -98,7 +98,7 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
     private TextView mGoodsPrice;
     private TextView mGoodsTitle;
     private TextView mGoodsSaleNum;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 
@@ -317,7 +317,7 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
                     @Override
                     public void onAllGranted() {
                         if (mRecordVoiceViewHolder == null) {
-                            mRecordVoiceViewHolder = new ActiveRecordVoiceViewHolder2(mContext, (ViewGroup) findViewById(R.id.root));
+                            mRecordVoiceViewHolder = new ActiveRecordVoiceViewHolder2(mContext, findViewById(R.id.root));
                             mRecordVoiceViewHolder.subscribeActivityLifeCycle();
                         }
                         if (!mRecordVoiceViewHolder.isShowing()) {

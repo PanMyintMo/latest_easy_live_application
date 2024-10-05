@@ -29,13 +29,13 @@ import java.util.List;
 
 public class LiveUserAdapter extends RecyclerView.Adapter<LiveUserAdapter.Vh> {
 
-    private Context mContext;
-    private List<LiveUserGiftBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<LiveUserGiftBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<UserBean> mOnItemClickListener;
-    private Drawable mGuardDrawable0;
-    private Drawable mGuardDrawable1;
+    private final Drawable mGuardDrawable0;
+    private final Drawable mGuardDrawable1;
 
     public LiveUserAdapter(Context context) {
         mContext = context;
@@ -92,10 +92,10 @@ public class LiveUserAdapter extends RecyclerView.Adapter<LiveUserAdapter.Vh> {
 
         public Vh(View itemView) {
             super(itemView);
-            mWrap = (ImageView) itemView.findViewById(R.id.wrap);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
-            mGuardIcon = (ImageView) itemView.findViewById(R.id.guard_icon);
+            mWrap = itemView.findViewById(R.id.wrap);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mIcon = itemView.findViewById(R.id.icon);
+            mGuardIcon = itemView.findViewById(R.id.guard_icon);
             itemView.setOnClickListener(mOnClickListener);
         }
 

@@ -17,10 +17,10 @@ import com.gawilive.live.R;
 
 public class MusicProgressTextView extends AppCompatTextView {
 
-    private String mStartText;
-    private String mEndText;
-    private int mBgColor;
-    private int mLineColor;
+    private final String mStartText;
+    private final String mEndText;
+    private final int mBgColor;
+    private final int mLineColor;
     private int mProgress;
     private RectF mRectF;
     private int mRadius;

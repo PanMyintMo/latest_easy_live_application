@@ -46,7 +46,7 @@ public class UserHomeBgActivity extends AbsActivity implements View.OnClickListe
     private ImageView mImg;
     private String mImgUrl;
 
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

@@ -13,8 +13,8 @@ import com.tencent.qcloud.tuikit.tuichat.TUIChatService;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.CustomLinkMessageBean;
 
 public class CustomLinkMessageHolder extends MessageContentHolder {
-    private TextView textView;
-    private TextView linkView;
+    private final TextView textView;
+    private final TextView linkView;
 
     public CustomLinkMessageHolder(View itemView) {
         super(itemView);

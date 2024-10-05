@@ -21,10 +21,10 @@ import java.io.File;
 
 public class PayContentMulAdapter extends RefreshAdapter<PayContentVideoBean> {
 
-    private View.OnClickListener mUploadClickListener;
-    private View.OnClickListener mDelImgClickListener;
-    private View.OnClickListener mAddItemClickListener;
-    private View.OnClickListener mDelItemClickListener;
+    private final View.OnClickListener mUploadClickListener;
+    private final View.OnClickListener mDelImgClickListener;
+    private final View.OnClickListener mAddItemClickListener;
+    private final View.OnClickListener mDelItemClickListener;
 
     public PayContentMulAdapter(Context context) {
         super(context);

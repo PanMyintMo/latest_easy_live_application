@@ -28,8 +28,8 @@ public class LiveMusicViewHolder extends AbsViewHolder implements View.OnClickLi
     private TextView mBtnEnd;//关闭按钮
     private TextView mTimeTextView;//时间
     private ILivePushViewHolder mILivePushViewHolder;
-    private int mParentWidth;
-    private int mParentHeight;
+    private final int mParentWidth;
+    private final int mParentHeight;
     private float mLastX;
     private float mLastY;
     private boolean mPaused;
@@ -63,10 +63,10 @@ public class LiveMusicViewHolder extends AbsViewHolder implements View.OnClickLi
 
     @Override
     public void init() {
-        mBtnEnd = (TextView) findViewById(R.id.btn_end);
+        mBtnEnd = findViewById(R.id.btn_end);
         mBtnEnd.setOnClickListener(this);
-        mTimeTextView = (TextView) findViewById(R.id.time);
-        mLrcTextView = (LrcTextView) findViewById(R.id.lrc);
+        mTimeTextView = findViewById(R.id.time);
+        mLrcTextView = findViewById(R.id.lrc);
         mContentView.setOnTouchListener(this);
         mLiveMusicPlayer = new LiveMusicPlayer();
         mLiveMusicPlayer.setActionListener(new LiveMusicPlayer.ActionListener() {

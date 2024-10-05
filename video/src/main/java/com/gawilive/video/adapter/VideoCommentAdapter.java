@@ -38,22 +38,22 @@ public class VideoCommentAdapter extends RefreshAdapter<VideoCommentBean> {
 
     private static final int PARENT = 1;
     private static final int CHILD = 2;
-    private Drawable mLikeDrawable;
-    private Drawable mUnLikeDrawable;
-    private int mLikeColor;
-    private int mUnLikeColor;
-    private ScaleAnimation mLikeAnimation;
-    private View.OnClickListener mOnClickListener;
-    private View.OnLongClickListener mOnLongClickListener;
-    private View.OnClickListener mLikeClickListener;
-    private View.OnClickListener mExpandClickListener;
-    private View.OnClickListener mCollapsedClickListener;
-    private View.OnClickListener mAvatarClickListener;
+    private final Drawable mLikeDrawable;
+    private final Drawable mUnLikeDrawable;
+    private final int mLikeColor;
+    private final int mUnLikeColor;
+    private final ScaleAnimation mLikeAnimation;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnLongClickListener mOnLongClickListener;
+    private final View.OnClickListener mLikeClickListener;
+    private final View.OnClickListener mExpandClickListener;
+    private final View.OnClickListener mCollapsedClickListener;
+    private final View.OnClickListener mAvatarClickListener;
     private ActionListener mActionListener;
     private ImageView mCurLikeImageView;
     private int mCurLikeCommentPosition;
     private VideoCommentBean mCurLikeCommentBean;
-    private HttpCallback mLikeCommentCallback;
+    private final HttpCallback mLikeCommentCallback;
     private String mVideoUid;
 
     public VideoCommentAdapter(Context context) {
@@ -285,8 +285,8 @@ public class VideoCommentAdapter extends RefreshAdapter<VideoCommentBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mContent = (TextView) itemView.findViewById(R.id.content);
+            mName = itemView.findViewById(R.id.name);
+            mContent = itemView.findViewById(R.id.content);
             itemView.setOnClickListener(mOnClickListener);
             itemView.setOnLongClickListener(mOnLongClickListener);
             mAvatar = itemView.findViewById(R.id.avatar);
@@ -330,8 +330,8 @@ public class VideoCommentAdapter extends RefreshAdapter<VideoCommentBean> {
 
         public ParentVh(View itemView) {
             super(itemView);
-            mBtnLike = (ImageView) itemView.findViewById(R.id.btn_like);
-            mLikeNum = (TextView) itemView.findViewById(R.id.like_num);
+            mBtnLike = itemView.findViewById(R.id.btn_like);
+            mLikeNum = itemView.findViewById(R.id.like_num);
             mBtnLike.setOnClickListener(mLikeClickListener);
 
         }

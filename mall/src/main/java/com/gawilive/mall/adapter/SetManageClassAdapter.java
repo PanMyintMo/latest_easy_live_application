@@ -18,11 +18,11 @@ import java.util.List;
 
 public class SetManageClassAdapter extends RefreshAdapter<ManageClassBean> {
 
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final View.OnClickListener mOnClickListener;
     private ActionListener mActionListener;
 
     public SetManageClassAdapter(Context context, List<ManageClassBean> list) {

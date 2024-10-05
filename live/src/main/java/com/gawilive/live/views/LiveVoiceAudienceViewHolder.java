@@ -49,7 +49,7 @@ public class LiveVoiceAudienceViewHolder extends AbsLiveViewHolder {
         mMicDown = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_voice_join_0);
         mDrawableMicOpen = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_mic_open);
         mDrawableMicClose = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_mic_close);
-        mBtnFunction = (ImageView) findViewById(R.id.btn_function);
+        mBtnFunction = findViewById(R.id.btn_function);
 //        mBtnFunction.setImageDrawable(mDrawable0);
         mBtnFunction.setOnClickListener(this);
         mBtnJoin = findViewById(R.id.btn_join);

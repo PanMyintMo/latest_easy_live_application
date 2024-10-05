@@ -36,14 +36,14 @@ public class VideoMessageHolder extends MessageContentHolder {
     private static final String TAG = "VideoMessageHolder";
     private static final int DEFAULT_MAX_SIZE = 540;
     private static final int DEFAULT_RADIUS = 10;
-    private ImageView contentImage;
-    private ImageView videoPlayBtn;
-    private TextView videoDurationText;
+    private final ImageView contentImage;
+    private final ImageView videoPlayBtn;
+    private final TextView videoDurationText;
 
-    private FrameLayout progressContainer;
-    private ChatRingProgressBar fileProgressBar;
-    private TextView progressText;
-    private ImageView progressIcon;
+    private final FrameLayout progressContainer;
+    private final ChatRingProgressBar fileProgressBar;
+    private final TextView progressText;
+    private final ImageView progressIcon;
 
     private TUIValueCallback downloadSnapshotCallback;
     private TUIValueCallback downloadVideoCallback;

@@ -27,7 +27,7 @@ public class SelectionMinimalistActivity extends BaseMinimalistLightActivity {
     private SelectAdapter selectListAdapter;
     private EditText input;
     private int mSelectionType;
-    private ArrayList<String> selectList = new ArrayList<>();
+    private final ArrayList<String> selectList = new ArrayList<>();
     private int selectedItem = -1;
     private OnItemClickListener onItemClickListener;
     private boolean needConfirm = true;

@@ -23,9 +23,9 @@ import java.util.List;
 
 public class VideoGoodsAddAdapter extends RefreshAdapter<GoodsBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
     private int mCheckedPosition = -1;
 
     public VideoGoodsAddAdapter(Context context) {

@@ -25,7 +25,7 @@ import java.util.List;
 
 public class LiveBlackAdapter extends RefreshAdapter<LiveShutUpBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public LiveBlackAdapter(Context context) {
         super(context);

@@ -626,12 +626,12 @@ public class SplitEditText extends AppCompatEditText {
          *
          * @param content 输入内容
          */
-        public abstract void onInputFinished(String content);
+        void onInputFinished(String content);
 
         /**
          * 输入的内容
          */
-        public void onInputChanged(String text) ;
+        void onInputChanged(String text) ;
     }
 
 }

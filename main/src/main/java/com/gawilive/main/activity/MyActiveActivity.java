@@ -22,7 +22,7 @@ public class MyActiveActivity extends AbsActivity implements View.OnClickListene
     @Override
     protected void main() {
         findViewById(R.id.btn_add).setOnClickListener(this);
-        ActiveHomeViewHolder vh = new ActiveHomeViewHolder(mContext, (ViewGroup) findViewById(R.id.container), CommonAppConfig.getInstance().getUid());
+        ActiveHomeViewHolder vh = new ActiveHomeViewHolder(mContext, findViewById(R.id.container), CommonAppConfig.getInstance().getUid());
         vh.addToParent();
         vh.subscribeActivityLifeCycle();
         vh.loadData();

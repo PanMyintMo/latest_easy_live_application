@@ -21,9 +21,9 @@ public class PurchaseLotteryTicketsPopupWindow extends BottomPopupView {
     private ShapeTextView mTvConfirm;
 
     // 单价
-    private String unitCoin;
+    private final String unitCoin;
 
-    private String myCoin;
+    private final String myCoin;
 
     private TextView tvNumber;
 
@@ -92,7 +92,7 @@ public class PurchaseLotteryTicketsPopupWindow extends BottomPopupView {
         });
     }
 
-    private OnConfirmClickListener onConfirmClickListener;
+    private final OnConfirmClickListener onConfirmClickListener;
 
     public interface OnConfirmClickListener {
         void onConfirm(String number);

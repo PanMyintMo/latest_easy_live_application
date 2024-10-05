@@ -22,7 +22,7 @@ import java.util.List;
 public class LocationAdapter extends RefreshAdapter<TxLocationPoiBean> {
 
     private int mCheckedPosition;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public LocationAdapter(Context context) {
         super(context);
@@ -96,9 +96,9 @@ public class LocationAdapter extends RefreshAdapter<TxLocationPoiBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mAddress = (TextView) itemView.findViewById(R.id.address);
-            mRadioButton = (ImageView) itemView.findViewById(R.id.radioButton);
+            mTitle = itemView.findViewById(R.id.title);
+            mAddress = itemView.findViewById(R.id.address);
+            mRadioButton = itemView.findViewById(R.id.radioButton);
             mLine = itemView.findViewById(R.id.line);
             itemView.setOnClickListener(mOnClickListener);
         }

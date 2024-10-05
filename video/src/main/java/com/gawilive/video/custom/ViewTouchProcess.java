@@ -9,7 +9,7 @@ import android.view.View;
 
 public class ViewTouchProcess implements View.OnTouchListener{
     private final String TAG = "RangeSliderChildViewTouchProcess";
-    private View mView;
+    private final View mView;
     private float mStartX;
     private OnPositionChangedListener mOnPositionChangedListener;
 

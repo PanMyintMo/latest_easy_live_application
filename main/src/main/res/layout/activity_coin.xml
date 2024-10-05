@@ -85,7 +85,7 @@
                                 android:layout_width="33dp"
                                 android:layout_height="33dp"
                                 android:layout_gravity="center_vertical"
-                                android:src="@mipmap/ic_sys" />
+                                android:src="@mipmap/scan_icon" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
                                 android:layout_width="33dp"
                                 android:layout_height="33dp"
                                 android:layout_gravity="center_vertical"
-                                android:src="@mipmap/ic_fkm" />
+                                android:src="@mipmap/dollar_icon" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -174,7 +174,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@mipmap/ic_my_cz"
+                        android:drawableTop="@mipmap/dollar_icon_ii"
                         android:drawablePadding="@dimen/dp_4"
                         android:gravity="center"
                         android:paddingVertical="11dp"
@@ -200,7 +200,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@mipmap/ic_my_tx"
+                        android:drawableTop="@mipmap/dollar_icon_iii"
                         android:drawablePadding="@dimen/dp_4"
                         android:gravity="center"
                         android:paddingVertical="11dp"
@@ -226,7 +226,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:drawableTop="@mipmap/ic_my_zz"
+                        android:drawableTop="@mipmap/amount_icon"
                         android:drawablePadding="@dimen/dp_4"
                         android:gravity="center"
                         android:paddingVertical="11dp"
@@ -411,7 +411,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginRight="15dp"
                                 android:adjustViewBounds="true"
-                                android:src="@mipmap/icon_charge_first_0" />
+                                android:src="@mipmap/banner_icon" />
 
                             <RelativeLayout
                                 android:layout_width="match_parent"

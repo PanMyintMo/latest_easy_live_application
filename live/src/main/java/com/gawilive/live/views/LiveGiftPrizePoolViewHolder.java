@@ -53,9 +53,9 @@ public class LiveGiftPrizePoolViewHolder extends AbsViewHolder {
         mQueue = new ConcurrentLinkedQueue<>();
         mDp120 = DpUtil.dp2px(120);
         mMeteor = findViewById(R.id.meteor);
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mCoin = (TextView) findViewById(R.id.coin);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mCoin = findViewById(R.id.coin);
         mGuang = findViewById(R.id.guang);
         mWinView = findViewById(R.id.win_view);
         mAnimator = ValueAnimator.ofFloat(-mDp120, mParentView.getWidth());

@@ -57,13 +57,13 @@ public class MyProfitActivity extends AbsActivity implements View.OnClickListene
     @Override
     protected void main() {
         mMoneySymbol = WordUtil.getString(R.string.money_symbol);
-        mAllName = (TextView) findViewById(R.id.all_name);
-        mAll = (TextView) findViewById(R.id.all);
-        mCanName = (TextView) findViewById(R.id.can_name);
-        mCan = (TextView) findViewById(R.id.can);
-        mGetName = (TextView) findViewById(R.id.get_name);
-        mTip = (TextView) findViewById(R.id.tip);
-        mMoney = (TextView) findViewById(R.id.money);
+        mAllName = findViewById(R.id.all_name);
+        mAll = findViewById(R.id.all);
+        mCanName = findViewById(R.id.can_name);
+        mCan = findViewById(R.id.can);
+        mGetName = findViewById(R.id.get_name);
+        mTip = findViewById(R.id.tip);
+        mMoney = findViewById(R.id.money);
         mEdit = findViewById(R.id.edit);
         mEdit.addTextChangedListener(new TextWatcher() {
             @Override

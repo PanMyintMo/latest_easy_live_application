@@ -32,17 +32,17 @@ public class PokerView extends View {
     private BitmapFactory.Options mOptions;
     private int mWidth;
     private int mHeight;
-    private float mScale;
+    private final float mScale;
     private int mR;
     private int mTriangleWidth;
     private int mTriangleHeight;
-    private int mTriangleDirection;//箭头方向
+    private final int mTriangleDirection;//箭头方向
     private Rect[] mRects;
     private Bitmap[] mBitmaps;
     private Rect mSrc;
     private Bitmap mCoverBitmap;
-    private int mCoverSrc;
-    private int mCount;//扑克牌的数量
+    private final int mCoverSrc;
+    private final int mCount;//扑克牌的数量
     private static final int READY = 0;
     private static final int SEND_CARD = 1;
     private static final int SHOW = 2;
@@ -56,8 +56,8 @@ public class PokerView extends View {
     private int mCurPokerAreaWidth;//当前放牌区域的宽度
     private static final int ARROW_LEFT = 0;
     private static final int ARROW_RIGHT = 1;
-    private float mRate;//牌面遮盖的范围相对牌宽度的百分比,默认为0.1f
-    private boolean mHasTriangle;//是否带有三角形
+    private final float mRate;//牌面遮盖的范围相对牌宽度的百分比,默认为0.1f
+    private final boolean mHasTriangle;//是否带有三角形
     private boolean mEnd;
     private Interpolator mInterpolator;
 

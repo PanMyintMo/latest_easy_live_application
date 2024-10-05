@@ -23,14 +23,14 @@ import java.util.List;
 
 public class LiveVoiceControlAdapter extends RefreshAdapter<LiveVoiceControlBean> {
 
-    private View.OnClickListener mControlClickListener;
-    private View.OnClickListener mDownMicClickListener;
+    private final View.OnClickListener mControlClickListener;
+    private final View.OnClickListener mDownMicClickListener;
     private ActionListener mActionListener;
-    private Drawable mDrawable0;
-    private Drawable mDrawable1;
-    private int mColor0;
-    private int mColor1;
-    private Drawable mNoAvatar;
+    private final Drawable mDrawable0;
+    private final Drawable mDrawable1;
+    private final int mColor0;
+    private final int mColor1;
+    private final Drawable mNoAvatar;
 
     public LiveVoiceControlAdapter(Context context, List<LiveVoiceControlBean> list) {
         super(context, list);
@@ -89,10 +89,10 @@ public class LiveVoiceControlAdapter extends RefreshAdapter<LiveVoiceControlBean
         public Vh(@NonNull View itemView) {
             super(itemView);
             mIndex = itemView.findViewById(R.id.index);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
             mBtnControl = itemView.findViewById(R.id.btn_control);
             mBtnDownMic = itemView.findViewById(R.id.btn_down_mic);
             mBtnControl.setOnClickListener(mControlClickListener);

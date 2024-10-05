@@ -41,6 +41,7 @@ import com.tencent.qcloud.tuikit.tuichat.bean.message.TipsMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.VideoMessageBean;
 
 import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -238,12 +239,9 @@ public class ChatMessageParser {
 
     public static boolean isTyping(byte[] data) {
         try {
-            String str = new String(data, "UTF-8");
+            String str = new String(data, StandardCharsets.UTF_8);
             MessageTyping typing = new Gson().fromJson(str, MessageTyping.class);
-            if (typing != null && typing.userAction == MessageTyping.TYPE_TYPING && TextUtils.equals(typing.actionParam, MessageTyping.EDIT_START)) {
-                return true;
-            }
-            return false;
+            return typing != null && typing.userAction == MessageTyping.TYPE_TYPING && TextUtils.equals(typing.actionParam, MessageTyping.EDIT_START);
         } catch (Exception e) {
             TUIChatLog.e(TAG, "parse json error");
         }
@@ -307,11 +305,7 @@ public class ChatMessageParser {
             businessIdObj = customJsonMap.get(TUIConstants.Message.CUSTOM_BUSINESS_ID_KEY);
         }
         if (businessIdObj == null) {
-            if (customJsonMap.keySet().contains(TUIConstants.TUICustomerServicePlugin.CUSTOMER_SERVICE_MESSAGE_KEY)) {
-                return true;
-            } else {
-                return false;
-            }
+            return customJsonMap.containsKey(TUIConstants.TUICustomerServicePlugin.CUSTOMER_SERVICE_MESSAGE_KEY);
         } else {
             return false;
         }

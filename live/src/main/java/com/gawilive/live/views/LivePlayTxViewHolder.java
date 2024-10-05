@@ -74,20 +74,20 @@ public class LivePlayTxViewHolder extends LiveRoomPlayViewHolder implements ITXL
 
     @Override
     public void init() {
-        mRoot = (ViewGroup) findViewById(R.id.root);
+        mRoot = findViewById(R.id.root);
         mRoot.post(new Runnable() {
             @Override
             public void run() {
                 mRootHeight = mRoot.getHeight();
             }
         });
-        mSmallContainer = (ViewGroup) findViewById(R.id.small_container);
-        mLeftContainer = (ViewGroup) findViewById(R.id.left_container);
-        mRightContainer = (ViewGroup) findViewById(R.id.right_container);
-        mPkContainer = (ViewGroup) findViewById(R.id.pk_container);
+        mSmallContainer = findViewById(R.id.small_container);
+        mLeftContainer = findViewById(R.id.left_container);
+        mRightContainer = findViewById(R.id.right_container);
+        mPkContainer = findViewById(R.id.pk_container);
         mLoading = findViewById(R.id.loading);
-        mCover = (ImageView) findViewById(R.id.cover);
-        mVideoView = (TXCloudVideoView) findViewById(R.id.video_view);
+        mCover = findViewById(R.id.cover);
+        mVideoView = findViewById(R.id.video_view);
 
         mPlayer = new TXLivePlayer(mContext);
         mPlayer.setPlayListener(this);

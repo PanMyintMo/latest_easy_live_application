@@ -33,7 +33,7 @@ public abstract class VideoMusicChildViewHolder extends AbsViewHolder {
 
     @Override
     public void init() {
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
     }
 

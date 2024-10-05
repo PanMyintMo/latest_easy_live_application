@@ -23,8 +23,8 @@ import java.lang.ref.SoftReference;
 public class BitmapUtil {
 
     private static BitmapUtil sInstance;
-    private Resources mResources;
-    private BitmapFactory.Options mOptions;
+    private final Resources mResources;
+    private final BitmapFactory.Options mOptions;
 
     private BitmapUtil() {
         mResources = CommonAppContext.getInstance().getResources();

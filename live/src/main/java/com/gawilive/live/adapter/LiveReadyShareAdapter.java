@@ -23,9 +23,9 @@ import java.util.List;
 public class LiveReadyShareAdapter extends RecyclerView.Adapter<LiveReadyShareAdapter.Vh> {
 
 
-    private List<MobBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<MobBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
 
     public LiveReadyShareAdapter(Context context) {
@@ -89,7 +89,7 @@ public class LiveReadyShareAdapter extends RecyclerView.Adapter<LiveReadyShareAd
 
         public Vh(View itemView) {
             super(itemView);
-            mImg = (ImageView) itemView.findViewById(R.id.img);
+            mImg = itemView.findViewById(R.id.img);
             itemView.setOnClickListener(mOnClickListener);
         }
 

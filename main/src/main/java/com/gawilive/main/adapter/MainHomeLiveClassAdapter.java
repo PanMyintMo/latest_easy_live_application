@@ -22,10 +22,10 @@ import java.util.List;
 
 public class MainHomeLiveClassAdapter extends RecyclerView.Adapter<MainHomeLiveClassAdapter.Vh> {
 
-    private Context mContext;
+    private final Context mContext;
     private List<LiveClassBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<LiveClassBean> mOnItemClickListener;
 
     public MainHomeLiveClassAdapter(Context context) {
@@ -77,8 +77,8 @@ public class MainHomeLiveClassAdapter extends RecyclerView.Adapter<MainHomeLiveC
 
         public Vh(View itemView) {
             super(itemView);
-            mImg = (ImageView) itemView.findViewById(R.id.img);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mImg = itemView.findViewById(R.id.img);
+            mName = itemView.findViewById(R.id.name);
             itemView.setOnClickListener(mOnClickListener);
         }
 

@@ -90,7 +90,7 @@ public class SimpleBeautyViewHolder extends AbsViewHolder implements IBeautyView
         seekBarHongRun.setProgress(SimpleDataManager.getInstance().getHongRun());
 
 
-        RecyclerView filterRecyclerView = (RecyclerView) findViewById(R.id.filter_recyclerView);
+        RecyclerView filterRecyclerView = findViewById(R.id.filter_recyclerView);
         filterRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         SimpleFilterAdapter adapter = new SimpleFilterAdapter(mContext);
         adapter.setOnItemClickListener(this);

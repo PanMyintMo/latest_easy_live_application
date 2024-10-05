@@ -50,7 +50,7 @@ public class SystemAudioRecordImpl implements AudioRecorder.IAudioRecorder {
                     stopRecord();
                     ToastUtil.toastLongMessage(TUIChatService.getAppContext().getString(com.tencent.qcloud.tuikit.tuichat.R.string.record_limit_tips));
                 }
-            }, (TUIChatConfigs.getGeneralConfig().getAudioRecordMaxTime() * 1000) - 200);
+            }, (TUIChatConfigs.getGeneralConfig().getAudioRecordMaxTime() * 1000L) - 200);
             if (this.callback != null) {
                 this.callback.onStarted();
             }

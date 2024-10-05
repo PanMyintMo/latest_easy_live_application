@@ -91,7 +91,7 @@ public class MallClassActivity extends AbsActivity implements View.OnClickListen
         mBtnNew.setOnClickListener(this);
         findViewById(R.id.btn_sale).setOnClickListener(this);
         findViewById(R.id.btn_price).setOnClickListener(this);
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_main_mall);
         mRefreshView.setLayoutManager(new GridLayoutManager(mContext, 2, GridLayoutManager.VERTICAL, false));

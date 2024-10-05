@@ -10,7 +10,7 @@ import com.gawilive.common.R;
  */
 
 public class CommonIconUtil {
-    private static SparseIntArray sCashTypeMap;//提现图片
+    private static final SparseIntArray sCashTypeMap;//提现图片
 
     static {
         sCashTypeMap = new SparseIntArray();

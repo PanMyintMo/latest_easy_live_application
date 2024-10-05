@@ -127,16 +127,16 @@ public class NumberProgressBar extends View {
     /**
      * Unreached bar area to draw rect.
      */
-    private RectF mUnreachedRectF = new RectF(0, 0, 0, 0);
+    private final RectF mUnreachedRectF = new RectF(0, 0, 0, 0);
     /**
      * Reached bar area rect.
      */
-    private RectF mReachedRectF = new RectF(0, 0, 0, 0);
+    private final RectF mReachedRectF = new RectF(0, 0, 0, 0);
 
     /**
      * The progress text offset.
      */
-    private float mOffset;
+    private final float mOffset;
 
     /**
      * Determine if need to draw unreached area.

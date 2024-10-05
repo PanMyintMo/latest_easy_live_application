@@ -132,10 +132,10 @@ public class VideoMusicViewHolder extends AbsViewHolder implements View.OnClickL
             }
 
         });
-        mMusicClassRecyclerView = (RecyclerView) findViewById(R.id.music_class_recyclerView);
+        mMusicClassRecyclerView = findViewById(R.id.music_class_recyclerView);
         mMusicClassRecyclerView.setHasFixedSize(true);
         mMusicClassRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
-        mContainer1 = (ViewGroup) findViewById(R.id.container_1);
+        mContainer1 = findViewById(R.id.container_1);
         findViewById(R.id.btn_close).setOnClickListener(this);
         findViewById(R.id.btn_hot).setOnClickListener(this);
         findViewById(R.id.btn_favorite).setOnClickListener(this);
@@ -145,7 +145,7 @@ public class VideoMusicViewHolder extends AbsViewHolder implements View.OnClickL
         mVideoMusicChildViewHolderList = new ArrayList<>();
         mVideoMusicChildViewHolderList.add(mHotViewHolder);
         mHandler = new MyHandler(this);
-        mInput = (EditText) findViewById(R.id.input);
+        mInput = findViewById(R.id.input);
         mInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -226,7 +226,7 @@ public class VideoMusicViewHolder extends AbsViewHolder implements View.OnClickL
             mHandler.removeCallbacksAndMessages(null);
         }
         if (mSearchViewHolder == null) {
-            mSearchViewHolder = new VideoMusicSearchViewHolder(mContext, (ViewGroup) findViewById(R.id.container_2), this);
+            mSearchViewHolder = new VideoMusicSearchViewHolder(mContext, findViewById(R.id.container_2), this);
             mSearchViewHolder.addToParent();
             if (mVideoMusicChildViewHolderList != null) {
                 mVideoMusicChildViewHolderList.add(mSearchViewHolder);

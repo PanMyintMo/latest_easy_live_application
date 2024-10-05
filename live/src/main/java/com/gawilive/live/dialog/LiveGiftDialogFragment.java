@@ -137,7 +137,7 @@ public class LiveGiftDialogFragment extends AbsDialogFragment implements View.On
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         ViewGroup.LayoutParams params = mViewPager.getLayoutParams();
         params.height = ScreenDimenUtil.getInstance().getScreenWdith() / 2 + DpUtil.dp2px(65);
         mViewPager.requestLayout();
@@ -223,7 +223,7 @@ public class LiveGiftDialogFragment extends AbsDialogFragment implements View.On
 
             }
         });
-        MagicIndicator indicator = (MagicIndicator) findViewById(R.id.indicator);
+        MagicIndicator indicator = findViewById(R.id.indicator);
         final String[] titles = PAGE_COUNT == 3 ?
                 new String[]{
                         WordUtil.getString(R.string.live_send_gift),
@@ -275,7 +275,7 @@ public class LiveGiftDialogFragment extends AbsDialogFragment implements View.On
 
         mBtnSendLian = mRootView.findViewById(R.id.btn_send_lian);
         mBtnSendLian.setOnClickListener(this);
-        mLianText = (TextView) mRootView.findViewById(R.id.lian_text);
+        mLianText = mRootView.findViewById(R.id.lian_text);
         mBtnGiftTip = mRootView.findViewById(R.id.btn_luck_gift_tip);
         mBtnGiftTip.setOnClickListener(this);
         mTvGiftTip = mRootView.findViewById(R.id.gift_tip);

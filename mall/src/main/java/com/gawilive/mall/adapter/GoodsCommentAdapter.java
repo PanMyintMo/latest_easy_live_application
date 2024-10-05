@@ -29,7 +29,7 @@ public class GoodsCommentAdapter extends RefreshAdapter<GoodsCommentBean> {
     private static final int TYPE_1_0_0 = 4;//评论有图片，没有追评
     private static final int TYPE_1_1_0 = 5;//评论有图片，有追评，追评没有图片
     private static final int TYPE_1_1_1 = 6;//评论有图片，有追评，追评有图片
-    private boolean mShowAppend;//是否显示追评
+    private final boolean mShowAppend;//是否显示追评
     private NineGridLayout2.ActionListener mNineGridListener;
 
     public GoodsCommentAdapter(Context context, boolean showAppend) {

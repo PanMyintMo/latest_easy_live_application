@@ -25,8 +25,8 @@ import java.util.List;
 
 public class GoodsTitleAdapter extends PagerAdapter {
 
-    private List<Vh> mViewList;
-    private Context mContext;
+    private final List<Vh> mViewList;
+    private final Context mContext;
     private VideoVh mVideoVh;
 
     public GoodsTitleAdapter(Context context, String videoUrl, String videoImgUrl, List<String> thumbs) {
@@ -98,7 +98,7 @@ public class GoodsTitleAdapter extends PagerAdapter {
 
     class ImageVh implements Vh {
         private ImageView mImg;
-        private String mImageUrl;
+        private final String mImageUrl;
 
         public ImageVh(String url) {
             mImageUrl = url;
@@ -128,13 +128,13 @@ public class GoodsTitleAdapter extends PagerAdapter {
 
     class VideoVh implements Vh, View.OnClickListener {
         private ImageView mImg;
-        private TXCloudVideoView mTXCloudVideoView;
-        private String mImageUrl;
-        private String mVideoUrl;
-        private View mView;
+        private final TXCloudVideoView mTXCloudVideoView;
+        private final String mImageUrl;
+        private final String mVideoUrl;
+        private final View mView;
         private TXVodPlayer mPlayer;
-        private View mIconPause;
-        private ImageView mImgMute;
+        private final View mIconPause;
+        private final ImageView mImgMute;
         private boolean mClickPaused;
         private boolean mPaused;
         private boolean mMute;

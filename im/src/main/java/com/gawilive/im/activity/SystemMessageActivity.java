@@ -27,7 +27,7 @@ public class SystemMessageActivity extends AbsActivity implements SystemMessageV
 
     @Override
     protected void main() {
-        mSystemMessageViewHolder = new SystemMessageViewHolder(mContext, (ViewGroup) findViewById(R.id.root));
+        mSystemMessageViewHolder = new SystemMessageViewHolder(mContext, findViewById(R.id.root));
         mSystemMessageViewHolder.setActionListener(this);
         mSystemMessageViewHolder.addToParent();
         mSystemMessageViewHolder.loadData();

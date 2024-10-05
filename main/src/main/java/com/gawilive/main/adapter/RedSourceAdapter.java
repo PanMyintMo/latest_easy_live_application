@@ -30,9 +30,9 @@ public class RedSourceAdapter extends AppAdapter<RedSourceModel> {
 
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
-        private TextView mTvRedScore;
-        private TextView mTvDesc;
-        private TextView mTvTime;
+        private final TextView mTvRedScore;
+        private final TextView mTvDesc;
+        private final TextView mTvTime;
 
         private ViewHolder() {
             super(R.layout.item_red_source);

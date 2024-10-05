@@ -54,7 +54,7 @@ public class LiveRoomTypeDialogFragment extends AbsDialogFragment implements OnI
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.recyclerView);
+        mRecyclerView = mRootView.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         Bundle bundle = getArguments();

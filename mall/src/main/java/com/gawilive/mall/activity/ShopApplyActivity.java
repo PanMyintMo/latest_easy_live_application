@@ -90,7 +90,7 @@ public class ShopApplyActivity extends AbsActivity {
     private String mImgLicenseUrl = "";//营业执照图片
     private String mImgOtherUrl = "";//其他证件图片
     private Dialog mLoading;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

@@ -40,7 +40,7 @@ public class LiveRecordActivity extends AbsActivity {
         if (mUserBean == null) {
             return;
         }
-        LiveRecordViewHolder liveRecordViewHolder = new LiveRecordViewHolder(mContext, (ViewGroup) findViewById(R.id.container),mUserBean.getId());
+        LiveRecordViewHolder liveRecordViewHolder = new LiveRecordViewHolder(mContext, findViewById(R.id.container),mUserBean.getId());
         liveRecordViewHolder.setActionListener(new LiveRecordViewHolder.ActionListener() {
             @Override
             public UserBean getUserBean() {

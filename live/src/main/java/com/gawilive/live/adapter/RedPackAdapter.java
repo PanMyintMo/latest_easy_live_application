@@ -30,12 +30,12 @@ import java.util.List;
 
 public class RedPackAdapter extends RecyclerView.Adapter<RedPackAdapter.Vh> {
 
-    private Context mContext;
-    private List<RedPackBean> mList;
-    private LayoutInflater mInflater;
-    private String mTypeString1;
-    private String mTypeString2;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<RedPackBean> mList;
+    private final LayoutInflater mInflater;
+    private final String mTypeString1;
+    private final String mTypeString2;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<RedPackBean> mOnItemClickListener;
     private MyHandler mMyHandler;
     private RedPackCountDownListener mRedPackCountDownListener;
@@ -110,11 +110,11 @@ public class RedPackAdapter extends RecyclerView.Adapter<RedPackAdapter.Vh> {
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mType = (TextView) itemView.findViewById(R.id.type);
-            mImg = (MyImageView) itemView.findViewById(R.id.img);
-            mTime = (TextView) itemView.findViewById(R.id.time);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mType = itemView.findViewById(R.id.type);
+            mImg = itemView.findViewById(R.id.img);
+            mTime = itemView.findViewById(R.id.time);
             mBtnRob = itemView.findViewById(R.id.btn_rob);
             mBtnRob.setOnClickListener(mOnClickListener);
         }

@@ -166,7 +166,7 @@ public class ChatMessageBuilder {
      */
     public static TUIMessageBean buildForwardMessage(V2TIMMessage v2TIMMessage) {
         V2TIMMessage forwardMessage = V2TIMManager.getMessageManager().createForwardMessage(v2TIMMessage);
-        forwardMessage.setNeedReadReceipt(TUIChatConfigs.getConfigs().getGeneralConfig().isMsgNeedReadReceipt());
+        forwardMessage.setNeedReadReceipt(TUIChatConfigs.getGeneralConfig().isMsgNeedReadReceipt());
 
         return buildMessage(forwardMessage);
     }
@@ -186,7 +186,7 @@ public class ChatMessageBuilder {
             msgList.add(messageInfoList.get(i).getV2TIMMessage());
         }
         V2TIMMessage mergeMsg = V2TIMManager.getMessageManager().createMergerMessage(msgList, title, abstractList, compatibleText);
-        mergeMsg.setNeedReadReceipt(TUIChatConfigs.getConfigs().getGeneralConfig().isMsgNeedReadReceipt());
+        mergeMsg.setNeedReadReceipt(TUIChatConfigs.getGeneralConfig().isMsgNeedReadReceipt());
 
         MergeMessageBean messageBean = new MergeMessageBean();
         messageBean.setCommonAttribute(mergeMsg);

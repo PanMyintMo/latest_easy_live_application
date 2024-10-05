@@ -18,10 +18,10 @@ import java.util.List;
 
 public class ActiveImageAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private List<ActiveImageBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<ActiveImageBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private ActionListener mActionListener;
 
     public ActiveImageAdapter(Context context) {

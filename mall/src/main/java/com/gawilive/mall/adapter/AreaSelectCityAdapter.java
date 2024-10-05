@@ -23,7 +23,7 @@ public class AreaSelectCityAdapter extends AppAdapter<AddressModel> {
 
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
-        private TextView tvCity;
+        private final TextView tvCity;
 
         private ViewHolder() {
             super(R.layout.item_area_select);

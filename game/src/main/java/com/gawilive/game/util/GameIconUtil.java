@@ -12,11 +12,11 @@ import java.util.Map;
  */
 
 public class GameIconUtil {
-    private static SparseIntArray sGameIconMap;//游戏图标
-    private static SparseIntArray sGameNameMap;//游戏名称
-    private static Map<String, Integer> sPokerMap;//扑克牌
-    private static Map<String, Integer> sJinHuaResult;//炸金花开牌结果
-    private static SparseIntArray sZpResult;//转盘结果
+    private static final SparseIntArray sGameIconMap;//游戏图标
+    private static final SparseIntArray sGameNameMap;//游戏名称
+    private static final Map<String, Integer> sPokerMap;//扑克牌
+    private static final Map<String, Integer> sJinHuaResult;//炸金花开牌结果
+    private static final SparseIntArray sZpResult;//转盘结果
 
     static {
         sGameIconMap = new SparseIntArray();

@@ -39,7 +39,7 @@ public class LiveLinkMicPlayTxViewHolder extends AbsLiveLinkMicPlayViewHolder im
     @Override
     public void init() {
         super.init();
-        mVideoView = (TXCloudVideoView) findViewById(R.id.video_view);
+        mVideoView = findViewById(R.id.video_view);
         mPlayer = new TXLivePlayer(mContext);
         mPlayer.setPlayListener(this);
         mPlayer.setPlayerView(mVideoView);

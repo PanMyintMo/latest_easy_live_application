@@ -16,9 +16,9 @@ import com.gawilive.common.R;
 
 public class MyRelativeLayout2 extends RelativeLayout {
 
-    private int mScreenWidth;
-    private float mRatio;
-    private float mScaleWidth;
+    private final int mScreenWidth;
+    private final float mRatio;
+    private final float mScaleWidth;
 
     public MyRelativeLayout2(@NonNull Context context) {
         this(context, null);

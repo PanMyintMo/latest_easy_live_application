@@ -20,9 +20,9 @@ public class ShopHomeMyAdapter extends RefreshAdapter<GoodsSimpleBean> {
 
     private static final int LEFT = 1;
     private static final int RIGHT = 2;
-    private View.OnClickListener mOnClickListener;
-    private String mSaleString;
-    private String mMoneySymbol;
+    private final View.OnClickListener mOnClickListener;
+    private final String mSaleString;
+    private final String mMoneySymbol;
 
 
     public ShopHomeMyAdapter(Context context) {

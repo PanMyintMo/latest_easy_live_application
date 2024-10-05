@@ -18,7 +18,7 @@ import com.gawilive.live.bean.LiveBean;
  */
 public class LiveVoiceListAdapter extends RefreshAdapter<LiveBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public LiveVoiceListAdapter(Context context) {
         super(context);

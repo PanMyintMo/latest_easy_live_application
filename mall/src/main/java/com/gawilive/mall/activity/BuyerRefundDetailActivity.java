@@ -307,7 +307,6 @@ public class BuyerRefundDetailActivity extends AbsActivity implements View.OnCli
      */
     private void forwardChat() {
         if (TextUtils.isEmpty(mOrderId) || mOrderInfo == null) {
-            return;
         }
 //        ImHttpUtil.getImUserInfo(mOrderInfo.getString("shop_uid"), new HttpCallback() {
 //            @Override

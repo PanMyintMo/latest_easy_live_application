@@ -195,7 +195,7 @@ public class LiveAudienceActivity extends LiveActivity implements LiveFunctionCl
         }
         super.main();
         if (isVoiceChatRoom()) {
-            mLiveVoicePlayTxViewHolder = new LiveVoicePlayTxViewHolder(mContext, (ViewGroup) findViewById(R.id.play_container));
+            mLiveVoicePlayTxViewHolder = new LiveVoicePlayTxViewHolder(mContext, findViewById(R.id.play_container));
             mLiveVoiceLinkMicViewHolder = new LiveVoiceLinkMicViewHolder(mContext, mLiveVoicePlayTxViewHolder.getContainer());
             mLiveVoiceLinkMicViewHolder.addToParent();
             mLiveVoiceLinkMicViewHolder.subscribeActivityLifeCycle();
@@ -203,16 +203,16 @@ public class LiveAudienceActivity extends LiveActivity implements LiveFunctionCl
         } else {
             if (mLiveSDK == Constants.LIVE_SDK_TX || isUseScroll()) {
                 //腾讯视频播放器
-                mLivePlayViewHolder = new LivePlayTxViewHolder(mContext, (ViewGroup) findViewById(R.id.play_container));
+                mLivePlayViewHolder = new LivePlayTxViewHolder(mContext, findViewById(R.id.play_container));
             } else {
                 //金山云播放器
-                mLivePlayViewHolder = new LivePlayKsyViewHolder(mContext, (ViewGroup) findViewById(R.id.play_container));
+                mLivePlayViewHolder = new LivePlayKsyViewHolder(mContext, findViewById(R.id.play_container));
             }
         }
 
         mLivePlayViewHolder.addToParent();
         mLivePlayViewHolder.subscribeActivityLifeCycle();
-        mViewPager = (MyViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (isVoiceChatRoom()) {
             mFirstPage = new View(mContext);
             mFirstPage.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -228,7 +228,7 @@ public class LiveAudienceActivity extends LiveActivity implements LiveFunctionCl
         mSecondPage = (ViewGroup) LayoutInflater.from(mContext).inflate(R.layout.view_audience_page, mViewPager, false);
         mContainerWrap = mSecondPage.findViewById(R.id.container_wrap);
         mContainer = mSecondPage.findViewById(R.id.container);
-        mLiveRoomViewHolder = new LiveRoomViewHolder(mContext, mContainer, (GifImageView) mSecondPage.findViewById(R.id.gift_gif), (SVGAImageView) mSecondPage.findViewById(R.id.gift_svga), mContainerWrap);
+        mLiveRoomViewHolder = new LiveRoomViewHolder(mContext, mContainer, mSecondPage.findViewById(R.id.gift_gif), mSecondPage.findViewById(R.id.gift_svga), mContainerWrap);
         mLiveRoomViewHolder.addToParent();
         mLiveRoomViewHolder.subscribeActivityLifeCycle();
         mBtnLandscape = findViewById(R.id.btn_landscape);

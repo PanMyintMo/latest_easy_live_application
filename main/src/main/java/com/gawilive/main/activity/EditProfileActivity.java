@@ -62,7 +62,7 @@ public class EditProfileActivity extends AbsActivity {
     private String mProvinceVal;
     private String mCityVal;
     private String mZoneVal;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 
@@ -119,12 +119,12 @@ public class EditProfileActivity extends AbsActivity {
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.edit_profile));
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mSign = (TextView) findViewById(R.id.sign);
-        mBirthday = (TextView) findViewById(R.id.birthday);
-        mSex = (TextView) findViewById(R.id.sex);
-        mCity = (TextView) findViewById(R.id.city);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mSign = findViewById(R.id.sign);
+        mBirthday = findViewById(R.id.birthday);
+        mSex = findViewById(R.id.sex);
+        mCity = findViewById(R.id.city);
         mUserBean = CommonAppConfig.getInstance().getUserBean();
         if (mUserBean != null) {
             showData(mUserBean);

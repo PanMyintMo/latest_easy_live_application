@@ -456,6 +456,7 @@
             android:id="@+id/btn_kefu"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1">
 
 
@@ -471,8 +472,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginBottom="8dp"
+                android:layout_gravity="center_vertical|bottom|center"
+                android:gravity="center"
                 android:text="@string/mall_137"
                 android:textColor="@color/gray1"
                 android:textSize="12sp" />

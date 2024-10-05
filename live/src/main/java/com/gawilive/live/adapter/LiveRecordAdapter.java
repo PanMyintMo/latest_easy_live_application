@@ -18,7 +18,7 @@ import com.gawilive.live.bean.LiveRecordBean;
 
 public class LiveRecordAdapter extends RefreshAdapter<LiveRecordBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public LiveRecordAdapter(Context context) {
         super(context);
@@ -58,9 +58,9 @@ public class LiveRecordAdapter extends RefreshAdapter<LiveRecordBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mTime = (TextView) itemView.findViewById(R.id.time);
-            mNum = (TextView) itemView.findViewById(R.id.num);
+            mTitle = itemView.findViewById(R.id.title);
+            mTime = itemView.findViewById(R.id.time);
+            mNum = itemView.findViewById(R.id.num);
             itemView.setOnClickListener(mOnClickListener);
         }
 

@@ -15,7 +15,7 @@ import com.gawilive.common.R;
 
 public class MyLinearLayout6 extends LinearLayout {
 
-    private float mRatio;
+    private final float mRatio;
 
     public MyLinearLayout6(Context context) {
         this(context, null);

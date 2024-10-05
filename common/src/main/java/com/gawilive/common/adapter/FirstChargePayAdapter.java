@@ -14,7 +14,7 @@ import com.gawilive.common.glide.ImgLoader;
 
 public class FirstChargePayAdapter extends RefreshAdapter<CoinPayBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public FirstChargePayAdapter(Context context) {
         super(context);

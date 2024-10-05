@@ -38,7 +38,7 @@ public class EditSignActivity extends AbsActivity implements View.OnClickListene
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.edit_profile_update_sign));
-        mEditText = (EditText) findViewById(R.id.edit);
+        mEditText = findViewById(R.id.edit);
         mEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

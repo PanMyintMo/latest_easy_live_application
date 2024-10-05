@@ -48,7 +48,7 @@ public class LiveTitleAnimViewHolder extends AbsViewHolder {
     @Override
     public void init() {
         mGroup = findViewById(R.id.group);
-        mTip = (TextView) findViewById(R.id.tip);
+        mTip = findViewById(R.id.tip);
         mDp500 = DpUtil.dp2px(500);
         mShowAnimator = ObjectAnimator.ofFloat(mGroup, "translationX", mDp500, 0);
         mShowAnimator.setDuration(1000);

@@ -29,12 +29,12 @@ import java.util.List;
 
 public class SearchAdapter extends RefreshAdapter<SearchUserBean> {
 
-    private View.OnClickListener mFollowClickListener;
-    private View.OnClickListener mClickListener;
-    private String mFollow;
-    private String mFollowing;
-    private int mFrom;
-    private String mUid;
+    private final View.OnClickListener mFollowClickListener;
+    private final View.OnClickListener mClickListener;
+    private final String mFollow;
+    private final String mFollowing;
+    private final int mFrom;
+    private final String mUid;
 
     public SearchAdapter(Context context, int from) {
         super(context);
@@ -118,13 +118,13 @@ public class SearchAdapter extends RefreshAdapter<SearchUserBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSign = (TextView) itemView.findViewById(R.id.sign);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevelAnchor = (ImageView) itemView.findViewById(R.id.level_anchor);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
-            mBtnFollow = (MyRadioButton) itemView.findViewById(R.id.btn_follow);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSign = itemView.findViewById(R.id.sign);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevelAnchor = itemView.findViewById(R.id.level_anchor);
+            mLevel = itemView.findViewById(R.id.level);
+            mBtnFollow = itemView.findViewById(R.id.btn_follow);
             itemView.setOnClickListener(mClickListener);
             mBtnFollow.setOnClickListener(mFollowClickListener);
         }

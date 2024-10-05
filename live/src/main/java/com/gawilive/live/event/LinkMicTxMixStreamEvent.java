@@ -7,8 +7,8 @@ package com.gawilive.live.event;
 
 public class LinkMicTxMixStreamEvent {
 
-    private int mType;
-    private String mToStream;
+    private final int mType;
+    private final String mToStream;
 
     public LinkMicTxMixStreamEvent(int type, String toStream) {
         mType = type;

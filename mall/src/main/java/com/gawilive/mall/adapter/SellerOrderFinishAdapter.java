@@ -16,8 +16,8 @@ import com.gawilive.mall.bean.SellerOrderBean;
  */
 public class SellerOrderFinishAdapter extends SellerOrderBaseAdapter {
 
-    private View.OnClickListener mDeleteClickListener;
-    private String mGoodsCountString;
+    private final View.OnClickListener mDeleteClickListener;
+    private final String mGoodsCountString;
 
     public SellerOrderFinishAdapter(Context context) {
         super(context);

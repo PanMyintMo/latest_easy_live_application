@@ -59,8 +59,8 @@ public class FamilyActivity extends AbsActivity {
                 mBtnCreate.setVisibility(View.VISIBLE);
             }
         }
-        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        LinearLayout rootView = findViewById(R.id.rootView);
+        mProgressBar = findViewById(R.id.progressbar);
         mWebView = new WebView(mContext);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         params.topMargin = DpUtil.dp2px(1);

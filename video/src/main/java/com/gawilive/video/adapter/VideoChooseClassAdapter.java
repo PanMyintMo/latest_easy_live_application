@@ -20,8 +20,8 @@ import java.util.List;
 
 public class VideoChooseClassAdapter extends RefreshAdapter<VideoClassBean> {
 
-    private Drawable mCheckedDrawable;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
 
     public VideoChooseClassAdapter(Context context, int checkedId) {
         super(context);

@@ -21,12 +21,12 @@ import java.util.List;
 
 public class MeiYanTitleAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<MeiYanTypeBean> mList;
-    private int mColor0;
-    private int mColor1;
+    private final LayoutInflater mInflater;
+    private final List<MeiYanTypeBean> mList;
+    private final int mColor0;
+    private final int mColor1;
     private int mCheckedPosition;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<MeiYanTypeBean> mOnItemClickListener;
 
     public MeiYanTitleAdapter(Context context, List<MeiYanTypeBean> list) {

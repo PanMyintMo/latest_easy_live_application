@@ -20,10 +20,10 @@ public class TextSeekBar extends FrameLayout implements SeekBar.OnSeekBarChangeL
     private SeekBar mSeekBar;
     private TextView mTextView;
     private TextView mProgressVal;
-    private Context mContext;
-    private String mText;
+    private final Context mContext;
+    private final String mText;
     private int mProgress;
-    private int mProgressMax;
+    private final int mProgressMax;
     private OnSeekChangeListener mOnSeekChangeListener;
 
     public TextSeekBar(Context context) {
@@ -48,9 +48,9 @@ public class TextSeekBar extends FrameLayout implements SeekBar.OnSeekBarChangeL
     protected void onFinishInflate() {
         super.onFinishInflate();
         View v = LayoutInflater.from(mContext).inflate(R.layout.view_seek_group, this, false);
-        mSeekBar = (SeekBar) v.findViewById(R.id.seekBar);
-        mTextView = (TextView) v.findViewById(R.id.text);
-        mProgressVal = (TextView) v.findViewById(R.id.progressVal);
+        mSeekBar = v.findViewById(R.id.seekBar);
+        mTextView = v.findViewById(R.id.text);
+        mProgressVal = v.findViewById(R.id.progressVal);
         mSeekBar.setProgress(mProgress);
         mSeekBar.setMax(mProgressMax);
         mSeekBar.setOnSeekBarChangeListener(this);

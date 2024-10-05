@@ -72,7 +72,7 @@ public class TieZhiBean {
     }
 
     public void checkDownloaded() {
-        mDownLoaded = TextUtils.isEmpty(mName) ? true : MhDataManager.isTieZhiDownloaded(mName);
+        mDownLoaded = TextUtils.isEmpty(mName) || MhDataManager.isTieZhiDownloaded(mName);
     }
 
     public String getKey() {

@@ -14,11 +14,11 @@ import com.tencent.qcloud.tuikit.tuichat.bean.message.MergeMessageBean;
 import java.util.List;
 
 public class MergeMessageHolder extends MessageContentHolder {
-    private LinearLayout mForwardMsgLayout;
-    private TextView msgForwardTitle;
-    private LinearLayout firstLine;
-    private LinearLayout secondLine;
-    private LinearLayout thirdLine;
+    private final LinearLayout mForwardMsgLayout;
+    private final TextView msgForwardTitle;
+    private final LinearLayout firstLine;
+    private final LinearLayout secondLine;
+    private final LinearLayout thirdLine;
 
     public MergeMessageHolder(View itemView) {
         super(itemView);

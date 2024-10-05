@@ -8,6 +8,7 @@ import com.tencent.imsdk.v2.V2TIMConversation;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
 public class OfflinePushExtBusinessInfo implements Serializable {
    // The following are example fields that can be used based on the explanation; they are already used in TUIKitDemo.
@@ -190,11 +191,7 @@ public class OfflinePushExtBusinessInfo implements Serializable {
    String getCustomDataString() {
       String customString = "";
       if (customData != null && customData.length > 0) {
-         try {
-            customString = new String(customData, "UTF-8");
-         } catch (UnsupportedEncodingException e) {
-            Log.e("entity", "getCustomData e = " + e);
-         }
+          customString = new String(customData, StandardCharsets.UTF_8);
       }
       return customString;
    }

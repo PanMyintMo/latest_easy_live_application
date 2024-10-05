@@ -51,7 +51,7 @@ public class LiveRedPackSendDialogFragment extends AbsDialogFragment implements 
     private String mSendRedPackString;
     private String mCoinName;
     private long mCoinPsq = 100;//拼手气钻石数量
-    private long mCountPsq = 10;//拼手气红包数量
+    private final long mCountPsq = 10;//拼手气红包数量
     private long mCoinPj = 1;//平均钻石数量
     private long mCountPj = 100;//平均红包数量
 

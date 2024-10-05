@@ -132,7 +132,7 @@ public class ServiceInitializer extends ContentProvider {
                 continue;
             }
             String[] dependencies = annotationDependency.value();
-            if (dependencies == null || dependencies.length == 0) {
+            if (dependencies == null) {
                 continue;
             }
             for (String dependencyID : dependencies) {

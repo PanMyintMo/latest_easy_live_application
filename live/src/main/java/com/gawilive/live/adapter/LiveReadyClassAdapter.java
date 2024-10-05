@@ -23,10 +23,10 @@ import java.util.List;
 
 public class LiveReadyClassAdapter extends RecyclerView.Adapter<LiveReadyClassAdapter.Vh> {
 
-    private Context mContext;
-    private List<LiveClassBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<LiveClassBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<LiveClassBean> mOnItemClickListener;
 
     public LiveReadyClassAdapter(Context context, List<LiveClassBean> list) {
@@ -74,10 +74,10 @@ public class LiveReadyClassAdapter extends RecyclerView.Adapter<LiveReadyClassAd
 
         public Vh(View itemView) {
             super(itemView);
-            mThumb = (ImageView) itemView.findViewById(R.id.thumb);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mDes = (TextView) itemView.findViewById(R.id.des);
-            mRadioButton = (MyRadioButton) itemView.findViewById(R.id.radioButton);
+            mThumb = itemView.findViewById(R.id.thumb);
+            mName = itemView.findViewById(R.id.name);
+            mDes = itemView.findViewById(R.id.des);
+            mRadioButton = itemView.findViewById(R.id.radioButton);
             itemView.setOnClickListener(mOnClickListener);
         }
 

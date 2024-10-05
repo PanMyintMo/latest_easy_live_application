@@ -16,10 +16,10 @@ import com.gawilive.mall.bean.SellerOrderBean;
 
 public abstract class SellerOrderBaseAdapter extends RefreshAdapter<SellerOrderBean> {
 
-    private String mOrderNoString;
-    private String mBuyerNameString;
+    private final String mOrderNoString;
+    private final String mBuyerNameString;
     protected String mMoneySymbol;
-    private View.OnClickListener mItemClickListener;
+    private final View.OnClickListener mItemClickListener;
     protected ActionListener mActionListener;
 
     public SellerOrderBaseAdapter(Context context) {

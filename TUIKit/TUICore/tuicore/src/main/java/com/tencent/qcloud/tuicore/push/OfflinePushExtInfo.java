@@ -38,7 +38,7 @@ public class OfflinePushExtInfo implements Serializable {
     public static final int REDIRECT_ACTION_CALL = 2;
 
     private OfflinePushExtBusinessInfo entity = new OfflinePushExtBusinessInfo();
-    private OfflinePushExtConfigInfo timPushFeatures = new OfflinePushExtConfigInfo();
+    private final OfflinePushExtConfigInfo timPushFeatures = new OfflinePushExtConfigInfo();
 
     /**
      * ## Universal feature function entry

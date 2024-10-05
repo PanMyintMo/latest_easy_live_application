@@ -67,11 +67,11 @@ public class LiveLinkMicPkViewHolder extends AbsViewHolder {
         mHalfScreenWidth = ScreenDimenUtil.getInstance().getScreenWdith() / 2;
         mLeftString = WordUtil.getString(R.string.live_link_mic_pk_1);
         mRightString = WordUtil.getString(R.string.live_link_mic_pk_2);
-        mFrameImageView = (FrameImageView) findViewById(R.id.frame_img);
+        mFrameImageView = findViewById(R.id.frame_img);
         mFrameImageView.setImageList(LiveIconUtil.getLinkMicPkAnim());
-        mPkProgressBar = (PkProgressBar) findViewById(R.id.progressbar);
-        mLeft = (TextView) findViewById(R.id.left);
-        mRight = (TextView) findViewById(R.id.right);
+        mPkProgressBar = findViewById(R.id.progressbar);
+        mLeft = findViewById(R.id.left);
+        mRight = findViewById(R.id.right);
         mLeft.setText(mLeftString + "  0");
         mRight.setText("0  " + mRightString);
         mLeft.setTranslationX(-mHalfScreenWidth);
@@ -113,11 +113,11 @@ public class LiveLinkMicPkViewHolder extends AbsViewHolder {
         });
         mAnimator2.setDuration(800);
         mAnimator2.setInterpolator(new LinearInterpolator());
-        mTime = (TextView) findViewById(R.id.time);
-        mResultImageView = (ImageView) findViewById(R.id.result);
+        mTime = findViewById(R.id.time);
+        mResultImageView = findViewById(R.id.result);
         mOffsetX = DpUtil.dp2px(75) / 2;
         mOffsetY = DpUtil.dp2px(50) / 2;
-        mPkWaitProgress = (ProgressTextView) findViewById(R.id.pk_wait_progress);
+        mPkWaitProgress = findViewById(R.id.pk_wait_progress);
     }
 
     public void startAnim() {

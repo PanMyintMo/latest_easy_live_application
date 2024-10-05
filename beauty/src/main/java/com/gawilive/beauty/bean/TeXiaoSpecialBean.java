@@ -4,9 +4,9 @@ import com.meihu.beautylibrary.bean.MHCommonBean;
 
 public class TeXiaoSpecialBean extends MHCommonBean {
 
-    private int mId;
-    private int mName;
-    private int mThumb;
+    private final int mId;
+    private final int mName;
+    private final int mThumb;
     private boolean mChecked;
 
     public TeXiaoSpecialBean(int id, int name, int thumb,String key) {

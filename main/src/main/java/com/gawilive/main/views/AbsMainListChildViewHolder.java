@@ -36,7 +36,7 @@ public abstract class AbsMainListChildViewHolder extends AbsMainViewHolder imple
 
     @Override
     public void init() {
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         findViewById(R.id.btn_day).setOnClickListener(this);
         findViewById(R.id.btn_week).setOnClickListener(this);

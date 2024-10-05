@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ActiveRecomTopicAdapter extends RefreshAdapter<ActiveTopicBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ActiveRecomTopicAdapter(Context context, List<ActiveTopicBean> list) {
         super(context, list);

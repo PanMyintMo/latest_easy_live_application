@@ -29,10 +29,10 @@ public class AwsUploadImpl implements UploadStrategy {
     private boolean mNeedCompress;
     private UploadCallback mUploadCallback;
     private Luban.Builder mLubanBuilder;
-    private TransferUtility mTransferUtility;
-    private String mBucketName;
-    private TransferListener mTransferListener;
-    private String mPrefix;
+    private final TransferUtility mTransferUtility;
+    private final String mBucketName;
+    private final TransferListener mTransferListener;
+    private final String mPrefix;
 
     public AwsUploadImpl(String region, String poolId, String bucketName, String prefix) {
         mBucketName = bucketName;

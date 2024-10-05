@@ -61,7 +61,7 @@ public class BonusViewHolder extends AbsViewHolder implements View.OnClickListen
     public void init() {
         mBg = findViewById(R.id.bg);
         mDialog = findViewById(R.id.dialog);
-        mTotalDay = (TextView) findViewById(R.id.day_total);
+        mTotalDay = findViewById(R.id.day_total);
         mDays = new TextView[7];
         mDays[0] = findViewById(R.id.day_1);
         mDays[1] = findViewById(R.id.day_2);
@@ -82,7 +82,7 @@ public class BonusViewHolder extends AbsViewHolder implements View.OnClickListen
         mImg1 = findViewById(R.id.img_1);
         mImg2 = findViewById(R.id.img_2);
         mImgBg = findViewById(R.id.img_bg);
-        mCoin = (TextView) findViewById(R.id.coin);
+        mCoin = findViewById(R.id.coin);
         findViewById(R.id.btn_close).setOnClickListener(this);
         mBtnSign = findViewById(R.id.btn_sign);
         mBtnSign.setOnClickListener(this);

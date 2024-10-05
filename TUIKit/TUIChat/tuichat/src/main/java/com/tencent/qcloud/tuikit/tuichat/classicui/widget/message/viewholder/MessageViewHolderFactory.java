@@ -48,7 +48,6 @@ public class MessageViewHolderFactory {
 
     private static RecyclerView.ViewHolder getViewHolder(View view, int viewType) {
         Class<? extends RecyclerView.ViewHolder> messageHolderClazz = ClassicUIService.getInstance().getMessageViewHolderClass(viewType);
-        ;
         if (messageHolderClazz != null) {
             Constructor<? extends RecyclerView.ViewHolder> constructor;
             try {

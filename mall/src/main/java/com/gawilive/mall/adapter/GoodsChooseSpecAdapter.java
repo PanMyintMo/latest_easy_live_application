@@ -18,9 +18,9 @@ import java.util.List;
 public class GoodsChooseSpecAdapter extends RefreshAdapter<GoodsChooseSpecBean> {
 
 
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private View.OnClickListener mOnClickListener;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
 
     public GoodsChooseSpecAdapter(Context context, List<GoodsChooseSpecBean> list) {

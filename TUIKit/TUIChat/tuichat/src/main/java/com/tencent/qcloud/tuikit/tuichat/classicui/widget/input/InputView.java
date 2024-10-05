@@ -153,7 +153,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
     private String mInputContent;
     private OnInputViewListener mOnInputViewListener;
 
-    private Map<String, String> atUserInfoMap = new HashMap<>();
+    private final Map<String, String> atUserInfoMap = new HashMap<>();
     private String displayInputString;
 
     private ChatPresenter presenter;

@@ -21,8 +21,8 @@ public class VideoMessageBean extends TUIMessageBean {
     @Override
     public void onProcessMessage(V2TIMMessage v2TIMMessage) {
         V2TIMVideoElem videoEle = v2TIMMessage.getVideoElem();
-        imgWidth = (int) videoEle.getSnapshotWidth();
-        imgHeight = (int) videoEle.getSnapshotHeight();
+        imgWidth = videoEle.getSnapshotWidth();
+        imgHeight = videoEle.getSnapshotHeight();
         videoElem = v2TIMMessage.getVideoElem();
         setExtra(TUIChatService.getAppContext().getString(R.string.video_extra));
     }

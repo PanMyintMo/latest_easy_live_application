@@ -23,15 +23,15 @@ import java.util.List;
 
 public class ChooseImageAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private LayoutInflater mInflater;
-    private List<ChooseImageBean> mList;
-    private View.OnClickListener mOnClickListener;
-    private Drawable mCheckDrawable;
-    private Drawable mUnCheckDrawable;
+    private final Context mContext;
+    private final LayoutInflater mInflater;
+    private final List<ChooseImageBean> mList;
+    private final View.OnClickListener mOnClickListener;
+    private final Drawable mCheckDrawable;
+    private final Drawable mUnCheckDrawable;
     private ActionListener mActionListener;
-    private List<ChooseImageBean> mCheckedImageList;//选中的图片列表
-    private int mMaxCount;
+    private final List<ChooseImageBean> mCheckedImageList;//选中的图片列表
+    private final int mMaxCount;
 
     public ChooseImageAdapter(Context context, List<ChooseImageBean> list, int maxCount) {
         mMaxCount = maxCount;

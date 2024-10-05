@@ -31,10 +31,10 @@ import java.util.List;
 
 public class VideoMusicClassDialog extends PopupWindow implements View.OnClickListener {
 
-    private Context mContext;
-    private View mParent;
-    private String mTitle;
-    private String mClassId;
+    private final Context mContext;
+    private final View mParent;
+    private final String mTitle;
+    private final String mClassId;
     private CommonRefreshView mRefreshView;
     private MusicAdapter mAdapter;
     private VideoMusicActionListener mActionListener;

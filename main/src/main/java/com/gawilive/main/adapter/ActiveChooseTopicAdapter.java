@@ -15,7 +15,7 @@ import com.gawilive.main.bean.ActiveTopicBean;
 
 public class ActiveChooseTopicAdapter extends RefreshAdapter<ActiveTopicBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ActiveChooseTopicAdapter(Context context) {
         super(context);

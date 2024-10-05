@@ -25,14 +25,14 @@ import java.util.List;
 
 public class LiveTimeChargeAdapter extends RecyclerView.Adapter<LiveTimeChargeAdapter.Vh> {
 
-    private List<LiveTimeChargeBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<LiveTimeChargeBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
     private String mCoinName;
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private String mStringMinute;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final String mStringMinute;
 
     public LiveTimeChargeAdapter(Context context, int checkedCoin) {
         mCheckedColor = ContextCompat.getColor(context, R.color.global);

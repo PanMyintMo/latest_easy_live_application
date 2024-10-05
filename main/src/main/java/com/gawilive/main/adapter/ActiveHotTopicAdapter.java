@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ActiveHotTopicAdapter extends RefreshAdapter<ActiveTopicBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ActiveHotTopicAdapter(Context context, List<ActiveTopicBean> list) {
         super(context, list);

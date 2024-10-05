@@ -27,12 +27,12 @@ import java.util.List;
 public class MhTeXiaoActionAdapter extends RecyclerView.Adapter {
 
     private final  String  TAG = MhTeXiaoActionAdapter.class.getName();
-    private LayoutInflater mInflater;
-    private List<TeXiaoActionBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final List<TeXiaoActionBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
-    private int mColor0;
-    private int mColor1;
+    private final int mColor0;
+    private final int mColor1;
     private OnItemClickListener<TeXiaoActionBean> mOnItemClickListener;
     private OnTieZhiActionClickListener mOnTieZhiActionClickListener;
 

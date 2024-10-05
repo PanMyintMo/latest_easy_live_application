@@ -20,15 +20,15 @@ import com.gawilive.live.R;
 
 public class GiftMarkView extends View {
 
-    private Context mContext;
+    private final Context mContext;
     private int mWidth;
     private int mIconRes1;
     private int mIconRes2;
-    private Paint mPaint;
-    private float mScale;
-    private int mDp24;
-    private int mDp12;
-    private int mDp10;
+    private final Paint mPaint;
+    private final float mScale;
+    private final int mDp24;
+    private final int mDp12;
+    private final int mDp10;
 
 
     public GiftMarkView(Context context) {

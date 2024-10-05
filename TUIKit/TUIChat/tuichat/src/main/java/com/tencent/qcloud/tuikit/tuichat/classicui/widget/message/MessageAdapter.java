@@ -39,7 +39,7 @@ public class MessageAdapter extends RecyclerView.Adapter implements IMessageAdap
     private List<TUIMessageBean> dataSource = new ArrayList<>();
     private OnItemClickListener mOnItemClickListener;
 
-    private HashMap<String, Boolean> mSelectedPositions = new HashMap<>();
+    private final HashMap<String, Boolean> mSelectedPositions = new HashMap<>();
     protected boolean isShowMultiSelectCheckBox = false;
 
     private boolean isForwardMode = false;
@@ -126,11 +126,7 @@ public class MessageAdapter extends RecyclerView.Adapter implements IMessageAdap
             MessageContentHolder messageContentHolder = (MessageContentHolder) holder;
             messageContentHolder.isForwardMode = isForwardMode;
             messageContentHolder.isReplyDetailMode = isReplyDetailMode;
-            if (TUIChatConfigs.getGeneralConfig().isMsgNeedReadReceipt() && presenter.getChatInfo() != null && presenter.getChatInfo().isNeedReadReceipt()) {
-                messageContentHolder.setShowRead(true);
-            } else {
-                messageContentHolder.setShowRead(false);
-            }
+            messageContentHolder.setShowRead(TUIChatConfigs.getGeneralConfig().isMsgNeedReadReceipt() && presenter.getChatInfo() != null && presenter.getChatInfo().isNeedReadReceipt());
             messageContentHolder.setNeedShowBottomLayout(presenter.isNeedShowBottom());
             messageContentHolder.setRecyclerView(mRecycleView);
             messageContentHolder.setFragment(fragment);
@@ -178,11 +174,7 @@ public class MessageAdapter extends RecyclerView.Adapter implements IMessageAdap
                 baseHolder.msgContentFrame.setOnClickListener(null);
             }
         } else {
-            if (messageBean.hasRiskContent()) {
-                baseHolder.mMutiSelectCheckBox.setEnabled(false);
-            } else {
-                baseHolder.mMutiSelectCheckBox.setEnabled(true);
-            }
+            baseHolder.mMutiSelectCheckBox.setEnabled(!messageBean.hasRiskContent());
             baseHolder.mMutiSelectCheckBox.setChecked(isItemChecked(messageBean));
             baseHolder.mMutiSelectCheckBox.setVisibility(View.VISIBLE);
             baseHolder.mMutiSelectCheckBox.setOnClickListener(new View.OnClickListener() {
@@ -236,11 +228,7 @@ public class MessageAdapter extends RecyclerView.Adapter implements IMessageAdap
             setItemChecked(messageBean, false);
             return;
         }
-        if (isItemChecked(messageBean)) {
-            setItemChecked(messageBean, false);
-        } else {
-            setItemChecked(messageBean, true);
-        }
+        setItemChecked(messageBean, !isItemChecked(messageBean));
         onViewNeedRefresh(IMessageRecyclerView.DATA_CHANGE_TYPE_UPDATE, messageBean);
     }
 

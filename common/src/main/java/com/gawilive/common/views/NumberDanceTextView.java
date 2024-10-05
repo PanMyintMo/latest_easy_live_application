@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * <p>
@@ -88,7 +89,7 @@ public class NumberDanceTextView extends AppCompatTextView {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     String value = new BigDecimal(String.valueOf(animation.getAnimatedValue()))
-                            .setScale(scale, BigDecimal.ROUND_HALF_EVEN).toString();
+                            .setScale(scale, RoundingMode.HALF_EVEN).toString();
                     setText(value);
                 }
             });
@@ -96,7 +97,7 @@ public class NumberDanceTextView extends AppCompatTextView {
                 @Override
                 public void onAnimationEnd(Animator animation) {
                     String value = new BigDecimal(targetValue)
-                            .setScale(scale, BigDecimal.ROUND_HALF_EVEN).toString();
+                            .setScale(scale, RoundingMode.HALF_EVEN).toString();
                     setText(value);
                 }
             });

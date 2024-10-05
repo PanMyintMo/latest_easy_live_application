@@ -68,31 +68,31 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class LiveGiftAnimPresenter {
 
-    private Context mContext;
-    private ViewGroup mParent2;
-    private ViewGroup mDrawParent;
+    private final Context mContext;
+    private final ViewGroup mParent2;
+    private final ViewGroup mDrawParent;
     private SVGAImageView mSVGAImageView;
-    private GifImageView mGifImageView;
+    private final GifImageView mGifImageView;
     private GifDrawable mGifDrawable;
     private View mGifGiftTipGroup;
     private TextView mGifGiftTip;
-    private ObjectAnimator mGifGiftTipShowAnimator;
-    private ObjectAnimator mGifGiftTipHideAnimator;
+    private final ObjectAnimator mGifGiftTipShowAnimator;
+    private final ObjectAnimator mGifGiftTipHideAnimator;
 
-    private View mGlobalGiftGroup;
-    private TextView[] mGlobalGiftTips;
-    private ObjectAnimator mGlobalGiftShowAnimator;//全站礼物
-    private ValueAnimator mGlobalGiftMoveAnimator;//全站礼物
-    private ObjectAnimator mGlobalGiftHideAnimator;//全站礼物
+    private final View mGlobalGiftGroup;
+    private final TextView[] mGlobalGiftTips;
+    private final ObjectAnimator mGlobalGiftShowAnimator;//全站礼物
+    private final ValueAnimator mGlobalGiftMoveAnimator;//全站礼物
+    private final ObjectAnimator mGlobalGiftHideAnimator;//全站礼物
     private int mMoveGlobalSpace;
     private LiveGiftDrawViewHolder mGiftDrawViewHolder;
-    private LiveGiftViewHolder[] mLiveGiftViewHolders;
-    private ConcurrentLinkedQueue<LiveReceiveGiftBean> mQueue;
-    private ConcurrentLinkedQueue<LiveReceiveGiftBean> mGifQueue;
-    private ConcurrentLinkedQueue<GlobalGiftBean> mGlobalGiftQueue;
-    private ConcurrentLinkedQueue<LiveReceiveGiftBean> mDrawGifQueue;
-    private ConcurrentLinkedQueue<String> mGoodsFloatQueue;
-    private Map<String, LiveReceiveGiftBean> mMap;
+    private final LiveGiftViewHolder[] mLiveGiftViewHolders;
+    private final ConcurrentLinkedQueue<LiveReceiveGiftBean> mQueue;
+    private final ConcurrentLinkedQueue<LiveReceiveGiftBean> mGifQueue;
+    private final ConcurrentLinkedQueue<GlobalGiftBean> mGlobalGiftQueue;
+    private final ConcurrentLinkedQueue<LiveReceiveGiftBean> mDrawGifQueue;
+    private final ConcurrentLinkedQueue<String> mGoodsFloatQueue;
+    private final Map<String, LiveReceiveGiftBean> mMap;
     private Handler mHandler;
     private MediaController mMediaController;//koral--/android-gif-drawable 这个库用来播放gif动画的
     private static final int WHAT_GIF = -1;
@@ -107,48 +107,48 @@ public class LiveGiftAnimPresenter {
     private boolean mShowDrawGif;
     private boolean mShowGoodsFloat;
     private CommonCallback<File> mDownloadGifCallback;
-    private int mDp10;
-    private int mDp20;
-    private int mDp50;
-    private int mDp500;
+    private final int mDp10;
+    private final int mDp20;
+    private final int mDp50;
+    private final int mDp500;
     private LiveReceiveGiftBean mTempGifGiftBean;
-    private String mSendString;
+    private final String mSendString;
     private SVGAParser mSVGAParser;
     private SVGAParser.ParseCompletion mParseCompletionCallback;
     private long mSvgaPlayTime;
     private Map<String, SoftReference<SVGAVideoEntity>> mSVGAMap;
-    private ViewGroup mTopLuckContainer;
+    private final ViewGroup mTopLuckContainer;
     private LiveGiftLuckTopViewHolder mLiveGiftLuckTopViewHolder;
     private LiveGiftPrizePoolViewHolder mPrizePoolViewHolder;
-    private ViewGroup mLiveGiftPrizePoolContainer;
+    private final ViewGroup mLiveGiftPrizePoolContainer;
 //    private TextView mPrizePoolLevel;
 //    private View mPrizePoolGuang;
     private Animation mPrizePoolLevelAnim;
     private Animation mPrizePoolGuangAnim;
-    private ViewGroup mTitleContainer;
+    private final ViewGroup mTitleContainer;
     private LiveTitleAnimViewHolder mTitleAnimViewHolder;
 
 
-    private FrameLayout mDrawGiftContainer;
+    private final FrameLayout mDrawGiftContainer;
     private List<ImageView> mDrawImgList;
     private Drawable mDrawGiftDrawable;
-    private float mDrawGiftOffsetX;
+    private final float mDrawGiftOffsetX;
     private float mDrawGiftOffsetY;
     private List<PointF> mDrawGiftPointList;
     private int mDrawCount;
     private int mDrawIndex;
-    private ScaleAnimation mDrawImgAnim;
-    private ScaleAnimation mDrawEndAnim;
-    private String mGoodsFloatString;
-    private TextView mTvGoodsFloat;
+    private final ScaleAnimation mDrawImgAnim;
+    private final ScaleAnimation mDrawEndAnim;
+    private final String mGoodsFloatString;
+    private final TextView mTvGoodsFloat;
     private ObjectAnimator mGoodsFloatShowAnimator;
     private ObjectAnimator mGoodsFloatShowAnimator2;
     private ObjectAnimator mGoodsFloatHideAnimator;
 
     public LiveGiftAnimPresenter(Context context, View v, GifImageView gifImageView, SVGAImageView svgaImageView, ViewGroup liveGiftPrizePoolContainer) {
         mContext = context;
-        mParent2 = (ViewGroup) v.findViewById(R.id.gift_group_1);
-        mDrawParent = (ViewGroup) v.findViewById(R.id.gift_group_draw);
+        mParent2 = v.findViewById(R.id.gift_group_1);
+        mDrawParent = v.findViewById(R.id.gift_group_draw);
         mTopLuckContainer = v.findViewById(R.id.luck_container);
         mGifImageView = gifImageView;
         mSVGAImageView = svgaImageView;
@@ -186,7 +186,7 @@ public class LiveGiftAnimPresenter {
 
 
         mGifGiftTipGroup = v.findViewById(R.id.gif_gift_tip_group);
-        mGifGiftTip = (TextView) v.findViewById(R.id.gif_gift_tip);
+        mGifGiftTip = v.findViewById(R.id.gif_gift_tip);
         mDrawGiftContainer = v.findViewById(R.id.draw_gift_container);
         mDrawGiftOffsetX = ScreenDimenUtil.getInstance().getScreenWdith() / 20f;
         mDrawImgAnim = new ScaleAnimation(1f, 1.5f, 1f, 1.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
@@ -195,7 +195,7 @@ public class LiveGiftAnimPresenter {
         mDrawEndAnim.setDuration(300);
         mTvGoodsFloat = v.findViewById(R.id.goods_float);
         mGifGiftTipGroup = v.findViewById(R.id.gif_gift_tip_group);
-        mGifGiftTip = (TextView) v.findViewById(R.id.gif_gift_tip);
+        mGifGiftTip = v.findViewById(R.id.gif_gift_tip);
         mDp500 = DpUtil.dp2px(500);
         mGifGiftTipShowAnimator = ObjectAnimator.ofFloat(mGifGiftTipGroup, "translationX", mDp500, 0);
         mGifGiftTipShowAnimator.setDuration(1000);
@@ -224,9 +224,9 @@ public class LiveGiftAnimPresenter {
         mDp50 = DpUtil.dp2px(50);
         mGlobalGiftGroup = v.findViewById(R.id.global_gift_tip_group);
         mGlobalGiftTips = new TextView[3];
-        mGlobalGiftTips[0] = (TextView) v.findViewById(R.id.global_gift_tip_0);
-        mGlobalGiftTips[1] = (TextView) v.findViewById(R.id.global_gift_tip_1);
-        mGlobalGiftTips[2] = (TextView) v.findViewById(R.id.global_gift_tip_2);
+        mGlobalGiftTips[0] = v.findViewById(R.id.global_gift_tip_0);
+        mGlobalGiftTips[1] = v.findViewById(R.id.global_gift_tip_1);
+        mGlobalGiftTips[2] = v.findViewById(R.id.global_gift_tip_2);
         LinearInterpolator linearInterpolator = new LinearInterpolator();
         mGlobalGiftShowAnimator = ObjectAnimator.ofFloat(mGlobalGiftGroup, "translationX", mDp500, 0);
         mGlobalGiftShowAnimator.setDuration(1000);
@@ -279,7 +279,7 @@ public class LiveGiftAnimPresenter {
 
 
         mLiveGiftViewHolders = new LiveGiftViewHolder[2];
-        mLiveGiftViewHolders[0] = new LiveGiftViewHolder(context, (ViewGroup) v.findViewById(R.id.gift_group_2));
+        mLiveGiftViewHolders[0] = new LiveGiftViewHolder(context, v.findViewById(R.id.gift_group_2));
         mLiveGiftViewHolders[0].addToParent();
         mQueue = new ConcurrentLinkedQueue<>();
         mGifQueue = new ConcurrentLinkedQueue<>();

@@ -40,17 +40,13 @@ public class ImDateUtil {
 
     private static boolean isSameDay(long inputTime) {
         TimeInfo tStartAndEndTime = getTodayStartAndEndTime();
-        if (inputTime > tStartAndEndTime.getStartTime() && inputTime < tStartAndEndTime.getEndTime())
-            return true;
-        return false;
+        return inputTime > tStartAndEndTime.getStartTime() && inputTime < tStartAndEndTime.getEndTime();
     }
 
 
     private static boolean isYesterday(long inputTime) {
         TimeInfo yStartAndEndTime = getYesterdayStartAndEndTime();
-        if (inputTime > yStartAndEndTime.getStartTime() && inputTime < yStartAndEndTime.getEndTime())
-            return true;
-        return false;
+        return inputTime > yStartAndEndTime.getStartTime() && inputTime < yStartAndEndTime.getEndTime();
     }
 
 

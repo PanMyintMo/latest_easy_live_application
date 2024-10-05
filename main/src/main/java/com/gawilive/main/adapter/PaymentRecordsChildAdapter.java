@@ -28,7 +28,7 @@ public class PaymentRecordsChildAdapter extends AppAdapter<PaymentChildRecordsMo
 
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
-        private TextView mTvNumber;
+        private final TextView mTvNumber;
 
         private ViewHolder() {
             super(R.layout.item_payment_record_child);

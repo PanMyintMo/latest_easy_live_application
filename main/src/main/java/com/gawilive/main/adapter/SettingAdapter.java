@@ -27,16 +27,16 @@ public class SettingAdapter extends RecyclerView.Adapter {
     private static final int VERSION = 1;
     private static final int LAST = 2;
     private static final int CHECK = 3;
-    private Context mContext;
-    private List<SettingBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<SettingBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private ActionListener mActionListener;
-    private String mVersionString;
+    private final String mVersionString;
     private String mCacheString;
-    private Drawable mRadioCheckDrawable;
-    private Drawable mRadioUnCheckDrawable;
-    private View.OnClickListener mOnRadioBtnClickListener;
+    private final Drawable mRadioCheckDrawable;
+    private final Drawable mRadioUnCheckDrawable;
+    private final View.OnClickListener mOnRadioBtnClickListener;
 
 
     public SettingAdapter(Context context, List<SettingBean> list, String version, String cache) {
@@ -139,7 +139,7 @@ public class SettingAdapter extends RecyclerView.Adapter {
 
         public Vh(View itemView) {
             super(itemView);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mName = itemView.findViewById(R.id.name);
             itemView.setOnClickListener(mOnClickListener);
         }
 
@@ -156,8 +156,8 @@ public class SettingAdapter extends RecyclerView.Adapter {
 
         public Vh2(View itemView) {
             super(itemView);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mText = (TextView) itemView.findViewById(R.id.text);
+            mName = itemView.findViewById(R.id.name);
+            mText = itemView.findViewById(R.id.text);
             itemView.setOnClickListener(mOnClickListener);
         }
 
@@ -180,7 +180,7 @@ public class SettingAdapter extends RecyclerView.Adapter {
 
         public RadioButtonVh(View itemView) {
             super(itemView);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mName = itemView.findViewById(R.id.name);
             mBtnRadio = itemView.findViewById(R.id.btn_radio);
             mBtnRadio.setOnClickListener(mOnRadioBtnClickListener);
         }

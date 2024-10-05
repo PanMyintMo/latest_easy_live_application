@@ -15,7 +15,7 @@ public class MoneyWatcher implements TextWatcher {
 
     }
 
-    private int digitsLength = 2;
+    private final int digitsLength = 2;
 
     @Override
     public void afterTextChanged(Editable s) {
@@ -29,7 +29,7 @@ public class MoneyWatcher implements TextWatcher {
                 }
             }
             //如果"."在起始位置,则起始位置自动补0
-            if (text.substring(0) == ".") {
+            if (text == ".") {
                 s.insert(0, "0");
             }
             //如果起始位置为0,且第二位跟的不是".",则无法后续输入

@@ -98,7 +98,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
     public ChatPresenter.TypingListener mTypingListener = new ChatPresenter.TypingListener() {
         @Override
         public void onTyping(int status) {
-            if (!TUIChatConfigs.getConfigs().getGeneralConfig().isEnableTypingStatus()) {
+            if (!TUIChatConfigs.getGeneralConfig().isEnableTypingStatus()) {
                 return;
             }
 
@@ -184,7 +184,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
         mMessageRecyclerView = findViewById(R.id.chat_message_layout);
         mInputView = findViewById(R.id.chat_input_layout);
         mInputView.setChatLayout(this);
-        boolean enableMainPageInputBar = TUIChatConfigs.getConfigs().getGeneralConfig().isEnableMainPageInputBar();
+        boolean enableMainPageInputBar = TUIChatConfigs.getGeneralConfig().isEnableMainPageInputBar();
         mInputView.setVisibility(enableMainPageInputBar ? VISIBLE : GONE);
         mRecordingGroup = findViewById(R.id.voice_recording_view);
         mRecordingIcon = findViewById(R.id.recording_icon);
@@ -216,7 +216,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
         lastTypingTime = 0;
         isSupportTyping = false;
 
-        TUIChatConfigs.getConfigs().getGeneralConfig().setEnableWelcomeCustomMessage(false);
+        TUIChatConfigs.getGeneralConfig().setEnableWelcomeCustomMessage(false);
     }
 
     public void displayBackToLastMessages() {
@@ -249,7 +249,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
         mJumpNewMessageShow = true;
         mJumpMessageLayout.setVisibility(VISIBLE);
         mArrowImageView.setBackgroundResource(TUIThemeManager.getAttrResId(getContext(), R.attr.chat_jump_recent_down_icon));
-        mJumpMessageTextView.setText(String.valueOf(count) + getContext().getString(R.string.back_to_newmessage));
+        mJumpMessageTextView.setText(count + getContext().getString(R.string.back_to_newmessage));
         mJumpMessageLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -432,11 +432,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
                     }
                     scrollDirection = 0;
 
-                    if (mMessageRecyclerView.isDisplayJumpMessageLayout()) {
-                        displayBackToLastMessage(true);
-                    } else {
-                        displayBackToLastMessage(false);
-                    }
+                    displayBackToLastMessage(mMessageRecyclerView.isDisplayJumpMessageLayout());
                 } else if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
                     hideBackToAtMessages();
                 }
@@ -823,8 +819,8 @@ public class ChatView extends LinearLayout implements IChatLayout {
 
             @Override
             public void onSpeakerModeSwitchClick(TUIMessageBean msg) {
-                boolean enableSpeakerMode = TUIChatConfigs.getConfigs().getGeneralConfig().isEnableSoundMessageSpeakerMode();
-                TUIChatConfigs.getConfigs().getGeneralConfig().setEnableSoundMessageSpeakerMode(!enableSpeakerMode);
+                boolean enableSpeakerMode = TUIChatConfigs.getGeneralConfig().isEnableSoundMessageSpeakerMode();
+                TUIChatConfigs.getGeneralConfig().setEnableSoundMessageSpeakerMode(!enableSpeakerMode);
                 AudioPlayer.getInstance().setSpeakerMode();
                 if (enableSpeakerMode) {
                     ToastUtil.toastShortMessage(getResources().getString(R.string.chat_speaker_mode_off_tip));
@@ -899,7 +895,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
 
             @Override
             public void onUserTyping(boolean status, long curTime) {
-                if (!TUIChatConfigs.getConfigs().getGeneralConfig().isEnableTypingStatus()) {
+                if (!TUIChatConfigs.getGeneralConfig().isEnableTypingStatus()) {
                     return;
                 }
 
@@ -1181,7 +1177,7 @@ public class ChatView extends LinearLayout implements IChatLayout {
         });
 
         getForwardLayout().setVisibility(GONE);
-        boolean enableMainPageInputBar = TUIChatConfigs.getConfigs().getGeneralConfig().isEnableMainPageInputBar();
+        boolean enableMainPageInputBar = TUIChatConfigs.getGeneralConfig().isEnableMainPageInputBar();
         getInputLayout().setVisibility(enableMainPageInputBar ? VISIBLE : GONE);
     }
 

@@ -23,9 +23,9 @@ import com.gawilive.live.bean.LivePkBean;
 
 public class LivePkAdapter extends RefreshAdapter<LivePkBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private String mLivePkInviteString;//邀请连麦
-    private String mLivePkInviteString2;//已邀请
+    private final View.OnClickListener mOnClickListener;
+    private final String mLivePkInviteString;//邀请连麦
+    private final String mLivePkInviteString2;//已邀请
 
     public LivePkAdapter(Context context) {
         super(context);
@@ -64,11 +64,11 @@ public class LivePkAdapter extends RefreshAdapter<LivePkBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
-            mBtnInvite = (TextView) itemView.findViewById(R.id.btn_invite);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
+            mBtnInvite = itemView.findViewById(R.id.btn_invite);
             mBtnInvite.setOnClickListener(mOnClickListener);
         }
 

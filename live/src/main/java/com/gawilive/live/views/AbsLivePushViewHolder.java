@@ -72,11 +72,11 @@ public abstract class AbsLivePushViewHolder extends AbsViewHolder implements ILi
 
     @Override
     public void init() {
-        mBigContainer = (ViewGroup) findViewById(R.id.big_container);
-        mSmallContainer = (ViewGroup) findViewById(R.id.small_container);
-        mLeftContainer = (ViewGroup) findViewById(R.id.left_container);
-        mRightContainer = (ViewGroup) findViewById(R.id.right_container);
-        mPkContainer = (ViewGroup) findViewById(R.id.pk_container);
+        mBigContainer = findViewById(R.id.big_container);
+        mSmallContainer = findViewById(R.id.small_container);
+        mLeftContainer = findViewById(R.id.left_container);
+        mRightContainer = findViewById(R.id.right_container);
+        mPkContainer = findViewById(R.id.pk_container);
         mCameraFront = true;
         getStickerList();
 

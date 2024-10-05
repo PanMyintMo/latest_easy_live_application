@@ -230,11 +230,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageRecycle
                 + ", computeVerticalScrollOffset() = " + computeVerticalScrollOffset());
         int toBottom = computeVerticalScrollRange() - computeVerticalScrollExtent() - computeVerticalScrollOffset();
         TUIChatLog.d(TAG, "toBottom = " + toBottom);
-        if (toBottom > 0 && toBottom >= 2 * computeVerticalScrollExtent()) {
-            return true;
-        } else {
-            return false;
-        }
+        return toBottom > 0 && toBottom >= 2 * computeVerticalScrollExtent();
     }
 
     public boolean isLastItemVisibleCompleted() {
@@ -245,10 +241,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageRecycle
         int lastPosition = linearLayoutManager.findLastCompletelyVisibleItemPosition();
         int childCount = linearLayoutManager.getChildCount();
         int firstPosition = linearLayoutManager.findFirstVisibleItemPosition();
-        if (lastPosition >= firstPosition + childCount - 1) {
-            return true;
-        }
-        return false;
+        return lastPosition >= firstPosition + childCount - 1;
     }
 
     private boolean isDefaultMessage(TUIMessageBean messageBean) {
@@ -285,7 +278,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageRecycle
             speakerModeSwitchAction = new ChatPopMenu.ChatPopMenuAction();
             int actionIcon = R.drawable.pop_menu_speaker;
             String actionName = getContext().getString(R.string.chat_speaker_mode_on_action);
-            boolean isSpeakerMode = TUIChatConfigs.getConfigs().getGeneralConfig().isEnableSoundMessageSpeakerMode();
+            boolean isSpeakerMode = TUIChatConfigs.getGeneralConfig().isEnableSoundMessageSpeakerMode();
             if (isSpeakerMode) {
                 actionIcon = R.drawable.pop_menu_ear;
                 actionName = getContext().getString(R.string.chat_speaker_mode_off_action);
@@ -309,7 +302,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageRecycle
             if (msg.isSelf()) {
                 if (msg.getStatus() != TUIMessageBean.MSG_STATUS_SEND_FAIL) {
                     long timeInterval = TUIChatUtils.getServerTime() - msg.getMessageTime();
-                    if (timeInterval < TUIChatConfigs.getConfigs().getGeneralConfig().getTimeIntervalForMessageRecall()) {
+                    if (timeInterval < TUIChatConfigs.getGeneralConfig().getTimeIntervalForMessageRecall()) {
                         revokeAction = new ChatPopMenu.ChatPopMenuAction();
                         revokeAction.setActionName(getContext().getString(R.string.revoke_action));
                         revokeAction.setActionIcon(R.drawable.pop_menu_revoke);
@@ -398,11 +391,11 @@ public class MessageRecyclerView extends RecyclerView implements IMessageRecycle
             multiSelectAction.setPriority(8000);
             mPopActions.add(multiSelectAction);
         }
-        if (quoteAction != null && TUIChatConfigs.getConfigs().getGeneralConfig().isEnablePopMenuReferenceAction()) {
+        if (quoteAction != null && TUIChatConfigs.getGeneralConfig().isEnablePopMenuReferenceAction()) {
             quoteAction.setPriority(7000);
             mPopActions.add(quoteAction);
         }
-        if (replyAction != null && TUIChatConfigs.getConfigs().getGeneralConfig().isEnablePopMenuReplyAction()) {
+        if (replyAction != null && TUIChatConfigs.getGeneralConfig().isEnablePopMenuReplyAction()) {
             replyAction.setPriority(6000);
             mPopActions.add(replyAction);
         }

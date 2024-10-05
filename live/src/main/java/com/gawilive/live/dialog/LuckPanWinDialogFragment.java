@@ -53,7 +53,7 @@ public class LuckPanWinDialogFragment extends AbsDialogFragment implements View.
         super.onActivityCreated(savedInstanceState);
         findViewById(R.id.btn_confirm).setOnClickListener(this);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         int size = turntableResultGiftBeans.size();
         mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, size >= 4 ? 4 : size, GridLayoutManager.VERTICAL, false));
         LuckPanWinAdapter adapter = new LuckPanWinAdapter(mContext, turntableResultGiftBeans);

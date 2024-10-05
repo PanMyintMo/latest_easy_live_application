@@ -11,9 +11,9 @@ import com.tencent.qcloud.tuikit.tuichat.bean.message.CustomEvaluationMessageBea
 import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
 
 public class CustomEvaluationMessageHolder extends MessageContentHolder {
-    private TextView textView;
-    private TextView contentView;
-    private RatingBar ratingBar;
+    private final TextView textView;
+    private final TextView contentView;
+    private final RatingBar ratingBar;
 
     public CustomEvaluationMessageHolder(View itemView) {
         super(itemView);

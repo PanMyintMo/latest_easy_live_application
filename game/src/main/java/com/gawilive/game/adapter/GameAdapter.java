@@ -23,8 +23,8 @@ import java.util.List;
 public class GameAdapter extends RecyclerView.Adapter<GameAdapter.Vh> {
 
     private List<Integer> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<Integer> mOnItemClickListener;
 
     public GameAdapter(Context context, List<Integer> list) {

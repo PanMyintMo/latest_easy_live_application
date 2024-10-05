@@ -24,12 +24,12 @@ import java.util.List;
 
 public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.Vh> {
 
-    private Context mContext;
-    private List<RecommendBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final Context mContext;
+    private final List<RecommendBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
 
     public RecommendAdapter(Context context, List<RecommendBean> list) {
         mContext = context;

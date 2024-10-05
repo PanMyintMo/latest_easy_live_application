@@ -24,7 +24,7 @@ public class MyVideoActivity extends AbsActivity {
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.video_my_video));
-        mVideoHomeViewHolder = new VideoHomeViewHolder(mContext, (ViewGroup) findViewById(R.id.container), CommonAppConfig.getInstance().getUid());
+        mVideoHomeViewHolder = new VideoHomeViewHolder(mContext, findViewById(R.id.container), CommonAppConfig.getInstance().getUid());
         mVideoHomeViewHolder.addToParent();
         mVideoHomeViewHolder.subscribeActivityLifeCycle();
         mVideoHomeViewHolder.loadData();

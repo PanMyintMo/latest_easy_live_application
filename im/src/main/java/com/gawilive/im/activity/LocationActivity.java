@@ -78,9 +78,9 @@ public class LocationActivity extends AbsActivity implements View.OnClickListene
     @Override
     protected void main(Bundle savedInstanceState) {
         setTitle(WordUtil.getString(R.string.location));
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        mRefreshViewSearch = (CommonRefreshView) findViewById(R.id.refreshView_search);
+        mRefreshViewSearch = findViewById(R.id.refreshView_search);
         mRefreshViewSearch.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRefreshView.setDataHelper(new CommonRefreshView.DataHelper<TxLocationPoiBean>() {
             @Override
@@ -193,7 +193,7 @@ public class LocationActivity extends AbsActivity implements View.OnClickListene
             }
         });
 
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
         mTencentMap = mMapView.getMap();
         mTencentMap.setZoom(16);
@@ -243,7 +243,7 @@ public class LocationActivity extends AbsActivity implements View.OnClickListene
         mBtnClear.setOnClickListener(this);
         mSearchResultGroup = findViewById(R.id.search_result_group);
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        mEditText = (EditText) findViewById(R.id.search_input);
+        mEditText = findViewById(R.id.search_input);
         mEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {

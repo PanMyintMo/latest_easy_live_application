@@ -17,7 +17,7 @@ import com.bumptech.glide.load.resource.bitmap.BitmapResource;
 import java.security.MessageDigest;
 
 public class CornerTransform implements Transformation<Bitmap> {
-    private BitmapPool mBitmapPool;
+    private final BitmapPool mBitmapPool;
     private float radius;
     private boolean exceptLeftTop;
     private boolean exceptRightTop;

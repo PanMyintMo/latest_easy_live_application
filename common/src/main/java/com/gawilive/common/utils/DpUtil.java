@@ -9,7 +9,7 @@ import com.gawilive.common.CommonAppContext;
 
 public class DpUtil {
 
-    private static float scale;
+    private static final float scale;
 
     static {
         scale = CommonAppContext.getInstance().getResources().getDisplayMetrics().density;

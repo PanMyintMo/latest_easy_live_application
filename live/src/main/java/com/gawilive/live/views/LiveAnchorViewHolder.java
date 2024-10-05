@@ -49,7 +49,7 @@ public class LiveAnchorViewHolder extends AbsLiveViewHolder {
         super.init();
 //        mDrawable0 = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_func_0);
 //        mDrawable1 = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_func_1);
-        mBtnFunction = (ImageView) findViewById(R.id.btn_function);
+        mBtnFunction = findViewById(R.id.btn_function);
 //        mBtnFunction.setImageDrawable(mDrawable0);
         mBtnFunction.setOnClickListener(this);
         mBtnGameClose = findViewById(R.id.btn_close_game);
@@ -59,8 +59,8 @@ public class LiveAnchorViewHolder extends AbsLiveViewHolder {
         mBtnPk.setOnClickListener(this);
         mDrawableLinkMic0 = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_link_mic);
         mDrawableLinkMic1 = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_link_mic_1);
-        mLinkMicIcon = (ImageView) findViewById(R.id.link_mic_icon);
-        mLinkMicTip = (TextView) findViewById(R.id.link_mic_tip);
+        mLinkMicIcon = findViewById(R.id.link_mic_icon);
+        mLinkMicTip = findViewById(R.id.link_mic_tip);
         findViewById(R.id.btn_link_mic).setOnClickListener(this);
         mBtnShop=findViewById(R.id.btn_shop);
         mBtnShop.setOnClickListener(this);

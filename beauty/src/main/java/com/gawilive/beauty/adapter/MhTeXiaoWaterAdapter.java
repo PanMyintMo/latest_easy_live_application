@@ -19,11 +19,11 @@ import java.util.List;
 
 public class MhTeXiaoWaterAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<TeXiaoWaterBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final List<TeXiaoWaterBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
-    private Drawable mCheckedDrawable;
+    private final Drawable mCheckedDrawable;
     private OnItemClickListener<TeXiaoWaterBean> mOnItemClickListener;
 
     public MhTeXiaoWaterAdapter(Context context, List<TeXiaoWaterBean> list) {

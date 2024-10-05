@@ -89,7 +89,7 @@ public class LiveRedPackListDialogFragment extends AbsDialogFragment implements 
                     mRedPackAdapter = new RedPackAdapter(mContext, list);
                     mRedPackAdapter.setOnItemClickListener(LiveRedPackListDialogFragment.this);
                     mRecyclerView.setAdapter(mRedPackAdapter);
-                    mCount.setText(String.format(WordUtil.getString(R.string.red_pack_9), String.valueOf(list.size())));
+                    mCount.setText(String.format(WordUtil.getString(R.string.red_pack_9), list.size()));
                 } else {
                     ToastUtil.show(msg);
                 }

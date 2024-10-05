@@ -28,7 +28,7 @@ public abstract class AbsVideoCommentActivity extends AbsActivity implements Key
      */
     public void openCommentWindow(boolean showComment, boolean openFace,boolean openKeyBoard, String videoId, String videoUid) {
         if (mVideoCommentViewHolder == null) {
-            mVideoCommentViewHolder = new VideoCommentViewHolder(mContext, (ViewGroup) findViewById(R.id.root));
+            mVideoCommentViewHolder = new VideoCommentViewHolder(mContext, findViewById(R.id.root));
             mVideoCommentViewHolder.addToParent();
         }
         mVideoCommentViewHolder.setVideoInfo(videoId, videoUid);

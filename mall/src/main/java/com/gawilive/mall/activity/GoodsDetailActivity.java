@@ -218,7 +218,7 @@ public class GoodsDetailActivity extends AbsActivity implements View.OnClickList
             }
         });
 
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = new String[]{WordUtil.getString(R.string.mall_132), mCommentString};
         CommonNavigator commonNavigator = new CommonNavigator(mContext);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {

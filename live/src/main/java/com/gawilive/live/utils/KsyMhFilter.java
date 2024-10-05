@@ -13,9 +13,9 @@ import com.meihu.beautylibrary.render.filter.ksyFilter.GLImageVertFlipFilter;
 public class KsyMhFilter extends ImgTexFilter {
 
     private final Object BUF_LOCK = new Object();
-    private MHBeautyManager mhBeautyManager;
-    private SinkPin<ImgTexFrame> mTexSinkPin;
-    private ImgTexSrcPin mSrcPin;
+    private final MHBeautyManager mhBeautyManager;
+    private final SinkPin<ImgTexFrame> mTexSinkPin;
+    private final ImgTexSrcPin mSrcPin;
 
     private GLImageVertFlipFilter glImageVertFlipFilter;
 

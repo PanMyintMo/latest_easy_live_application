@@ -76,8 +76,8 @@ public class BigImageActivity extends AbsActivity {
         handler.postDelayed(pollingRunnable, 2000);
     }
 
-    private Handler handler = new Handler();
-    private Runnable pollingRunnable = new Runnable() {
+    private final Handler handler = new Handler();
+    private final Runnable pollingRunnable = new Runnable() {
         @Override
         public void run() {
             getOrder();

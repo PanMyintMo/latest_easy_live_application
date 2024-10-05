@@ -181,15 +181,15 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="@dimen/dp_16"
-                            android:src="@mipmap/ic_new_zshy" />
+                            android:src="@mipmap/img_membership" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="13dp"
-                            android:layout_toRightOf="@id/imgLogo"
                             android:layout_toLeftOf="@id/btn_vip"
+                            android:layout_toRightOf="@id/imgLogo"
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:text="@string/new_42"
@@ -262,7 +262,6 @@
                     android:drawablePadding="@dimen/dp_5"
                     android:ellipsize="end"
                     android:gravity="center"
-
                     android:singleLine="true"
                     android:text="@string/new_03"
                     android:textColor="#222222"
@@ -374,11 +373,11 @@
                     <LinearLayout
                         android:id="@+id/llRedScore"
                         android:layout_width="0dp"
-                        android:visibility="gone"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/tvBalance"
@@ -580,7 +579,7 @@
             <com.youth.banner.Banner
                 android:id="@+id/banner"
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="60dp"
                 android:layout_marginHorizontal="@dimen/dp_16"
                 android:layout_marginTop="21dp"
                 app:delay_time="3000"
@@ -597,7 +596,7 @@
                 android:layout_marginHorizontal="@dimen/dp_16"
                 android:layout_marginTop="@dimen/dp_12"
                 android:layout_marginBottom="60dp"
-                android:background="@mipmap/ic_img_kf" />
+                android:background="@mipmap/customer_service" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

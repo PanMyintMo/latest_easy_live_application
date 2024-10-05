@@ -146,7 +146,7 @@ public class SellerOrderActivity extends AbsActivity implements View.OnClickList
             frameLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             mViewList.add(frameLayout);
         }
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (PAGE_COUNT > 1) {
             mViewPager.setOffscreenPageLimit(PAGE_COUNT - 1);
         }
@@ -168,7 +168,7 @@ public class SellerOrderActivity extends AbsActivity implements View.OnClickList
             }
         });
         mViewHolders = new AbsSellerOrderViewHolder[PAGE_COUNT];
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = new String[]{
                 mWaitSendString,
                 mWaitRefundString,

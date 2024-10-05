@@ -20,7 +20,7 @@ import java.util.List;
 
 public class LiveVoiceApplyUpAdapter extends RefreshAdapter<UserBean> {
 
-    private boolean mIsAnchor;
+    private final boolean mIsAnchor;
     private View.OnClickListener mAgreeClickListener;
     private View.OnClickListener mRefuseClickListener;
     private ActionListener mActionListener;
@@ -80,10 +80,10 @@ public class LiveVoiceApplyUpAdapter extends RefreshAdapter<UserBean> {
         public Vh(@NonNull View itemView) {
             super(itemView);
             mIndex = itemView.findViewById(R.id.index);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
         }
 
         void setData(UserBean bean, int position) {
@@ -113,10 +113,10 @@ public class LiveVoiceApplyUpAdapter extends RefreshAdapter<UserBean> {
         public VhAnchor(@NonNull View itemView) {
             super(itemView);
             mIndex = itemView.findViewById(R.id.index);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
             mBtnAgree = itemView.findViewById(R.id.btn_agree);
             mBtnRefuse = itemView.findViewById(R.id.btn_refuse);
             mBtnAgree.setOnClickListener(mAgreeClickListener);

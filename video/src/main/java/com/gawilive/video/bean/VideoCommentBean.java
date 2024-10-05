@@ -269,9 +269,7 @@ public class VideoCommentBean implements Parcelable {
             List<VideoCommentBean> parentChildList = parentNodeBean.getChildList();
             if (parentChildList != null) {
                 int size = parentChildList.size();
-                if (parentNodeBean.getReplyNum() > 1 && parentNodeBean.getReplyNum() > size && this == parentChildList.get(size - 1)) {
-                    return true;
-                }
+                return parentNodeBean.getReplyNum() > 1 && parentNodeBean.getReplyNum() > size && this == parentChildList.get(size - 1);
             }
         }
         return false;
@@ -283,9 +281,7 @@ public class VideoCommentBean implements Parcelable {
             List<VideoCommentBean> parentChildList = parentNodeBean.getChildList();
             if (parentChildList != null) {
                 int size = parentChildList.size();
-                if (size > 1 && size >= parentNodeBean.getReplyNum() && this == parentChildList.get(size - 1)) {
-                    return true;
-                }
+                return size > 1 && size >= parentNodeBean.getReplyNum() && this == parentChildList.get(size - 1);
             }
         }
         return false;

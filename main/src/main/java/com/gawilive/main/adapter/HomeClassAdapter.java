@@ -26,8 +26,8 @@ public class HomeClassAdapter extends AppAdapter<LiveClassBean> {
 
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
-        private ImageView mImg;
-        private TextView mName;
+        private final ImageView mImg;
+        private final TextView mName;
 
 
         private ViewHolder() {

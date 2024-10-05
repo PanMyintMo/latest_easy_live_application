@@ -19,8 +19,8 @@ import java.util.regex.Pattern;
 
 public class FaceTextUtil {
 
-    private static ForegroundColorSpan sColorSpan1;
-    private static AbsoluteSizeSpan sFontSizeSpan1;
+    private static final ForegroundColorSpan sColorSpan1;
+    private static final AbsoluteSizeSpan sFontSizeSpan1;
     private static final int FACE_WIDTH;
     private static final int VIDEO_FACE_WIDTH;
     private static final String REGEX = "\\[([\u4e00-\u9fa5\\w])+\\]";

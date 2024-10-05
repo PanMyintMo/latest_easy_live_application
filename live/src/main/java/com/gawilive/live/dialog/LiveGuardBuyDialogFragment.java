@@ -96,16 +96,16 @@ public class LiveGuardBuyDialogFragment extends AbsDialogFragment implements Vie
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.recyclerView);
+        mRecyclerView = mRootView.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRadioGroup = mRootView.findViewById(R.id.radio_group);
         mRadioBtns = new RadioButton[3];
-        mRadioBtns[0] = (RadioButton) mRootView.findViewById(R.id.btn_1);
-        mRadioBtns[1] = (RadioButton) mRootView.findViewById(R.id.btn_2);
-        mRadioBtns[2] = (RadioButton) mRootView.findViewById(R.id.btn_3);
-        mCoinNameTextView = (TextView) mRootView.findViewById(R.id.coin_name);
-        mCoin = (TextView) mRootView.findViewById(R.id.coin);
+        mRadioBtns[0] = mRootView.findViewById(R.id.btn_1);
+        mRadioBtns[1] = mRootView.findViewById(R.id.btn_2);
+        mRadioBtns[2] = mRootView.findViewById(R.id.btn_3);
+        mCoinNameTextView = mRootView.findViewById(R.id.coin_name);
+        mCoin = mRootView.findViewById(R.id.coin);
         mBtnBuy = mRootView.findViewById(R.id.btn_buy);
         mRadioBtns[0].setOnClickListener(this);
         mRadioBtns[1].setOnClickListener(this);

@@ -68,7 +68,7 @@ public abstract class TUIMessageBean implements Serializable {
     private MessageReceiptInfo messageReceiptInfo;
     private MessageRepliesBean messageRepliesBean;
     private boolean hasReaction = false;
-    private Map<String, UserBean> userBeanMap = new LinkedHashMap<>();
+    private final Map<String, UserBean> userBeanMap = new LinkedHashMap<>();
 
     public void setExcludeFromHistory(boolean excludeFromHistory) {
         this.excludeFromHistory = excludeFromHistory;

@@ -25,9 +25,9 @@ import java.util.List;
 
 public class ImChatChooseImageAdapter extends RefreshAdapter<ChooseImageBean> {
 
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
 
     public ImChatChooseImageAdapter(Context context, List<ChooseImageBean> list) {

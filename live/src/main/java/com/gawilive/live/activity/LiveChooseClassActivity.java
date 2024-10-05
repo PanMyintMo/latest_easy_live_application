@@ -34,7 +34,7 @@ public class LiveChooseClassActivity extends AbsActivity implements OnItemClickL
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.live_class_choose));
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         final int checkedClassId = getIntent().getIntExtra(Constants.CLASS_ID, 0);
@@ -48,11 +48,7 @@ public class LiveChooseClassActivity extends AbsActivity implements OnItemClickL
                     }
                     for (int i = 0, size = list.size(); i < size; i++) {
                         LiveClassBean bean = list.get(i);
-                        if (bean.getId() == checkedClassId) {
-                            bean.setChecked(true);
-                        } else {
-                            bean.setChecked(false);
-                        }
+                        bean.setChecked(bean.getId() == checkedClassId);
                     }
                     LiveReadyClassAdapter adapter = new LiveReadyClassAdapter(mContext, list);
                     adapter.setOnItemClickListener(LiveChooseClassActivity.this);

@@ -23,8 +23,8 @@ public class VideoLoadingBar extends View {
     private RectF mFgRectF;
     private float mRate;
     private boolean mLoading;
-    private int mBgColor;//背景色
-    private int mFgColor;//前景色
+    private final int mBgColor;//背景色
+    private final int mFgColor;//前景色
 
     public VideoLoadingBar(Context context) {
         this(context, null);

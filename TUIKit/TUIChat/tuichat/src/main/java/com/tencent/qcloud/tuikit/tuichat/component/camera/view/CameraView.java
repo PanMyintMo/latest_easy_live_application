@@ -49,7 +49,7 @@ public class CameraView extends FrameLayout implements SurfaceHolder.Callback, I
     public static final int MEDIA_QUALITY_POOR = 8 * 100000;
     public static final int MEDIA_QUALITY_FUNNY = 4 * 100000;
     public static final int MEDIA_QUALITY_DESPAIR = 2 * 100000;
-    public static final int MEDIA_QUALITY_SORRY = 1 * 80000;
+    public static final int MEDIA_QUALITY_SORRY = 80000;
 
     
     // Flash status
@@ -59,12 +59,12 @@ public class CameraView extends FrameLayout implements SurfaceHolder.Callback, I
     
     // Camera state machine
     private CameraMachine machine;
-    private int flashType = FLASH_TYPE_OFF;
+    private final int flashType = FLASH_TYPE_OFF;
     private CameraListener cameraListener;
     private ClickListener leftClickListener;
     private ClickListener rightClickListener;
 
-    private Context mContext;
+    private final Context mContext;
     private VideoView mVideoView;
     private ImageView mPictureShowView;
     private ImageView mSwitchCamera;
@@ -115,7 +115,7 @@ public class CameraView extends FrameLayout implements SurfaceHolder.Callback, I
         iconSrc = a.getResourceId(R.styleable.CameraView_iconSrc, R.drawable.chat_camera_switchcamera);
         iconLeft = a.getResourceId(R.styleable.CameraView_iconLeft, 0);
         iconRight = a.getResourceId(R.styleable.CameraView_iconRight, 0);
-        duration = TUIChatConfigs.getConfigs().getGeneralConfig().getVideoRecordMaxTime() * 1000;
+        duration = TUIChatConfigs.getGeneralConfig().getVideoRecordMaxTime() * 1000;
         a.recycle();
         initData();
         initView();

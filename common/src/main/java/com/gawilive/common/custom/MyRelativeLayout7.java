@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 
 public class MyRelativeLayout7 extends RelativeLayout {
 
-    private int mWidth;
+    private final int mWidth;
 
     public MyRelativeLayout7(Context context) {
         this(context, null);

@@ -10,10 +10,10 @@ import com.tencent.qcloud.tuikit.tuichat.R;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.CallingMessageBean;
 
 public class CallingMessageHolder extends TextMessageHolder {
-    private TextView msgBodyText;
-    private ImageView mLeftView;
-    private ImageView mRightView;
-    private LinearLayout mCallingLayout;
+    private final TextView msgBodyText;
+    private final ImageView mLeftView;
+    private final ImageView mRightView;
+    private final LinearLayout mCallingLayout;
 
     public CallingMessageHolder(View itemView) {
         super(itemView);

@@ -36,15 +36,15 @@ public class MainListAdapter extends RefreshAdapter<ListBean> {
     public static final int TYPE_CONTRIBUTE = 0;//贡献榜
     private static final int HEAD = 0;
     private static final int NORMAL = 1;
-    private String mCoinName;
-    private String mFollow;
-    private String mFollowing;
-    private View.OnClickListener mFollowClickListener1;
-    private View.OnClickListener mFollowClickListener2;
-    private View.OnClickListener mItemClickListener;
-    private List<ListBean> mTopList;
+    private final String mCoinName;
+    private final String mFollow;
+    private final String mFollowing;
+    private final View.OnClickListener mFollowClickListener1;
+    private final View.OnClickListener mFollowClickListener2;
+    private final View.OnClickListener mItemClickListener;
+    private final List<ListBean> mTopList;
     private HeadVh mHeadVh;
-    private int mType;
+    private final int mType;
 
     public MainListAdapter(Context context, int type) {
         super(context);
@@ -215,24 +215,24 @@ public class MainListAdapter extends RefreshAdapter<ListBean> {
             mItem1.setOnClickListener(mItemClickListener);
             mItem2.setOnClickListener(mItemClickListener);
             mItem3.setOnClickListener(mItemClickListener);
-            mAvatar1 = (ImageView) itemView.findViewById(R.id.avatar_1);
-            mAvatar2 = (ImageView) itemView.findViewById(R.id.avatar_2);
-            mAvatar3 = (ImageView) itemView.findViewById(R.id.avatar_3);
-            mName1 = (TextView) itemView.findViewById(R.id.name_1);
-            mName2 = (TextView) itemView.findViewById(R.id.name_2);
-            mName3 = (TextView) itemView.findViewById(R.id.name_3);
-            mVotes1 = (TextView) itemView.findViewById(R.id.votes_1);
-            mVotes2 = (TextView) itemView.findViewById(R.id.votes_2);
-            mVotes3 = (TextView) itemView.findViewById(R.id.votes_3);
-            mSex1 = (ImageView) itemView.findViewById(R.id.sex_1);
-            mSex2 = (ImageView) itemView.findViewById(R.id.sex_2);
-            mSex3 = (ImageView) itemView.findViewById(R.id.sex_3);
-            mLevel1 = (ImageView) itemView.findViewById(R.id.level_1);
-            mLevel2 = (ImageView) itemView.findViewById(R.id.level_2);
-            mLevel3 = (ImageView) itemView.findViewById(R.id.level_3);
-            mBtnFollow1 = (MyRadioButton) itemView.findViewById(R.id.btn_follow_1);
-            mBtnFollow2 = (MyRadioButton) itemView.findViewById(R.id.btn_follow_2);
-            mBtnFollow3 = (MyRadioButton) itemView.findViewById(R.id.btn_follow_3);
+            mAvatar1 = itemView.findViewById(R.id.avatar_1);
+            mAvatar2 = itemView.findViewById(R.id.avatar_2);
+            mAvatar3 = itemView.findViewById(R.id.avatar_3);
+            mName1 = itemView.findViewById(R.id.name_1);
+            mName2 = itemView.findViewById(R.id.name_2);
+            mName3 = itemView.findViewById(R.id.name_3);
+            mVotes1 = itemView.findViewById(R.id.votes_1);
+            mVotes2 = itemView.findViewById(R.id.votes_2);
+            mVotes3 = itemView.findViewById(R.id.votes_3);
+            mSex1 = itemView.findViewById(R.id.sex_1);
+            mSex2 = itemView.findViewById(R.id.sex_2);
+            mSex3 = itemView.findViewById(R.id.sex_3);
+            mLevel1 = itemView.findViewById(R.id.level_1);
+            mLevel2 = itemView.findViewById(R.id.level_2);
+            mLevel3 = itemView.findViewById(R.id.level_3);
+            mBtnFollow1 = itemView.findViewById(R.id.btn_follow_1);
+            mBtnFollow2 = itemView.findViewById(R.id.btn_follow_2);
+            mBtnFollow3 = itemView.findViewById(R.id.btn_follow_3);
             mBtnFollow1.setOnClickListener(mFollowClickListener1);
             mBtnFollow2.setOnClickListener(mFollowClickListener1);
             mBtnFollow3.setOnClickListener(mFollowClickListener1);
@@ -357,13 +357,13 @@ public class MainListAdapter extends RefreshAdapter<ListBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mOrder = (TextView) itemView.findViewById(R.id.order);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mVotes = (TextView) itemView.findViewById(R.id.votes);
+            mOrder = itemView.findViewById(R.id.order);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mVotes = itemView.findViewById(R.id.votes);
             mSex = itemView.findViewById(R.id.sex);
             mLevel = itemView.findViewById(R.id.level);
-            mBtnFollow = (MyRadioButton) itemView.findViewById(R.id.btn_follow);
+            mBtnFollow = itemView.findViewById(R.id.btn_follow);
             mBtnFollow.setOnClickListener(mFollowClickListener2);
             itemView.setOnClickListener(mItemClickListener);
         }

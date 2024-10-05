@@ -17,9 +17,9 @@ import com.tencent.qcloud.tuikit.tuichat.R;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.SoundMessageBean;
 
 public class SoundMessageHolder extends MessageContentHolder {
-    private TextView audioTimeText;
-    private ImageView audioPlayImage;
-    private LinearLayout audioContentView;
+    private final TextView audioTimeText;
+    private final ImageView audioPlayImage;
+    private final LinearLayout audioContentView;
     private AnimationDrawable animationDrawable;
 
     public SoundMessageHolder(View itemView) {
@@ -66,7 +66,7 @@ public class SoundMessageHolder extends MessageContentHolder {
             }
         }
 
-        int duration = (int) message.getDuration();
+        int duration = message.getDuration();
         if (duration == 0) {
             duration = 1;
         }

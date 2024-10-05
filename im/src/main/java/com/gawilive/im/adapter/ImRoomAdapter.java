@@ -73,30 +73,30 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
     private static final int TYPE_GOODS_RIGHT = 11;
     private static final int TYPE_PROMPT = 9;
 
-    private Context mContext;
+    private final Context mContext;
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
-    private UserBean mUserBean;
-    private UserBean mToUserBean;
-    private String mToUid;
-    private String mTxMapAppKey;
-    private String mTxMapAppSecret;
-    private List<ImMessageBean> mList;
-    private LayoutInflater mInflater;
-    private String mUserAvatar;
-    private String mToUserAvatar;
+    private final UserBean mUserBean;
+    private final UserBean mToUserBean;
+    private final String mToUid;
+    private final String mTxMapAppKey;
+    private final String mTxMapAppSecret;
+    private final List<ImMessageBean> mList;
+    private final LayoutInflater mInflater;
+    private final String mUserAvatar;
+    private final String mToUserAvatar;
     private long mLastMessageTime;
     private ActionListener mActionListener;
     private View.OnClickListener mOnImageClickListener;
-    private int[] mLocation;
-    private ValueAnimator mAnimator;
+    private final int[] mLocation;
+    private final ValueAnimator mAnimator;
     private ChatVoiceLayout mChatVoiceLayout;
     private View.OnClickListener mOnVoiceClickListener;
-    private CommonCallback<File> mVoiceFileCallback;
-    private View.OnLongClickListener mOnLongClickListener;
+    private final CommonCallback<File> mVoiceFileCallback;
+    private final View.OnLongClickListener mOnLongClickListener;
     private PopupWindow mPopupWindow;
-    private View.OnClickListener mGoodsClickListener;
-    private View.OnClickListener mLocationClickListener;
+    private final View.OnClickListener mGoodsClickListener;
+    private final View.OnClickListener mLocationClickListener;
 
 
     public ImRoomAdapter(Context context, String toUid, UserBean toUserBean) {
@@ -523,8 +523,8 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mTime = (TextView) itemView.findViewById(R.id.time);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mTime = itemView.findViewById(R.id.time);
         }
 
         void setData(ImMessageBean bean, int position, Object payload) {
@@ -564,7 +564,7 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
 
         public TextVh(View itemView) {
             super(itemView);
-            mText = (TextView) itemView.findViewById(R.id.text);
+            mText = itemView.findViewById(R.id.text);
         }
 
         @Override
@@ -626,7 +626,7 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
 
         public ImageVh(View itemView) {
             super(itemView);
-            mImg = (MyImageView) itemView.findViewById(R.id.img);
+            mImg = itemView.findViewById(R.id.img);
             mImg.setOnClickListener(mOnImageClickListener);
             mCommonCallback = new CommonCallback<File>() {
                 @Override
@@ -706,7 +706,7 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
         public VoiceVh(View itemView) {
             super(itemView);
             mRedPoint = itemView.findViewById(R.id.red_point);
-            mDuration = (TextView) itemView.findViewById(R.id.duration);
+            mDuration = itemView.findViewById(R.id.duration);
             mChatVoiceLayout = itemView.findViewById(R.id.voice);
             mChatVoiceLayout.setOnClickListener(mOnVoiceClickListener);
         }
@@ -742,7 +742,7 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
 
         public SelfVoiceVh(View itemView) {
             super(itemView);
-            mDuration = (TextView) itemView.findViewById(R.id.duration);
+            mDuration = itemView.findViewById(R.id.duration);
             mChatVoiceLayout = itemView.findViewById(R.id.voice);
             mChatVoiceLayout.setOnClickListener(mOnVoiceClickListener);
             mFailIcon = itemView.findViewById(R.id.icon_fail);
@@ -795,9 +795,9 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
 
         public LocationVh(View itemView) {
             super(itemView);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mAddress = (TextView) itemView.findViewById(R.id.address);
-            mMap = (ImageView) itemView.findViewById(R.id.map);
+            mTitle = itemView.findViewById(R.id.title);
+            mAddress = itemView.findViewById(R.id.address);
+            mMap = itemView.findViewById(R.id.map);
             mGroup = itemView.findViewById(R.id.group);
             mGroup.setOnClickListener(mLocationClickListener);
         }
@@ -948,7 +948,6 @@ public class ImRoomAdapter extends RecyclerView.Adapter {
 
     public void onPromptMessage(int msgId) {
         if (mList == null || mList.size() == 0) {
-            return;
         }
 
     }

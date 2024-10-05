@@ -146,6 +146,10 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
 
         });
 
+        mTvLjgd.setOnClickListener(v -> {
+            ToastUtil.show("Click Learn More Activity");
+        });
+
         // 缴费记录
         mTvCjjl.setOnClickListener(v -> {
             startActivity(PaymentRecordsActivity.class);

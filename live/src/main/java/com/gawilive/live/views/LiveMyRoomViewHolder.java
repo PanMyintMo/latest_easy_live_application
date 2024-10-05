@@ -41,7 +41,7 @@ public class LiveMyRoomViewHolder extends AbsCommonViewHolder implements OnItemC
 
     @Override
     public void init() {
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_admin_room);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRefreshView.setDataHelper(new CommonRefreshView.DataHelper<LiveAdminRoomBean>() {

@@ -15,14 +15,14 @@ import com.gawilive.beauty.R;
 
 public class TextSeekBar extends FrameLayout {
 
-    private TextView mTextView;
-    private SeekBar mSeekBar;
-    private float mScale;
-    private int mDp20;
-    private int mLeft;
-    private int mRight;
+    private final TextView mTextView;
+    private final SeekBar mSeekBar;
+    private final float mScale;
+    private final int mDp20;
+    private final int mLeft;
+    private final int mRight;
     private ActionListener mActionListener;
-    private TextView leftText;
+    private final TextView leftText;
 
     public TextSeekBar(@NonNull Context context) {
         this(context, null);

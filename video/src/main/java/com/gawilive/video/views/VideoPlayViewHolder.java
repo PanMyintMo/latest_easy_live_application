@@ -57,7 +57,7 @@ public class VideoPlayViewHolder extends AbsViewHolder implements ITXVodPlayList
     @Override
     public void init() {
         mCachePath = mContext.getCacheDir().getAbsolutePath();
-        mTXCloudVideoView = (TXCloudVideoView) findViewById(R.id.video_view);
+        mTXCloudVideoView = findViewById(R.id.video_view);
        // mTXCloudVideoView.setRenderMode(TXLiveConstants.RENDER_MODE_FULL_FILL_SCREEN);
         mPlayer = new TXVodPlayer(mContext);
         mTXVodPlayConfig = new TXVodPlayConfig();

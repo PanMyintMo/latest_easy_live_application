@@ -26,16 +26,16 @@ import java.util.List;
 
 public class CoinPayAdapter extends RecyclerView.Adapter<CoinPayAdapter.Vh> {
 
-    private Context mContext;
-    private List<CoinPayBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<CoinPayBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
     private OnItemClickListener<CoinPayBean> mOnItemClickListener;
-    private Drawable mCheckedBg;
-    private Drawable mUnCheckedBg;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final Drawable mCheckedBg;
+    private final Drawable mUnCheckedBg;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
 
     public CoinPayAdapter(Context context) {
         mContext = context;
@@ -144,9 +144,7 @@ public class CoinPayAdapter extends RecyclerView.Adapter<CoinPayAdapter.Vh> {
         if (mList != null && mList.size() > 0) {
             if (mCheckedPosition >= 0 && mCheckedPosition < mList.size()) {
                 CoinPayBean bean = mList.get(mCheckedPosition);
-                if (bean != null) {
-                    return bean;
-                }
+                return bean;
             }
         }
         return null;

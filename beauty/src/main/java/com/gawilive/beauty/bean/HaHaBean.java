@@ -3,9 +3,9 @@ package com.gawilive.beauty.bean;
 import com.meihu.beautylibrary.bean.MHCommonBean;
 
 public class HaHaBean extends MHCommonBean {
-    private int mId;
-    private int mName;
-    private int mThumb;
+    private final int mId;
+    private final int mName;
+    private final int mThumb;
     private boolean mChecked;
 
     public HaHaBean(int id, int name, int thumb,String key) {

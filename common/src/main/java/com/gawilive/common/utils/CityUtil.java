@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import cn.qqtheme.framework.entity.Province;
@@ -23,7 +24,7 @@ public class CityUtil {
 
     private ArrayList<Province> mProvinceList;
     private static CityUtil sInstance;
-    private Handler mHandler;
+    private final Handler mHandler;
 
     private CityUtil() {
         mProvinceList = new ArrayList<>();
@@ -48,7 +49,7 @@ public class CityUtil {
                 BufferedReader br = null;
                 try {
                     InputStream is = CommonAppContext.getInstance().getAssets().open("city.json");
-                    br = new BufferedReader(new InputStreamReader(is, "utf-8"));
+                    br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
                     StringBuilder sb = new StringBuilder();
                     String line;
                     while ((line = br.readLine()) != null) {

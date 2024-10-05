@@ -69,7 +69,7 @@ public class LiveFollowActivity extends AbsActivity implements OnItemClickListen
             }
         });
         classRecyclerView.setAdapter(classAdapter);
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_live_follow);
         mRefreshView.setLayoutManager(new GridLayoutManager(mContext, 2, GridLayoutManager.VERTICAL, false));
         ItemDecoration decoration = new ItemDecoration(mContext, 0x00000000, 5, 0);

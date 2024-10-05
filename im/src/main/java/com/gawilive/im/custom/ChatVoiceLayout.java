@@ -22,15 +22,15 @@ import com.gawilive.im.bean.ImMessageBean;
 
 public class ChatVoiceLayout extends FrameLayout {
 
-    private Context mContext;
+    private final Context mContext;
     private int mDuration;
-    private int mDirection;
-    private float mScale;
-    private int mMaxWidth;
-    private int mMinWidth;
-    private int mRate;
+    private final int mDirection;
+    private final float mScale;
+    private final int mMaxWidth;
+    private final int mMinWidth;
+    private final int mRate;
     private ImageView mImageView;
-    private Drawable[] mDrawables;
+    private final Drawable[] mDrawables;
     private int mIndex = 2;
     private ImMessageBean mImMessageBean;
 

@@ -40,9 +40,9 @@ import java.util.Locale;
 
 public class FileMessageHolder extends MessageContentHolder {
     private static final String TAG = "FileMessageHolder";
-    private TextView fileNameText;
-    private TextView fileSizeText;
-    private TextView fileStatusText;
+    private final TextView fileNameText;
+    private final TextView fileSizeText;
+    private final TextView fileStatusText;
 
     private ProgressPresenter.ProgressListener progressListener;
     private NetworkConnectionListener networkConnectionListener;

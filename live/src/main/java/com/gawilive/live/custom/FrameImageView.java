@@ -24,13 +24,13 @@ import java.util.List;
 
 public class FrameImageView extends AppCompatImageView {
 
-    private float mRatio;
+    private final float mRatio;
     private Bitmap mBitmap;
     private List<Integer> mImageList;
     private int mCurIndex;
     private Paint mPaint;
-    private Rect mDst;
-    private Rect mSrc;
+    private final Rect mDst;
+    private final Rect mSrc;
     private boolean mPlayAnim;
 
     public FrameImageView(Context context) {

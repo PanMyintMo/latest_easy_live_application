@@ -42,7 +42,7 @@ public class SystemMessageViewHolder extends AbsViewHolder implements View.OnCli
     @Override
     public void init() {
         findViewById(R.id.btn_back).setOnClickListener(this);
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_sys_msg);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRefreshView.setDataHelper(new CommonRefreshView.DataHelper<SystemMessageBean>() {

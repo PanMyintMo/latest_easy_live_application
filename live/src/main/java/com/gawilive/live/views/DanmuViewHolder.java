@@ -54,9 +54,9 @@ public class DanmuViewHolder extends AbsViewHolder {
 
     @Override
     public void init() {
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mContent = (TextView) findViewById(R.id.content);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mContent = findViewById(R.id.content);
         mScreenWidth = ScreenDimenUtil.getInstance().getScreenWdith();
         mUpdateListener = new ValueAnimator.AnimatorUpdateListener() {
             @Override

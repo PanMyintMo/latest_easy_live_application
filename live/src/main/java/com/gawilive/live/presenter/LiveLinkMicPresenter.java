@@ -59,12 +59,12 @@ import org.greenrobot.eventbus.EventBus;
 
 public class LiveLinkMicPresenter implements View.OnClickListener {
 
-    private Context mContext;
-    private View mRoot;
+    private final Context mContext;
+    private final View mRoot;
     private SocketClient mSocketClient;
-    private boolean mIsAnchor;//是否是主播
+    private final boolean mIsAnchor;//是否是主播
     private String mLiveUid;//主播的uid
-    private ViewGroup mSmallContainer;
+    private final ViewGroup mSmallContainer;
     private TextView mLinkMicTip;
     private TextView mLinkMicWaitText;
     private String mApplyUid;//正在申请连麦的人的uid
@@ -74,7 +74,7 @@ public class LiveLinkMicPresenter implements View.OnClickListener {
     private boolean mIsLinkMic;//是否已经连麦了
     private boolean mIsLinkMicDialogShow;//观众申请连麦的弹窗是否显示了
     private boolean mAcceptLinkMic;//是否接受连麦
-    private String mLinkMicWaitString;
+    private final String mLinkMicWaitString;
     private int mLinkMicWaitCount;//连麦弹窗等待倒计时
     private static final int LINK_MIC_COUNT_MAX = 10;
     private PopupWindow mLinkMicPopWindow;
@@ -82,7 +82,7 @@ public class LiveLinkMicPresenter implements View.OnClickListener {
     private AbsLiveLinkMicPlayViewHolder mLiveLinkMicPlayViewHolder;//连麦播放小窗口
     private AbsLiveLinkMicPushViewHolder mLiveLinkMicPushViewHolder;//连麦推流小窗口
     private boolean mPaused;//是否执行了Activity周期的pause
-    private int mLiveSdk;
+    private final int mLiveSdk;
 
     public LiveLinkMicPresenter(Context context, ILiveLinkMicViewHolder linkMicViewHolder, boolean isAnchor, int liveSdk, View root) {
         mContext = context;
@@ -517,10 +517,10 @@ public class LiveLinkMicPresenter implements View.OnClickListener {
         mIsLinkMicDialogShow = true;
         mAcceptLinkMic = false;
         View v = LayoutInflater.from(mContext).inflate(R.layout.dialog_link_mic_wait, null);
-        ImageView avatar = (ImageView) v.findViewById(R.id.avatar);
-        TextView name = (TextView) v.findViewById(R.id.name);
-        ImageView sex = (ImageView) v.findViewById(R.id.sex);
-        ImageView level = (ImageView) v.findViewById(R.id.level);
+        ImageView avatar = v.findViewById(R.id.avatar);
+        TextView name = v.findViewById(R.id.name);
+        ImageView sex = v.findViewById(R.id.sex);
+        ImageView level = v.findViewById(R.id.level);
         mLinkMicWaitText = v.findViewById(R.id.wait_text);
         v.findViewById(R.id.btn_refuse).setOnClickListener(this);
         v.findViewById(R.id.btn_accept).setOnClickListener(this);

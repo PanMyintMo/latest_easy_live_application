@@ -116,7 +116,7 @@ public class ShopHomeActivity extends AbsActivity implements View.OnClickListene
         }
         mUnitString = WordUtil.getString(R.string.mall_168);
 
-        mSmartRefreshLayout = (SmartRefreshLayout) findViewById(com.gawilive.common.R.id.refreshLayout);
+        mSmartRefreshLayout = findViewById(com.gawilive.common.R.id.refreshLayout);
         mSmartRefreshLayout.setEnableLoadMoreWhenContentNotFull(true);//是否在列表不满一页时候开启上拉加载功能
         mSmartRefreshLayout.setEnableFooterFollowWhenLoadFinished(true);//是否在全部加载结束之后Footer跟随内容
         mSmartRefreshLayout.setEnableOverScrollBounce(false);//设置是否开启越界回弹功能（默认true）
@@ -139,7 +139,7 @@ public class ShopHomeActivity extends AbsActivity implements View.OnClickListene
             frameLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             mViewList.add(frameLayout);
         }
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (PAGE_COUNT > 1) {
             mViewPager.setOffscreenPageLimit(PAGE_COUNT - 1);
         }
@@ -161,7 +161,7 @@ public class ShopHomeActivity extends AbsActivity implements View.OnClickListene
             }
         });
         mViewHolders = new AbsCommonViewHolder[PAGE_COUNT];
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = mIsPlat ? new String[]{
                 WordUtil.getString(R.string.mall_405)
         } : new String[]{

@@ -133,8 +133,6 @@ public class MoneyInputActivity extends AbsActivity {
                 "" +
                 "" +
                 "" +
-                "" +
-                "" +
                 "", map, new OkHttp.DataCallBack() {
 
             @Override

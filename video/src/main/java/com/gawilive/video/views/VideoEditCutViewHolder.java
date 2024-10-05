@@ -59,9 +59,9 @@ public class VideoEditCutViewHolder extends AbsViewHolder implements View.OnClic
     @Override
     public void init() {
         findViewById(R.id.root).setOnClickListener(this);
-        mTip = (TextView) findViewById(R.id.tip);
-        mStartTime = (TextView) findViewById(R.id.start_time);
-        mEndTime = (TextView) findViewById(R.id.end_time);
+        mTip = findViewById(R.id.tip);
+        mStartTime = findViewById(R.id.start_time);
+        mEndTime = findViewById(R.id.end_time);
         mSpecialGroup = findViewById(R.id.group_special);
         mBtnSpecialCancel = findViewById(R.id.btn_special_cancel);
         mBtnSpecialCancel.setOnClickListener(this);
@@ -88,7 +88,7 @@ public class VideoEditCutViewHolder extends AbsViewHolder implements View.OnClic
         findViewById(R.id.btn_special_3).setOnTouchListener(onTouchListener);
         findViewById(R.id.btn_special_4).setOnTouchListener(onTouchListener);
 
-        mVideoProgressView = (VideoProgressView) findViewById(R.id.progress_view);
+        mVideoProgressView = findViewById(R.id.progress_view);
         List<Bitmap> list = ((VideoEditActivity)mContext).getBitmapList();
         if (list != null) {
             mVideoProgressView.addBitmapList(list);

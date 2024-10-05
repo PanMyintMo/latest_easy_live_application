@@ -38,7 +38,7 @@ public class LiveVoiceAnchorViewHolder extends AbsLiveViewHolder {
         super.init();
 //        mDrawable0 = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_func_0);
 //        mDrawable1 = ContextCompat.getDrawable(mContext, R.mipmap.icon_live_func_1);
-        mBtnFunction = (ImageView) findViewById(R.id.btn_function);
+        mBtnFunction = findViewById(R.id.btn_function);
 //        mBtnFunction.setImageDrawable(mDrawable0);
         mBtnFunction.setOnClickListener(this);
         findViewById(R.id.btn_gift).setOnClickListener(this);

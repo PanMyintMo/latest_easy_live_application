@@ -17,9 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class TopGradual extends RecyclerView.ItemDecoration {
 
-    private Paint mPaint;
-    private Xfermode mXfermode;
-    private LinearGradient mLinearGradient;
+    private final Paint mPaint;
+    private final Xfermode mXfermode;
+    private final LinearGradient mLinearGradient;
     private int mLayerId;
 
     public TopGradual() {

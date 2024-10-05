@@ -9,9 +9,9 @@ public final class Base64 {
 	private static final int SIXTEENBIT = 16;
 	private static final int FOURBYTE = 4;
 	private static final int SIGN = -128;
-	private static char PAD = '=';
-	private static byte[] base64Alphabet = new byte[BASELENGTH];
-	private static char[] lookUpBase64Alphabet = new char[LOOKUPLENGTH];
+	private static final char PAD = '=';
+	private static final byte[] base64Alphabet = new byte[BASELENGTH];
+	private static final char[] lookUpBase64Alphabet = new char[LOOKUPLENGTH];
 
 	static {
 		for (int i = 0; i < BASELENGTH; ++i) {
@@ -42,8 +42,8 @@ public final class Base64 {
 		for (int i = 52, j = 0; i <= 61; i++, j++) {
 			lookUpBase64Alphabet[i] = (char) ('0' + j);
 		}
-		lookUpBase64Alphabet[62] = (char) '+';
-		lookUpBase64Alphabet[63] = (char) '/';
+		lookUpBase64Alphabet[62] = '+';
+		lookUpBase64Alphabet[63] = '/';
 
 	}
 
@@ -81,7 +81,7 @@ public final class Base64 {
 		int numberTriplets = lengthDataBits / TWENTYFOURBITGROUP;
 		int numberQuartet = fewerThan24bits != 0 ? numberTriplets + 1
 				: numberTriplets;
-		char encodedData[] = null;
+		char[] encodedData = null;
 
 		encodedData = new char[numberQuartet * 4];
 
@@ -169,7 +169,7 @@ public final class Base64 {
 			return new byte[0];
 		}
 
-		byte decodedData[] = null;
+		byte[] decodedData = null;
 		byte b1 = 0, b2 = 0, b3 = 0, b4 = 0;
 		char d1 = 0, d2 = 0, d3 = 0, d4 = 0;
 

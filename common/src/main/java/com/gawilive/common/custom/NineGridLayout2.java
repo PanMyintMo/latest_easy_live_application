@@ -16,18 +16,18 @@ import java.util.List;
 
 public class NineGridLayout2 extends FrameLayout {
 
-    private Context mContext;
-    private int mItemWidth;
-    private int mDividerWidth;
-    private int mPlayIconRes;
-    private List<ImageView> mViewList;
+    private final Context mContext;
+    private final int mItemWidth;
+    private final int mDividerWidth;
+    private final int mPlayIconRes;
+    private final List<ImageView> mViewList;
     private ActionListener mActionListener;
     private LayoutParams[] mLayoutParamsArray;
-    private OnClickListener mOnClickListener;
+    private final OnClickListener mOnClickListener;
     private List<?> mDataList;
     private String mVideoUrl;
     private ImageView mPlayIcon;
-    private float mScale;
+    private final float mScale;
 
 
     public NineGridLayout2(Context context) {

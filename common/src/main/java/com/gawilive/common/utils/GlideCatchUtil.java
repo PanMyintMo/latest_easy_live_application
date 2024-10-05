@@ -10,6 +10,7 @@ import com.gawilive.common.CommonAppContext;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * Created by cxf on 2017/8/18.
@@ -118,7 +119,7 @@ public class GlideCatchUtil {
             try {
                 File file = new File(filePath);
                 if (file.isDirectory()) {
-                    File files[] = file.listFiles();
+                    File[] files = file.listFiles();
                     for (File file1 : files) {
                         deleteFolderFile(file1.getAbsolutePath(), true);
                     }
@@ -154,23 +155,23 @@ public class GlideCatchUtil {
         double megaByte = kiloByte / 1024;
         if (megaByte < 1) {
             BigDecimal result1 = new BigDecimal(Double.toString(kiloByte));
-            return result1.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "KB";
+            return result1.setScale(2, RoundingMode.HALF_UP).toPlainString() + "KB";
         }
 
         double gigaByte = megaByte / 1024;
         if (gigaByte < 1) {
             BigDecimal result2 = new BigDecimal(Double.toString(megaByte));
-            return result2.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "MB";
+            return result2.setScale(2, RoundingMode.HALF_UP).toPlainString() + "MB";
         }
 
         double teraBytes = gigaByte / 1024;
         if (teraBytes < 1) {
             BigDecimal result3 = new BigDecimal(Double.toString(gigaByte));
-            return result3.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "GB";
+            return result3.setScale(2, RoundingMode.HALF_UP).toPlainString() + "GB";
         }
         BigDecimal result4 = new BigDecimal(teraBytes);
 
-        return result4.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "TB";
+        return result4.setScale(2, RoundingMode.HALF_UP).toPlainString() + "TB";
     }
 
 }

@@ -35,8 +35,8 @@ public class LotteryRecordAdapter extends AppAdapter<LotteryRecordModel> {
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
 
-        private TextView mTvDesignated;
-        private RecyclerView mRecyclerView;
+        private final TextView mTvDesignated;
+        private final RecyclerView mRecyclerView;
 
         private ViewHolder() {
             super(R.layout.item_lottery_record);

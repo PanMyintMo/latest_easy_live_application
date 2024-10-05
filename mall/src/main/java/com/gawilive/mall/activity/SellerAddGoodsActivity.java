@@ -93,7 +93,7 @@ public class SellerAddGoodsActivity extends AbsActivity {
     private String mDetailVal;
     private String mPostageVal;
     private String mPriceYongVal;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

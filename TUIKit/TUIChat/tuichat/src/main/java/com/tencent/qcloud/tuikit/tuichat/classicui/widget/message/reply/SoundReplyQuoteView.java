@@ -12,9 +12,9 @@ import com.tencent.qcloud.tuikit.tuichat.R;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.reply.SoundReplyQuoteBean;
 
 public class SoundReplyQuoteView extends TUIReplyQuoteView {
-    private View soundMsgLayout;
-    private ImageView soundMsgIcon;
-    private TextView soundMsgTv;
+    private final View soundMsgLayout;
+    private final ImageView soundMsgIcon;
+    private final TextView soundMsgTv;
 
     public SoundReplyQuoteView(Context context) {
         super(context);

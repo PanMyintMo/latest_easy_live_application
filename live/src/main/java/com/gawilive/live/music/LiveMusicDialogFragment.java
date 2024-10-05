@@ -164,7 +164,7 @@ public class LiveMusicDialogFragment extends AbsDialogFragment implements View.O
         LiveHttpUtil.searchMusic(key, mSearchCallback);
     }
 
-    private HttpCallback mSearchCallback = new HttpCallback() {
+    private final HttpCallback mSearchCallback = new HttpCallback() {
         @Override
         public void onSuccess(int code, String msg, String[] info) {
             if (code == 0) {
@@ -212,7 +212,7 @@ public class LiveMusicDialogFragment extends AbsDialogFragment implements View.O
     /**
      * 获取歌曲下载地址的回调
      */
-    private MusicUrlCallback mMusicUrlCallback = new MusicUrlCallback() {
+    private final MusicUrlCallback mMusicUrlCallback = new MusicUrlCallback() {
 
         @Override
         public void onSuccess(int code, String msg, String[] info) {

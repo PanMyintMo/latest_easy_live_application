@@ -18,12 +18,12 @@ import com.gawilive.mall.bean.GoodsManageBean;
 
 public class SellerZaiShouAdapter extends RefreshAdapter<GoodsManageBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mPirceNumClickListener;
-    private View.OnClickListener mXaiJiaClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mPirceNumClickListener;
+    private final View.OnClickListener mXaiJiaClickListener;
     private ActionListener mActionListener;
-    private String mSaleString;
-    private String mMoneySymbol;
+    private final String mSaleString;
+    private final String mMoneySymbol;
 
 
     public SellerZaiShouAdapter(Context context) {

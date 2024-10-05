@@ -59,7 +59,7 @@ public class LiveTimeDialogFragment extends AbsDialogFragment implements View.On
             return;
         }
         int checkedCoin = bundle.getInt(Constants.CHECKED_COIN, 0);
-        mRecyclerView =(RecyclerView) mRootView.findViewById(R.id.recyclerView);
+        mRecyclerView = mRootView.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mAdapter = new LiveTimeChargeAdapter(mContext, checkedCoin);

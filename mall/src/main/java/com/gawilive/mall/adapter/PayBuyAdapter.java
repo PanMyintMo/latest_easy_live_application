@@ -16,7 +16,7 @@ import com.gawilive.mall.bean.PayContentBuyBean;
 
 public class PayBuyAdapter extends RefreshAdapter<PayContentBuyBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public PayBuyAdapter(Context context) {
         super(context);

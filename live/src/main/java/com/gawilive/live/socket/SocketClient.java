@@ -114,7 +114,7 @@ public class SocketClient {
     }
 
 
-    private Emitter.Listener mConnectListener = new Emitter.Listener() {
+    private final Emitter.Listener mConnectListener = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             L.e(TAG, "--onConnect-->" + args);
@@ -122,7 +122,7 @@ public class SocketClient {
         }
     };
 
-    private Emitter.Listener mReConnectListener = new Emitter.Listener() {
+    private final Emitter.Listener mReConnectListener = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             L.e(TAG, "--reConnect-->" + args);
@@ -130,7 +130,7 @@ public class SocketClient {
         }
     };
 
-    private Emitter.Listener mDisConnectListener = new Emitter.Listener() {
+    private final Emitter.Listener mDisConnectListener = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             L.e(TAG, "--onDisconnect-->" + args);
@@ -139,21 +139,21 @@ public class SocketClient {
             }
         }
     };
-    private Emitter.Listener mErrorListener = new Emitter.Listener() {
+    private final Emitter.Listener mErrorListener = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             L.e(TAG, "--onConnectError-->" + args);
         }
     };
 
-    private Emitter.Listener mTimeOutListener = new Emitter.Listener() {
+    private final Emitter.Listener mTimeOutListener = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             L.e(TAG, "--onConnectTimeOut-->" + args);
         }
     };
 
-    private Emitter.Listener onConn = new Emitter.Listener() {
+    private final Emitter.Listener onConn = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             if (mSocketHandler != null) {
@@ -171,7 +171,7 @@ public class SocketClient {
         }
     };
 
-    private Emitter.Listener onBroadcast = new Emitter.Listener() {
+    private final Emitter.Listener onBroadcast = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
             if (mSocketHandler != null) {

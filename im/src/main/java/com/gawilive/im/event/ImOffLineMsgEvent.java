@@ -8,7 +8,7 @@ import com.gawilive.im.bean.ImUserBean;
  */
 
 public class ImOffLineMsgEvent {
-    private ImUserBean mBean;
+    private final ImUserBean mBean;
 
     public ImOffLineMsgEvent(ImUserBean bean) {
         mBean = bean;

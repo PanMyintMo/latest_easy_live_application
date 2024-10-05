@@ -17,10 +17,10 @@ import java.util.List;
 
 public class ChooseVideoAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private LayoutInflater mInflater;
-    private List<ChooseVideoBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final LayoutInflater mInflater;
+    private final List<ChooseVideoBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private ActionListener mActionListener;
 
     public ChooseVideoAdapter(Context context, List<ChooseVideoBean> list) {
@@ -40,7 +40,6 @@ public class ChooseVideoAdapter extends RecyclerView.Adapter {
                     if (mActionListener != null) {
                         mActionListener.onCameraClick();
                     }
-                    return;
                 }else{
                     if (mActionListener != null) {
                         mActionListener.onVideoItemClick(bean);

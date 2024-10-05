@@ -12,14 +12,14 @@ import com.gawilive.common.R;
 public class LineProgress extends View {
 
     private int mHeight;
-    private int mFgColor;
-    private int mBgColor;
-    private int mMaxProgress;
+    private final int mFgColor;
+    private final int mBgColor;
+    private final int mMaxProgress;
     private int mCurProgress;
     private Paint mBgPaint;
     private Paint mFgPaint;
-    private float mStrokeWidth;
-    private float[] mLineX;
+    private final float mStrokeWidth;
+    private final float[] mLineX;
 
     public LineProgress(Context context) {
         this(context, null);

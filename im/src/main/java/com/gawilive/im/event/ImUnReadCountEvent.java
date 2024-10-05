@@ -6,8 +6,8 @@ package com.gawilive.im.event;
 
 public class ImUnReadCountEvent {
 
-    private String mUnReadCount;
-    private String mLiveRoomUnReadCount;
+    private final String mUnReadCount;
+    private final String mLiveRoomUnReadCount;
 
 
     public ImUnReadCountEvent(String unReadCount, String liveRoomUnReadCount) {

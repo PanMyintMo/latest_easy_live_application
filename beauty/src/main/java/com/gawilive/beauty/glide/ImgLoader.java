@@ -26,7 +26,7 @@ import java.util.Map;
 public class ImgLoader {
     private static final boolean SKIP_MEMORY_CACHE = false;
 
-    private static Headers sHeaders;
+    private static final Headers sHeaders;
 
     static {
         sHeaders = new Headers() {

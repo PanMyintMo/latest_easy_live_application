@@ -29,11 +29,11 @@ import java.util.List;
 
 public class LivePlatGoodsAddAdapter extends RefreshAdapter<GoodsBean> {
 
-    private View.OnClickListener mAddClickListener;
-    private String mMoneySymbol;
-    private String mAddString;
-    private String mAddedString;
-    private String mStringYong;
+    private final View.OnClickListener mAddClickListener;
+    private final String mMoneySymbol;
+    private final String mAddString;
+    private final String mAddedString;
+    private final String mStringYong;
 
 
     public LivePlatGoodsAddAdapter(Context context) {

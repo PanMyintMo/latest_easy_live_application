@@ -28,10 +28,10 @@ import java.util.List;
 
 public class AddGoodsTitleAdapter extends RefreshAdapter<AddGoodsImageBean> {
 
-    private String mTip0;
-    private String mTip1;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mDeleteClickListener;
+    private final String mTip0;
+    private final String mTip1;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mDeleteClickListener;
     private File mVideoFile;
     private String mVideoUrl;
     private String mVideoImgUrl;

@@ -42,7 +42,7 @@ public class ErrorActivity extends AbsActivity {
         String title = intent.getStringExtra("title");
         mErrorInfo = intent.getStringExtra("error");
         setTitle(title);
-        mTextView = (TextView) findViewById(R.id.text);
+        mTextView = findViewById(R.id.text);
         mTextView.setText(mErrorInfo);
         findViewById(R.id.btn_copy).setOnClickListener(new View.OnClickListener() {
             @Override

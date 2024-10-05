@@ -22,11 +22,11 @@ import com.tencent.qcloud.tuikit.timcommon.R;
  */
 public class MinimalistLineControllerView extends RelativeLayout {
     private String mName;
-    private boolean mIsBottom;
-    private boolean mIsTop;
+    private final boolean mIsBottom;
+    private final boolean mIsTop;
     private String mContent;
     private boolean mIsJump;
-    private boolean mIsSwitch;
+    private final boolean mIsSwitch;
 
     protected TextView mNameText;
     protected TextView mContentText;

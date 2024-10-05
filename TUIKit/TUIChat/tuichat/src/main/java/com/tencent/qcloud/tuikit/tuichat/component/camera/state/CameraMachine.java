@@ -8,7 +8,7 @@ import com.tencent.qcloud.tuikit.tuichat.component.camera.view.CameraInterface;
 import com.tencent.qcloud.tuikit.tuichat.component.camera.view.ICameraView;
 
 public class CameraMachine implements State {
-    private Context context;
+    private final Context context;
     private State state;
     private final ICameraView cameraView;
 

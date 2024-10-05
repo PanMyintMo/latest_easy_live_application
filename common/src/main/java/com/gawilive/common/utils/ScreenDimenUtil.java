@@ -16,9 +16,9 @@ public class ScreenDimenUtil {
 
     private int mStatusBarHeight;//状态栏高度
     private int mContentHeight;
-    private int mScreenWidth;
-    private int mScreenHeight;
-    private int mScreenRealHeight;
+    private final int mScreenWidth;
+    private final int mScreenHeight;
+    private final int mScreenRealHeight;
 
 
     private static ScreenDimenUtil sInstance;

@@ -35,7 +35,7 @@ public class MobLoginUtil {
     private static final int CODE_ERROR = 300;//失败
     private static final int CODE_CANCEL = 400;//取消
 
-    private PlatformActionListener mPlatformActionListener;
+    private final PlatformActionListener mPlatformActionListener;
     private Handler mHandler;
     private MobCallback mMobCallback;
 

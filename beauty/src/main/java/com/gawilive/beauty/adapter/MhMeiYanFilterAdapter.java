@@ -23,12 +23,12 @@ import java.util.List;
 
 public class MhMeiYanFilterAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<MeiYanFilterBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final List<MeiYanFilterBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
-    private int mColor0;
-    private int mColor1;
+    private final int mColor0;
+    private final int mColor1;
     private OnItemClickListener<MeiYanFilterBean> mOnItemClickListener;
 
     public MhMeiYanFilterAdapter(Context context, List<MeiYanFilterBean> list) {

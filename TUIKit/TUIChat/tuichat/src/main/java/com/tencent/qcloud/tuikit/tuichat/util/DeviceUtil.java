@@ -6,7 +6,7 @@ import com.tencent.qcloud.tuicore.TUIConfig;
 import com.tencent.qcloud.tuicore.util.TUIBuild;
 
 public class DeviceUtil {
-    private static String[] huaweiAndHonorDevice = {
+    private static final String[] huaweiAndHonorDevice = {
         "hwH60", 
         "hwPE", 
         "hwH30",

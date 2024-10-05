@@ -99,7 +99,7 @@ public class CallModel implements Cloneable, Serializable {
     private int participantType = CALL_PARTICIPANT_TYPE_UNKNOWN;
     private int participantRole = CALL_PARTICIPANT_ROLE_UNKNOWN;
     private String caller = "";
-    private Map<String, UserBean> participantsMap = new LinkedHashMap<>();
+    private final Map<String, UserBean> participantsMap = new LinkedHashMap<>();
     private int duration = 0;
 
     public int getParticipantRole() {

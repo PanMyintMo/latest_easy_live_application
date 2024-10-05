@@ -95,7 +95,7 @@ public class MainHomeLiveViewHolder extends AbsMainHomeChildViewHolder implement
 
     @Override
     public void init() {
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_live);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 2, GridLayoutManager.VERTICAL, false);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
@@ -261,7 +261,7 @@ public class MainHomeLiveViewHolder extends AbsMainHomeChildViewHolder implement
 
         // 获取配置文件
 
-        mBanner = (Banner) headView.findViewById(R.id.banner);
+        mBanner = headView.findViewById(R.id.banner);
         mBanner.setImageLoader(new ImageLoader() {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {

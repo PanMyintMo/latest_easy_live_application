@@ -28,7 +28,7 @@ public class LiveAddImpressActivity extends AbsActivity {
         if (TextUtils.isEmpty(toUid)) {
             return;
         }
-        mLiveAddImpressViewHolder = new LiveAddImpressViewHolder(mContext, (ViewGroup) findViewById(R.id.container));
+        mLiveAddImpressViewHolder = new LiveAddImpressViewHolder(mContext, findViewById(R.id.container));
         mLiveAddImpressViewHolder.subscribeActivityLifeCycle();
         mLiveAddImpressViewHolder.addToParent();
         mLiveAddImpressViewHolder.setToUid(toUid);

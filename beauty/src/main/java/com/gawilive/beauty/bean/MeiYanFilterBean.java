@@ -3,9 +3,9 @@ package com.gawilive.beauty.bean;
 import com.meihu.beautylibrary.bean.MHCommonBean;
 
 public class MeiYanFilterBean extends MHCommonBean {
-    private int mName;
-    private int mThumb;
-    private int mFilterRes;
+    private final int mName;
+    private final int mThumb;
+    private final int mFilterRes;
     private boolean mChecked;
 
     public MeiYanFilterBean(int name, int thumb, int filterRes,String key) {

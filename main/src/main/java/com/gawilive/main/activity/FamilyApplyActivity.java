@@ -48,7 +48,7 @@ public class FamilyApplyActivity extends AbsActivity implements View.OnClickList
     private String mImgFamilyUrl;
     private int mImgPosition;
     private Dialog mLoading;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

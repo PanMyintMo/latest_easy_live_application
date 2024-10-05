@@ -26,15 +26,15 @@ public class SellerOrderAllAdapter extends SellerOrderBaseAdapter {
 //    private static final int ITEM_COMMENT_APPEND = 4;//已评价 可追评
     private static final int ITEM_REFUND = 5;//退款
 
-    private View.OnClickListener mDeleteClickListener;
-    private View.OnClickListener mBuyerClickListener;
-    private View.OnClickListener mWuLiuClickListener;
-    private View.OnClickListener mRefundClickListener;
-    private View.OnClickListener mSendClickListener;
-    private String mRefundString;
-    private String mRefundString0;
-    private String mRefundString1;
-    private String mGoodsCountString;
+    private final View.OnClickListener mDeleteClickListener;
+    private final View.OnClickListener mBuyerClickListener;
+    private final View.OnClickListener mWuLiuClickListener;
+    private final View.OnClickListener mRefundClickListener;
+    private final View.OnClickListener mSendClickListener;
+    private final String mRefundString;
+    private final String mRefundString0;
+    private final String mRefundString1;
+    private final String mGoodsCountString;
 
     public SellerOrderAllAdapter(Context context) {
         super(context);

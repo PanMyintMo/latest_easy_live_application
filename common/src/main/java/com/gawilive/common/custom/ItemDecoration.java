@@ -24,9 +24,9 @@ import android.view.View;
 
 public class ItemDecoration extends RecyclerView.ItemDecoration {
     private static final String TAG = "ItemDecoration";
-    private Drawable mDivider;
-    private int dividerHeight;
-    private int dividerWidth;
+    private final Drawable mDivider;
+    private final int dividerHeight;
+    private final int dividerWidth;
     private int dividerColor;
     private static final int[] ATTRS = new int[]{android.R.attr.listDivider};
     private static final int HORIZONTAL_LIST = LinearLayoutManager.HORIZONTAL;
@@ -400,29 +400,22 @@ public class ItemDecoration extends RecyclerView.ItemDecoration {
 //                    return true;
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
-                if(spanSizeLookup.getSpanGroupIndex(pos,spanCount)==0){
-                    return true;
-                }
+                return spanSizeLookup.getSpanGroupIndex(pos, spanCount) == 0;
             }else{
 //                if(pos%spanCount==0){
 //                    return true;
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
-                if(spanIndexLeft==0){
-                    return true;
-                }
+                return spanIndexLeft == 0;
             }
         }else{
             if (orientation == LinearLayoutManager.VERTICAL) {
-                if(pos==0){
-                    return true;
-                }
+                return pos == 0;
             }else{
                 //每一个都是第一行，也是最后一行
                 return true;
             }
         }
-        return false;
     }
 
     private boolean isFirstColumn(RecyclerView parent, int pos, int spanCount){
@@ -434,29 +427,22 @@ public class ItemDecoration extends RecyclerView.ItemDecoration {
 //                    return true;
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
-                if(spanIndexLeft==0){
-                    return true;
-                }
+                return spanIndexLeft == 0;
             }else{
 //                if(pos<spanCount){
 //                    return true;
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
-                if(spanSizeLookup.getSpanGroupIndex(pos,spanCount)==0){
-                    return true;
-                }
+                return spanSizeLookup.getSpanGroupIndex(pos, spanCount) == 0;
             }
         }else{
             if (orientation == LinearLayoutManager.VERTICAL) {
                 //每一个都是第一列，也是最后一列
                 return true;
             }else{
-                if(pos==0){
-                    return true;
-                }
+                return pos == 0;
             }
         }
-        return false;
     }
 
     private boolean isLastColum(RecyclerView parent, int pos, int spanCount, int childCount) {
@@ -469,9 +455,7 @@ public class ItemDecoration extends RecyclerView.ItemDecoration {
 //                    return true;
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
-                if(spanIndexLeft==spanCount-1 || spanCount==spanSizeLookup.getSpanSize(pos) || pos==childCount-1){
-                    return true;
-                }
+                return spanIndexLeft == spanCount - 1 || spanCount == spanSizeLookup.getSpanSize(pos) || pos == childCount - 1;
             }else{
 //                if(pos>=childCount-spanCount && childCount%spanCount==0){
 //                    //整除的情况判断最后一整列
@@ -486,21 +470,16 @@ public class ItemDecoration extends RecyclerView.ItemDecoration {
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
                 int lastItemSpanGroupIndex=spanSizeLookup.getSpanGroupIndex(childCount-1,spanCount);
-                if(spanSizeLookup.getSpanGroupIndex(pos,spanCount)==lastItemSpanGroupIndex){
-                    return true;//如果与最后一个元素同组则判定为最后一行
-                }
+                return spanSizeLookup.getSpanGroupIndex(pos, spanCount) == lastItemSpanGroupIndex;//如果与最后一个元素同组则判定为最后一行
             }
         }else{
             if (orientation == LinearLayoutManager.VERTICAL) {
                 //每一个都是第一列，也是最后一列
                 return true;
             }else{
-                if(pos==childCount-1){
-                    return true;
-                }
+                return pos == childCount - 1;
             }
         }
-        return false;
     }
 
     private boolean isLastRaw(RecyclerView parent, int pos, int spanCount, int childCount) {
@@ -523,9 +502,7 @@ public class ItemDecoration extends RecyclerView.ItemDecoration {
                 //判断最后一行是否充满整行
                 boolean flag=spanSizeLookup.getSpanIndex(childCount-1, spanCount)==spanCount-1 || spanCount==spanSizeLookup.getSpanSize(childCount-1);
                 int lastItemSpanGroupIndex=spanSizeLookup.getSpanGroupIndex(childCount-1,spanCount);
-                if(spanSizeLookup.getSpanGroupIndex(pos,spanCount)==lastItemSpanGroupIndex){
-                    return true;//如果与最后一个元素同组则判定为最后一行
-                }
+                return spanSizeLookup.getSpanGroupIndex(pos, spanCount) == lastItemSpanGroupIndex;//如果与最后一个元素同组则判定为最后一行
 //                if(flag){
 //                }else{
 //                    //没有充满则前一行跟最后一行都判定为最后一行
@@ -539,21 +516,16 @@ public class ItemDecoration extends RecyclerView.ItemDecoration {
 //                    return true;
 //                }
                 //=========================另一种方案，兼容每个item的spanSize不同的情况==============================
-                if(spanIndexLeft==spanCount-1 || spanCount==spanSizeLookup.getSpanSize(pos) || pos==childCount-1){
-                    return true;
-                }
+                return spanIndexLeft == spanCount - 1 || spanCount == spanSizeLookup.getSpanSize(pos) || pos == childCount - 1;
             }
         }else{
             if (orientation == LinearLayoutManager.VERTICAL) {
-                if(pos==childCount-1){
-                    return true;
-                }
+                return pos == childCount - 1;
             }else{
                 //每一个都是第一行，也是最后一行
                 return true;
             }
         }
-        return false;
     }
 
 

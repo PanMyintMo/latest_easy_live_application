@@ -14,9 +14,9 @@ import com.tencent.qcloud.tuikit.tuichat.bean.message.MergeMessageBean;
 import java.util.List;
 
 public class MergeReplyQuoteView extends TUIReplyQuoteView {
-    private View mergeMsgLayout;
-    private TextView mergeMsgTitle;
-    private TextView mergeMsgContent;
+    private final View mergeMsgLayout;
+    private final TextView mergeMsgTitle;
+    private final TextView mergeMsgContent;
     
     @Override
     public int getLayoutResourceId() {

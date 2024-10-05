@@ -22,10 +22,10 @@ import java.util.List;
 
 public class MusicClassAdapter extends RecyclerView.Adapter<MusicClassAdapter.Vh> {
 
-    private Context mContext;
-    private List<MusicClassBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<MusicClassBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<MusicClassBean> mOnItemClickListener;
 
     public MusicClassAdapter(Context context, List<MusicClassBean> list) {
@@ -71,8 +71,8 @@ public class MusicClassAdapter extends RecyclerView.Adapter<MusicClassAdapter.Vh
 
         public Vh(View itemView) {
             super(itemView);
-            mImg = (ImageView) itemView.findViewById(R.id.img);
-            mText = (TextView) itemView.findViewById(R.id.text);
+            mImg = itemView.findViewById(R.id.img);
+            mText = itemView.findViewById(R.id.text);
             itemView.setOnClickListener(mOnClickListener);
         }
 

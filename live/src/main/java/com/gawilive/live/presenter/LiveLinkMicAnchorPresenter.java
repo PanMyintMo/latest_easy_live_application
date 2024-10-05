@@ -52,11 +52,11 @@ import org.greenrobot.eventbus.EventBus;
 
 public class LiveLinkMicAnchorPresenter implements View.OnClickListener {
 
-    private Context mContext;
-    private View mRoot;
-    private boolean mIsAnchor;//自己是否是主播
+    private final Context mContext;
+    private final View mRoot;
+    private final boolean mIsAnchor;//自己是否是主播
     private SocketClient mSocketClient;
-    private ViewGroup mRightContainer;
+    private final ViewGroup mRightContainer;
     private boolean mPlayingVideo;//是否播放对方主播的视频
     private AbsLiveLinkMicPlayViewHolder mLiveLinkMicPlayViewHolder;//连麦播放小窗口
     private String mPlayUrl;//自己直播间的播流地址
@@ -69,19 +69,19 @@ public class LiveLinkMicAnchorPresenter implements View.OnClickListener {
     private TextView mLinkMicWaitText;
     private int mLinkMicWaitCount;//连麦弹窗等待倒计时
     private static final int LINK_MIC_COUNT_MAX = 10;
-    private String mLinkMicWaitString;
+    private final String mLinkMicWaitString;
     private PopupWindow mLinkMicPopWindow;
     private Handler mHandler;
     private boolean mPaused;//是否执行了Activity周期的pause
     private long mLastApplyLinkMicTime;//上次申请连麦的时间
-    private ILiveLinkMicViewHolder mLiveRoomPlayViewHolder;
-    private int mLiveSdk;
+    private final ILiveLinkMicViewHolder mLiveRoomPlayViewHolder;
+    private final int mLiveSdk;
     private String mSelfStream;//自己主播的stream
 
-    private View mPkFollowGroup;
-    private ImageView mPkFollowAvatar;
-    private TextView mPkFollowName;
-    private View mPkFollowIcon;
+    private final View mPkFollowGroup;
+    private final ImageView mPkFollowAvatar;
+    private final TextView mPkFollowName;
+    private final View mPkFollowIcon;
 
     public LiveLinkMicAnchorPresenter(Context context, ILiveLinkMicViewHolder linkMicViewHolder, boolean isAnchor, int liveSdk, View root) {
         mContext = context;
@@ -184,10 +184,10 @@ public class LiveLinkMicAnchorPresenter implements View.OnClickListener {
         mIsApplyDialogShow = true;
         mAcceptLinkMic = false;
         View v = LayoutInflater.from(mContext).inflate(R.layout.dialog_link_mic_wait, null);
-        ImageView avatar = (ImageView) v.findViewById(R.id.avatar);
-        TextView name = (TextView) v.findViewById(R.id.name);
-        ImageView sex = (ImageView) v.findViewById(R.id.sex);
-        ImageView level = (ImageView) v.findViewById(R.id.level);
+        ImageView avatar = v.findViewById(R.id.avatar);
+        TextView name = v.findViewById(R.id.name);
+        ImageView sex = v.findViewById(R.id.sex);
+        ImageView level = v.findViewById(R.id.level);
         mLinkMicWaitText = v.findViewById(R.id.wait_text);
         v.findViewById(R.id.btn_refuse).setOnClickListener(this);
         v.findViewById(R.id.btn_accept).setOnClickListener(this);

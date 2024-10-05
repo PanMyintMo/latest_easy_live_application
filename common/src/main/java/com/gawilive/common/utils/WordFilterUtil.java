@@ -11,7 +11,7 @@ import java.util.Map;
 public class WordFilterUtil {
 
     private Map<String, Object> mMap;
-    private StringBuilder mStringBuilder;
+    private final StringBuilder mStringBuilder;
 
     private static WordFilterUtil sInstance;
 

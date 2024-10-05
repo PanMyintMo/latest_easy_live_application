@@ -32,8 +32,8 @@ public class PrizeListAdapter extends AppAdapter<PrizeListModel> {
 
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
-        private ImageView mImg;
-        private TextView mTvDesc;
+        private final ImageView mImg;
+        private final TextView mTvDesc;
 
         private ViewHolder() {
             super(R.layout.item_prize_list);

@@ -123,7 +123,7 @@ public class VideoRecordActivity extends AbsActivity implements
     protected void main() {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         //按钮动画相关
-        mVideoRecordBtnView = (VideoRecordBtnView) findViewById(R.id.record_btn_view);
+        mVideoRecordBtnView = findViewById(R.id.record_btn_view);
         mRecordView = findViewById(R.id.record_view);
         mUnRecordDrawable = ContextCompat.getDrawable(mContext, R.drawable.bg_btn_record_1);
         mRecordDrawable = ContextCompat.getDrawable(mContext, R.drawable.bg_btn_record_2);
@@ -142,18 +142,18 @@ public class VideoRecordActivity extends AbsActivity implements
         mRecordBtnAnimator.setRepeatMode(ValueAnimator.REVERSE);
 
         /****************************/
-        mRoot = (ViewGroup) findViewById(R.id.root);
+        mRoot = findViewById(R.id.root);
         mGroup1 = findViewById(R.id.group_1);
         mGroup2 = findViewById(R.id.group_2);
         mGroup3 = findViewById(R.id.group_3);
         mGroup4 = findViewById(R.id.group_4);
-        mVideoView = (TXCloudVideoView) findViewById(R.id.video_view);
+        mVideoView = findViewById(R.id.video_view);
         // mVideoView.enableHardwareDecode(true);
         mTime = findViewById(R.id.time);
-        mRecordProgressView = (RecordProgressView) findViewById(R.id.record_progress_view);
+        mRecordProgressView = findViewById(R.id.record_progress_view);
         mRecordProgressView.setMaxDuration(MAX_DURATION);
         mRecordProgressView.setMinDuration(MIN_DURATION);
-        mBtnFlash = (DrawableRadioButton2) findViewById(R.id.btn_flash);
+        mBtnFlash = findViewById(R.id.btn_flash);
         mBtnNext = findViewById(R.id.btn_next);
         mBtnMusic = findViewById(R.id.btn_music);
 

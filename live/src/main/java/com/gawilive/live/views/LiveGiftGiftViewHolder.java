@@ -45,7 +45,7 @@ public class LiveGiftGiftViewHolder extends AbsLiveGiftViewHolder {
     @Override
     public void init() {
         super.init();
-        mCoin = (TextView) findViewById(R.id.coin);
+        mCoin = findViewById(R.id.coin);
         findViewById(R.id.btn_charge).setOnClickListener(this);
     }
 

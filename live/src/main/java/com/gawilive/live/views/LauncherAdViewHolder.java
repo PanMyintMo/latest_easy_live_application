@@ -26,7 +26,7 @@ public class LauncherAdViewHolder extends AbsLivePageViewHolder implements View.
     private ProgressBar mProgressBar;
     private WebView mWebView;
     private TextView mTitle;
-    private String mUrl;
+    private final String mUrl;
     private ActionListener mActionListener;
 
     public LauncherAdViewHolder(Context context, ViewGroup parentView, String url) {
@@ -42,8 +42,8 @@ public class LauncherAdViewHolder extends AbsLivePageViewHolder implements View.
     @Override
     public void init() {
         super.init();
-        mTitle = (TextView) findViewById(R.id.title);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        mTitle = findViewById(R.id.title);
+        mProgressBar = findViewById(R.id.progressbar);
         mWebView = new WebView(mContext);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mWebView.setLayoutParams(params);

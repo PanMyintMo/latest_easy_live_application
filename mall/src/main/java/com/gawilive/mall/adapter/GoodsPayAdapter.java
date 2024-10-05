@@ -21,10 +21,10 @@ import java.util.List;
 
 public class GoodsPayAdapter extends RefreshAdapter<GoodsPayBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
-    private String mBalanceVal;
-    private Drawable mCheckedDrawable;
+    private final String mBalanceVal;
+    private final Drawable mCheckedDrawable;
 
     public GoodsPayAdapter(Context context, List<GoodsPayBean> list, String balanceVal) {
         super(context, list);

@@ -13,7 +13,7 @@ import com.gawilive.mall.bean.GoodsClassBean;
 
 public class GoodsClassRightAdapter extends RefreshAdapter<GoodsClassBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public GoodsClassRightAdapter(Context context) {
         super(context);

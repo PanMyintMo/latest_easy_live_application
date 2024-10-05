@@ -22,9 +22,9 @@ import java.util.List;
 
 public class SimpleFilterAdapter extends RecyclerView.Adapter<SimpleFilterAdapter.Vh> {
 
-    private List<SimpleFilterBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<SimpleFilterBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<SimpleFilterBean> mOnItemClickListener;
     private int mCheckedPosition;
 
@@ -98,8 +98,8 @@ public class SimpleFilterAdapter extends RecyclerView.Adapter<SimpleFilterAdapte
 
         public Vh(View itemView) {
             super(itemView);
-            mImg = (ImageView) itemView.findViewById(R.id.img);
-            mCheckImg = (ImageView) itemView.findViewById(R.id.check_img);
+            mImg = itemView.findViewById(R.id.img);
+            mCheckImg = itemView.findViewById(R.id.check_img);
             itemView.setOnClickListener(mOnClickListener);
         }
 

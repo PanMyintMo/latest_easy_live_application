@@ -221,7 +221,7 @@ public class TUILogin {
         if (this.sdkAppId != 0 && sdkAppId != this.sdkAppId) {
             logout((TUICallback) null);
         }
-        this.appContext = context.getApplicationContext();
+        appContext = context.getApplicationContext();
         this.sdkAppId = sdkAppId;
         currentBusinessScene = TUIBusinessScene.NONE;
         V2TIMManager.getInstance().addIMSDKListener(imSdkListener);
@@ -343,7 +343,7 @@ public class TUILogin {
             logout((V2TIMCallback) null);
             unInit();
         }
-        getInstance().appContext = context.getApplicationContext();
+        appContext = context.getApplicationContext();
         getInstance().sdkAppId = sdkAppId;
         V2TIMManager.getInstance().addIMSDKListener(new V2TIMSDKListener() {
             @Override
@@ -467,7 +467,7 @@ public class TUILogin {
     }
 
     public static Context getAppContext() {
-        return getInstance().appContext;
+        return appContext;
     }
 
     public static boolean isUserLogined() {

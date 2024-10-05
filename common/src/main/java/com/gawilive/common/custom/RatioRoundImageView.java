@@ -14,7 +14,7 @@ import com.gawilive.common.R;
 
 public class RatioRoundImageView extends RoundedImageView {
 
-    private float mRatio;
+    private final float mRatio;
 
     public RatioRoundImageView(Context context) {
         this(context, null);

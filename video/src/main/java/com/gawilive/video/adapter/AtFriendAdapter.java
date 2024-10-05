@@ -18,7 +18,7 @@ import com.gawilive.video.R;
  */
 public class AtFriendAdapter extends RefreshAdapter<UserBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public AtFriendAdapter(Context context) {
         super(context);
@@ -53,9 +53,9 @@ public class AtFriendAdapter extends RefreshAdapter<UserBean> {
 
         public Vh(@NonNull View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSign = (TextView) itemView.findViewById(R.id.sign);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSign = itemView.findViewById(R.id.sign);
             itemView.setOnClickListener(mOnClickListener);
         }
 

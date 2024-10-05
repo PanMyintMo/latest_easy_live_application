@@ -60,7 +60,7 @@ public class BuyerRefundOfficialActivity extends AbsActivity implements View.OnC
     private Dialog mLoading;
     private List<RefundReasonBean> mReasonList;
     private String mReasonId;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

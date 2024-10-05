@@ -17,10 +17,10 @@ import com.gawilive.mall.bean.PayContentBean;
 
 public class PayPubAdapter extends RefreshAdapter<PayContentBean> {
 
-    private String mSaleNumString;
-    private String mShenHeString0;
-    private String mShenHeString1;
-    private View.OnClickListener mOnClickListener;
+    private final String mSaleNumString;
+    private final String mShenHeString0;
+    private final String mShenHeString1;
+    private final View.OnClickListener mOnClickListener;
 
     public PayPubAdapter(Context context) {
         super(context);

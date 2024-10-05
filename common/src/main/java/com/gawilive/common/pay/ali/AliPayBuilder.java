@@ -27,10 +27,10 @@ import java.util.Map;
 
 public class AliPayBuilder {
 
-    private Activity mActivity;
-    private String mPartner;// 商户ID
-    private String mSellerId; // 商户收款账号
-    private String mPrivateKey; // 商户私钥，pkcs8格式
+    private final Activity mActivity;
+    private final String mPartner;// 商户ID
+    private final String mSellerId; // 商户收款账号
+    private final String mPrivateKey; // 商户私钥，pkcs8格式
     private String mPayInfo;//支付宝订单信息 包括 商品信息，订单签名，签名类型
     private String mGoodsName;//商品名称
     private String mMoney;//要支付的金额

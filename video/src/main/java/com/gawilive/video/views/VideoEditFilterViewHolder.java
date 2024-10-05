@@ -38,7 +38,7 @@ public class VideoEditFilterViewHolder extends AbsViewHolder implements OnItemCl
     @Override
     public void init() {
         findViewById(R.id.root).setOnClickListener(this);
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         SimpleFilterAdapter adapter = new SimpleFilterAdapter(mContext);
@@ -55,12 +55,8 @@ public class VideoEditFilterViewHolder extends AbsViewHolder implements OnItemCl
             int filterSrc = bean.getFilterSrc();
             if (filterSrc != 0) {
                 Bitmap bitmap = BitmapUtil.getInstance().decodeBitmap(filterSrc);
-                if (bitmap != null) {
-//                    mBitmap = bitmap;
-                    mActionListener.onFilterChanged(bitmap);
-                } else {
-                    mActionListener.onFilterChanged(null);
-                }
+                //                    mBitmap = bitmap;
+                mActionListener.onFilterChanged(bitmap);
             } else {
                 mActionListener.onFilterChanged(null);
             }

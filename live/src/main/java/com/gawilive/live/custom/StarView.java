@@ -19,11 +19,11 @@ import com.gawilive.live.R;
 
 public class StarView extends View {
 
-    private Context mContext;
+    private final Context mContext;
     private int mWidth;
-    private float mScale;
-    private int mDp14;
-    private Paint mPaint;
+    private final float mScale;
+    private final int mDp14;
+    private final Paint mPaint;
 
     public StarView(Context context) {
         this(context, null);

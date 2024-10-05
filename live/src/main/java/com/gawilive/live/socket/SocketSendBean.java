@@ -15,9 +15,9 @@ import org.json.JSONObject;
 
 public class SocketSendBean {
 
-    private JSONObject mResult;
-    private JSONArray mMsg;
-    private JSONObject mMsg0;
+    private final JSONObject mResult;
+    private final JSONArray mMsg;
+    private final JSONObject mMsg0;
 
     public SocketSendBean() {
         mResult = new JSONObject();

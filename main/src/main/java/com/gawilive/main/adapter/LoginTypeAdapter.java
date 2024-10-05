@@ -20,10 +20,10 @@ import java.util.List;
 
 public class LoginTypeAdapter extends RecyclerView.Adapter<LoginTypeAdapter.Vh> {
 
-    private List<MobBean> mList;
-    private LayoutInflater mInflater;
+    private final List<MobBean> mList;
+    private final LayoutInflater mInflater;
     private OnItemClickListener<MobBean> mOnItemClickListener;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public LoginTypeAdapter(Context context, List<MobBean> list) {
         mList = list;
@@ -64,7 +64,7 @@ public class LoginTypeAdapter extends RecyclerView.Adapter<LoginTypeAdapter.Vh> 
 
         public Vh(View itemView) {
             super(itemView);
-            mImg =(ImageView) itemView.findViewById(R.id.img);
+            mImg = itemView.findViewById(R.id.img);
             itemView.setOnClickListener(mOnClickListener);
         }
 

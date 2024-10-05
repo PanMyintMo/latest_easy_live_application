@@ -153,7 +153,7 @@ public abstract class LiveActivity extends AbsActivity implements SocketMessageL
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         mCoinName = CommonAppConfig.getInstance().getCoinName();
         mIsAnchor = this instanceof LiveAnchorActivity;
-        mPageContainer = (ViewGroup) findViewById(R.id.page_container);
+        mPageContainer = findViewById(R.id.page_container);
         EventBus.getDefault().register(this);
         mDialogFragmentSet = new HashSet<>();
         mPkBg = findViewById(R.id.pk_bg);
@@ -903,7 +903,7 @@ public abstract class LiveActivity extends AbsActivity implements SocketMessageL
         LiveHttpUtil.sendDanmu(content, mLiveUid, mStream, mDanmuCallback);
     }
 
-    private HttpCallback mDanmuCallback = new HttpCallback() {
+    private final HttpCallback mDanmuCallback = new HttpCallback() {
         @Override
         public void onSuccess(int code, String msg, String[] info) {
             if (code == 0 && info.length > 0) {

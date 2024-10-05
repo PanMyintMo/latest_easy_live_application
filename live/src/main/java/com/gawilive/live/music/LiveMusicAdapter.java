@@ -26,13 +26,13 @@ import java.util.List;
 public class LiveMusicAdapter extends RecyclerView.Adapter<LiveMusicAdapter.Vh> implements ItemSlideHelper.Callback {
 
     private Context mContext;
-    private List<LiveMusicBean> mList;
-    private LayoutInflater mInflater;
+    private final List<LiveMusicBean> mList;
+    private final LayoutInflater mInflater;
     private RecyclerView mRecyclerView;
     private View.OnClickListener mChooseClickListener;
     private View.OnClickListener mDeleteClickListener;
     private ActionListener mActionListener;
-    private HashMap<String, Integer> mMap;
+    private final HashMap<String, Integer> mMap;
 
     public LiveMusicAdapter(Context context) {
         mContext = context;
@@ -116,9 +116,9 @@ public class LiveMusicAdapter extends RecyclerView.Adapter<LiveMusicAdapter.Vh> 
 
         public Vh(View itemView) {
             super(itemView);
-            mMusicName = (TextView) itemView.findViewById(R.id.music_name);
-            mArtist = (TextView) itemView.findViewById(R.id.artist);
-            mProgressTextView = (MusicProgressTextView) itemView.findViewById(R.id.ptv);
+            mMusicName = itemView.findViewById(R.id.music_name);
+            mArtist = itemView.findViewById(R.id.artist);
+            mProgressTextView = itemView.findViewById(R.id.ptv);
             mProgressTextView.setOnClickListener(mChooseClickListener);
             mLine = itemView.findViewById(R.id.line);
             mBtnDelete = itemView.findViewById(R.id.btn_delete);

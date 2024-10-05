@@ -21,9 +21,9 @@ import com.gawilive.video.bean.VideoBean;
 
 public class VideoHomeAdapter extends RefreshAdapter<VideoBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private String mStatusShenHe;
-    private String mStatusJuJue;
+    private final View.OnClickListener mOnClickListener;
+    private final String mStatusShenHe;
+    private final String mStatusJuJue;
 
     public VideoHomeAdapter(Context context) {
         super(context);
@@ -79,8 +79,8 @@ public class VideoHomeAdapter extends RefreshAdapter<VideoBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mImg = (ImageView) itemView.findViewById(R.id.img);
-            mNum = (TextView) itemView.findViewById(R.id.num);
+            mImg = itemView.findViewById(R.id.img);
+            mNum = itemView.findViewById(R.id.num);
             mStatus = itemView.findViewById(R.id.status);
             itemView.setOnClickListener(mOnClickListener);
         }

@@ -29,9 +29,9 @@ public class CaptureButton extends View {
     private static final String TAG = CaptureButton.class.getSimpleName();
     private int state; 
     private int buttonState; 
-    private int progressColor = 0xEE16AE16; 
-    private int outsideColor = 0xEEDCDCDC; 
-    private int insideColor = 0xFFFFFFFF; 
+    private final int progressColor = 0xEE16AE16;
+    private final int outsideColor = 0xEEDCDCDC;
+    private final int insideColor = 0xFFFFFFFF;
 
     private float eventY; 
 

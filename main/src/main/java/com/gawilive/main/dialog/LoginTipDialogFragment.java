@@ -66,10 +66,7 @@ public class LoginTipDialogFragment extends AbsDialogFragment implements View.On
             dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
                 @Override
                 public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-                    if (keyCode == KeyEvent.KEYCODE_BACK) {
-                        return true;
-                    }
-                    return false;
+                    return keyCode == KeyEvent.KEYCODE_BACK;
                 }
             });
         }
@@ -130,7 +127,7 @@ public class LoginTipDialogFragment extends AbsDialogFragment implements View.On
         if (id == R.id.btn_cancel) {
             dismiss();
             if (mContext != null) {
-              //  ((RegisterActivity) mContext).finish();
+                ((RegisterActivity) mContext).finish();
             }
         } else if (id == R.id.btn_confirm) {
             dismiss();

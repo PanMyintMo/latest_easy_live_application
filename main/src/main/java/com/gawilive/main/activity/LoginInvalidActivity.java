@@ -25,7 +25,7 @@ public class LoginInvalidActivity extends AbsActivity implements View.OnClickLis
 
     @Override
     protected void main() {
-        TextView textView = (TextView) findViewById(R.id.content);
+        TextView textView = findViewById(R.id.content);
         String tip = getIntent().getStringExtra(Constants.TIP);
         textView.setText(tip);
         findViewById(R.id.btn_confirm).setOnClickListener(this);

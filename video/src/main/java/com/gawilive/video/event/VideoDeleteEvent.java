@@ -6,7 +6,7 @@ package com.gawilive.video.event;
 
 public class VideoDeleteEvent {
 
-    private String mVideoId;
+    private final String mVideoId;
 
     public VideoDeleteEvent(String videoId) {
         mVideoId = videoId;

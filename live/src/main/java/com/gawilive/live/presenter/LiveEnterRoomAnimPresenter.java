@@ -48,28 +48,28 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class LiveEnterRoomAnimPresenter {
 
-    private Context mContext;
-    private View mBg;
-    private View mUserGroup;
-    private ImageView mAvatar;
-    private TextView mName;
-    private View mStar;
-    private GifImageView mGifImageView;
+    private final Context mContext;
+    private final View mBg;
+    private final View mUserGroup;
+    private final ImageView mAvatar;
+    private final TextView mName;
+    private final View mStar;
+    private final GifImageView mGifImageView;
     private GifDrawable mGifDrawable;
-    private TextView mWordText;
+    private final TextView mWordText;
     private MediaController mMediaController;//koral--/android-gif-drawable 这个库用来播放gif动画的
-    private ObjectAnimator mBgAnimator1;
-    private ObjectAnimator mBgAnimator2;
-    private ObjectAnimator mBgAnimator3;
-    private ObjectAnimator mUserAnimator1;
-    private ObjectAnimator mUserAnimator2;
-    private ObjectAnimator mUserAnimator3;
-    private Animation mStarAnim;
-    private int mDp500;
+    private final ObjectAnimator mBgAnimator1;
+    private final ObjectAnimator mBgAnimator2;
+    private final ObjectAnimator mBgAnimator3;
+    private final ObjectAnimator mUserAnimator1;
+    private final ObjectAnimator mUserAnimator2;
+    private final ObjectAnimator mUserAnimator3;
+    private final Animation mStarAnim;
+    private final int mDp500;
     private boolean mIsAnimating;//是否在执行动画
-    private ConcurrentLinkedQueue<LiveEnterRoomBean> mQueue;
+    private final ConcurrentLinkedQueue<LiveEnterRoomBean> mQueue;
     private Handler mHandler;
-    private int mScreenWidth;
+    private final int mScreenWidth;
     private CommonCallback<File> mDownloadGifCallback;
     private boolean mShowGif;
     private boolean mEnd;
@@ -79,11 +79,11 @@ public class LiveEnterRoomAnimPresenter {
         mContext = context;
         mBg = root.findViewById(R.id.jg_bg);
         mUserGroup = root.findViewById(R.id.jg_user);
-        mAvatar = (ImageView) root.findViewById(R.id.jg_avatar);
-        mName = (TextView) root.findViewById(R.id.jg_name);
+        mAvatar = root.findViewById(R.id.jg_avatar);
+        mName = root.findViewById(R.id.jg_name);
         mStar = root.findViewById(R.id.star);
-        mGifImageView = (GifImageView) root.findViewById(R.id.enter_room_gif);
-        mWordText = (TextView) root.findViewById(R.id.enter_room_word);
+        mGifImageView = root.findViewById(R.id.enter_room_gif);
+        mWordText = root.findViewById(R.id.enter_room_word);
         mDp500 = DpUtil.dp2px(500);
         mQueue = new ConcurrentLinkedQueue<>();
         Interpolator interpolator1 = new AccelerateDecelerateInterpolator();

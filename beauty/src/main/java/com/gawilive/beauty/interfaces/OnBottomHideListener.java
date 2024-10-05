@@ -2,8 +2,8 @@ package com.gawilive.beauty.interfaces;
 
 public interface OnBottomHideListener {
 
-    public void OnBottomStartHide();
-    public void OnBottomHide();
-    public void OnBottomShow();
+    void OnBottomStartHide();
+    void OnBottomHide();
+    void OnBottomShow();
 
 }

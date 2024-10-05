@@ -18,8 +18,8 @@ import com.gawilive.live.R;
 
 public class UserHomeSharePresenter {
 
-    private Context mContext;
-    private MobShareUtil mMobShareUtil;
+    private final Context mContext;
+    private final MobShareUtil mMobShareUtil;
     private String mToUid;
     private String mToName;
     private String mToAvatarThumb;

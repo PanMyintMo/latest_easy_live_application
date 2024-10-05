@@ -29,7 +29,7 @@ import cn.sharesdk.tencent.qq.QQ;
 
 public class MobShareUtil {
 
-    private PlatformActionListener mPlatformActionListener;
+    private final PlatformActionListener mPlatformActionListener;
     private MobCallback mMobCallback;
 
 

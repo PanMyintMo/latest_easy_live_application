@@ -79,13 +79,13 @@ public class LiveChargeDialogFragment extends AbsDialogFragment implements View.
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 3, GridLayoutManager.VERTICAL, false));
         ItemDecoration decoration = new ItemDecoration(mContext, 0x00000000, 5, 10);
         decoration.setOnlySetItemOffsetsButNoDraw(true);
         mRecyclerView.addItemDecoration(decoration);
-        mBtnCharge = (TextView) findViewById(R.id.btn_charge);
+        mBtnCharge = findViewById(R.id.btn_charge);
         mBtnCharge.setOnClickListener(this);
         findViewById(R.id.btn_close).setOnClickListener(this);
         EventBus.getDefault().register(this);

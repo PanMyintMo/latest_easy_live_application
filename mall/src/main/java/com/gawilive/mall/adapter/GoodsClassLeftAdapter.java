@@ -18,9 +18,9 @@ import java.util.List;
 
 public class GoodsClassLeftAdapter extends RefreshAdapter<GoodsClassTitleBean> {
 
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private View.OnClickListener mOnClickListener;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
 
     public GoodsClassLeftAdapter(Context context, List<GoodsClassTitleBean> list) {

@@ -6,7 +6,7 @@ package com.gawilive.live.event;
 
 public class LinkMicTxAccEvent {
 
-    private boolean mLinkMic;
+    private final boolean mLinkMic;
 
     public LinkMicTxAccEvent(boolean linkMic) {
         mLinkMic = linkMic;

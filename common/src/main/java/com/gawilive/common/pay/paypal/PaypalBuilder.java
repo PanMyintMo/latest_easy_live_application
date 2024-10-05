@@ -22,7 +22,7 @@ import com.gawilive.common.utils.WordUtil;
 
 public class PaypalBuilder {
 
-    private FragmentActivity mActivity;
+    private final FragmentActivity mActivity;
     private PayCallback mPayCallback;
     private String mOrderParams;//订单获取订单需要的参数
     private String mMoney;//要支付的金额

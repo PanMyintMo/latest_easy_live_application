@@ -145,7 +145,7 @@ public class CommonAppConfig {
     public String getUid() {
         if (TextUtils.isEmpty(mUid)) {
             String[] uidAndToken = SpUtil.getInstance()
-                    .getMultiStringValue(new String[]{SpUtil.UID, SpUtil.TOKEN});
+                    .getMultiStringValue(SpUtil.UID, SpUtil.TOKEN);
             if (uidAndToken != null) {
                 if (!TextUtils.isEmpty(uidAndToken[0]) && !TextUtils.isEmpty(uidAndToken[1])) {
                     mUid = uidAndToken[0];

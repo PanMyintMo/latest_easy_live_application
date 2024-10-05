@@ -63,7 +63,7 @@ public class MainListViewHolder extends AbsMainViewHolder {
             mViewList.add(frameLayout);
         }
         mViewHolders = new AbsMainListChildViewHolder[PAGE_COUNT];
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         mViewPager.setOffscreenPageLimit(PAGE_COUNT - 1);
         mViewPager.setAdapter(new ViewPagerAdapter(mViewList));
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -82,7 +82,7 @@ public class MainListViewHolder extends AbsMainViewHolder {
 
             }
         });
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = new String[]{
                 WordUtil.getString(R.string.main_list_profit),
                 WordUtil.getString(R.string.main_list_contribute)

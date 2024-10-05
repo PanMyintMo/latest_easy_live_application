@@ -1,0 +1,7 @@
+#Thu Oct 03 16:21:29 MMT 2024
+base.1=D\:\\duoyuyan-new_ui-main_latest_code\\duoyuyan-new_ui-main\\TUIKit\\TUICore\\tuicore\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\classes.dex
+path.1=classes.dex
+base.0=D\:\\duoyuyan-new_ui-main_latest_code\\duoyuyan-new_ui-main\\TUIKit\\TUICore\\tuicore\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

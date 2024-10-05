@@ -62,7 +62,7 @@ public class LiveFunctionDialogFragment extends AbsDialogFragment implements OnI
             taskSwitch = bundle.getBoolean("TASK", false);
             luckPanSwitch = bundle.getBoolean("LUCK_PAN", false);
         }
-        RecyclerView recyclerView = (RecyclerView) mRootView.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = mRootView.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(mContext, 5, GridLayoutManager.VERTICAL, false));
         LiveFunctionAdapter adapter = new LiveFunctionAdapter(mContext, hasGame, openFlash, taskSwitch, luckPanSwitch);

@@ -56,10 +56,10 @@ public class LiveGiftDrawViewHolder extends AbsViewHolder {
         mRoot = findViewById(R.id.root);
         mBg = findViewById(R.id.bg);
         mStar = findViewById(R.id.star);
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mContent = (TextView) findViewById(R.id.content);
-        mGiftGroupCount = (TextView) findViewById(R.id.gift_group_count);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mContent = findViewById(R.id.content);
+        mGiftGroupCount = findViewById(R.id.gift_group_count);
         mDp214 = DpUtil.dp2px(214);
         mHandler = new Handler() {
             @Override

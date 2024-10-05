@@ -24,12 +24,12 @@ import java.util.List;
 
 public class CashAccountAdapter extends RecyclerView.Adapter<CashAccountAdapter.Vh> {
 
-    private List<CashAccountBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mDeleteClickListener;
+    private final List<CashAccountBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mDeleteClickListener;
     private ActionListener mActionListener;
-    private String mCashAccountId;
+    private final String mCashAccountId;
 
     public CashAccountAdapter(Context context, String cashAccountId) {
         mList = new ArrayList<>();
@@ -114,8 +114,8 @@ public class CashAccountAdapter extends RecyclerView.Adapter<CashAccountAdapter.
 
         public Vh(View itemView) {
             super(itemView);
-            mRadioButton = (RadioButton) itemView.findViewById(R.id.radioButton);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
+            mRadioButton = itemView.findViewById(R.id.radioButton);
+            mIcon = itemView.findViewById(R.id.icon);
             mAccount = itemView.findViewById(R.id.account);
             mBtnDelete = itemView.findViewById(R.id.btn_delete);
             itemView.setOnClickListener(mOnClickListener);

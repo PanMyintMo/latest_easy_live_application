@@ -20,11 +20,11 @@ public class ShopHomePlatAdapter extends RefreshAdapter<GoodsSimpleBean> {
 
     private static final int LEFT = 1;
     private static final int RIGHT = 2;
-    private View.OnClickListener mOnClickListener;
-    private String mSaleString;
-    private String mMoneySymbol;
-    private String mStringYong;
-    private boolean mSelf;
+    private final View.OnClickListener mOnClickListener;
+    private final String mSaleString;
+    private final String mMoneySymbol;
+    private final String mStringYong;
+    private final boolean mSelf;
 
 
     public ShopHomePlatAdapter(Context context, boolean self) {

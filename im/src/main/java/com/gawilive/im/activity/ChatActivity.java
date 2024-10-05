@@ -32,7 +32,7 @@ public class ChatActivity extends AbsActivity {
 
     @Override
     protected void main() {
-        mChatListViewHolder = new ChatListViewHolder(mContext, (ViewGroup) findViewById(R.id.root), ChatListViewHolder.TYPE_ACTIVITY);
+        mChatListViewHolder = new ChatListViewHolder(mContext, findViewById(R.id.root), ChatListViewHolder.TYPE_ACTIVITY);
         mChatListViewHolder.setActionListener(new ChatListViewHolder.ActionListener() {
             @Override
             public void onCloseClick() {

@@ -211,7 +211,7 @@ public class LiveVoiceLinkMicViewHolder extends AbsViewHolder implements ITXLive
             livePushConfig.enablePureAudioPush(true);//启动纯音频推流
             mLivePusher.setConfig(livePushConfig);
             mLivePusher.setPushListener(this);
-            mLivePusher.startCameraPreview((TXCloudVideoView) findViewById(R.id.camera_preview));
+            mLivePusher.startCameraPreview(findViewById(R.id.camera_preview));
         }
         mLivePusher.setMute(false);
         mLivePusher.startPusher(pushUrl);

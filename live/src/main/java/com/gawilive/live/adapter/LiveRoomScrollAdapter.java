@@ -26,13 +26,13 @@ import java.util.List;
 
 public class LiveRoomScrollAdapter extends RecyclerView.Adapter<LiveRoomScrollAdapter.Vh> {
 
-    private Context mContext;
-    private List<LiveBean> mList;
-    private LayoutInflater mInflater;
+    private final Context mContext;
+    private final List<LiveBean> mList;
+    private final LayoutInflater mInflater;
     private int mCurPosition;
     private boolean mFirstLoad;
     private boolean mFirstAttached;
-    private SparseArray<Vh> mMap;
+    private final SparseArray<Vh> mMap;
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
     private ActionListener mActionListener;

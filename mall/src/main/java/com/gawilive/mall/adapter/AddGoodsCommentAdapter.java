@@ -29,9 +29,9 @@ import java.util.List;
  */
 public class AddGoodsCommentAdapter extends RefreshAdapter<AddGoodsCommentImageBean> {
 
-    private String mTipString;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mDeleteClickListener;
+    private final String mTipString;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mDeleteClickListener;
     private File mVideoFile;
     private String mVideoUrl;
     private String mVideoImgUrl;

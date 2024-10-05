@@ -5,8 +5,8 @@ package com.gawilive.common.event;
  */
 
 public class LocationEvent {
-    private double lng;
-    private double lat;
+    private final double lng;
+    private final double lat;
 
     public LocationEvent(double lng, double lat) {
         this.lng = lng;

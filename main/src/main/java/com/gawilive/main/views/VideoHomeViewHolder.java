@@ -66,7 +66,7 @@ public class VideoHomeViewHolder extends AbsCommonViewHolder implements OnItemCl
             return;
         }
         mKey = Constants.VIDEO_USER + this.hashCode();
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         if (mToUid.equals(CommonAppConfig.getInstance().getUid())) {
             mRefreshView.setEmptyLayoutId(R.layout.view_no_data_video_home);
         } else {

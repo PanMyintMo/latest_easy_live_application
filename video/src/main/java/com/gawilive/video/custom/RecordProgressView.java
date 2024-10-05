@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class RecordProgressView extends View {
     private final String TAG = "RecordProgressView";
 
-    private float mScale;
+    private final float mScale;
     private Paint mRecordPaint;
     private Paint mPendingPaint;
     private Paint mSpacePaint;
@@ -193,7 +193,7 @@ public class RecordProgressView extends View {
         startCursorBling();
     }
 
-    private Runnable cursorRunnable = new Runnable() {
+    private final Runnable cursorRunnable = new Runnable() {
         @Override
         public void run() {
             isCursorShow = !isCursorShow;

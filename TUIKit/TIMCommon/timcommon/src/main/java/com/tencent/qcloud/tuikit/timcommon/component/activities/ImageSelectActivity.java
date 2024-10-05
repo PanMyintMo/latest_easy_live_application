@@ -93,7 +93,7 @@ public class ImageSelectActivity extends BaseLightActivity {
                     downloadUrl();
                 } else {
                     Intent resultIntent = new Intent();
-                    resultIntent.putExtra(DATA, (Serializable) selected);
+                    resultIntent.putExtra(DATA, selected);
                     setResult(RESULT_CODE_SUCCESS, resultIntent);
                     finish();
                 }
@@ -191,7 +191,7 @@ public class ImageSelectActivity extends BaseLightActivity {
 
     private void setResult(ImageBean bean) {
         Intent resultIntent = new Intent();
-        resultIntent.putExtra(DATA, (Serializable) bean);
+        resultIntent.putExtra(DATA, bean);
         setResult(RESULT_CODE_SUCCESS, resultIntent);
         finish();
     }

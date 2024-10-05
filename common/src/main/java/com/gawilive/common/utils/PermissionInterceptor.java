@@ -192,7 +192,7 @@ public final class PermissionInterceptor implements OnPermissionInterceptor {
     /**
      * 生成权限说明文案
      */
-    protected String generatePermissionDescription(Context context, @NonNull List<String> permissions) {
+    private String generatePermissionDescription(Context context, @NonNull List<String> permissions) {
         return PermissionDescriptionConvert.getPermissionDescription(context, permissions);
     }
 

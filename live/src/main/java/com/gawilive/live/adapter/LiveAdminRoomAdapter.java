@@ -19,8 +19,8 @@ import com.gawilive.live.bean.LiveAdminRoomBean;
 
 public class LiveAdminRoomAdapter extends RefreshAdapter<LiveAdminRoomBean> {
 
-    private String mSuffix;
-    private View.OnClickListener mOnClickListener;
+    private final String mSuffix;
+    private final View.OnClickListener mOnClickListener;
 
     public LiveAdminRoomAdapter(Context context) {
         super(context);

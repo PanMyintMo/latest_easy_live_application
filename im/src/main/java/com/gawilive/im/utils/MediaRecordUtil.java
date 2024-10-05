@@ -11,11 +11,11 @@ import java.util.concurrent.Executors;
 
 public class MediaRecordUtil {
 
-    private MediaRecorder mMediaRecorder;
+    private final MediaRecorder mMediaRecorder;
     private long mStartTime;
-    private ExecutorService mExecutorService;
+    private final ExecutorService mExecutorService;
     private String mOutPutPath;
-    private Runnable mStartRecordRunable;
+    private final Runnable mStartRecordRunable;
     private boolean mStartRecord;
 
     public MediaRecordUtil() {

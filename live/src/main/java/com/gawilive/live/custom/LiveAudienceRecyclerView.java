@@ -10,11 +10,11 @@ import android.view.MotionEvent;
 
 public class LiveAudienceRecyclerView extends RecyclerView {
 
-    private float mScale;
-    private int mLeft;
-    private int mTop;
-    private int mRight;
-    private int mBottom;
+    private final float mScale;
+    private final int mLeft;
+    private final int mTop;
+    private final int mRight;
+    private final int mBottom;
 
     public LiveAudienceRecyclerView(@NonNull Context context) {
         this(context, null);

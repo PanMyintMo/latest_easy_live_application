@@ -22,12 +22,12 @@ import java.util.List;
 
 public class MhMeiYanOneKeyAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<MeiYanOneKeyBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final List<MeiYanOneKeyBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
-    private int mColor0;
-    private int mColor1;
+    private final int mColor0;
+    private final int mColor1;
     private OnItemClickListener<MeiYanOneKeyBean> mOnItemClickListener;
 
     public MhMeiYanOneKeyAdapter(Context context, List<MeiYanOneKeyBean> list) {

@@ -30,7 +30,7 @@ import java.lang.ref.WeakReference;
 public class WxPayBuilder {
 
     private Context mContext;
-    private String mAppId;
+    private final String mAppId;
     private PayCallback mPayCallback;
     private String mOrderParams;//订单获取订单需要的参数
 

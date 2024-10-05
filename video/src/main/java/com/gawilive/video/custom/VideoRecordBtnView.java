@@ -18,15 +18,15 @@ import com.gawilive.video.R;
 public class VideoRecordBtnView extends View {
 
     private static final int RATE_MAX = 100;
-    private int mMaxWidth;
-    private int mMinWidth;
-    private int mStartWidth;
+    private final int mMaxWidth;
+    private final int mMinWidth;
+    private final int mStartWidth;
     private int mRate;
     private int mStrokeWidth;
-    private Paint mPaint;
+    private final Paint mPaint;
     private int mRadius;
-    private Path mBgPath;
-    private Path mFgPath;
+    private final Path mBgPath;
+    private final Path mFgPath;
 
     public VideoRecordBtnView(Context context) {
         this(context, null);

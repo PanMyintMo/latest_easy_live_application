@@ -32,13 +32,13 @@ import com.gawilive.live.bean.LiveChatBean;
 
 public class LiveTextRender {
 
-    private static StyleSpan sBoldSpan;
-    private static StyleSpan sNormalSpan;
-    private static ForegroundColorSpan sWhiteColorSpan;
-    private static ForegroundColorSpan sGlobalColorSpan;
-    private static AbsoluteSizeSpan sFontSizeSpan;
-    private static AbsoluteSizeSpan sFontSizeSpan2;
-    private static AbsoluteSizeSpan sFontSizeSpan3;
+    private static final StyleSpan sBoldSpan;
+    private static final StyleSpan sNormalSpan;
+    private static final ForegroundColorSpan sWhiteColorSpan;
+    private static final ForegroundColorSpan sGlobalColorSpan;
+    private static final AbsoluteSizeSpan sFontSizeSpan;
+    private static final AbsoluteSizeSpan sFontSizeSpan2;
+    private static final AbsoluteSizeSpan sFontSizeSpan3;
 
     static {
         sBoldSpan = new StyleSpan(Typeface.BOLD);

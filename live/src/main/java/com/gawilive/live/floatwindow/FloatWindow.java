@@ -13,8 +13,8 @@ import com.gawilive.common.utils.ScreenDimenUtil;
 
 public class FloatWindow implements View.OnTouchListener {
 
-    private WindowManager mWindowManager;
-    private WindowManager.LayoutParams mLayoutParams;
+    private final WindowManager mWindowManager;
+    private final WindowManager.LayoutParams mLayoutParams;
     private View mView;
     private int mWidth;
     private int mHeight;

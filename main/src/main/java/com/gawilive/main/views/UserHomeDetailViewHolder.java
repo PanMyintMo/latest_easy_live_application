@@ -79,24 +79,24 @@ public class UserHomeDetailViewHolder extends AbsCommonViewHolder implements Vie
             findViewById(R.id.btn_impress).setOnClickListener(this);
             findViewById(R.id.impress_arrow).setVisibility(View.VISIBLE);
         }
-        mVotesName = (TextView) findViewById(R.id.votes_name);
+        mVotesName = findViewById(R.id.votes_name);
         mAvatarCon = new ImageView[3];
         mAvatarGuard = new ImageView[3];
         if (!CommonAppConfig.getInstance().isTeenagerType()) {
             findViewById(R.id.group_rank).setVisibility(View.VISIBLE);
-            mAvatarCon[0] = (ImageView) findViewById(R.id.avatar_con_1);
-            mAvatarCon[1] = (ImageView) findViewById(R.id.avatar_con_2);
-            mAvatarCon[2] = (ImageView) findViewById(R.id.avatar_con_3);
-            mAvatarGuard[0] = (ImageView) findViewById(R.id.avatar_guard_1);
-            mAvatarGuard[1] = (ImageView) findViewById(R.id.avatar_guard_2);
-            mAvatarGuard[2] = (ImageView) findViewById(R.id.avatar_guard_3);
+            mAvatarCon[0] = findViewById(R.id.avatar_con_1);
+            mAvatarCon[1] = findViewById(R.id.avatar_con_2);
+            mAvatarCon[2] = findViewById(R.id.avatar_con_3);
+            mAvatarGuard[0] = findViewById(R.id.avatar_guard_1);
+            mAvatarGuard[1] = findViewById(R.id.avatar_guard_2);
+            mAvatarGuard[2] = findViewById(R.id.avatar_guard_3);
         }
 
-        mImpressGroup = (LinearLayout) findViewById(R.id.impress_group);
+        mImpressGroup = findViewById(R.id.impress_group);
         mNoImpressTip = findViewById(R.id.no_impress_tip);
-        mSign = (TextView) findViewById(R.id.sign);
-        mBirthday = (TextView) findViewById(R.id.birthday);
-        mCity = (TextView) findViewById(R.id.city);
+        mSign = findViewById(R.id.sign);
+        mBirthday = findViewById(R.id.birthday);
+        mCity = findViewById(R.id.city);
         mAddImpressOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {

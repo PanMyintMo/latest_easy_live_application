@@ -24,12 +24,12 @@ import java.util.List;
 
 public class TieZhiAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private LayoutInflater mInflater;
-    private List<TieZhiBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final LayoutInflater mInflater;
+    private final List<TieZhiBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<TieZhiBean> mOnItemClickListener;
-    private Drawable mCheckDrawable;
+    private final Drawable mCheckDrawable;
     private int mCheckedPosition = -1;
 
 

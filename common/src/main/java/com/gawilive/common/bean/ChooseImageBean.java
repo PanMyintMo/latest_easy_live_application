@@ -7,7 +7,7 @@ public class ChooseImageBean {
     public static final int FILE = 1;
 
     private File mImageFile;
-    private int mType;
+    private final int mType;
     private boolean mChecked;
 
     public ChooseImageBean(int type) {

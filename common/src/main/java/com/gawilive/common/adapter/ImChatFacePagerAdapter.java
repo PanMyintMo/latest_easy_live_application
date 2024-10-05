@@ -23,7 +23,7 @@ import java.util.List;
 
 public class ImChatFacePagerAdapter extends PagerAdapter {
 
-    private List<View> mViewList;
+    private final List<View> mViewList;
     private static final int FACE_COUNT = 20;//每页20个表情
 
     public ImChatFacePagerAdapter(Context context, OnFaceClickListener onFaceClickListener) {

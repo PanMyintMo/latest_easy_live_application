@@ -17,9 +17,9 @@ import com.gawilive.live.R;
 
 public class MyFrameLayout3 extends FrameLayout {
 
-    private int mScreenWidth;
-    private int mScreenHeight;
-    private float mRatio;
+    private final int mScreenWidth;
+    private final int mScreenHeight;
+    private final float mRatio;
 
     public MyFrameLayout3(@NonNull Context context) {
         this(context, null);

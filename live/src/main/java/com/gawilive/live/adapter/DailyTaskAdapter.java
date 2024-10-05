@@ -22,14 +22,14 @@ import java.util.List;
 
 public class DailyTaskAdapter extends RefreshAdapter<DailyTaskBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private String mStatus0;
-    private String mStatus1;
-    private String mStatus2;
-    private int mColor0;
-    private int mColor1;
-    private Drawable mDrawable0;
-    private Drawable mDrawable1;
+    private final View.OnClickListener mOnClickListener;
+    private final String mStatus0;
+    private final String mStatus1;
+    private final String mStatus2;
+    private final int mColor0;
+    private final int mColor1;
+    private final Drawable mDrawable0;
+    private final Drawable mDrawable1;
 
     public DailyTaskAdapter(Context context, List<DailyTaskBean> list) {
         super(context, list);

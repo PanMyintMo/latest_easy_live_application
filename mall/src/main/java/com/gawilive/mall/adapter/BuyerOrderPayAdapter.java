@@ -14,8 +14,8 @@ import com.gawilive.mall.bean.BuyerOrderBean;
  */
 public class BuyerOrderPayAdapter extends BuyerOrderBaseAdapter {
 
-    private View.OnClickListener mCancelClickListener;
-    private View.OnClickListener mPayClickListener;
+    private final View.OnClickListener mCancelClickListener;
+    private final View.OnClickListener mPayClickListener;
 
     public BuyerOrderPayAdapter(Context context) {
         super(context);

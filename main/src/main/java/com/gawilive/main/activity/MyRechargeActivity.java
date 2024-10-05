@@ -116,10 +116,7 @@ public class MyRechargeActivity extends AbsActivity {
                     List<PayTypeModel> list = new Gson().fromJson(array.toString(), new TypeToken<List<PayTypeModel>>() {
                     }.getType());
                     for (int i = 0; i < list.size(); i++) {
-                        if (i == 0) {
-                            list.get(i).setSelect(true);
-                        } else
-                            list.get(i).setSelect(false);
+                        list.get(i).setSelect(i == 0);
                     }
                     adapter.setData(list);
 
@@ -247,8 +244,8 @@ public class MyRechargeActivity extends AbsActivity {
         });
     }
 
-    private Handler handler = new Handler();
-    private Runnable pollingRunnable = new Runnable() {
+    private final Handler handler = new Handler();
+    private final Runnable pollingRunnable = new Runnable() {
         @Override
         public void run() {
             recharge(orderNo);

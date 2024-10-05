@@ -12,7 +12,7 @@ import com.gawilive.common.bean.TxLocationPoiBean;
 
 public class ChooseLocationAdapter extends RefreshAdapter<TxLocationPoiBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
 
     public ChooseLocationAdapter(Context context) {

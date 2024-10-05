@@ -26,9 +26,9 @@ import java.util.List;
 
 public class LiveFunctionAdapter extends RecyclerView.Adapter<LiveFunctionAdapter.Vh> {
 
-    private List<LiveFunctionBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<LiveFunctionBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<Integer> mOnItemClickListener;
 
     public LiveFunctionAdapter(Context context, boolean hasGame, boolean openFlash, boolean taskSwitch,boolean luckPanSwitch) {
@@ -111,8 +111,8 @@ public class LiveFunctionAdapter extends RecyclerView.Adapter<LiveFunctionAdapte
 
         public Vh(View itemView) {
             super(itemView);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mIcon = itemView.findViewById(R.id.icon);
+            mName = itemView.findViewById(R.id.name);
             itemView.setOnClickListener(mOnClickListener);
         }
 

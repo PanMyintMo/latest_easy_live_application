@@ -26,7 +26,7 @@ public abstract class AbsLiveViewHolder extends AbsViewHolder implements View.On
     public void init() {
         findViewById(R.id.btn_chat).setOnClickListener(this);
         findViewById(R.id.btn_msg).setOnClickListener(this);
-        mRedPoint = (TextView) findViewById(R.id.red_point);
+        mRedPoint = findViewById(R.id.red_point);
     }
 
     @Override

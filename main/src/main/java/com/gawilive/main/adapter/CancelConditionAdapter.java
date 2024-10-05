@@ -19,12 +19,12 @@ import java.util.List;
 
 public class CancelConditionAdapter extends RefreshAdapter<CancelConditionBean> {
 
-    private Drawable mDrawable0;
-    private Drawable mDrawable1;
-    private int mColor0;
-    private int mColor1;
-    private String mString0;
-    private String mString1;
+    private final Drawable mDrawable0;
+    private final Drawable mDrawable1;
+    private final int mColor0;
+    private final int mColor1;
+    private final String mString0;
+    private final String mString1;
 
     public CancelConditionAdapter(Context context, List<CancelConditionBean> list) {
         super(context, list);

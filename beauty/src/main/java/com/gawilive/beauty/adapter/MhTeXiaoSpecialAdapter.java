@@ -23,12 +23,12 @@ import java.util.List;
 
 public class MhTeXiaoSpecialAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<TeXiaoSpecialBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final List<TeXiaoSpecialBean> mList;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
-    private int mColor0;
-    private int mColor1;
+    private final int mColor0;
+    private final int mColor1;
     private OnItemClickListener<TeXiaoSpecialBean> mOnItemClickListener;
 
     public MhTeXiaoSpecialAdapter(Context context, List<TeXiaoSpecialBean> list) {

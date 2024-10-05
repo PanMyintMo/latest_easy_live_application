@@ -4,8 +4,8 @@ package com.gawilive.common.event;
  * 登录状态改变
  */
 public class LoginChangeEvent {
-    private boolean mLogin;
-    private boolean mFirstLogin;//是否是第一次登录
+    private final boolean mLogin;
+    private final boolean mFirstLogin;//是否是第一次登录
 
     public LoginChangeEvent(boolean login, boolean firstLogin) {
         mLogin = login;

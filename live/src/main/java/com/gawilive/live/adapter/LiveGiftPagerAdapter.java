@@ -22,12 +22,12 @@ import java.util.List;
 
 public class LiveGiftPagerAdapter<T extends LiveGiftBean> extends PagerAdapter {
 
-    private Context mContext;
-    private List<RecyclerView> mViewList;
+    private final Context mContext;
+    private final List<RecyclerView> mViewList;
     private static final int GIFT_COUNT = 8;//每页10个礼物
     private int mPage = -1;
     private ActionListener mActionListener;
-    private int mGiftType;//礼物类型  0普通礼物  1道具  2背包
+    private final int mGiftType;//礼物类型  0普通礼物  1道具  2背包
 
     public LiveGiftPagerAdapter(Context context, List<T> giftList, int giftType) {
         mContext = context;

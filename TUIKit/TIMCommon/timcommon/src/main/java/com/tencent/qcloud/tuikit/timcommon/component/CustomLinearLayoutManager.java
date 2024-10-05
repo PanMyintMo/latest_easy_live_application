@@ -28,7 +28,7 @@ public class CustomLinearLayoutManager extends LinearLayoutManager {
         try {
             super.onLayoutChildren(recycler, state);
         } catch (Throwable e) {
-            Log.w("CustomLinearLayoutManager", "" + e.getLocalizedMessage());
+            Log.w("CustomLinearLayoutManager", e.getLocalizedMessage());
         }
     }
 }

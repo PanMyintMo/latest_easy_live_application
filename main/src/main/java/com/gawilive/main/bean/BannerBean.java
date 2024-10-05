@@ -39,9 +39,6 @@ public class BannerBean {
         if (TextUtils.isEmpty(mImageUrl) || !mImageUrl.equals(bean.getImageUrl())) {
             return false;
         }
-        if (TextUtils.isEmpty(mLink) || !mLink.equals(bean.getLink())) {
-            return false;
-        }
-        return true;
+        return !TextUtils.isEmpty(mLink) && mLink.equals(bean.getLink());
     }
 }

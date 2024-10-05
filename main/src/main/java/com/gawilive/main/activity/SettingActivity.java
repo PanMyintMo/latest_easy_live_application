@@ -53,7 +53,7 @@ public class SettingActivity extends AbsActivity implements SettingAdapter.Actio
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.setting));
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         MainHttpUtil.getSettingList(new HttpCallback() {

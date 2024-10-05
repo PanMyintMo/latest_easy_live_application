@@ -21,7 +21,7 @@ import com.gawilive.main.R;
 
 public class ShopAdapter extends RefreshAdapter<GoodsBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ShopAdapter(Context context) {
         super(context);

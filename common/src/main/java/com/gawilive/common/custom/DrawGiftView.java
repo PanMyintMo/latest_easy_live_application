@@ -19,12 +19,12 @@ public class DrawGiftView extends View {
 
     private static final String TAG = "DrawGiftView";
     private int mCount;
-    private Paint mPaint;
-    private List<PointF> mPointList;
+    private final Paint mPaint;
+    private final List<PointF> mPointList;
     private Bitmap mBitmap;
-    private Rect mSrc;
-    private RectF mDst;
-    private float mOffsetX;
+    private final Rect mSrc;
+    private final RectF mDst;
+    private final float mOffsetX;
     private float mOffsetY;
     private ActionListener mActionListener;
     private int mHeight;

@@ -37,7 +37,7 @@ public class UserHomeActivity extends AbsActivity {
         }
         boolean fromLiveRoom = intent.getBooleanExtra(Constants.FROM_LIVE_ROOM, false);
         String fromLiveUid = fromLiveRoom ? intent.getStringExtra(Constants.LIVE_UID) : null;
-        mUserHomeViewHolder = new UserHomeViewHolder(mContext, (ViewGroup) findViewById(R.id.container), toUid, fromLiveRoom,fromLiveUid);
+        mUserHomeViewHolder = new UserHomeViewHolder(mContext, findViewById(R.id.container), toUid, fromLiveRoom,fromLiveUid);
         mUserHomeViewHolder.addToParent();
         mUserHomeViewHolder.subscribeActivityLifeCycle();
         mUserHomeViewHolder.loadData();

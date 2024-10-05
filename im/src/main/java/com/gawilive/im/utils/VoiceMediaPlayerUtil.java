@@ -12,14 +12,14 @@ import android.text.TextUtils;
 
 public class VoiceMediaPlayerUtil {
 
-    private MediaPlayer mPlayer;
+    private final MediaPlayer mPlayer;
     private boolean mStarted;
     private boolean mPaused;
     private boolean mDestroy;
     private String mCurPath;
     private ActionListener mActionListener;
 
-    private MediaPlayer.OnPreparedListener mOnPreparedListener = new MediaPlayer.OnPreparedListener() {
+    private final MediaPlayer.OnPreparedListener mOnPreparedListener = new MediaPlayer.OnPreparedListener() {
         @Override
         public void onPrepared(MediaPlayer mp) {
             if (mDestroy) {
@@ -31,7 +31,7 @@ public class VoiceMediaPlayerUtil {
         }
     };
 
-    private MediaPlayer.OnCompletionListener mOnCompletionListener = new MediaPlayer.OnCompletionListener() {
+    private final MediaPlayer.OnCompletionListener mOnCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mp) {
             mStarted = false;
@@ -42,7 +42,7 @@ public class VoiceMediaPlayerUtil {
         }
     };
 
-    private MediaPlayer.OnErrorListener mOnErrorListener = new MediaPlayer.OnErrorListener() {
+    private final MediaPlayer.OnErrorListener mOnErrorListener = new MediaPlayer.OnErrorListener() {
         @Override
         public boolean onError(MediaPlayer mp, int what, int extra) {
             mStarted = false;

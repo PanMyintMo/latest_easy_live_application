@@ -34,9 +34,9 @@ public class CaptureLayout extends FrameLayout {
     private ImageView backBtn; 
     private ImageView selectPhotoBtn; 
     private TextView txtTip; 
-    private int layoutWidth;
-    private int layoutHeight;
-    private int buttonSize;
+    private final int layoutWidth;
+    private final int layoutHeight;
+    private final int buttonSize;
     private boolean isFirst = true;
 
     public CaptureLayout(Context context) {

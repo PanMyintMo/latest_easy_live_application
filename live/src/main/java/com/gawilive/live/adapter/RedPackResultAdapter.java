@@ -21,9 +21,9 @@ import java.util.List;
 
 public class RedPackResultAdapter extends RecyclerView.Adapter<RedPackResultAdapter.Vh> {
 
-    private Context mContext;
-    private List<RedPackResultBean> mList;
-    private LayoutInflater mInflater;
+    private final Context mContext;
+    private final List<RedPackResultBean> mList;
+    private final LayoutInflater mInflater;
 
     public RedPackResultAdapter(Context context, List<RedPackResultBean> list) {
         mContext=context;
@@ -57,10 +57,10 @@ public class RedPackResultAdapter extends RecyclerView.Adapter<RedPackResultAdap
 
         public Vh(View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mTime = (TextView) itemView.findViewById(R.id.time);
-            mWinCoin = (TextView) itemView.findViewById(R.id.win_coin);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mTime = itemView.findViewById(R.id.time);
+            mWinCoin = itemView.findViewById(R.id.win_coin);
         }
 
         void setData(RedPackResultBean bean) {

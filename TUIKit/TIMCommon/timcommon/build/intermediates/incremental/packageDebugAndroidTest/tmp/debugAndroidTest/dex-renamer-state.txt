@@ -1,0 +1,10 @@
+#Thu Oct 03 16:20:31 MMT 2024
+base.2=D\:\\duoyuyan-new_ui-main_latest_code\\duoyuyan-new_ui-main\\TUIKit\\TIMCommon\\timcommon\\build\\intermediates\\dex\\debugAndroidTest\\mergeLibDexDebugAndroidTest\\classes_0.dex
+path.2=classes_0.dex
+base.1=D\:\\duoyuyan-new_ui-main_latest_code\\duoyuyan-new_ui-main\\TUIKit\\TIMCommon\\timcommon\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\classes.dex
+path.1=classes.dex
+base.0=D\:\\duoyuyan-new_ui-main_latest_code\\duoyuyan-new_ui-main\\TUIKit\\TIMCommon\\timcommon\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -67,7 +67,7 @@ public class LiveLinkMicPushTxViewHolder extends AbsLiveLinkMicPushViewHolder im
     @Override
     public void startPush(String pushUrl) {
         if (mLivePusher != null) {
-            mLivePusher.startCameraPreview((TXCloudVideoView) findViewById(R.id.camera_preview));
+            mLivePusher.startCameraPreview(findViewById(R.id.camera_preview));
             mLivePusher.startPusher(pushUrl);
         }
     }

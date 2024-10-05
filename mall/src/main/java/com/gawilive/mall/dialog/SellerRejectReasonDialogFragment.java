@@ -63,7 +63,7 @@ public class SellerRejectReasonDialogFragment extends AbsDialogFragment implemen
         for (RejectRefundBean bean : mList) {
             stringList.add(bean.getName());
         }
-        mWheelView = (WheelView) findViewById(R.id.wheelView);
+        mWheelView = findViewById(R.id.wheelView);
         mWheelView.setTextSize(17);
         mWheelView.setTextColor(0xff646464, 0xffff5878);
         mWheelView.setCycleDisable(true);//禁用循环

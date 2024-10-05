@@ -19,7 +19,7 @@ import com.gawilive.live.bean.LuckPanBean;
 
 public class LuckPanRecordAdapter extends RefreshAdapter<LuckPanBean> {
 
-    private boolean mIsDialog;
+    private final boolean mIsDialog;
 
     public LuckPanRecordAdapter(Context context, boolean isDialog) {
         super(context);

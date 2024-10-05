@@ -18,7 +18,7 @@ import org.greenrobot.eventbus.EventBus;
 public class LocationUtil {
     private static final String TAG = "定位";
     private static LocationUtil sInstance;
-    private TencentLocationManager mLocationManager;
+    private final TencentLocationManager mLocationManager;
 //    private boolean mLocationStarted;
     private boolean mNeedPostLocationEvent;//是否需要发送定位成功事件
 
@@ -38,7 +38,7 @@ public class LocationUtil {
     }
 
 
-    private TencentLocationListener mLocationListener = new TencentLocationListener() {
+    private final TencentLocationListener mLocationListener = new TencentLocationListener() {
         @Override
         public void onLocationChanged(TencentLocation location, int code, String reason) {
             L.e(TAG,"onLocationChanged-----code-----> "+code+"-----reason---> "+reason);
@@ -59,7 +59,7 @@ public class LocationUtil {
         }
     };
 
-    private HttpCallback mCallback = new HttpCallback() {
+    private final HttpCallback mCallback = new HttpCallback() {
         @Override
         public void onSuccess(int code, String msg, String[] info) {
             if (code == 0 && info.length > 0) {

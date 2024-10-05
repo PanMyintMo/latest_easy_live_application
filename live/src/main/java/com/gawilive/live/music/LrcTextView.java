@@ -18,10 +18,10 @@ import com.gawilive.live.R;
 public class LrcTextView extends AppCompatTextView {
 
     private float mProgress;
-    private int mProgressColor;
+    private final int mProgressColor;
     private int mWidth;
     private int mHeight;
-    private Paint mPaint;
+    private final Paint mPaint;
     private String mCurString;
     private Paint.FontMetricsInt mFontMetricsInt;
 

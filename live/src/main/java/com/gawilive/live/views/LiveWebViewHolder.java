@@ -47,8 +47,8 @@ public class LiveWebViewHolder extends AbsLivePageViewHolder implements View.OnC
     @Override
     public void init() {
         super.init();
-        mTitle = (TextView) findViewById(R.id.title);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        mTitle = findViewById(R.id.title);
+        mProgressBar = findViewById(R.id.progressbar);
         mWebView = new WebView(mContext);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mWebView.setLayoutParams(params);

@@ -18,7 +18,7 @@ import java.util.List;
 
 public class ChooseVideoUtil {
 
-    private ContentResolver mContentResolver;
+    private final ContentResolver mContentResolver;
     private CommonCallback<List<ChooseVideoBean>> mCallback;
     private boolean mStop;
 

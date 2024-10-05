@@ -32,7 +32,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 	 * 
 	 * @author tomasz.zawada@gmail.com
 	 */
-	public static interface OnPhotoTapListener {
+	public interface OnPhotoTapListener {
 		/**
 		 * A callback to receive where the user taps on a photo. You will only
 		 * receive a callback if the user taps on the actual photo, tapping on
@@ -47,7 +47,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 		 *            - where the user tapped from the top of the Drawable, as
 		 *            percentage of the Drawable height.
 		 */
-		public void onPhotoTap(View view, float x, float y);
+        void onPhotoTap(View view, float x, float y);
 	}
 
 	/**
@@ -56,7 +56,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 	 * 
 	 * @author tomasz.zawada@gmail.com
 	 */
-	public static interface OnViewTapListener {
+	public interface OnViewTapListener {
 		/**
 		 * A callback to receive where the user taps on a ImageView. You will
 		 * receive a callback if the user taps anywhere on the view, tapping on
@@ -69,10 +69,10 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 		 * @param y
 		 *            - where the user tapped from the top of the View.
 		 */
-		public void onViewTap(View view, float x, float y);
+        void onViewTap(View view, float x, float y);
 	}
 	public interface SingleTapConfirmedListener {
-		public void onSingleTapConfirmed();
+		void onSingleTapConfirmed();
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 			case MotionEvent.ACTION_MOVE: {
 				final float dx = x - lastTouchX, dy = y - lastTouchY;
 				//只有一个手指的时候才可以拖拽
-				if (isDragging == false && event.getPointerCount() == 1) {
+				if (!isDragging && event.getPointerCount() == 1) {
 					// Use Pythagoras to see if drag length is larger than
 					// touch slop
 					isDragging = Math.sqrt((dx * dx) + (dy * dy)) >= scaledTouchSlop;
@@ -439,8 +439,8 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	private static class ScrollerProxy {
 
-		private boolean isOld;
-		private Object scroller;
+		private final boolean isOld;
+		private final Object scroller;
 
 		public ScrollerProxy(Context context) {
 			if (Build.VERSION.SDK_INT < Build.VERSION_CODES.GINGERBREAD) {
@@ -518,7 +518,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 
 	private boolean allowParentInterceptOnEdge = true;
 
-	private MultiGestureDetector multiGestureDetector;
+	private final MultiGestureDetector multiGestureDetector;
 
 	// These are set so we don't keep allocating them on the heap
 	private final Matrix baseMatrix = new Matrix();
@@ -532,7 +532,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 	//需要将这个matrix后乘到变换matrix上
 	private final Matrix backMatrix = new Matrix();
 	
-	private float floatDeviation = 0.001f;//比较2个float时的误差，大于这个误差才算大，否则算是float的误差
+	private final float floatDeviation = 0.001f;//比较2个float时的误差，大于这个误差才算大，否则算是float的误差
 	
 	//是否是新的一次手势
 	private boolean isNewGesture;
@@ -1078,11 +1078,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 	 * @return
 	 */
 	private boolean isTargetDegreeHorizontal(int degreeIn360){
-		if(degreeIn360 == 0 || degreeIn360 == 180 || degreeIn360 == 360){
-			return true;
-		}else{
-			return false;
-		}
+        return degreeIn360 == 0 || degreeIn360 == 180 || degreeIn360 == 360;
 	}
 	
 	/**
@@ -1097,11 +1093,8 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 		if(degreeIn360 >= 135 && degreeIn360 < 225){
 			return true;
 		}
-		if(degreeIn360 >= 315){
-			return true;
-		}
-		return false;
-	}
+        return degreeIn360 >= 315;
+    }
 	
 	/**
 	 * 获取当前真实的缩放大小，排除旋转对缩放的影响
@@ -1344,11 +1337,7 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 		}
 		final int drawableWidth = d.getIntrinsicWidth();
 		final int drawableHeight = d.getIntrinsicHeight();
-		if(drawableHeight > drawableWidth){
-			horizontalImage = false;
-		}else{
-			horizontalImage = true;
-		}
+        horizontalImage = drawableHeight <= drawableWidth;
 		mPicCenterX = 1f * drawableWidth/2;
 		mPicCenterY = 1f * drawableHeight/2;
 		baseMatrix.reset();
@@ -1525,25 +1514,25 @@ public class ZoomView extends AppCompatImageView implements View.OnTouchListener
 	 */
 	private class BackRunnable implements Runnable {
 		
-		private float targetRotation;
-		private float targetScale;
-		private float fromRotation;
-		private float fromScale;
-		private float centerFromX;//图片中心点的起始位置
-		private float centerFromY;//图片中心点的起始位置
-		private long mDuration;//回弹时间 单位毫秒
+		private final float targetRotation;
+		private final float targetScale;
+		private final float fromRotation;
+		private final float fromScale;
+		private final float centerFromX;//图片中心点的起始位置
+		private final float centerFromY;//图片中心点的起始位置
+		private final long mDuration;//回弹时间 单位毫秒
 		private boolean isStop;//是否结束
 		private long mStartTime = -1;//开始时间
-		private Interpolator mInterpolator = new LinearInterpolator();//回弹速率
-		private float center2X;//图片中心点的目标位置
-		private float center2Y;//图片中心点的目标位置
+		private final Interpolator mInterpolator = new LinearInterpolator();//回弹速率
+		private final float center2X;//图片中心点的目标位置
+		private final float center2Y;//图片中心点的目标位置
 		
 		//图片回弹时是否保持图片的宽或高不离开边界，如果为true，则如果回弹开始时图片
 		//中心不在view中心，并且图片脱离边界，则会直接从中心开始回弹，即从当前位置
 		//消失，然后从中心显示然后开始回弹，会有一些不连贯，回弹最终结果保持图片不离开
 		//边界，如果设定的目标超出边界，则真正回弹的目标点不会是设定的点，会在设定的目标点
 		//上进行相应的移动变换。如果为false则平滑从当前位置回弹，最终到达目标点，可能会超出边界
-		private boolean limitBounds;
+		private final boolean limitBounds;
 		
 		public BackRunnable(float targetRotation, float fromRotation, float targetScale, float fromScale, float centerFromX, float centerFromY){
 			this.targetRotation = targetRotation;

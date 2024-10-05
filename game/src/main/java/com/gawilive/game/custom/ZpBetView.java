@@ -51,10 +51,10 @@ public class ZpBetView extends RelativeLayout {
         params.addRule(RelativeLayout.CENTER_IN_PARENT);
         view.setLayoutParams(params);
         addView(view);
-        ImageView img = (ImageView) view.findViewById(R.id.img);
+        ImageView img = view.findViewById(R.id.img);
         img.setImageResource(mSrc);
-        mTotalBet = (TextView) view.findViewById(R.id.coin_total);
-        mMyBet = (TextView) view.findViewById(R.id.coin_my);
+        mTotalBet = view.findViewById(R.id.coin_total);
+        mMyBet = view.findViewById(R.id.coin_my);
     }
 
     public void updateBetVal(int betVal, boolean isSelf) {
@@ -90,7 +90,7 @@ public class ZpBetView extends RelativeLayout {
         String result;
         if (mTotalBetVal >= 10000) {
             if (mTotalBetVal % 10000 == 0) {
-                result = String.valueOf(mTotalBetVal / 10000) + mWan;
+                result = mTotalBetVal / 10000 + mWan;
             } else {
                 result = String.format("%.1f",mTotalBetVal / 10000f) + mWan;
             }
@@ -110,7 +110,7 @@ public class ZpBetView extends RelativeLayout {
         String result;
         if (mMyBetVal >= 10000) {
             if (mMyBetVal % 10000 == 0) {
-                result = String.valueOf(mMyBetVal / 10000) + mWan;
+                result = mMyBetVal / 10000 + mWan;
             } else {
                 result = String.format("%.1f",mTotalBetVal / 10000f) + mWan;
             }

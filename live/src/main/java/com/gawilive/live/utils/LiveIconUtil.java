@@ -12,9 +12,9 @@ import java.util.List;
  */
 
 public class LiveIconUtil {
-    private static SparseIntArray sLiveLightMap;//飘心动画图片
-    private static SparseIntArray sLiveGiftCountMap;//送礼物数字
-    private static List<Integer> sLinkMicPkAnim;//连麦pk帧动画
+    private static final SparseIntArray sLiveLightMap;//飘心动画图片
+    private static final SparseIntArray sLiveGiftCountMap;//送礼物数字
+    private static final List<Integer> sLinkMicPkAnim;//连麦pk帧动画
     private static SparseIntArray sVoiceRoomFace;//语音直播间表情
 
     static {

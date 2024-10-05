@@ -33,15 +33,15 @@ public class VideoScrollAdapter extends RecyclerView.Adapter<VideoScrollAdapter.
 
     private static final String TAG = "VideoScrollAdapter";
     private static final int COUNT = 20;//接口每页返回多少条
-    private Context mContext;
-    private List<VideoBean> mList;
-    private SparseArray<VideoPlayWrapViewHolder> mMap;
+    private final Context mContext;
+    private final List<VideoBean> mList;
+    private final SparseArray<VideoPlayWrapViewHolder> mMap;
     private int mCurPosition;
     private ActionListener mActionListener;
     private boolean mFirstLoad;
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
-    private Drawable[] mLikeAnimDrawables;
+    private final Drawable[] mLikeAnimDrawables;
     private Handler mHandler;
 
     public VideoScrollAdapter(Context context, List<VideoBean> list, int curPosition) {

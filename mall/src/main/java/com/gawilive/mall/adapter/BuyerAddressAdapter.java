@@ -14,8 +14,8 @@ import com.gawilive.mall.bean.BuyerAddressBean;
 
 public class BuyerAddressAdapter extends RefreshAdapter<BuyerAddressBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mOnEditClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnEditClickListener;
     private ActionListener mActionListener;
 
     public BuyerAddressAdapter(Context context) {

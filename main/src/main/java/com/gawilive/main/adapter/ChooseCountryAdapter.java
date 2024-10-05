@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ChooseCountryAdapter extends RefreshAdapter<ChooseCountryBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public ChooseCountryAdapter(Context context) {
         super(context);

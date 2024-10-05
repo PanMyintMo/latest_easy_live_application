@@ -13,12 +13,12 @@ import java.util.regex.Pattern;
  */
 
 public class StringUtil {
-    private static DecimalFormat sDecimalFormat;
-    private static DecimalFormat sDecimalFormat2;
+    private static final DecimalFormat sDecimalFormat;
+    private static final DecimalFormat sDecimalFormat2;
     // private static Pattern sPattern;
-    private static Pattern sIntPattern;
-    private static Random sRandom;
-    private static StringBuilder sStringBuilder;
+    private static final Pattern sIntPattern;
+    private static final Random sRandom;
+    private static final StringBuilder sStringBuilder;
 
 
     static {
@@ -98,14 +98,14 @@ public class StringUtil {
             if (hours < 10) {
                 sStringBuilder.append("0");
             }
-            sStringBuilder.append(String.valueOf(hours));
+            sStringBuilder.append(hours);
             sStringBuilder.append(":");
         }
         if (minutes > 0) {
             if (minutes < 10) {
                 sStringBuilder.append("0");
             }
-            sStringBuilder.append(String.valueOf(minutes));
+            sStringBuilder.append(minutes);
             sStringBuilder.append(":");
         } else {
             sStringBuilder.append("00:");
@@ -114,7 +114,7 @@ public class StringUtil {
             if (seconds < 10) {
                 sStringBuilder.append("0");
             }
-            sStringBuilder.append(String.valueOf(seconds));
+            sStringBuilder.append(seconds);
         } else {
             sStringBuilder.append("00");
         }
@@ -138,14 +138,14 @@ public class StringUtil {
             if (hours < 10) {
                 sStringBuilder.append("0");
             }
-            sStringBuilder.append(String.valueOf(hours));
+            sStringBuilder.append(hours);
             sStringBuilder.append(":");
         }
         if (minutes > 0) {
             if (minutes < 10) {
                 sStringBuilder.append("0");
             }
-            sStringBuilder.append(String.valueOf(minutes));
+            sStringBuilder.append(minutes);
             sStringBuilder.append(":");
         } else {
             sStringBuilder.append("00:");
@@ -154,7 +154,7 @@ public class StringUtil {
             if (seconds < 10) {
                 sStringBuilder.append("0");
             }
-            sStringBuilder.append(String.valueOf(seconds));
+            sStringBuilder.append(seconds);
         } else {
             sStringBuilder.append("00");
         }

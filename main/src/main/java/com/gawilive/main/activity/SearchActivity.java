@@ -67,7 +67,7 @@ public class SearchActivity extends AbsActivity implements OnItemClickListener<S
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         mBtnClear = findViewById(R.id.btn_clear);
         mBtnClear.setOnClickListener(this);
-        mEditText = (EditText) findViewById(R.id.edit);
+        mEditText = findViewById(R.id.edit);
         mEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {

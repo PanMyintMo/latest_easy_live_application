@@ -19,9 +19,9 @@ public class HttpClient {
 
     private static HttpClient sInstance;
     private String mLanguage;//语言
-    private String mUrl;
-    private OkHttpClient mOkHttpClient;
-    private OkHttpBuilder mBuilder;
+    private final String mUrl;
+    private final OkHttpClient mOkHttpClient;
+    private final OkHttpBuilder mBuilder;
 
     private HttpClient() {
         mUrl = CommonAppConfig.HOST + "/appapi/?service=";

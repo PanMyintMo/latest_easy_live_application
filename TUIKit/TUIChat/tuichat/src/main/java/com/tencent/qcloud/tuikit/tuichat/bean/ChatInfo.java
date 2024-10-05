@@ -149,7 +149,7 @@ public class ChatInfo implements Serializable {
     }
 
     public void setAtInfoList(List<V2TIMGroupAtInfo> atInfoList) {
-        this.atInfoList = atInfoList;
+        ChatInfo.atInfoList = atInfoList;
     }
 
     public void setLocateMessage(TUIMessageBean locateMessage) {

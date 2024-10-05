@@ -38,9 +38,9 @@ public class VideoProcessViewHolder extends AbsViewHolder implements View.OnClic
 
     @Override
     public void init() {
-        mTitle = (TextView) findViewById(R.id.title);
+        mTitle = findViewById(R.id.title);
         mTitle.setText(mTitleString);
-        mProgressBar = (NumberProgressBar) findViewById(R.id.progressbar);
+        mProgressBar = findViewById(R.id.progressbar);
         findViewById(R.id.btn_cancel).setOnClickListener(this);
     }
 

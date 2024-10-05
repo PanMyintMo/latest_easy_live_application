@@ -122,7 +122,7 @@ public class VideoEditActivity extends AbsActivity implements
 
     @Override
     protected void main() {
-        mRoot = (ViewGroup) findViewById(R.id.root);
+        mRoot = findViewById(R.id.root);
         mGroup = findViewById(R.id.group);
         mBtnNext = findViewById(R.id.btn_next);
         mBtnPlay = findViewById(R.id.btn_play);
@@ -230,7 +230,7 @@ public class VideoEditActivity extends AbsActivity implements
         if (mVideoEditer == null) {
             return;
         }
-        FrameLayout layout = (FrameLayout) findViewById(R.id.video_container);
+        FrameLayout layout = findViewById(R.id.video_container);
         TXVideoEditConstants.TXPreviewParam param = new TXVideoEditConstants.TXPreviewParam();
         param.videoView = layout;
         param.renderMode = TXVideoEditConstants.PREVIEW_RENDER_MODE_FILL_EDGE;

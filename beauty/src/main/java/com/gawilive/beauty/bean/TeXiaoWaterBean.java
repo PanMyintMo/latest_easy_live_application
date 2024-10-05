@@ -2,9 +2,9 @@ package com.gawilive.beauty.bean;
 
 public class TeXiaoWaterBean {
 
-    private int mThumb;
-    private int mRes;
-    private int mPositon;
+    private final int mThumb;
+    private final int mRes;
+    private final int mPositon;
     private boolean mChecked;
 
     public TeXiaoWaterBean(int thumb, int res, int positon) {

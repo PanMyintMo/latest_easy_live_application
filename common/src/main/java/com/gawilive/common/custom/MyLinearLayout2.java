@@ -14,8 +14,8 @@ import com.gawilive.common.R;
 
 public class MyLinearLayout2 extends LinearLayout {
 
-    private float mScreenWidth;
-    private int mSpanCount;
+    private final float mScreenWidth;
+    private final int mSpanCount;
 
     public MyLinearLayout2(Context context) {
         this(context, null);

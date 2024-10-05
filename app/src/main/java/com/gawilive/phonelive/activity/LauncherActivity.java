@@ -139,7 +139,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
             }
         };
         String[] uidAndToken = SpUtil.getInstance().getMultiStringValue(
-                new String[]{SpUtil.UID, SpUtil.TOKEN});
+                SpUtil.UID, SpUtil.TOKEN);
         //已登录，显示引导页
         if (!TextUtils.isEmpty(uidAndToken[0]) && !TextUtils.isEmpty(uidAndToken[1])
                 && CommonAppConfig.getInstance().isLogin()
@@ -274,7 +274,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
             mHandler = null;
         }
         String[] uidAndToken = SpUtil.getInstance().getMultiStringValue(
-                new String[]{SpUtil.UID, SpUtil.TOKEN});
+                SpUtil.UID, SpUtil.TOKEN);
         final String uid = uidAndToken[0];
         final String token = uidAndToken[1];
         if (!TextUtils.isEmpty(uid) && !TextUtils.isEmpty(token)) {

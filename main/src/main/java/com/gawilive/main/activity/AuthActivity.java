@@ -44,7 +44,7 @@ public class AuthActivity extends AbsActivity implements View.OnClickListener {
     private String mImgFrontHandUrl;
     private int mImgPosition;
     private Dialog mLoading;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 

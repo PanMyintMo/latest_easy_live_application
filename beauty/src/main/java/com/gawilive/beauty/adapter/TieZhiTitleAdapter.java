@@ -19,12 +19,12 @@ import java.util.List;
 
 public class TieZhiTitleAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<TieZhiTypeBean> mList;
-    private int mColor0;
-    private int mColor1;
+    private final LayoutInflater mInflater;
+    private final List<TieZhiTypeBean> mList;
+    private final int mColor0;
+    private final int mColor1;
     private int mCheckedPosition;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<TieZhiTypeBean> mOnItemClickListener;
 
     public TieZhiTitleAdapter(Context context, List<TieZhiTypeBean> list) {

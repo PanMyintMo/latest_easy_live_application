@@ -98,9 +98,9 @@ public class LiveRoomViewHolder extends AbsViewHolder implements View.OnClickLis
     private HttpCallback mRefreshUserListCallback;
     private HttpCallback mTimeChargeCallback;
     protected int mUserListInterval;//用户列表刷新时间的间隔
-    private GifImageView mGifImageView;
-    private SVGAImageView mSVGAImageView;
-    private ViewGroup mLiveGiftPrizePoolContainer;
+    private final GifImageView mGifImageView;
+    private final SVGAImageView mSVGAImageView;
+    private final ViewGroup mLiveGiftPrizePoolContainer;
     private TextView mLiveTimeTextView;//主播的直播时长
     private int mAnchorLiveTime;//主播直播时间
     private Handler mAnchorTimeHandler;
@@ -132,17 +132,17 @@ public class LiveRoomViewHolder extends AbsViewHolder implements View.OnClickLis
 
     @Override
     public void init() {
-        mRoot = (ViewGroup) findViewById(R.id.root);
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mLevelAnchor = (ImageView) findViewById(R.id.level_anchor);
-        mName = (TextView) findViewById(R.id.name);
-        mID = (TextView) findViewById(R.id.id_val);
+        mRoot = findViewById(R.id.root);
+        mAvatar = findViewById(R.id.avatar);
+        mLevelAnchor = findViewById(R.id.level_anchor);
+        mName = findViewById(R.id.name);
+        mID = findViewById(R.id.id_val);
         mBtnFollow = findViewById(R.id.btn_follow);
-        mVotesName = (TextView) findViewById(R.id.votes_name);
-        mVotes = (TextView) findViewById(R.id.votes);
-        mGuardNum = (TextView) findViewById(R.id.guard_num);
+        mVotesName = findViewById(R.id.votes_name);
+        mVotes = findViewById(R.id.votes);
+        mGuardNum = findViewById(R.id.guard_num);
         //用户头像列表
-        mUserRecyclerView = (RecyclerView) findViewById(R.id.user_recyclerView);
+        mUserRecyclerView = findViewById(R.id.user_recyclerView);
         mUserRecyclerView.setHasFixedSize(true);
         mUserRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         mLiveUserAdapter = new LiveUserAdapter(mContext);
@@ -154,7 +154,7 @@ public class LiveRoomViewHolder extends AbsViewHolder implements View.OnClickLis
         });
         mUserRecyclerView.setAdapter(mLiveUserAdapter);
         //聊天栏
-        mChatRecyclerView = (RecyclerView) findViewById(R.id.chat_recyclerView);
+        mChatRecyclerView = findViewById(R.id.chat_recyclerView);
         mChatRecyclerView.setHasFixedSize(true);
         mChatRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mChatRecyclerView.addItemDecoration(new TopGradual());
@@ -193,7 +193,7 @@ public class LiveRoomViewHolder extends AbsViewHolder implements View.OnClickLis
                 mRoot.setOnClickListener(this);
             }
         } else {
-            mLiveTimeTextView = (TextView) findViewById(R.id.live_time);
+            mLiveTimeTextView = findViewById(R.id.live_time);
             mLiveTimeTextView.setVisibility(View.VISIBLE);
         }
         mLightAnimPresenter = new LiveLightAnimPresenter(mContext, mParentView);
@@ -266,7 +266,7 @@ public class LiveRoomViewHolder extends AbsViewHolder implements View.OnClickLis
             return;
         }
         if (mBtnViewHolder == null) {
-            mBtnViewHolder = new LiveRoomBtnViewHolder(mContext, (ViewGroup) findViewById(R.id.btn_container), showPan, prizePoolLevel, dailyTaskSwitch);
+            mBtnViewHolder = new LiveRoomBtnViewHolder(mContext, findViewById(R.id.btn_container), showPan, prizePoolLevel, dailyTaskSwitch);
             mBtnViewHolder.addToParent();
             mBtnViewHolder.subscribeActivityLifeCycle();
 //            mPrizePoolLevel = mBtnViewHolder.getPrizePoolLevel();
@@ -718,7 +718,7 @@ public class LiveRoomViewHolder extends AbsViewHolder implements View.OnClickLis
     }
 
     public ViewGroup getInnerContainer() {
-        return (ViewGroup) findViewById(R.id.inner_container);
+        return findViewById(R.id.inner_container);
     }
 
 

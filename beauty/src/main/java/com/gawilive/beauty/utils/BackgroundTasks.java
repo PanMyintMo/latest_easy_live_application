@@ -12,7 +12,7 @@ public class BackgroundTasks {
     }
 
     @NonNull
-    private Handler mHandler = new Handler(Looper.getMainLooper());
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
 
     public void runOnUiThread(Runnable runnable) {

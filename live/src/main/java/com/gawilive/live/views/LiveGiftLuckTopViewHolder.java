@@ -50,7 +50,7 @@ public class LiveGiftLuckTopViewHolder extends AbsViewHolder {
         mQueue = new ConcurrentLinkedQueue<>();
         mTipString = WordUtil.getString(R.string.live_gift_luck_tip);
         mRoot = findViewById(R.id.root);
-        mGiftTip = (TextView) findViewById(R.id.luck_gift_tip);
+        mGiftTip = findViewById(R.id.luck_gift_tip);
         mParentWidth = mParentView.getWidth();
         mDp20 = DpUtil.dp2px(20);
         ViewGroup.LayoutParams params = mRoot.getLayoutParams();

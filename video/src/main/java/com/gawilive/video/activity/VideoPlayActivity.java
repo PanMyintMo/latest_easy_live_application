@@ -66,7 +66,7 @@ public class VideoPlayActivity extends AbsVideoPlayActivity {
         }
         int position = intent.getIntExtra(Constants.VIDEO_POSITION, 0);
         int page = intent.getIntExtra(Constants.VIDEO_PAGE, 1);
-        mVideoScrollViewHolder = new VideoScrollViewHolder(mContext, (ViewGroup) findViewById(R.id.container), position, mVideoKey, page);
+        mVideoScrollViewHolder = new VideoScrollViewHolder(mContext, findViewById(R.id.container), position, mVideoKey, page);
         mVideoScrollViewHolder.addToParent();
         mVideoScrollViewHolder.subscribeActivityLifeCycle();
         VideoHttpUtil.startWatchVideo();

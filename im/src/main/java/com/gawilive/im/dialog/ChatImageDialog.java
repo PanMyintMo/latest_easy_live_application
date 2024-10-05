@@ -81,7 +81,7 @@ public class ChatImageDialog extends AbsDialogFragment {
         mRecyclerView = mRootView.findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
-        mCover = (ImageView) mRootView.findViewById(R.id.cover);
+        mCover = mRootView.findViewById(R.id.cover);
         mAnimator = ValueAnimator.ofFloat(0, 1);
         mAnimator.setDuration(300);
         mAnimator.setInterpolator(new AccelerateDecelerateInterpolator());

@@ -44,7 +44,7 @@ public class LiveContributeViewHolder extends AbsLivePageViewHolder implements V
     @Override
     public void init() {
         super.init();
-        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        mProgressBar = findViewById(R.id.progressbar);
         mWebView = new WebView(mContext);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         mWebView.setLayoutParams(params);

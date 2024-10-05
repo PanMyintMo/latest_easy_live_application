@@ -10,7 +10,7 @@ import com.gawilive.im.bean.ImUserBean;
 
 public class ImRoamMsgEvent {
 
-    private ImUserBean mBean;
+    private final ImUserBean mBean;
 
     public ImRoamMsgEvent(ImUserBean bean){
         mBean=bean;

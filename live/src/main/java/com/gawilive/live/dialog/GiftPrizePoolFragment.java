@@ -56,8 +56,8 @@ public class GiftPrizePoolFragment extends AbsDialogFragment implements View.OnC
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mLevel = (TextView) findViewById(R.id.level);
-        mCoin = (TextView) findViewById(R.id.coin);
+        mLevel = findViewById(R.id.level);
+        mCoin = findViewById(R.id.coin);
         findViewById(R.id.btn_close).setOnClickListener(this);
         LiveHttpUtil.getLiveGiftPrizePool(mLiveUid, mStream, new HttpCallback() {
 

@@ -77,8 +77,5 @@ public class MainStartDialogFragment extends AbsDialogFragment implements View.O
                 mCallback.onVoiceClick();
             }
         }
-
-
     }
-
 }

@@ -81,13 +81,13 @@ public class GameZjhViewHolder extends AbsGameViewHolder {
         boolean anchor = param.isAnchor();
         mGameViewHeight = anchor ? DpUtil.dp2px(150) : DpUtil.dp2px(190);
         if (!anchor) {
-            ViewStub viewStub = (ViewStub) findViewById(R.id.view_stub);
+            ViewStub viewStub = findViewById(R.id.view_stub);
             View view = viewStub.inflate();
             view.findViewById(R.id.btn_bet_shi).setOnClickListener(this);
             view.findViewById(R.id.btn_bet_bai).setOnClickListener(this);
             view.findViewById(R.id.btn_bet_qian).setOnClickListener(this);
             view.findViewById(R.id.btn_bet_wan).setOnClickListener(this);
-            mCoinTextView = (TextView) view.findViewById(R.id.coin);
+            mCoinTextView = view.findViewById(R.id.coin);
             mCoinTextView.setOnClickListener(this);
             for (View v : mBetCoinViews) {
                 v.setOnClickListener(this);
@@ -113,16 +113,16 @@ public class GameZjhViewHolder extends AbsGameViewHolder {
 
     @Override
     public void init() {
-        mTip = (TextView) findViewById(R.id.tip);
-        mReadyCountDown = (TextView) findViewById(R.id.count_down_1);
+        mTip = findViewById(R.id.tip);
+        mReadyCountDown = findViewById(R.id.count_down_1);
         mRoleGroup = findViewById(R.id.role_group);
         mSceneHeight = DpUtil.dp2px(150);
         mRoleHeight = DpUtil.dp2px(90);
         mPokerGroup = findViewById(R.id.pokers_group);
         mPokerViews = new PokerView[3];
-        mPokerViews[0] = (PokerView) findViewById(R.id.pokers_1);
-        mPokerViews[1] = (PokerView) findViewById(R.id.pokers_2);
-        mPokerViews[2] = (PokerView) findViewById(R.id.pokers_3);
+        mPokerViews[0] = findViewById(R.id.pokers_1);
+        mPokerViews[1] = findViewById(R.id.pokers_2);
+        mPokerViews[2] = findViewById(R.id.pokers_3);
         mRoles = new View[3];
         mRoles[0] = findViewById(R.id.role_1);
         mRoles[1] = findViewById(R.id.role_2);
@@ -131,16 +131,16 @@ public class GameZjhViewHolder extends AbsGameViewHolder {
         mRoleNames[0] = findViewById(R.id.name_1);
         mRoleNames[1] = findViewById(R.id.name_2);
         mRoleNames[2] = findViewById(R.id.name_3);
-        mBetCountDown = (TextView) findViewById(R.id.count_down_2);
+        mBetCountDown = findViewById(R.id.count_down_2);
         mBetCoinViews = new GameBetCoinView[3];
-        mBetCoinViews[0] = (GameBetCoinView) findViewById(R.id.score_1);
-        mBetCoinViews[1] = (GameBetCoinView) findViewById(R.id.score_2);
-        mBetCoinViews[2] = (GameBetCoinView) findViewById(R.id.score_3);
+        mBetCoinViews[0] = findViewById(R.id.score_1);
+        mBetCoinViews[1] = findViewById(R.id.score_2);
+        mBetCoinViews[2] = findViewById(R.id.score_3);
         mResults = new ImageView[3];
-        mResults[0] = (ImageView) findViewById(R.id.result_1);
-        mResults[1] = (ImageView) findViewById(R.id.result_2);
-        mResults[2] = (ImageView) findViewById(R.id.result_3);
-        mCoverImg = (ImageView) findViewById(R.id.cover);
+        mResults[0] = findViewById(R.id.result_1);
+        mResults[1] = findViewById(R.id.result_2);
+        mResults[2] = findViewById(R.id.result_3);
+        mCoverImg = findViewById(R.id.cover);
         //角色缩小的动画
         mRoleScaleAnim = ValueAnimator.ofFloat(mSceneHeight, mRoleHeight);
         mRoleScaleAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -523,7 +523,7 @@ public class GameZjhViewHolder extends AbsGameViewHolder {
             msg.arg1 = i;
             msg.obj = result[i];
             if (mHandler != null) {
-                mHandler.sendMessageDelayed(msg, i * 2000);
+                mHandler.sendMessageDelayed(msg, i * 2000L);
             }
         }
     }

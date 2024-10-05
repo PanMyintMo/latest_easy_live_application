@@ -70,10 +70,7 @@ public class LiveRoomCheckDialogFragment extends AbsDialogFragment implements Vi
             dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
                 @Override
                 public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-                    if (keyCode == KeyEvent.KEYCODE_BACK) {
-                        return true;
-                    }
-                    return false;
+                    return keyCode == KeyEvent.KEYCODE_BACK;
                 }
             });
         }

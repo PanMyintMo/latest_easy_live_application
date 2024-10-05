@@ -61,8 +61,8 @@ public class WebViewActivity extends AbsActivity {
     protected void main() {
         String url = getIntent().getStringExtra(Constants.URL);
         L.e("H5--->" + url);
-        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        LinearLayout rootView = findViewById(R.id.rootView);
+        mProgressBar = findViewById(R.id.progressbar);
         saveImage = findViewById(R.id.tvSaveImage);
         mWebView = findViewById(R.id.webView);
 //        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);

@@ -39,7 +39,7 @@ public class PayContentActivity1 extends AbsActivity implements View.OnClickList
     protected void main() {
         setTitle(WordUtil.getString(R.string.mall_309));
         findViewById(R.id.btn_apply).setOnClickListener(this);
-        PayBuyViewHolder viewHolder = new PayBuyViewHolder(mContext, (ViewGroup) findViewById(R.id.content));
+        PayBuyViewHolder viewHolder = new PayBuyViewHolder(mContext, findViewById(R.id.content));
         viewHolder.addToParent();
         viewHolder.loadData();
     }

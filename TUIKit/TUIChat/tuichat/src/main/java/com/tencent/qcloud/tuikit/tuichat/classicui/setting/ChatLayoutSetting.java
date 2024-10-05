@@ -20,7 +20,7 @@ import com.tencent.qcloud.tuikit.tuichat.util.ChatMessageBuilder;
 public class ChatLayoutSetting {
     private static final String TAG = ChatLayoutSetting.class.getSimpleName();
 
-    private Context mContext;
+    private final Context mContext;
     private String groupId;
 
     public ChatLayoutSetting(Context context) {
@@ -33,14 +33,13 @@ public class ChatLayoutSetting {
 
     public void customizeMessageLayout(final MessageRecyclerView messageRecyclerView) {
         if (messageRecyclerView == null) {
-            return;
         }
     }
 
     public void customizeChatLayout(final ChatView layout) {
         
         // Set custom view of chat interface as security prompt
-        ViewGroup customNoticeLayout = TUIChatConfigs.getConfigs().getNoticeLayoutConfig().getCustomNoticeLayout();
+        ViewGroup customNoticeLayout = TUIChatConfigs.getNoticeLayoutConfig().getCustomNoticeLayout();
         FrameLayout customView = layout.getCustomView();
         if (customNoticeLayout != null && customView.getVisibility() == View.GONE) {
             ViewParent viewParent = customNoticeLayout.getParent();

@@ -34,9 +34,9 @@ public class PaymentRecordsAdapter extends AppAdapter<PaymentRecordsModel> {
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
 
-        private TextView mTvQs;
-        private TextView mTvCount;
-        private RecyclerView mRecyclerView;
+        private final TextView mTvQs;
+        private final TextView mTvCount;
+        private final RecyclerView mRecyclerView;
 
 
         private ViewHolder() {

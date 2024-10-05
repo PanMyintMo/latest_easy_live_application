@@ -101,8 +101,8 @@ public class ThreeDistributActivity extends AbsActivity implements View.OnClickL
 
         String url = intent.getStringExtra(Constants.URL);
         L.e("H5--->" + url);
-        LinearLayout container = (LinearLayout) findViewById(R.id.container);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressbar);
+        LinearLayout container = findViewById(R.id.container);
+        mProgressBar = findViewById(R.id.progressbar);
         mWebView = new WebView(mContext);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         params.topMargin = DpUtil.dp2px(1);

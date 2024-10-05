@@ -31,12 +31,12 @@ public class UploadQnImpl implements UploadStrategy {
     private int mIndex;
     private boolean mNeedCompress;
     private UploadCallback mUploadCallback;
-    private String mToken;
-    private String mZone;
+    private final String mToken;
+    private final String mZone;
     private UploadManager mUploadManager;
-    private UpCompletionHandler mCompletionHandler;//上传回调
+    private final UpCompletionHandler mCompletionHandler;//上传回调
     private Luban.Builder mLubanBuilder;
-    private String mPrefix;
+    private final String mPrefix;
 
     public UploadQnImpl(String uploadToken, String zone, String prefix) {
         mToken = uploadToken;

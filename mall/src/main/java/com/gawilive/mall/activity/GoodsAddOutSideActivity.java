@@ -60,7 +60,7 @@ public class GoodsAddOutSideActivity extends AbsActivity implements View.OnClick
     private Dialog mLoading;
     private String mGoodsId;
     private String mImgUrl;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 
@@ -94,13 +94,13 @@ public class GoodsAddOutSideActivity extends AbsActivity implements View.OnClick
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.mall_375));
-        mLink = (EditText) findViewById(R.id.link);
-        mName = (EditText) findViewById(R.id.name);
-        mPriceOrigin = (EditText) findViewById(R.id.price_origin);
-        mPriceNow = (EditText) findViewById(R.id.price_now);
+        mLink = findViewById(R.id.link);
+        mName = findViewById(R.id.name);
+        mPriceOrigin = findViewById(R.id.price_origin);
+        mPriceNow = findViewById(R.id.price_now);
 //        mPriceYong = (EditText) findViewById(R.id.price_yong);
-        mDes = (EditText) findViewById(R.id.des);
-        mImg = (ImageView) findViewById(R.id.img);
+        mDes = findViewById(R.id.des);
+        mImg = findViewById(R.id.img);
         mBtnConfirm = findViewById(R.id.btn_confirm);
         mBtnConfirm.setOnClickListener(this);
         findViewById(R.id.btn_img_add).setOnClickListener(this);

@@ -17,9 +17,9 @@ import com.gawilive.live.R;
 
 public class LiveGiftCountAdapter extends RecyclerView.Adapter<LiveGiftCountAdapter.Vh> {
 
-    private String[] mArray;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final String[] mArray;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<String> mOnItemClickListener;
 
     public LiveGiftCountAdapter(Context context) {

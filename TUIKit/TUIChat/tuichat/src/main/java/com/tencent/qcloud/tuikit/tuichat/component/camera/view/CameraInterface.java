@@ -50,8 +50,8 @@ public class CameraInterface {
     private int previewWidth;
     private int previewHeight;
     private int angle = 0;
-    private int cameraAngle = 90;
-    private int rotation = 0;
+    private final int cameraAngle = 90;
+    private final int rotation = 0;
     private int nowScaleRate = 0;
     private int recordScaleRate = 0;
     private OnRotateListener onRotateListener;
@@ -337,11 +337,7 @@ public class CameraInterface {
 
                 bitmap = createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
                 if (callback != null) {
-                    if (nowAngle == 90 || nowAngle == 270) {
-                        callback.captureResult(bitmap, true);
-                    } else {
-                        callback.captureResult(bitmap, false);
-                    }
+                    callback.captureResult(bitmap, nowAngle == 90 || nowAngle == 270);
                 }
             }
         });

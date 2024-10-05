@@ -8,10 +8,10 @@ import com.meihu.beautylibrary.MHSDK;
 import com.meihu.beautylibrary.bean.MHCommonBean;
 
 public class MakeupBean  extends MHCommonBean {
-    private int mName;
-    private int mThumb0;
-    private int mThumb1;
-    private int mMakeupId;
+    private final int mName;
+    private final int mThumb0;
+    private final int mThumb1;
+    private final int mMakeupId;
     private boolean mChecked;
     private Drawable mDrawable0;
     private Drawable mDrawable1;

@@ -48,9 +48,9 @@ public class OkHttpBuilder {
 
     public OkHttpClient build(Application application) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.connectTimeout((long)this.mTimeout, TimeUnit.MILLISECONDS);
-        builder.readTimeout((long)this.mTimeout, TimeUnit.MILLISECONDS);
-        builder.writeTimeout((long)this.mTimeout, TimeUnit.MILLISECONDS);
+        builder.connectTimeout(this.mTimeout, TimeUnit.MILLISECONDS);
+        builder.readTimeout(this.mTimeout, TimeUnit.MILLISECONDS);
+        builder.writeTimeout(this.mTimeout, TimeUnit.MILLISECONDS);
         builder.cookieJar(new CookieJarImpl(new MemoryCookieStore()));
         builder.retryOnConnectionFailure(true);
         if (this.mLoggingInterceptor != null) {

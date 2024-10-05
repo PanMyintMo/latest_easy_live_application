@@ -44,22 +44,22 @@ public class PermissionRequester {
     public static final String PERMISSION_REQUEST_KEY = "PERMISSION_REQUEST_KEY";
     private static final Object sLock = new Object();
 
-    private static AtomicBoolean sIsRequesting = new AtomicBoolean(false);
+    private static final AtomicBoolean sIsRequesting = new AtomicBoolean(false);
 
     private PermissionCallback mPermissionCallback;
-    private String[] mPermissions;
+    private final String[] mPermissions;
     private String mTitle;
     private String mDescription;
     private String mSettingsTip;
-    private ITUINotification mPermissionNotification;
+    private final ITUINotification mPermissionNotification;
 
     public enum Result { Granted, Denied, Requesting }
 
     public static final String FLOAT_PERMISSION    = "PermissionOverlayWindows";
     public static final String BG_START_PERMISSION = "PermissionStartActivityFromBackground";
 
-    private List<String> mDirectPermissionList   = new ArrayList<>();
-    private List<String> mIndirectPermissionList = new ArrayList<>();
+    private final List<String> mDirectPermissionList   = new ArrayList<>();
+    private final List<String> mIndirectPermissionList = new ArrayList<>();
 
     private PermissionRequester(String... permissions) {
         mPermissions = permissions;
@@ -523,7 +523,7 @@ public class PermissionRequester {
             }
             int op = 10021;
             Method method = appOpsManager.getClass().getMethod("checkOpNoThrow",
-                    new Class[]{int.class, int.class, String.class});
+                    int.class, int.class, String.class);
             method.setAccessible(true);
             int result = (int) method.invoke(appOpsManager, op, android.os.Process.myUid(), context.getPackageName());
             Log.i(TAG, "isXiaomiBgStartPermissionAllowed, result: " + (AppOpsManager.MODE_ALLOWED == result));

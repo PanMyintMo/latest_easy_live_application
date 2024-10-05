@@ -21,9 +21,9 @@ import java.util.List;
 
 public class GuardRightAdapter extends RecyclerView.Adapter<GuardRightAdapter.Vh> {
 
-    private Context mContext;
-    private List<GuardRightBean> mList;
-    private LayoutInflater mInflater;
+    private final Context mContext;
+    private final List<GuardRightBean> mList;
+    private final LayoutInflater mInflater;
 //    private int mColor1;
 //    private int mColor2;
 
@@ -60,9 +60,9 @@ public class GuardRightAdapter extends RecyclerView.Adapter<GuardRightAdapter.Vh
 
         public Vh(@NonNull View itemView) {
             super(itemView);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mDes = (TextView) itemView.findViewById(R.id.des);
+            mIcon = itemView.findViewById(R.id.icon);
+            mTitle = itemView.findViewById(R.id.title);
+            mDes = itemView.findViewById(R.id.des);
         }
 
         void setData(GuardRightBean bean) {

@@ -20,8 +20,8 @@ import java.util.List;
 
 public class SearchPayAdapter extends RefreshAdapter<SearchPayBean> {
 
-    private Drawable mCheckedDrawable;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
 
     public SearchPayAdapter(Context context) {

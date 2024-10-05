@@ -25,7 +25,7 @@ public class AudioRecorderEx {
 
 //    public static final String AUDIO_DIR_PATH = "audioRecorderEx";
 
-    private List<String> mRecordFiles = new ArrayList<String>();
+    private final List<String> mRecordFiles = new ArrayList<String>();
     private String savePath;
 
 //    private static Context mContext;
@@ -50,8 +50,6 @@ public class AudioRecorderEx {
     public enum State {
         INITIALIZING, READY, RECORDING, ERROR, STOPPED
     }
-
-    ;
 
 
     //public static final boolean RECORDING_UNCOMPRESSED = true;
@@ -125,7 +123,7 @@ public class AudioRecorderEx {
     /*
      * Method used for recording.
      */
-    private AudioRecord.OnRecordPositionUpdateListener updateListener = new AudioRecord.OnRecordPositionUpdateListener() {
+    private final AudioRecord.OnRecordPositionUpdateListener updateListener = new AudioRecord.OnRecordPositionUpdateListener() {
 
         public void onPeriodicNotification(AudioRecord recorder) {
             //Log.i("buffer", "start write time:" + System.currentTimeMillis());
@@ -221,7 +219,7 @@ public class AudioRecorderEx {
                 // Set frame period and timer interval accordingly
                 framePeriod = bufferSize / (2 * bSamples * nChannels / 8);
                 L.e("Increasing buffer size to "
-                        + Integer.toString(bufferSize));
+                        + bufferSize);
 
             }
 

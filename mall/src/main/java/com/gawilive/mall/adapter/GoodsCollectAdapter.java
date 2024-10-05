@@ -32,11 +32,11 @@ import java.util.List;
 
 public class GoodsCollectAdapter extends RefreshAdapter<GoodsBean> implements ItemSlideHelper.Callback{
 
-    private String mMoneySymbol;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mDeleteClickListener;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final String mMoneySymbol;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mDeleteClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
     private boolean mShowCheck;
 
     public GoodsCollectAdapter(Context context) {

@@ -16,9 +16,9 @@ import com.gawilive.common.utils.DpUtil;
 
 public class MyLinearLayout3 extends LinearLayout {
 
-    private int mScreenHeight;
-    private float mHeightPercent;
-    private int mHeight;
+    private final int mScreenHeight;
+    private final float mHeightPercent;
+    private final int mHeight;
 
     public MyLinearLayout3(Context context) {
         this(context, null);

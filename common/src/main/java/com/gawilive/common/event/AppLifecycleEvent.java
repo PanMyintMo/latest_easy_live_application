@@ -5,7 +5,7 @@ package com.gawilive.common.event;
  */
 public class AppLifecycleEvent {
 
-    private boolean mFrontGround;
+    private final boolean mFrontGround;
 
     public AppLifecycleEvent(boolean frontGround) {
         mFrontGround = frontGround;

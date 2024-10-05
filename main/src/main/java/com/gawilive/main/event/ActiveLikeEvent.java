@@ -1,10 +1,10 @@
 package com.gawilive.main.event;
 
 public class ActiveLikeEvent {
-    private int mFrom;
-    private String mActiveId;
-    private int mIsLike;//是否点赞了
-    private int mLikeNum;//点赞数
+    private final int mFrom;
+    private final String mActiveId;
+    private final int mIsLike;//是否点赞了
+    private final int mLikeNum;//点赞数
 
 
     public ActiveLikeEvent(int from, String activeId, int isLike, int likeNum) {

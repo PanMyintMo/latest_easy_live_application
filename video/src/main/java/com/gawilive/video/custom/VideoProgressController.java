@@ -16,20 +16,20 @@ import java.util.List;
 
 public class VideoProgressController {
 
-    private Context mContext;
+    private final Context mContext;
     private VideoProgressView mVideoProgressView;
     private RecyclerView mRecyclerView;
     private boolean mIsTouching;
     private int mScrollState;
     private float mCurrentScroll;
     private long mCurrentTimeMs;
-    private long mTotalDurationMs; // us
+    private final long mTotalDurationMs; // us
     private float mThumbnailPicListDisplayWidth; // 视频缩略图列表的宽度
-    private float mVideoProgressDisplayWidth; // 视频进度条可显示宽度
+    private final float mVideoProgressDisplayWidth; // 视频进度条可显示宽度
     private int mThumbnailNum;
     private VideoProgressSeekListener mVideoProgressSeekListener;
-    private float mScale;
-    private int mFrameWidth;
+    private final float mScale;
+    private final int mFrameWidth;
     private List<RangeSliderViewContainer> mRangeSliderViewContainerList;
     private boolean mIsRangeSliderChanged;
     private ColorfulProgress mColorfulProgress;

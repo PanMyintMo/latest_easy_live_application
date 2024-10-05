@@ -470,7 +470,7 @@ public class MainMeViewNewHolder extends AbsMainViewHolder {
     }
 
 
-    private CommonCallback<UserBean> mCallback = new CommonCallback<UserBean>() {
+    private final CommonCallback<UserBean> mCallback = new CommonCallback<UserBean>() {
         @Override
         public void callback(UserBean bean) {
             queryWallet(bean);
@@ -528,6 +528,7 @@ public class MainMeViewNewHolder extends AbsMainViewHolder {
         // 店铺
         tvDp.setOnClickListener(v -> {
             if (u.getIsOpenShop() == 0) {
+
                 BuyerActivity.forward(mContext);
             } else {
                 SellerActivity.forward(mContext);
@@ -552,6 +553,8 @@ public class MainMeViewNewHolder extends AbsMainViewHolder {
                     map.put("account", bean.getMobile());
                     map.put("username", bean.getUserNiceName());
                     map.put("avatar", bean.getAvatarThumb());
+
+
                     map.put("live_user_id", bean.getId());
                     syncData(map);
                 } else {

@@ -75,7 +75,7 @@ public class ChatFileDownloadProvider implements IDownloadProvider {
     }
 
     private static class DownloadCallback implements V2TIMDownloadCallback {
-        private TUIValueCallback callback;
+        private final TUIValueCallback callback;
 
         DownloadCallback(TUIValueCallback callback) {
             this.callback = callback;

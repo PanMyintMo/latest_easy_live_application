@@ -58,7 +58,7 @@ public class PayContentPubActivity extends AbsActivity implements View.OnClickLi
     private List<PayContentVideoBean> mVideoList;
     private Dialog mLoading;
     private PayContentChooseVideoViewHolder mChooseVideoViewHolder;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 
@@ -182,7 +182,7 @@ public class PayContentPubActivity extends AbsActivity implements View.OnClickLi
      */
     private void openChooseVideo() {
         if (mChooseVideoViewHolder == null) {
-            mChooseVideoViewHolder = new PayContentChooseVideoViewHolder(mContext, (ViewGroup) findViewById(R.id.root));
+            mChooseVideoViewHolder = new PayContentChooseVideoViewHolder(mContext, findViewById(R.id.root));
             mChooseVideoViewHolder.subscribeActivityLifeCycle();
             mChooseVideoViewHolder.addToParent();
         }

@@ -22,10 +22,10 @@ import com.tencent.qcloud.tuikit.tuichat.bean.message.CustomOrderMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
 
 public class CustomOrderMessageHolder extends MessageContentHolder {
-    private ImageView imageView;
-    private TextView titleView;
-    private TextView contentView;
-    private TextView priceView;
+    private final ImageView imageView;
+    private final TextView titleView;
+    private final TextView contentView;
+    private final TextView priceView;
 
     public CustomOrderMessageHolder(View itemView) {
         super(itemView);

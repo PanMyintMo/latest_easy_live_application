@@ -16,8 +16,8 @@ import com.gawilive.mall.bean.SellerOrderBean;
  */
 public class SellerOrderSendAdapter extends SellerOrderBaseAdapter {
 
-    private View.OnClickListener mSendClickListener;
-    private String mGoodsCountString;
+    private final View.OnClickListener mSendClickListener;
+    private final String mGoodsCountString;
 
     public SellerOrderSendAdapter(Context context) {
         super(context);

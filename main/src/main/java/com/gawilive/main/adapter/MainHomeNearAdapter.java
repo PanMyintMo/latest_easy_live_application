@@ -22,7 +22,7 @@ import com.gawilive.main.utils.MainIconUtil;
 public class MainHomeNearAdapter extends RefreshAdapter<LiveBean> {
 
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public MainHomeNearAdapter(Context context) {
         super(context);
@@ -63,12 +63,12 @@ public class MainHomeNearAdapter extends RefreshAdapter<LiveBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mCover = (ImageView) itemView.findViewById(R.id.cover);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mDistance = (TextView) itemView.findViewById(R.id.distance);
-            mType = (ImageView) itemView.findViewById(R.id.type);
+            mCover = itemView.findViewById(R.id.cover);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mTitle = itemView.findViewById(R.id.title);
+            mDistance = itemView.findViewById(R.id.distance);
+            mType = itemView.findViewById(R.id.type);
             itemView.setOnClickListener(mOnClickListener);
         }
 

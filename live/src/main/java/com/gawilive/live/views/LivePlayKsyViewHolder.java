@@ -58,14 +58,14 @@ public class LivePlayKsyViewHolder extends LiveRoomPlayViewHolder implements
 
     @Override
     public void init() {
-        mRoot = (ViewGroup) findViewById(R.id.root);
-        mSmallContainer = (ViewGroup) findViewById(R.id.small_container);
-        mLeftContainer = (ViewGroup) findViewById(R.id.left_container);
-        mRightContainer = (ViewGroup) findViewById(R.id.right_container);
-        mPkContainer = (ViewGroup) findViewById(R.id.pk_container);
-        mVideoView = (KSYTextureView) findViewById(R.id.video_view);
+        mRoot = findViewById(R.id.root);
+        mSmallContainer = findViewById(R.id.small_container);
+        mLeftContainer = findViewById(R.id.left_container);
+        mRightContainer = findViewById(R.id.right_container);
+        mPkContainer = findViewById(R.id.pk_container);
+        mVideoView = findViewById(R.id.video_view);
         mLoading = findViewById(R.id.loading);
-        mCover = (ImageView) findViewById(R.id.cover);
+        mCover = findViewById(R.id.cover);
         mVideoView.setOnPreparedListener(this);
         mVideoView.setOnErrorListener(this);
         mVideoView.setOnInfoListener(this);

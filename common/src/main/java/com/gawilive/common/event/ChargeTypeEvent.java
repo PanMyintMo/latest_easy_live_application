@@ -1,7 +1,7 @@
 package com.gawilive.common.event;
 
 public class ChargeTypeEvent {
-    private String mPayType;
+    private final String mPayType;
 
     public ChargeTypeEvent(String payType) {
         mPayType = payType;

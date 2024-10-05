@@ -18,8 +18,8 @@ import java.util.List;
 
 public class PayContentClassAdapter extends RefreshAdapter<PayContentClassBean> {
 
-    private Drawable mCheckedDrawable;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
 
     public PayContentClassAdapter(Context context) {
         super(context);

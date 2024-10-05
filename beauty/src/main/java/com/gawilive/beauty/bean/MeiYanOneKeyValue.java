@@ -2,21 +2,21 @@ package com.gawilive.beauty.bean;
 
 public class MeiYanOneKeyValue {
 
-    private Value mMeiBai;
-    private Value mMoPi;
-    private Value mHongRun;
-    private Value mDaYan;
-    private Value mMeiMao;
-    private Value mYanJu;
-    private Value mYanJiao;
-    private Value mShouLian;
-    private Value mZuiXing;
-    private Value mShouBi;
-    private Value mXiaBa;
-    private Value mETou;
-    private Value mChangBi;
-    private Value mXueLian;
-    private Value mKaiYanJiao;
+    private final Value mMeiBai;
+    private final Value mMoPi;
+    private final Value mHongRun;
+    private final Value mDaYan;
+    private final Value mMeiMao;
+    private final Value mYanJu;
+    private final Value mYanJiao;
+    private final Value mShouLian;
+    private final Value mZuiXing;
+    private final Value mShouBi;
+    private final Value mXiaBa;
+    private final Value mETou;
+    private final Value mChangBi;
+    private final Value mXueLian;
+    private final Value mKaiYanJiao;
 
     public MeiYanOneKeyValue(
             Value meiBai,
@@ -71,8 +71,8 @@ public class MeiYanOneKeyValue {
 
 
     public static class Value {
-        private int minValue;
-        private int maxValue;
+        private final int minValue;
+        private final int maxValue;
 
         public Value(int minValue, int maxValue) {
             this.minValue = minValue;

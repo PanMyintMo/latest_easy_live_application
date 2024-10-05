@@ -79,13 +79,13 @@ public class GameZpViewHolder extends AbsGameViewHolder {
         int h = ScreenDimenUtil.getInstance().getScreenWdith() / 2 + DpUtil.dp2px(20);
         mGameViewHeight = anchor ? h : h + DpUtil.dp2px(40);
         if (!anchor) {
-            ViewStub viewStub = (ViewStub) findViewById(R.id.view_stub);
+            ViewStub viewStub = findViewById(R.id.view_stub);
             View view = viewStub.inflate();
             view.findViewById(R.id.btn_bet_shi).setOnClickListener(this);
             view.findViewById(R.id.btn_bet_bai).setOnClickListener(this);
             view.findViewById(R.id.btn_bet_qian).setOnClickListener(this);
             view.findViewById(R.id.btn_bet_wan).setOnClickListener(this);
-            mCoinTextView = (TextView) view.findViewById(R.id.coin);
+            mCoinTextView = view.findViewById(R.id.coin);
             mCoinTextView.setOnClickListener(this);
             for (View v : mRoles) {
                 v.setOnClickListener(this);
@@ -111,16 +111,16 @@ public class GameZpViewHolder extends AbsGameViewHolder {
 
     @Override
     public void init() {
-        mTip = (TextView) findViewById(R.id.tip);
-        mReadyCountDown = (TextView) findViewById(R.id.count_down_1);
+        mTip = findViewById(R.id.tip);
+        mReadyCountDown = findViewById(R.id.count_down_1);
         mPan = findViewById(R.id.pan);
-        mLight = (ImageView) findViewById(R.id.light);
+        mLight = findViewById(R.id.light);
         mRoles = new ZpBetView[4];
-        mRoles[0] = (ZpBetView) findViewById(R.id.role_1);
-        mRoles[1] = (ZpBetView) findViewById(R.id.role_2);
-        mRoles[2] = (ZpBetView) findViewById(R.id.role_3);
-        mRoles[3] = (ZpBetView) findViewById(R.id.role_4);
-        mBetCountDown = (TextView) findViewById(R.id.count_down_2);
+        mRoles[0] = findViewById(R.id.role_1);
+        mRoles[1] = findViewById(R.id.role_2);
+        mRoles[2] = findViewById(R.id.role_3);
+        mRoles[3] = findViewById(R.id.role_4);
+        mBetCountDown = findViewById(R.id.count_down_2);
         //转盘待机动画
         mPanIdleAnim = ObjectAnimator.ofFloat(mPan, "rotation", 0, 359);
         mPanIdleAnim.setRepeatCount(-1);

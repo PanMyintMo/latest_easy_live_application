@@ -7,7 +7,7 @@ package com.gawilive.im.event;
 
 public class ImLoginEvent {
 
-    private boolean mLogin;
+    private final boolean mLogin;
 
     public ImLoginEvent(boolean login) {
         mLogin = login;

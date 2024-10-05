@@ -20,9 +20,9 @@ import java.util.List;
 
 public class ImChatFaceAdapter extends RecyclerView.Adapter<ImChatFaceAdapter.Vh> {
 
-    private List<String> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<String> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
 
     public ImChatFaceAdapter(List<String> list, LayoutInflater inflater, final OnFaceClickListener onFaceClickListener) {
         mList = list;

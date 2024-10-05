@@ -39,27 +39,27 @@ public class SwipeLayout extends FrameLayout {
     private static final int DRAG_BOTTOM = 8;
     private static final DragEdge DefaultDragEdge = DragEdge.Right;
 
-    private int mTouchSlop;
+    private final int mTouchSlop;
 
     private DragEdge mCurrentDragEdge = DefaultDragEdge;
-    private ViewDragHelper mDragHelper;
+    private final ViewDragHelper mDragHelper;
 
     private int mDragDistance = 0;
-    private LinkedHashMap<DragEdge, View> mDragEdges = new LinkedHashMap<>();
+    private final LinkedHashMap<DragEdge, View> mDragEdges = new LinkedHashMap<>();
     private ShowMode mShowMode;
 
-    private float[] mEdgeSwipesOffset = new float[4];
+    private final float[] mEdgeSwipesOffset = new float[4];
 
-    private List<SwipeListener> mSwipeListeners = new ArrayList<>();
-    private List<SwipeDenier> mSwipeDeniers = new ArrayList<>();
-    private Map<View, ArrayList<OnRevealListener>> mRevealListeners = new HashMap<>();
-    private Map<View, Boolean> mShowEntirely = new HashMap<>();
-    private Map<View, Rect> mViewBoundCache = new HashMap<>(); // save all children's bound, restore in onLayout
+    private final List<SwipeListener> mSwipeListeners = new ArrayList<>();
+    private final List<SwipeDenier> mSwipeDeniers = new ArrayList<>();
+    private final Map<View, ArrayList<OnRevealListener>> mRevealListeners = new HashMap<>();
+    private final Map<View, Boolean> mShowEntirely = new HashMap<>();
+    private final Map<View, Rect> mViewBoundCache = new HashMap<>(); // save all children's bound, restore in onLayout
 
     private DoubleClickListener mDoubleClickListener;
 
     private boolean mSwipeEnabled = true;
-    private boolean[] mSwipesEnabled = new boolean[] {true, true, true, true};
+    private final boolean[] mSwipesEnabled = new boolean[] {true, true, true, true};
     private boolean mClickToClose = false;
     private float mWillOpenPercentAfterOpen = 0.75f;
     private float mWillOpenPercentAfterClose = 0.25f;
@@ -213,7 +213,7 @@ public class SwipeLayout extends FrameLayout {
         }
     }
 
-    private ViewDragHelper.Callback mDragHelperCallback = new ViewDragHelper.Callback() {
+    private final ViewDragHelper.Callback mDragHelperCallback = new ViewDragHelper.Callback() {
         @Override
         public int clampViewPositionHorizontal(View child, int left, int dx) {
             return handleClampHorizontal(child, left);
@@ -1294,7 +1294,7 @@ public class SwipeLayout extends FrameLayout {
         return hitSurfaceRect.contains((int) ev.getX(), (int) ev.getY());
     }
 
-    private GestureDetector gestureDetector = new GestureDetector(getContext(), new SwipeDetector());
+    private final GestureDetector gestureDetector = new GestureDetector(getContext(), new SwipeDetector());
 
     class SwipeDetector extends GestureDetector.SimpleOnGestureListener {
         @Override

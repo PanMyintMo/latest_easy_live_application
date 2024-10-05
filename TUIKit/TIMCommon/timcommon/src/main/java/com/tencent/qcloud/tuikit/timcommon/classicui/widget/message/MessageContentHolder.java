@@ -46,9 +46,9 @@ public abstract class MessageContentHolder<T extends TUIMessageBean> extends Mes
     public TextView isReadText;
     public TextView unreadAudioText;
     public TextView messageDetailsTimeTv;
-    private LinearLayout bottomContentArea;
-    private FrameLayout bottomContentFrameLayout;
-    private View bottomFailedIv;
+    private final LinearLayout bottomContentArea;
+    private final FrameLayout bottomContentFrameLayout;
+    private final View bottomFailedIv;
 
     public boolean isForwardMode = false;
     public boolean isReplyDetailMode = false;

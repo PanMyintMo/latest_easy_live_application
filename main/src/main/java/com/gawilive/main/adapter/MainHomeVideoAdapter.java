@@ -26,9 +26,9 @@ import java.util.List;
 public class MainHomeVideoAdapter extends RefreshAdapter<VideoBean> {
 
 
-    private View.OnClickListener mOnClickListener;
-    private Drawable mDrawableMall;
-    private Drawable mDrawablePay;
+    private final View.OnClickListener mOnClickListener;
+    private final Drawable mDrawableMall;
+    private final Drawable mDrawablePay;
 
     public MainHomeVideoAdapter(Context context) {
         super(context);
@@ -91,12 +91,12 @@ public class MainHomeVideoAdapter extends RefreshAdapter<VideoBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mCover = (ImageView) itemView.findViewById(R.id.cover);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mTitle = (TextView) itemView.findViewById(R.id.title);
-            mNum = (TextView) itemView.findViewById(R.id.num);
-            mTypeImg = (ImageView) itemView.findViewById(R.id.type_img);
+            mCover = itemView.findViewById(R.id.cover);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mTitle = itemView.findViewById(R.id.title);
+            mNum = itemView.findViewById(R.id.num);
+            mTypeImg = itemView.findViewById(R.id.type_img);
             mAd = itemView.findViewById(R.id.ad);
             itemView.setOnClickListener(mOnClickListener);
         }

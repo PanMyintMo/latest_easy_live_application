@@ -21,12 +21,12 @@ import com.tencent.qcloud.tuikit.timcommon.R;
  * Custom LineControllerView
  */
 public class LineControllerView extends RelativeLayout {
-    private String mName;
-    private boolean mIsBottom;
-    private boolean mIsTop;
+    private final String mName;
+    private final boolean mIsBottom;
+    private final boolean mIsTop;
     private String mContent;
     private boolean mIsJump;
-    private boolean mIsSwitch;
+    private final boolean mIsSwitch;
 
     protected TextView mNameText;
     protected TextView mContentText;
@@ -103,11 +103,7 @@ public class LineControllerView extends RelativeLayout {
     public void setCanNav(boolean canNav) {
         this.mIsJump = canNav;
         mNavArrowView.setVisibility(canNav ? VISIBLE : GONE);
-        if (canNav) {
-            mContentText.setTextIsSelectable(false);
-        } else {
-            mContentText.setTextIsSelectable(true);
-        }
+        mContentText.setTextIsSelectable(!canNav);
     }
 
     public boolean isChecked() {

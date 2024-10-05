@@ -31,23 +31,23 @@ import java.util.List;
 
 public class LiveGiftAdapter extends RecyclerView.Adapter<LiveGiftAdapter.Vh> {
 
-    private Context mContext;
-    private List<LiveGiftBean> mList;
-    private LayoutInflater mInflater;
-    private String mCoinName;
+    private final Context mContext;
+    private final List<LiveGiftBean> mList;
+    private final LayoutInflater mInflater;
+    private final String mCoinName;
     private View.OnClickListener mOnClickListener;
     private ActionListener mActionListener;
     private int mCheckedPosition = -1;
-    private ScaleAnimation mAnimation;
+    private final ScaleAnimation mAnimation;
     private View mAnimView;
-    private String mGe;
-    private int mGiftType;//礼物类型  0普通礼物  1道具  2背包
-    private Drawable mDrawableHot;
-    private Drawable mDrawableGuard;
-    private Drawable mDrawableLuck;
-    private Drawable mDrawableGlobal;
-    private Drawable mDrawableTu;
-    private Drawable mDrawableHao;
+    private final String mGe;
+    private final int mGiftType;//礼物类型  0普通礼物  1道具  2背包
+    private final Drawable mDrawableHot;
+    private final Drawable mDrawableGuard;
+    private final Drawable mDrawableLuck;
+    private final Drawable mDrawableGlobal;
+    private final Drawable mDrawableTu;
+    private final Drawable mDrawableHao;
 
     public LiveGiftAdapter(Context context, LayoutInflater inflater, List<LiveGiftBean> list, String coinName, int giftType) {
         mContext = context;

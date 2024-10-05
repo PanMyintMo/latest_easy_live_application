@@ -21,16 +21,16 @@ public class PkProgressBar extends View {
     private Paint mPaint2;
     private Paint mPaintStroke1;
     private Paint mPaintStroke2;
-    private int mMinWidth;
+    private final int mMinWidth;
     private float mRate;
-    private int mLeftColor;
-    private int mRightColor;
-    private int mLeftStrokeColor;
-    private int mRightStrokeColor;
+    private final int mLeftColor;
+    private final int mRightColor;
+    private final int mLeftStrokeColor;
+    private final int mRightStrokeColor;
     private Rect mRect1;
     private Rect mRect2;
     private int mWidth;
-    private float mScale;
+    private final float mScale;
 
     public PkProgressBar(Context context) {
         this(context, null);

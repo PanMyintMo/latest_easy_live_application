@@ -33,11 +33,11 @@ import java.util.List;
 
 public class ChatImagePreviewAdapter extends RecyclerView.Adapter<ChatImagePreviewAdapter.Vh> {
 
-    private Context mContext;
-    private List<ImMessageBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
-    private View.OnLongClickListener mLongClickListener;
+    private final Context mContext;
+    private final List<ImMessageBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnLongClickListener mLongClickListener;
     private ActionListener mActionListener;
 
     public ChatImagePreviewAdapter(Context context, List<ImMessageBean> list) {

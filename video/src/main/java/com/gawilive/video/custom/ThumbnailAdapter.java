@@ -21,10 +21,10 @@ public class ThumbnailAdapter extends RecyclerView.Adapter {
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_NORMAL = 1;
 
-    private Context mContext;
-    private List<Bitmap> mList;
-    private LayoutInflater mInflater;
-    private int mScreenWdith;
+    private final Context mContext;
+    private final List<Bitmap> mList;
+    private final LayoutInflater mInflater;
+    private final int mScreenWdith;
 
     public ThumbnailAdapter(Context context) {
         mContext = context;

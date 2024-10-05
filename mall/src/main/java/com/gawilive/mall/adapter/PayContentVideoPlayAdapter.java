@@ -17,8 +17,8 @@ public class PayContentVideoPlayAdapter extends RefreshAdapter<PayContentVideoPl
 
     private boolean mHasBuy;
     private String mTipString;
-    private String mDurationString;
-    private View.OnClickListener mOnClickListener;
+    private final String mDurationString;
+    private final View.OnClickListener mOnClickListener;
 
     public PayContentVideoPlayAdapter(Context context) {
         super(context);

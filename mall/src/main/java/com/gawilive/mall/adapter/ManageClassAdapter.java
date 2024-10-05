@@ -20,9 +20,9 @@ import java.util.List;
 
 public class ManageClassAdapter extends RefreshAdapter<ManageClassBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
 
     public ManageClassAdapter(Context context, List<ManageClassBean> list) {
         super(context, list);

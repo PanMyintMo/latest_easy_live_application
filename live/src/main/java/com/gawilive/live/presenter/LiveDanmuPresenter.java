@@ -17,11 +17,11 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class LiveDanmuPresenter implements DanmuViewHolder.ActionListener {
 
-    private Context mContext;
-    private ViewGroup mDanmuContainer;
-    private boolean[] mLines;//弹幕的轨道
-    private List<DanmuViewHolder> mList;
-    private ConcurrentLinkedQueue<LiveDanMuBean> mQueue;
+    private final Context mContext;
+    private final ViewGroup mDanmuContainer;
+    private final boolean[] mLines;//弹幕的轨道
+    private final List<DanmuViewHolder> mList;
+    private final ConcurrentLinkedQueue<LiveDanMuBean> mQueue;
 
     public LiveDanmuPresenter(Context context, ViewGroup danmuContainer) {
         mContext = context;

@@ -40,11 +40,11 @@ public class LiveLinkMicPkPresenter implements View.OnClickListener {
     private static final int LINK_MIC_COUNT_MAX = 10;
     private static final int PK_TIME_MAX = 60 * 5;//pk时间 5分钟
     private static final int PK_TIME_MAX_2 = 60;//惩罚时间 1分钟
-    private Context mContext;
-    private View mRoot;
-    private boolean mIsAnchor;//自己是否是主播
+    private final Context mContext;
+    private final View mRoot;
+    private final boolean mIsAnchor;//自己是否是主播
     private SocketClient mSocketClient;
-    private ViewGroup mPkContainer;
+    private final ViewGroup mPkContainer;
     private boolean mIsApplyDialogShow;//是否显示了申请PK的弹窗
     private boolean mAcceptPk;//是否接受连麦
     private boolean mIsPk;//是否已经Pk了
@@ -58,8 +58,8 @@ public class LiveLinkMicPkPresenter implements View.OnClickListener {
     private PopupWindow mPkPopWindow;
     private Handler mHandler;
     private LiveLinkMicPkViewHolder mLiveLinkMicPkViewHolder;
-    private String mPkTimeString1;
-    private String mPkTimeString2;
+    private final String mPkTimeString1;
+    private final String mPkTimeString2;
     private boolean mIsPkEnd;//pk是否结束，进入惩罚时间
     private boolean mPkSend;//pk请求是否已经发送
     private int mPkSendWaitCount;//发送pk请求后的等待时间

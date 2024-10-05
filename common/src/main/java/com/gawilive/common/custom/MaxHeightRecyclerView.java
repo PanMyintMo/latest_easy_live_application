@@ -11,7 +11,7 @@ import com.gawilive.common.R;
 
 public class MaxHeightRecyclerView extends RecyclerView {
 
-    private int mMaxHeight;
+    private final int mMaxHeight;
 
     public MaxHeightRecyclerView(@NonNull Context context) {
         this(context, null);

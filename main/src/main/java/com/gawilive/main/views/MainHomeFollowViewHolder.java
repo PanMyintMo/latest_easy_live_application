@@ -71,7 +71,7 @@ public class MainHomeFollowViewHolder extends AbsMainHomeChildViewHolder impleme
             }
         });
         classRecyclerView.setAdapter(classAdapter);
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mNoDataView = LayoutInflater.from(mContext).inflate(R.layout.view_no_data_live_follow, mRefreshView.getmEmptyLayout(), false);
         mGroupHasLogin = mNoDataView.findViewById(R.id.group_has_login);
         mGroupNotLogin = mNoDataView.findViewById(R.id.group_not_login);

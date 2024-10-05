@@ -89,13 +89,13 @@ public class VideoScrollViewHolder extends AbsViewHolder implements
 //        mRefreshLayout.setOnRefreshListener(this);
 //        mRefreshLayout.setColorSchemeResources(R.color.global);
 //        mRefreshLayout.setEnabled(false);//产品不让使用刷新
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mVideoScrollAdapter = new VideoScrollAdapter(mContext, list, mPosition);
         mVideoScrollAdapter.setActionListener(this);
         mRecyclerView.setAdapter(mVideoScrollAdapter);
-        mVideoLoadingBar = (VideoLoadingBar) findViewById(R.id.video_loading);
+        mVideoLoadingBar = findViewById(R.id.video_loading);
         findViewById(R.id.input_tip).setOnClickListener(this);
         findViewById(R.id.btn_face).setOnClickListener(this);
         findViewById(R.id.btn_at).setOnClickListener(this);

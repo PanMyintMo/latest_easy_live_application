@@ -83,7 +83,7 @@ public class VideoReportActivity extends AbsActivity implements VideoReportAdapt
         VideoHttpUtil.videoReport(mVideoId, bean.getId(), content, mReportCallback);
     }
 
-    private HttpCallback mReportCallback = new HttpCallback() {
+    private final HttpCallback mReportCallback = new HttpCallback() {
         @Override
         public void onSuccess(int code, String msg, String[] info) {
             if (code == 0) {

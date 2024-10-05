@@ -11,7 +11,7 @@ import android.text.style.ImageSpan;
  */
 
 public class VerticalImageSpan extends ImageSpan {
-    private Drawable drawable;
+    private final Drawable drawable;
     public VerticalImageSpan(Drawable drawable) {
         super(drawable);
         this.drawable=drawable;

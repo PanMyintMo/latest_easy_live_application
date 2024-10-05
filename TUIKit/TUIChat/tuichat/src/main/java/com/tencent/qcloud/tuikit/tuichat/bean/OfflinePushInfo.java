@@ -112,11 +112,7 @@ public class OfflinePushInfo implements Serializable {
      * @return Disabled. true: disabled; false: enabled
      */
     public boolean isDisablePush() {
-        if (getPushFlag() == MessageOfflinePushInfo.OFFLINE_PUSH_FLAG_NO_PUSH) {
-            return true;
-        } else {
-            return false;
-        }
+        return getPushFlag() == MessageOfflinePushInfo.OFFLINE_PUSH_FLAG_NO_PUSH;
     }
 
     /**

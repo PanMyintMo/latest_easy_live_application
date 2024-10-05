@@ -56,7 +56,7 @@ public class DialogUitl {
         dialog.setCancelable(false);
         dialog.setCanceledOnTouchOutside(false);
         if (!TextUtils.isEmpty(text)) {
-            TextView titleView = (TextView) dialog.findViewById(R.id.text);
+            TextView titleView = dialog.findViewById(R.id.text);
             if (titleView != null) {
                 titleView.setText(text);
             }
@@ -91,7 +91,7 @@ public class DialogUitl {
         dialog.setContentView(R.layout.dialog_simple_tip);
         dialog.setCancelable(true);
         dialog.setCanceledOnTouchOutside(true);
-        TextView titleView = (TextView) dialog.findViewById(R.id.title);
+        TextView titleView = dialog.findViewById(R.id.title);
         if (hideTitle) {
             titleView.setVisibility(View.GONE);
         } else {
@@ -100,7 +100,7 @@ public class DialogUitl {
             }
         }
         if (!TextUtils.isEmpty(content)) {
-            TextView contentTextView = (TextView) dialog.findViewById(R.id.content);
+            TextView contentTextView = dialog.findViewById(R.id.content);
             contentTextView.setText(content);
         }
         dialog.findViewById(R.id.btn_confirm).setOnClickListener(new View.OnClickListener() {
@@ -179,7 +179,7 @@ public class DialogUitl {
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         params.gravity = Gravity.BOTTOM;
         window.setAttributes(params);
-        LinearLayout container = (LinearLayout) dialog.findViewById(R.id.container);
+        LinearLayout container = dialog.findViewById(R.id.container);
         View.OnClickListener itemListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -228,7 +228,7 @@ public class DialogUitl {
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         params.gravity = Gravity.BOTTOM;
         window.setAttributes(params);
-        LinearLayout container = (LinearLayout) dialog.findViewById(R.id.container);
+        LinearLayout container = dialog.findViewById(R.id.container);
         View.OnClickListener itemListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -270,7 +270,7 @@ public class DialogUitl {
         dialog.setContentView(R.layout.dialog_date_picker);
         dialog.setCancelable(true);
         dialog.setCanceledOnTouchOutside(true);
-        DatePicker datePicker = (DatePicker) dialog.findViewById(R.id.datePicker);
+        DatePicker datePicker = dialog.findViewById(R.id.datePicker);
         final Calendar c = Calendar.getInstance();
         datePicker.init(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH), new DatePicker.OnDateChangedListener() {
 
@@ -304,7 +304,7 @@ public class DialogUitl {
 
     public static class Builder {
 
-        private Context mContext;
+        private final Context mContext;
         private String mTitle;
         private String mContent;
         private String mConfirmString;
@@ -405,7 +405,7 @@ public class DialogUitl {
             dialog.setContentView(mInput ? R.layout.dialog_input : R.layout.dialog_simple);
             dialog.setCancelable(mCancelable);
             dialog.setCanceledOnTouchOutside(mCancelable);
-            TextView titleView = (TextView) dialog.findViewById(R.id.title);
+            TextView titleView = dialog.findViewById(R.id.title);
             if (mIsHideTitle) {
                 titleView.setVisibility(View.GONE);
             } else {
@@ -413,7 +413,7 @@ public class DialogUitl {
                     titleView.setText(mTitle);
                 }
             }
-            final TextView content = (TextView) dialog.findViewById(R.id.content);
+            final TextView content = dialog.findViewById(R.id.content);
             if (!TextUtils.isEmpty(mHint)) {
                 content.setHint(mHint);
             }
@@ -433,14 +433,14 @@ public class DialogUitl {
             if (mLength > 0 && content instanceof EditText) {
                 content.setFilters(new InputFilter[]{new InputFilter.LengthFilter(mLength)});
             }
-            TextView btnConfirm = (TextView) dialog.findViewById(R.id.btn_confirm);
+            TextView btnConfirm = dialog.findViewById(R.id.btn_confirm);
             if (!TextUtils.isEmpty(mConfirmString)) {
                 btnConfirm.setText(mConfirmString);
             }
             if (mConfirmColor != 0) {
                 btnConfirm.setTextColor(mConfirmColor);
             }
-            TextView btnCancel = (TextView) dialog.findViewById(R.id.btn_cancel);
+            TextView btnCancel = dialog.findViewById(R.id.btn_cancel);
             if (!TextUtils.isEmpty(mCancelString)) {
                 btnCancel.setText(mCancelString);
             }

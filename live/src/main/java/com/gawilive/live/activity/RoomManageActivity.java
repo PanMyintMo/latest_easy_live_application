@@ -57,7 +57,7 @@ public class RoomManageActivity extends AbsActivity {
             frameLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             mViewList.add(frameLayout);
         }
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (PAGE_COUNT > 1) {
             mViewPager.setOffscreenPageLimit(PAGE_COUNT - 1);
         }
@@ -79,7 +79,7 @@ public class RoomManageActivity extends AbsActivity {
             }
         });
         mViewHolders = new AbsCommonViewHolder[PAGE_COUNT];
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         final String[] titles = new String[]{WordUtil.getString(R.string.live_my_live_room), WordUtil.getString(R.string.live_my_room)};
         CommonNavigator commonNavigator = new CommonNavigator(mContext);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {

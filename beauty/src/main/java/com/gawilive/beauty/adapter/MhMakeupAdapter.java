@@ -22,12 +22,12 @@ import java.util.List;
 
 public class MhMakeupAdapter extends RecyclerView.Adapter {
 
-    private LayoutInflater mInflater;
-    private List<MakeupBean> mList;
-    private View.OnClickListener mOnClickListener;
-    private int mCheckedPosition = -1;
-    private int mColor0;
-    private int mColor1;
+    private final LayoutInflater mInflater;
+    private final List<MakeupBean> mList;
+    private final View.OnClickListener mOnClickListener;
+    private final int mCheckedPosition = -1;
+    private final int mColor0;
+    private final int mColor1;
     private OnItemClickListener<MakeupBean> mOnItemClickListener;
 
     public MhMakeupAdapter(Context context, List<MakeupBean> list) {

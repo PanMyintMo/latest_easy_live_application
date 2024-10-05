@@ -39,7 +39,7 @@ public class ChatChooseImageActivity extends AbsActivity implements View.OnClick
     protected void main() {
         findViewById(R.id.btn_cancel).setOnClickListener(this);
         findViewById(R.id.btn_send).setOnClickListener(this);
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new GridLayoutManager(mContext, 4, GridLayoutManager.VERTICAL, false));
         ItemDecoration decoration = new ItemDecoration(mContext, 0x00000000, 1, 1);

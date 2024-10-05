@@ -89,7 +89,7 @@ public class VideoCommentViewHolder extends AbsViewHolder implements View.OnClic
     @Override
     public void init() {
         mRoot = findViewById(R.id.root);
-        mBottom = (MyLinearLayout3) findViewById(R.id.bottom);
+        mBottom = findViewById(R.id.bottom);
         int height = mBottom.getHeight2();
         mBottom.setTranslationY(height);
         mShowAnimator = ObjectAnimator.ofFloat(mBottom, "translationY", 0);
@@ -128,8 +128,8 @@ public class VideoCommentViewHolder extends AbsViewHolder implements View.OnClic
         findViewById(R.id.root).setOnClickListener(this);
         findViewById(R.id.btn_close).setOnClickListener(this);
         mCommentString = WordUtil.getString(R.string.video_comment);
-        mCommentNum = (TextView) findViewById(R.id.comment_num);
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mCommentNum = findViewById(R.id.comment_num);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_comment);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false) {
             @Override
@@ -199,7 +199,7 @@ public class VideoCommentViewHolder extends AbsViewHolder implements View.OnClic
             }
         });
         mInputViewHolder = new InputViewHolder(mContext,
-                (ViewGroup) findViewById(R.id.input_container),
+                findViewById(R.id.input_container),
                 false, R.layout.view_input_video_comment, R.layout.view_input_face
         );
         mInputViewHolder.addToParent();
@@ -559,10 +559,7 @@ public class VideoCommentViewHolder extends AbsViewHolder implements View.OnClic
     }
 
     public boolean canBack() {
-        if (mInputViewHolder != null && mInputViewHolder.hideKeyBoardFaceMore()) {
-            return false;
-        }
-        return true;
+        return mInputViewHolder == null || !mInputViewHolder.hideKeyBoardFaceMore();
     }
 
 

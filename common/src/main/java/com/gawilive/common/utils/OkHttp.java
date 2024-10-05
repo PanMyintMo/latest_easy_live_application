@@ -40,7 +40,7 @@ public class OkHttp {
     /**
      * 因为我们请求数据一般都是子线程中请求，在这里我们使用了handler
      */
-    private Handler mHandler;
+    private final Handler mHandler;
 
     /**
      * 构造方法
@@ -268,7 +268,7 @@ public class OkHttp {
          * 在这对添加的参数进行遍历，map遍历有四种方式，如果想要了解的可以网上查找
          */
         for (Map.Entry<String, String> map : params.entrySet()) {
-            String key = map.getKey().toString();
+            String key = map.getKey();
             String value = null;
             /**
              * 判断值是否是空的
@@ -374,7 +374,7 @@ public class OkHttp {
      */
     private String getFileName(String url) {
         int separatorIndex = url.lastIndexOf("/");
-        String path = (separatorIndex < 0) ? url : url.substring(separatorIndex + 1, url.length());
+        String path = (separatorIndex < 0) ? url : url.substring(separatorIndex + 1);
         return path;
     }
 

@@ -28,13 +28,13 @@ import com.gawilive.live.http.LiveHttpUtil;
 
 public class LiveShopAdapter extends RefreshAdapter<GoodsBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mShowClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mShowClickListener;
     private ActionListener mActionListener;
-    private String mMoneySymbol;
-    private int mColor0;
-    private int mColor1;
-    private String mStringYong;
+    private final String mMoneySymbol;
+    private final int mColor0;
+    private final int mColor1;
+    private final String mStringYong;
 
     public LiveShopAdapter(Context context) {
         super(context);

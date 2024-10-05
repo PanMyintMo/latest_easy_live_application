@@ -16,9 +16,9 @@ import java.util.List;
 
 public class MainHomeVideoClassAdapter extends RefreshAdapter<VideoClassBean> {
 
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private View.OnClickListener mOnClickListener;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
 
     public MainHomeVideoClassAdapter(Context context, List<VideoClassBean> list) {

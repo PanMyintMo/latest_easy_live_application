@@ -50,9 +50,9 @@ public final class PermissionRequester {
     private SimpleCallback mSimpleCallback;
     private FullCallback mFullCallback;
     private PermissionDialogCallback mDialogCallback;
-    private Set<String> mPermissions;
+    private final Set<String> mPermissions;
     private List<String> mPermissionsRequest;
-    private String mCurrentRequestPermission;
+    private final String mCurrentRequestPermission;
     private List<String> mPermissionsGranted;
     private List<String> mPermissionsDenied;
 

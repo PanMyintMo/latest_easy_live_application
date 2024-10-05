@@ -9,9 +9,9 @@ import java.util.Date;
 
 public class DateFormatUtil {
 
-    private static SimpleDateFormat sFormat;
-    private static SimpleDateFormat sFormat2;
-    private static SimpleDateFormat sFormat3;
+    private static final SimpleDateFormat sFormat;
+    private static final SimpleDateFormat sFormat2;
+    private static final SimpleDateFormat sFormat3;
 
     static {
         sFormat = new SimpleDateFormat("yyyyMMddHHmmssSSS");

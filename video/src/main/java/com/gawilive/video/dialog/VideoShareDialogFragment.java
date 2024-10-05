@@ -68,10 +68,10 @@ public class VideoShareDialogFragment extends AbsDialogFragment implements OnIte
         if (mVideoBean == null) {
             return;
         }
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
-        mRecyclerView2 = (RecyclerView) findViewById(R.id.recyclerView_2);
+        mRecyclerView2 = findViewById(R.id.recyclerView_2);
         mRecyclerView2.setHasFixedSize(true);
         mRecyclerView2.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         List<MobBean> list = null;

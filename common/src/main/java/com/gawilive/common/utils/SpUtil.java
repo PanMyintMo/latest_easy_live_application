@@ -17,7 +17,7 @@ public class SpUtil {
 
     public static final String LANGUAGE = "language";
     private static SpUtil sInstance;
-    private SharedPreferences mSharedPreferences;
+    private final SharedPreferences mSharedPreferences;
 
     public static final String UID = "uid";
     public static final String TOKEN = "token";

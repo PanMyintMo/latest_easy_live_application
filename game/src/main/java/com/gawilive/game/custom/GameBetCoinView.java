@@ -18,19 +18,19 @@ import com.gawilive.game.R;
 
 public class GameBetCoinView extends LinearLayout {
 
-    private Context mContext;
+    private final Context mContext;
     private TextView mNameTextView;
     private TextView mTotalBet;
     private TextView mMyBet;
-    private String mName;
-    private int mTextColor;
-    private float mTextSize;
-    private int mMarginTop1;
-    private int mMarginTop2;
-    private int mMarginTop3;
+    private final String mName;
+    private final int mTextColor;
+    private final float mTextSize;
+    private final int mMarginTop1;
+    private final int mMarginTop2;
+    private final int mMarginTop3;
     private int mTotalBetVal;
     private int mMyBetVal;
-    private String mWan;
+    private final String mWan;
 
     public GameBetCoinView(Context context) {
         this(context, null);
@@ -110,7 +110,7 @@ public class GameBetCoinView extends LinearLayout {
         String result;
         if (mTotalBetVal >= 10000) {
             if (mTotalBetVal % 10000 == 0) {
-                result = String.valueOf(mTotalBetVal / 10000) + mWan;
+                result = mTotalBetVal / 10000 + mWan;
             } else {
                 result = String.format("%.1f", mTotalBetVal / 10000f) + mWan;
             }
@@ -127,7 +127,7 @@ public class GameBetCoinView extends LinearLayout {
         String result;
         if (mMyBetVal >= 10000) {
             if (mMyBetVal % 10000 == 0) {
-                result = String.valueOf(mMyBetVal / 10000) + mWan;
+                result = mMyBetVal / 10000 + mWan;
             } else {
                 result = String.format("%.1f", mTotalBetVal / 10000f) + mWan;
             }

@@ -66,10 +66,10 @@ public abstract class AbsLiveGiftViewHolder extends AbsViewHolder implements Vie
         mArrow = findViewById(R.id.arrow);
         mBtnSend = findViewById(R.id.btn_send);
         mBtnSendGroup = findViewById(R.id.btn_send_group);
-        mBtnChooseCount = (TextView) findViewById(R.id.btn_choose);
+        mBtnChooseCount = findViewById(R.id.btn_choose);
         mDrawable1 = ContextCompat.getDrawable(mContext, R.drawable.bg_live_gift_send);
         mDrawable2 = ContextCompat.getDrawable(mContext, R.drawable.bg_live_gift_send_2);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         mViewPager.setOffscreenPageLimit(5);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -91,7 +91,7 @@ public abstract class AbsLiveGiftViewHolder extends AbsViewHolder implements Vie
 
             }
         });
-        mRadioGroup = (RadioGroup) findViewById(R.id.radio_group);
+        mRadioGroup = findViewById(R.id.radio_group);
         mBtnSend.setOnClickListener(this);
         if (mBtnChooseCount != null) {
             mBtnChooseCount.setOnClickListener(this);
@@ -169,7 +169,7 @@ public abstract class AbsLiveGiftViewHolder extends AbsViewHolder implements Vie
      */
     private void showGiftCount() {
         View v = LayoutInflater.from(mContext).inflate(R.layout.view_gift_count, null);
-        RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = v.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, true));
         LiveGiftCountAdapter adapter = new LiveGiftCountAdapter(mContext);

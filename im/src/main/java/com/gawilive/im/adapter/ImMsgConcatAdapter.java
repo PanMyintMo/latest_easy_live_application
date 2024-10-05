@@ -31,12 +31,12 @@ import java.util.List;
  */
 public class ImMsgConcatAdapter extends RefreshAdapter<VideoImConcatBean> {
 
-    private String mTip;
-    private int mColor;
-    private View.OnClickListener mFollowClickListener;
-    private View.OnClickListener mOnClickListener;
-    private String mFollow;
-    private String mFollowing;
+    private final String mTip;
+    private final int mColor;
+    private final View.OnClickListener mFollowClickListener;
+    private final View.OnClickListener mOnClickListener;
+    private final String mFollow;
+    private final String mFollowing;
 
     public ImMsgConcatAdapter(Context context) {
         super(context);

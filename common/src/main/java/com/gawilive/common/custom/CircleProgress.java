@@ -17,10 +17,10 @@ import com.gawilive.common.R;
 
 public class CircleProgress extends View {
 
-    private float mStrokeWidth;
+    private final float mStrokeWidth;
     private float mR;
-    private int mBgColor;
-    private int mFgColor;
+    private final int mBgColor;
+    private final int mFgColor;
     private float mMaxProgress;
     private float mCurProgress;
     private Paint mBgPaint;

@@ -118,7 +118,7 @@ public class AIDenoiseAudioRecordImpl implements AudioRecorder.IAudioRecorder {
     }
 
     class AIDenoiseRecorderCallback extends TUIServiceCallback {
-        private AudioRecorder.AudioRecorderInternalCallback callback;
+        private final AudioRecorder.AudioRecorderInternalCallback callback;
 
         AIDenoiseRecorderCallback(AudioRecorder.AudioRecorderInternalCallback callback) {
             this.callback = callback;
@@ -149,7 +149,7 @@ public class AIDenoiseAudioRecordImpl implements AudioRecorder.IAudioRecorder {
                         }
                         stopRecord();
                         ToastUtil.toastLongMessage(TUIChatService.getAppContext().getString(com.tencent.qcloud.tuikit.tuichat.R.string.record_limit_tips));
-                    }, TUIChatConfigs.getGeneralConfig().getAudioRecordMaxTime() * 1000 - 200);
+                    }, TUIChatConfigs.getGeneralConfig().getAudioRecordMaxTime() * 1000L - 200);
                     return;
                 case TUIConstants.TUICalling.ERROR_STATUS_IN_CALL:
                     handler.post(() -> {

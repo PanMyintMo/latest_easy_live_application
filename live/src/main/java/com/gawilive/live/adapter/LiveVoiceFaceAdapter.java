@@ -16,10 +16,10 @@ import java.util.List;
 
 public class LiveVoiceFaceAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private LayoutInflater mInflater;
-    private List<LiveVoiceFaceBean> mList;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final LayoutInflater mInflater;
+    private final List<LiveVoiceFaceBean> mList;
+    private final View.OnClickListener mOnClickListener;
 
     public LiveVoiceFaceAdapter(Context context, LayoutInflater inflater, List<LiveVoiceFaceBean> list) {
         mContext = context;

@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 
 public class LrcParser {
 
-    private static Pattern sPattern;
+    private static final Pattern sPattern;
 
     static {
         sPattern = Pattern.compile("\\[(\\d{2}:\\d{2}\\.\\d{2})\\]");
@@ -105,6 +105,6 @@ public class LrcParser {
         String[] ss = s[1].split("\\.");
         int sec = Integer.parseInt(ss[0]);
         int mill = Integer.parseInt(ss[1]);
-        return min * 60 * 1000 + sec * 1000 + mill * 10;
+        return (long) min * 60 * 1000 + sec * 1000L + mill * 10L;
     }
 }

@@ -65,7 +65,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="15dp"
                 android:layout_toStartOf="@id/btn_msg"
-                android:src="@mipmap/ic_new_yy" />
+                android:src="@mipmap/language_icon" />
 
             <TextView
                 android:layout_width="60dp"

@@ -23,14 +23,14 @@ import java.util.List;
 
 public class LiveChatAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
-    private List<LiveChatBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<LiveChatBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<LiveChatBean> mOnItemClickListener;
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
-    private Runnable mRunnable;
+    private final Runnable mRunnable;
 
     public LiveChatAdapter(Context context) {
         mContext = context;

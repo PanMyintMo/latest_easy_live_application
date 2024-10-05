@@ -23,10 +23,10 @@ import java.util.List;
 public class MainMeAdapter2 extends RecyclerView.Adapter<MainMeAdapter2.Vh> {
 
 
-    private Context mContext;
+    private final Context mContext;
     private List<UserItemBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<UserItemBean> mOnItemClickListener;
 
     public MainMeAdapter2(Context context, List<UserItemBean> list) {
@@ -96,8 +96,8 @@ public class MainMeAdapter2 extends RecyclerView.Adapter<MainMeAdapter2.Vh> {
 
         public Vh(View itemView) {
             super(itemView);
-            mThumb = (ImageView) itemView.findViewById(R.id.thumb);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mThumb = itemView.findViewById(R.id.thumb);
+            mName = itemView.findViewById(R.id.name);
             itemView.setOnClickListener(mOnClickListener);
         }
 

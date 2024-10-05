@@ -27,13 +27,13 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class ReplyMessageHolder extends MessageContentHolder {
-    private View originMsgLayout;
+    private final View originMsgLayout;
 
-    private TextView senderNameTv;
-    private TextView replyContentTv;
-    private FrameLayout quoteFrameLayout;
-    private LinearLayout replyContainer;
-    private View line;
+    private final TextView senderNameTv;
+    private final TextView replyContentTv;
+    private final FrameLayout quoteFrameLayout;
+    private final LinearLayout replyContainer;
+    private final View line;
 
     public ReplyMessageHolder(View itemView) {
         super(itemView);

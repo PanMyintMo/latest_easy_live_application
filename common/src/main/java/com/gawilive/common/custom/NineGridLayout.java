@@ -18,19 +18,19 @@ import java.util.List;
 
 public class NineGridLayout extends FrameLayout {
 
-    private Context mContext;
-    private int mWidth1;
-    private int mWidth2;
-    private int mWidth3;
-    private int mDividerWidth;
-    private int mCornerRadius;
-    private List<RoundedImageView> mViewList;
+    private final Context mContext;
+    private final int mWidth1;
+    private final int mWidth2;
+    private final int mWidth3;
+    private final int mDividerWidth;
+    private final int mCornerRadius;
+    private final List<RoundedImageView> mViewList;
     private ActionListener mActionListener;
     private LayoutParams mLayoutParams00;
     private LayoutParams mLayoutParams10;
     private LayoutParams mLayoutParams11;
     private LayoutParams[] mLayoutParamsArray;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private List<?> mDataList;
 
 

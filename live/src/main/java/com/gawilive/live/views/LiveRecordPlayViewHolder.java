@@ -47,7 +47,7 @@ public class LiveRecordPlayViewHolder extends AbsViewHolder implements ITXLivePl
     @Override
     public void init() {
         mLoading = findViewById(R.id.loading);
-        mVideoView = (TXCloudVideoView) findViewById(R.id.video_view);
+        mVideoView = findViewById(R.id.video_view);
       //  mVideoView.setRenderMode(TXLiveConstants.RENDER_MODE_FULL_FILL_SCREEN);
         mPlayer = new TXVodPlayer(mContext);
         mPlayer.setPlayerView(mVideoView);

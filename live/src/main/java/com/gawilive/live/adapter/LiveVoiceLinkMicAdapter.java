@@ -24,12 +24,12 @@ import java.util.List;
 
 public class LiveVoiceLinkMicAdapter extends RefreshAdapter<LiveVoiceLinkMicBean> {
 
-    private String mNoString;
-    private int mColor0;
-    private int mColor1;
-    private Drawable mDrawable0;
-    private Drawable mDrawable1;
-    private View.OnClickListener mOnClickListener;
+    private final String mNoString;
+    private final int mColor0;
+    private final int mColor1;
+    private final Drawable mDrawable0;
+    private final Drawable mDrawable1;
+    private final View.OnClickListener mOnClickListener;
 
 
     public LiveVoiceLinkMicAdapter(Context context, List<LiveVoiceLinkMicBean> list) {

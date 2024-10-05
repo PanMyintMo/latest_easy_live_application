@@ -79,26 +79,17 @@ public class AreaSelectActivity extends AbsActivity {
                 if (code == 0) {
                     List<AddressModel> list = JSONArray.parseArray(Arrays.toString(info), AddressModel.class);
                     for (int i = 0; i < list.size(); i++) {
-                        if (i == checkProvincePosition) {
-                            list.get(i).setSelect(true);
-                        } else
-                            list.get(i).setSelect(false);
+                        list.get(i).setSelect(i == checkProvincePosition);
                     }
                     mProvinceAdapter.setData(list);
 
                     for (int i = 0; i < list.get(checkProvincePosition).getChildren().size(); i++) {
-                        if (i == checkCityPosition) {
-                            list.get(checkProvincePosition).getChildren().get(i).setSelect(true);
-                        } else
-                            list.get(checkProvincePosition).getChildren().get(i).setSelect(false);
+                        list.get(checkProvincePosition).getChildren().get(i).setSelect(i == checkCityPosition);
                     }
                     mCityAdapter.setData(list.get(checkProvincePosition).getChildren());
 
                     for (int i = 0; i < list.get(checkProvincePosition).getChildren().get(checkCityPosition).getChildren().size(); i++) {
-                        if (i == checkCityPosition) {
-                            list.get(checkProvincePosition).getChildren().get(checkCityPosition).getChildren().get(i).setSelect(true);
-                        } else
-                            list.get(checkProvincePosition).getChildren().get(checkCityPosition).getChildren().get(i).setSelect(false);
+                        list.get(checkProvincePosition).getChildren().get(checkCityPosition).getChildren().get(i).setSelect(i == checkCityPosition);
                     }
                     mAreaAdapter.setData(list.get(checkProvincePosition).getChildren().get(checkCityPosition).getChildren());
                 }
@@ -126,17 +117,11 @@ public class AreaSelectActivity extends AbsActivity {
             List<AddressModel> cityList = mProvinceAdapter.getData().get(checkProvincePosition).getChildren();
             List<AddressModel> areaList = mProvinceAdapter.getData().get(checkProvincePosition).getChildren().get(checkCityPosition).getChildren();
             for (int i = 0; i < cityList.size(); i++) {
-                if (i == 0) {
-                    cityList.get(i).setSelect(true);
-                } else
-                    cityList.get(i).setSelect(false);
+                cityList.get(i).setSelect(i == 0);
             }
             mCityAdapter.setData(cityList);
             for (int i = 0; i < areaList.size(); i++) {
-                if (i == 0) {
-                    areaList.get(i).setSelect(true);
-                } else
-                    areaList.get(i).setSelect(false);
+                areaList.get(i).setSelect(i == 0);
             }
             mAreaAdapter.setData(areaList);
         });
@@ -154,10 +139,7 @@ public class AreaSelectActivity extends AbsActivity {
             }
             List<AddressModel> areaList = mCityAdapter.getData().get(checkCityPosition).getChildren();
             for (int i = 0; i < areaList.size(); i++) {
-                if (i == 0) {
-                    areaList.get(i).setSelect(true);
-                } else
-                    areaList.get(i).setSelect(false);
+                areaList.get(i).setSelect(i == 0);
             }
             mAreaAdapter.setData(areaList);
 

@@ -93,7 +93,7 @@ public class ImageSelectMinimalistActivity extends BaseMinimalistLightActivity {
                     downloadUrl();
                 } else {
                     Intent resultIntent = new Intent();
-                    resultIntent.putExtra(DATA, (Serializable) selected);
+                    resultIntent.putExtra(DATA, selected);
                     setResult(RESULT_CODE_SUCCESS, resultIntent);
                     finish();
                 }
@@ -190,7 +190,7 @@ public class ImageSelectMinimalistActivity extends BaseMinimalistLightActivity {
 
     private void setResult(ImageBean bean) {
         Intent resultIntent = new Intent();
-        resultIntent.putExtra(DATA, (Serializable) bean);
+        resultIntent.putExtra(DATA, bean);
         setResult(RESULT_CODE_SUCCESS, resultIntent);
         finish();
     }

@@ -25,12 +25,12 @@ import java.util.List;
 
 public class LiveRoomTypeAdapter extends RecyclerView.Adapter<LiveRoomTypeAdapter.Vh> {
 
-    private List<LiveRoomTypeBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<LiveRoomTypeBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<LiveRoomTypeBean> mOnItemClickListener;
-    private int mCheckedColor;
-    private int mUnCheckedColor;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
 
     public LiveRoomTypeAdapter(Context context, int checkedId) {
         mCheckedColor = ContextCompat.getColor(context, R.color.global);
@@ -92,8 +92,8 @@ public class LiveRoomTypeAdapter extends RecyclerView.Adapter<LiveRoomTypeAdapte
 
         public Vh(View itemView) {
             super(itemView);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mIcon = itemView.findViewById(R.id.icon);
+            mName = itemView.findViewById(R.id.name);
             itemView.setOnClickListener(mOnClickListener);
         }
 

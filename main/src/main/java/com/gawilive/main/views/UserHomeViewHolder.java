@@ -176,21 +176,21 @@ public class UserHomeViewHolder extends AbsLivePageViewHolder implements LiveSha
             btnReport.setVisibility(View.VISIBLE);
             btnReport.setOnClickListener(this);
         }
-        mAvatarBg = (ImageView) findViewById(R.id.bg_avatar);
+        mAvatarBg = findViewById(R.id.bg_avatar);
         mAvatarBg.setOnClickListener(this);
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mName = (TextView) findViewById(R.id.name);
-        mSex = (ImageView) findViewById(R.id.sex);
-        mLevelAnchor = (ImageView) findViewById(R.id.level_anchor);
-        mLevel = (ImageView) findViewById(R.id.level);
-        mID = (TextView) findViewById(R.id.id_val);
-        mFansNum = (TextView) findViewById(R.id.fans_num);
-        mFollowNum = (TextView) findViewById(R.id.follow_num);
-        mZanNum = (TextView) findViewById(R.id.zan_num);
-        mBtnOption = (TextView) findViewById(R.id.btn_option);
+        mAvatar = findViewById(R.id.avatar);
+        mName = findViewById(R.id.name);
+        mSex = findViewById(R.id.sex);
+        mLevelAnchor = findViewById(R.id.level_anchor);
+        mLevel = findViewById(R.id.level);
+        mID = findViewById(R.id.id_val);
+        mFansNum = findViewById(R.id.fans_num);
+        mFollowNum = findViewById(R.id.follow_num);
+        mZanNum = findViewById(R.id.zan_num);
+        mBtnOption = findViewById(R.id.btn_option);
 
         mBtnLive = findViewById(R.id.btn_live);
-        mBlackText = (TextView) findViewById(R.id.black_text);
+        mBlackText = findViewById(R.id.black_text);
         mBtnShop = findViewById(R.id.btn_shop);
         mShopName = findViewById(R.id.shop_name);
         mShopGoodsNum = findViewById(R.id.shop_goods_num);
@@ -210,7 +210,7 @@ public class UserHomeViewHolder extends AbsLivePageViewHolder implements LiveSha
             mPageCount = 5;
         }
 
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mViewPager = findViewById(R.id.viewPager);
         if (mPageCount > 1) {
             mViewPager.setOffscreenPageLimit(mPageCount - 1);
         }
@@ -243,7 +243,7 @@ public class UserHomeViewHolder extends AbsLivePageViewHolder implements LiveSha
         mLiveString = WordUtil.getString(R.string.live);
         mActiveString = WordUtil.getString(R.string.main_active);
         mPayContentString = WordUtil.getString(R.string.mall_355);
-        mIndicator = (MagicIndicator) findViewById(R.id.indicator);
+        mIndicator = findViewById(R.id.indicator);
         if (CommonAppConfig.getInstance().isTeenagerType()) {
             mIndicatorTitles = new String[]{WordUtil.getString(R.string.live_user_home_detail), mVideoString, mActiveString, mLiveString};
         } else {

@@ -72,7 +72,7 @@ public class ActiveDetailActivity extends AbsActivity implements ActiveCommentAd
         EventBus.getDefault().register(this);
         mActiveBean = getIntent().getParcelableExtra(Constants.ACTIVE_BEAN);
         mInputViewHolder = new InputViewHolder(mContext,
-                (ViewGroup) findViewById(R.id.input_container),
+                findViewById(R.id.input_container),
                 false, R.layout.view_input_top_active, R.layout.view_input_face
         );
         mInputViewHolder.addToParent();

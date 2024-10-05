@@ -118,16 +118,16 @@ public class LiveReadyViewHolder extends AbsViewHolder implements View.OnClickLi
 
     @Override
     public void init() {
-        mAvatar = (ImageView) findViewById(R.id.avatar);
-        mCoverText = (TextView) findViewById(R.id.cover_text);
-        mEditTitle = (EditText) findViewById(R.id.edit_title);
-        mCity = (TextView) findViewById(R.id.city);
+        mAvatar = findViewById(R.id.avatar);
+        mCoverText = findViewById(R.id.cover_text);
+        mEditTitle = findViewById(R.id.edit_title);
+        mCity = findViewById(R.id.city);
         mCity.setText(CommonAppConfig.getInstance().getCity());
-        mLocationImg = (ImageView) findViewById(R.id.location_img);
+        mLocationImg = findViewById(R.id.location_img);
         findViewById(R.id.btn_locaiton).setOnClickListener(this);
         mOpenLocation = true;
 
-        mLiveShareRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mLiveShareRecyclerView = findViewById(R.id.recyclerView);
         mLiveShareRecyclerView.setHasFixedSize(true);
         mLiveShareRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
         mLiveShareAdapter = new LiveReadyShareAdapter(mContext);
@@ -141,9 +141,9 @@ public class LiveReadyViewHolder extends AbsViewHolder implements View.OnClickLi
             tvForbidTip.setText(mForbidLiveTip);
         }
         if (!((LiveActivity) mContext).isVoiceChatRoom()) {
-            mLiveTypeTextView = (TextView) findViewById(R.id.btn_room_type);
+            mLiveTypeTextView = findViewById(R.id.btn_room_type);
             mLiveTypeTextView.setOnClickListener(this);
-            mLiveClass = (TextView) findViewById(R.id.live_class);
+            mLiveClass = findViewById(R.id.live_class);
             mLiveClass.setOnClickListener(this);
             findViewById(R.id.btn_camera).setOnClickListener(this);
             findViewById(R.id.btn_beauty).setOnClickListener(this);
@@ -173,7 +173,7 @@ public class LiveReadyViewHolder extends AbsViewHolder implements View.OnClickLi
                     }
                 }
             };
-            mShopSwitch = (CheckBox) findViewById(R.id.check_box);
+            mShopSwitch = findViewById(R.id.check_box);
             if (haveStore == 1) {
                 mShopSwitch.setVisibility(View.VISIBLE);
                 mShopOpenString = WordUtil.getString(R.string.live_shop_open);

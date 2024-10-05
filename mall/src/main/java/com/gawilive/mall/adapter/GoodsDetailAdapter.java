@@ -18,7 +18,7 @@ import java.util.List;
 
 public class GoodsDetailAdapter extends RefreshAdapter<String> {
 
-    private boolean mHasText;
+    private final boolean mHasText;
 
     public GoodsDetailAdapter(Context context, List<String> list, boolean hasText) {
         super(context, list);

@@ -83,7 +83,7 @@ public interface ImClient {
      * @param content
      * @return
      */
-    public ImMessageBean createTextMessage(String toUid, String content);
+    ImMessageBean createTextMessage(String toUid, String content);
 
     /**
      * 创建图片消息
@@ -132,10 +132,10 @@ public interface ImClient {
      *
      * @param toUid 对方的uid
      */
-    public void sendMessage(String toUid, ImMessageBean bean, SendMsgResultCallback callback);
+    void sendMessage(String toUid, ImMessageBean bean, SendMsgResultCallback callback);
 
 
-    public void removeMessage(String toUid, ImMessageBean bean);
+    void removeMessage(String toUid, ImMessageBean bean);
 
     /**
      * 删除所有会话记录

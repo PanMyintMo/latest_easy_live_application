@@ -24,9 +24,9 @@ public class TUIUtil {
 
         try {
             final Method declaredMethod = Class.forName("android.app.ActivityThread", false, Application.class.getClassLoader())
-                                              .getDeclaredMethod("currentProcessName", (Class<?>[]) new Class[0]);
+                                              .getDeclaredMethod("currentProcessName", new Class[0]);
             declaredMethod.setAccessible(true);
-            final Object invoke = declaredMethod.invoke(null, new Object[0]);
+            final Object invoke = declaredMethod.invoke(null);
             if (invoke instanceof String) {
                 currentProcessName = (String) invoke;
             }

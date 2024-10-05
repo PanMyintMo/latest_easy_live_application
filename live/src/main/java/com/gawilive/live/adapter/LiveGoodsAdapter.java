@@ -22,8 +22,8 @@ import com.gawilive.live.R;
 
 public class LiveGoodsAdapter extends RefreshAdapter<GoodsBean> {
 
-    private View.OnClickListener mOnClickListener;
-    private String mMoneySymbol;
+    private final View.OnClickListener mOnClickListener;
+    private final String mMoneySymbol;
 
     public LiveGoodsAdapter(Context context) {
         super(context);

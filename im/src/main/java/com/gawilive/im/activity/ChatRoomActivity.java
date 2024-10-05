@@ -46,7 +46,7 @@ public class ChatRoomActivity extends AbsActivity implements KeyBoardUtil.KeyBoa
     private ChatRoomViewHolder mChatRoomViewHolder;
     private boolean mFromUserHome;
     private KeyBoardUtil mKeyBoardUtil;
-    private ImageResultCallback mImageResultCallback = new ImageResultCallback() {
+    private final ImageResultCallback mImageResultCallback = new ImageResultCallback() {
         @Override
         public void beforeCamera() {
 
@@ -81,8 +81,8 @@ public class ChatRoomActivity extends AbsActivity implements KeyBoardUtil.KeyBoa
         }
         boolean following = intent.getBooleanExtra(Constants.FOLLOW, false);
         mFromUserHome = intent.getBooleanExtra(Constants.IM_FROM_HOME, false);
-        mRoot = (ViewGroup) findViewById(R.id.root);
-        mContianer = (ViewGroup) findViewById(R.id.container);
+        mRoot = findViewById(R.id.root);
+        mContianer = findViewById(R.id.container);
         mChatRoomViewHolder = new ChatRoomViewHolder(mContext, mContianer, userBean, following);
         mChatRoomViewHolder.setActionListener(new ChatRoomActionListener() {
             @Override

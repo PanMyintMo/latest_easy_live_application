@@ -17,8 +17,8 @@ import com.baidu.speech.asr.SpeechConstant;
 public class ImAsrUtil {
 
     private EventManager mManager;
-    private EventListener mEventListener;
-    private String mJsonString;
+    private final EventListener mEventListener;
+    private final String mJsonString;
     private AsrCallback mCallback;
 
     public ImAsrUtil(Context context) {

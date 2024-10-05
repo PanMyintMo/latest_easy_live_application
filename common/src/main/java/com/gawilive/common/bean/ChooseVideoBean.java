@@ -15,7 +15,7 @@ public class ChooseVideoBean {
     private File videoFile;
     private long duration;
     private String durationString;
-    private int mType;
+    private final int mType;
 
     public ChooseVideoBean(int type) {
         mType = type;

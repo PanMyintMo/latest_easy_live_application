@@ -12,7 +12,7 @@ import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
 
 public class AudioPlayer {
     private static final String TAG = AudioPlayer.class.getSimpleName();
-    private static AudioPlayer sInstance = new AudioPlayer();
+    private static final AudioPlayer sInstance = new AudioPlayer();
     private Callback mPlayCallback;
 
     private String mAudioPath;
@@ -86,10 +86,7 @@ public class AudioPlayer {
     }
 
     public boolean isPlaying() {
-        if (mPlayer != null && mPlayer.isPlaying()) {
-            return true;
-        }
-        return false;
+        return mPlayer != null && mPlayer.isPlaying();
     }
 
     private void onPlayCompleted(boolean success) {

@@ -1,8 +1,11 @@
 package com.gawilive.mall.adapter;
 
 import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,10 +19,10 @@ import com.gawilive.mall.bean.BuyerOrderBean;
 
 public abstract class BuyerOrderBaseAdapter extends RefreshAdapter<BuyerOrderBean> {
 
-    private String mTotalTipString;
-    private String mMoneySymbol;
-    private View.OnClickListener mShopClickListener;
-    private View.OnClickListener mItemClickListener;
+    private final String mTotalTipString;
+    private final String mMoneySymbol;
+    private final View.OnClickListener mShopClickListener;
+    private final View.OnClickListener mItemClickListener;
     protected ActionListener mActionListener;
 
     public BuyerOrderBaseAdapter(Context context) {
@@ -78,6 +81,7 @@ public abstract class BuyerOrderBaseAdapter extends RefreshAdapter<BuyerOrderBea
             itemView.setOnClickListener(mItemClickListener);
         }
 
+
         public void setData(BuyerOrderBean bean) {
             mShopName.setTag(bean);
             itemView.setTag(bean);
@@ -85,12 +89,16 @@ public abstract class BuyerOrderBaseAdapter extends RefreshAdapter<BuyerOrderBea
             mStatusTip.setText(bean.getStatusTip());
             ImgLoader.display(mContext, bean.getGoodsSpecThumb(), mGoodsThumb);
             mGoodsName.setText(bean.getGoodsName());
-            mGoodsPrice.setText(StringUtil.contact(mMoneySymbol, bean.getGoodsPrice()));
+            mGoodsPrice.setText(StringUtil.contact(mMoneySymbol, bean.getGoodsPrice()));  // Correct
             mGoodsSpecName.setText(bean.getGoodsSpecName());
             mGoodsNum.setText(StringUtil.contact("x", bean.getGoodsNum()));
-            mTotalTip.setText(String.format(mTotalTipString, bean.getGoodsNum()));
-            mTotalPrice.setText(StringUtil.contact(mMoneySymbol, bean.getTotalPrice()));
+
+            // Use the format string directly in String.format()
+            mTotalTip.setText(String.format("%1$s items in total", String.valueOf(bean.getGoodsNum())));
+
+            mTotalPrice.setText(StringUtil.contact(mMoneySymbol, bean.getTotalPrice()));  // Correct
         }
+
     }
 
     public interface ActionListener {

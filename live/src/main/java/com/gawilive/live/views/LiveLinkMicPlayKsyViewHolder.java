@@ -40,7 +40,7 @@ public class LiveLinkMicPlayKsyViewHolder extends AbsLiveLinkMicPlayViewHolder i
     @Override
     public void init() {
         super.init();
-        mVideoView = (KSYTextureView) findViewById(R.id.video_view);
+        mVideoView = findViewById(R.id.video_view);
         mVideoView.setOnPreparedListener(this);
         mVideoView.setOnErrorListener(this);
         mVideoView.setOnInfoListener(this);

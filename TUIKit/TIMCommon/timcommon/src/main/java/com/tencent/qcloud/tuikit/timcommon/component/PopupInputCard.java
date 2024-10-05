@@ -23,13 +23,13 @@ import com.tencent.qcloud.tuikit.timcommon.util.SoftKeyBoardUtil;
 import java.util.regex.Pattern;
 
 public class PopupInputCard {
-    private PopupWindow popupWindow;
+    private final PopupWindow popupWindow;
 
-    private TextView titleTv;
-    private EditText editText;
-    private TextView descriptionTv;
-    private Button positiveBtn;
-    private View closeBtn;
+    private final TextView titleTv;
+    private final EditText editText;
+    private final TextView descriptionTv;
+    private final Button positiveBtn;
+    private final View closeBtn;
     private OnClickListener positiveOnClickListener;
     private OnTextExceedListener textExceedListener;
 
@@ -37,7 +37,7 @@ public class PopupInputCard {
     private int maxLimit = Integer.MAX_VALUE;
     private String rule;
     private String notMachRuleTip;
-    private ByteLengthFilter lengthFilter = new ByteLengthFilter();
+    private final ByteLengthFilter lengthFilter = new ByteLengthFilter();
 
     public PopupInputCard(Activity activity) {
         View popupView = LayoutInflater.from(activity).inflate(R.layout.timcommon_layout_popup_card, null);
@@ -125,11 +125,7 @@ public class PopupInputCard {
             @Override
             public void afterTextChanged(Editable s) {
                 if (!TextUtils.isEmpty(rule)) {
-                    if (!Pattern.matches(rule, s.toString())) {
-                        positiveBtn.setEnabled(false);
-                    } else {
-                        positiveBtn.setEnabled(true);
-                    }
+                    positiveBtn.setEnabled(Pattern.matches(rule, s.toString()));
                 }
             }
         });

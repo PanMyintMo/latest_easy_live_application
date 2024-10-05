@@ -11,7 +11,7 @@ import com.gawilive.common.CommonAppContext;
 
 public class WordUtil {
 
-    private static Resources sResources;
+    private static final Resources sResources;
 
     static {
         sResources = CommonAppContext.getInstance().getResources();

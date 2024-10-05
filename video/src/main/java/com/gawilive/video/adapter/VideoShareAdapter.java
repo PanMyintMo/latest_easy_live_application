@@ -22,9 +22,9 @@ import java.util.List;
 
 public class VideoShareAdapter extends RecyclerView.Adapter<VideoShareAdapter.Vh> {
 
-    private List<MobBean> mList;
-    private LayoutInflater mInflater;
-    private View.OnClickListener mOnClickListener;
+    private final List<MobBean> mList;
+    private final LayoutInflater mInflater;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<MobBean> mOnItemClickListener;
 
     public VideoShareAdapter(Context context, List<MobBean> list) {
@@ -70,8 +70,8 @@ public class VideoShareAdapter extends RecyclerView.Adapter<VideoShareAdapter.Vh
 
         public Vh(View itemView) {
             super(itemView);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
-            mName = (TextView) itemView.findViewById(R.id.name);
+            mIcon = itemView.findViewById(R.id.icon);
+            mName = itemView.findViewById(R.id.name);
             itemView.setOnClickListener(mOnClickListener);
         }
 

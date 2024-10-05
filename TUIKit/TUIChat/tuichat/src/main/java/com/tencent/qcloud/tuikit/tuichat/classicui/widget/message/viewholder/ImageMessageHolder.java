@@ -32,13 +32,13 @@ import java.io.Serializable;
 public class ImageMessageHolder extends MessageContentHolder {
     private static final int DEFAULT_MAX_SIZE = 540;
     private static final int DEFAULT_RADIUS = 10;
-    private ImageView contentImage;
-    private ImageView videoPlayBtn;
-    private TextView videoDurationText;
-    private FrameLayout progressContainer;
-    private ChatRingProgressBar fileProgressBar;
-    private TextView progressText;
-    private ImageView progressIcon;
+    private final ImageView contentImage;
+    private final ImageView videoPlayBtn;
+    private final TextView videoDurationText;
+    private final FrameLayout progressContainer;
+    private final ChatRingProgressBar fileProgressBar;
+    private final TextView progressText;
+    private final ImageView progressIcon;
 
     private TUIValueCallback downloadCallback;
     private ProgressPresenter.ProgressListener progressListener;

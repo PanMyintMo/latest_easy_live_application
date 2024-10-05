@@ -6,8 +6,8 @@ package com.gawilive.video.event;
 
 public class VideoScrollPageEvent {
 
-    private String mKey;
-    private int mPage;
+    private final String mKey;
+    private final int mPage;
 
     public VideoScrollPageEvent(String key, int page) {
         mKey = key;

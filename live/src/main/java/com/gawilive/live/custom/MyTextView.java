@@ -22,15 +22,15 @@ import com.gawilive.live.bean.ImpressBean;
 
 public class MyTextView extends AppCompatTextView {
 
-    private Paint mPaint;
-    private Paint mPaint2;
-    private int mRadius;
+    private final Paint mPaint;
+    private final Paint mPaint2;
+    private final int mRadius;
     private boolean mChecked;
     private int mColor;
     private int mColor2;
-    private RectF mRectF;
-    private float mScale;
-    private int mStrokeWidth;
+    private final RectF mRectF;
+    private final float mScale;
+    private final int mStrokeWidth;
     private ImpressBean mBean;
 
     public MyTextView(Context context) {

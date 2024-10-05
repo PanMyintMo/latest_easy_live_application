@@ -31,34 +31,34 @@ import java.util.List;
 public class SelectTextHelper {
     private static final String TAG = SelectTextHelper.class.getSimpleName();
 
-    private static int DEFAULT_SELECTION_LENGTH = 2;
-    private static int DEFAULT_SHOW_DURATION = 100;
+    private static final int DEFAULT_SELECTION_LENGTH = 2;
+    private static final int DEFAULT_SHOW_DURATION = 100;
 
     private CursorHandle mStartHandle;
     private CursorHandle mEndHandle;
     private Magnifier mMagnifier;
-    private SelectionInfo mSelectionInfo = new SelectionInfo();
+    private final SelectionInfo mSelectionInfo = new SelectionInfo();
     private OnSelectListener mSelectListener;
 
-    private Context mContext;
-    private TextView mTextView;
+    private final Context mContext;
+    private final TextView mTextView;
     private Spannable mSpannable;
 
     private int mTouchX;
     private int mTouchY;
     private int mTextViewMarginStart = 0; 
 
-    private int mSelectedColor;
-    private int mCursorHandleColor;
-    private int mCursorHandleSize;
-    private boolean mSelectAll;
-    private boolean mSelectedAllNoPop;
-    private boolean mScrollShow;
-    private boolean mMagnifierShow;
-    private int mPopSpanCount;
-    private int mPopBgResource;
-    private int mPopArrowImg;
-    private List<Pair<Integer, String>> itemTextList;
+    private final int mSelectedColor;
+    private final int mCursorHandleColor;
+    private final int mCursorHandleSize;
+    private final boolean mSelectAll;
+    private final boolean mSelectedAllNoPop;
+    private final boolean mScrollShow;
+    private final boolean mMagnifierShow;
+    private final int mPopSpanCount;
+    private final int mPopBgResource;
+    private final int mPopArrowImg;
+    private final List<Pair<Integer, String>> itemTextList;
     private List<Builder.OnSeparateItemClickListener> itemListenerList = new LinkedList<>();
 
     private boolean isHideWhenScroll;
@@ -90,7 +90,7 @@ public class SelectTextHelper {
     }
 
     public static class Builder {
-        private TextView mTextView;
+        private final TextView mTextView;
         private int mCursorHandleColor = 0xFF1379D6;
         private int mSelectedColor = 0xFFAFE1F4;
         private float mCursorHandleSizeInDp = 24;
@@ -101,8 +101,8 @@ public class SelectTextHelper {
         private int mPopSpanCount = 5;
         private int mPopBgResource = 0;
         private int mPopArrowImg = 0;
-        private List<Pair<Integer, String>> itemTextList = new LinkedList<>();
-        private List<OnSeparateItemClickListener> itemListenerList = new LinkedList<>();
+        private final List<Pair<Integer, String>> itemTextList = new LinkedList<>();
+        private final List<OnSeparateItemClickListener> itemListenerList = new LinkedList<>();
 
         public Builder(TextView textView) {
             mTextView = textView;
@@ -450,13 +450,13 @@ public class SelectTextHelper {
     }
 
     private class CursorHandle extends View {
-        private PopupWindow mPopupWindow;
-        private Paint mPaint;
+        private final PopupWindow mPopupWindow;
+        private final Paint mPaint;
 
-        private int mCircleRadius = mCursorHandleSize / 2;
-        private int mWidth = mCursorHandleSize;
-        private int mHeight = mCursorHandleSize;
-        private int mPadding = 32; 
+        private final int mCircleRadius = mCursorHandleSize / 2;
+        private final int mWidth = mCursorHandleSize;
+        private final int mHeight = mCursorHandleSize;
+        private final int mPadding = 32;
         private boolean isLeft;
 
         public CursorHandle(boolean isLeft) {
@@ -544,7 +544,7 @@ public class SelectTextHelper {
             mPopupWindow.dismiss();
         }
 
-        private int[] mTempCoors = new int[2];
+        private final int[] mTempCoors = new int[2];
 
         public void update(int x, int y) {
             mTextView.getLocationInWindow(mTempCoors);

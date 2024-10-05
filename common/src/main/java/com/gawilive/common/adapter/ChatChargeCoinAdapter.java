@@ -26,14 +26,14 @@ import java.util.List;
 
 public class ChatChargeCoinAdapter extends RecyclerView.Adapter<ChatChargeCoinAdapter.Vh> {
 
-    private List<CoinBean> mList;
-    private LayoutInflater mInflater;
-    private String mCoinName;
-    private String mGiveString;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final List<CoinBean> mList;
+    private final LayoutInflater mInflater;
+    private final String mCoinName;
+    private final String mGiveString;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
     private int mCheckedPosition;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener<CoinBean> mOnItemClickListener;
     private boolean mIsPaypal;
 

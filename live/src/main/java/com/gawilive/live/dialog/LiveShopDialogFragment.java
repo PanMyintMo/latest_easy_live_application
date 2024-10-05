@@ -72,9 +72,9 @@ public class LiveShopDialogFragment extends AbsDialogFragment implements View.On
         if (bundle != null) {
             mLiveUid = bundle.getString(Constants.LIVE_UID);
         }
-        mTitle = (TextView) findViewById(R.id.title);
+        mTitle = findViewById(R.id.title);
         findViewById(R.id.btn_add).setOnClickListener(this);
-        mRefreshView = (CommonRefreshView) findViewById(R.id.refreshView);
+        mRefreshView = findViewById(R.id.refreshView);
         mRefreshView.setEmptyLayoutId(R.layout.view_no_data_shop);
         mRefreshView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRefreshView.setDataHelper(new CommonRefreshView.DataHelper<GoodsBean>() {

@@ -91,7 +91,7 @@ public class SellerActivity extends AbsActivity {
         mCountPay = findViewById(R.id.count_pay);
         mCountSend = findViewById(R.id.count_send);
         mCountRefund = findViewById(R.id.count_refund);
-        mRedPoint = (TextView) findViewById(R.id.red_point);
+        mRedPoint = findViewById(R.id.red_point);
         String[] unReadCountArr = ImMessageUtil.getInstance().getAllUnReadMsgCount();
         String unReadCount =
                 unReadCountArr != null && unReadCountArr.length > 0 ? unReadCountArr[0] : "0";

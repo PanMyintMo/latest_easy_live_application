@@ -17,8 +17,8 @@ public class GameSoundPool {
     public static final int GAME_SOUND_BET_SUCCESS = 2;//下注成功提示音
     public static final int GAME_SOUND_RESULT = 3;//显示结果提示音
 
-    private SoundPool mSoundPool;
-    private SparseIntArray mSparseIntArray;
+    private final SoundPool mSoundPool;
+    private final SparseIntArray mSparseIntArray;
 
     public GameSoundPool() {
         mSparseIntArray = new SparseIntArray();

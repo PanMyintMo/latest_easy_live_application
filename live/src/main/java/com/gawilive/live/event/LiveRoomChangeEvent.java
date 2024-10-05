@@ -8,9 +8,9 @@ import com.gawilive.live.bean.LiveBean;
 
 public class LiveRoomChangeEvent {
 
-    private LiveBean mLiveBean;
-    private int mLiveType;//直播间的类型  普通 密码 门票 计时等
-    private int mLiveTypeVal;//收费价格,计时收费每次扣费的值
+    private final LiveBean mLiveBean;
+    private final int mLiveType;//直播间的类型  普通 密码 门票 计时等
+    private final int mLiveTypeVal;//收费价格,计时收费每次扣费的值
 
     public LiveRoomChangeEvent(LiveBean bean, int liveType, int liveTypeVal) {
         mLiveBean = bean;

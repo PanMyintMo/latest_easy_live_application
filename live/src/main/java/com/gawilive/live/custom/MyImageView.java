@@ -14,7 +14,7 @@ import android.view.animation.RotateAnimation;
 public class MyImageView extends AppCompatImageView {
 
     private boolean mAnimating;
-    private RotateAnimation mRotateAnimation;
+    private final RotateAnimation mRotateAnimation;
 
 
     public MyImageView(Context context) {

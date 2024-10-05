@@ -17,14 +17,14 @@ import com.gawilive.common.R;
 
 public class DrawableRadioButton extends AppCompatRadioButton {
 
-    private int mTopWidth;
-    private int mTopHeight;
-    private int mLeftWidth;
-    private int mLeftHeight;
-    private int mRightWidth;
-    private int mRightHeight;
-    private int mBottomWidth;
-    private int mBottomHeight;
+    private final int mTopWidth;
+    private final int mTopHeight;
+    private final int mLeftWidth;
+    private final int mLeftHeight;
+    private final int mRightWidth;
+    private final int mRightHeight;
+    private final int mBottomWidth;
+    private final int mBottomHeight;
     private Drawable mTopDrawable;
     private Drawable mLeftDrawable;
     private Drawable mRightDrawable;

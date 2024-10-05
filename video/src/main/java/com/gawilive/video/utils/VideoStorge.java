@@ -14,8 +14,8 @@ import java.util.Map;
 public class VideoStorge {
 
     private static VideoStorge sInstance;
-    private Map<String, List<VideoBean>> mMap;
-    private Map<String, VideoScrollDataHelper> mHelperMap;
+    private final Map<String, List<VideoBean>> mMap;
+    private final Map<String, VideoScrollDataHelper> mHelperMap;
 
     private VideoStorge() {
         mMap = new HashMap<>();

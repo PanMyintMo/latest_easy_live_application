@@ -22,11 +22,11 @@ import java.util.List;
 
 public class SearchPlatGoodsAdapter extends RefreshAdapter<SearchGoodsBean> {
 
-    private Drawable mCheckedDrawable;
-    private View.OnClickListener mOnClickListener;
+    private final Drawable mCheckedDrawable;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition = -1;
-    private String mStringYong;
-    private String mMoneySymbol;
+    private final String mStringYong;
+    private final String mMoneySymbol;
 
     public SearchPlatGoodsAdapter(Context context) {
         super(context);

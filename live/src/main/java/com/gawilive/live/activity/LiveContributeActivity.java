@@ -28,7 +28,7 @@ public class LiveContributeActivity extends AbsActivity {
         if (TextUtils.isEmpty(mLiveUid)) {
             return;
         }
-        mLiveContributeViewHolder = new LiveContributeViewHolder(mContext, (ViewGroup) findViewById(R.id.container));
+        mLiveContributeViewHolder = new LiveContributeViewHolder(mContext, findViewById(R.id.container));
         mLiveContributeViewHolder.addToParent();
         mLiveContributeViewHolder.loadData();
     }

@@ -21,17 +21,17 @@ public class ItemSlideHelper implements RecyclerView.OnItemTouchListener, Gestur
     private View mTargetView;
 
     private int mActivePointerId;
-    private int mTouchSlop;
-    private int mMaxVelocity;
-    private int mMinVelocity;
+    private final int mTouchSlop;
+    private final int mMaxVelocity;
+    private final int mMinVelocity;
     private int mLastX;
     private int mLastY;
 
     private boolean mIsDragging;
     private Animator mExpandAndCollapseAnim;
-    private GestureDetectorCompat mGestureDetector;
+    private final GestureDetectorCompat mGestureDetector;
 
-    private Callback mCallback;
+    private final Callback mCallback;
 
     public ItemSlideHelper(Context context, Callback callback) {
         this.mCallback = callback;

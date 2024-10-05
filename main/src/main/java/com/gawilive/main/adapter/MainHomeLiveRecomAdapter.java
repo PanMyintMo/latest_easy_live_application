@@ -23,7 +23,7 @@ import java.util.List;
 
 public class MainHomeLiveRecomAdapter extends RefreshAdapter<LiveBean> {
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public MainHomeLiveRecomAdapter(Context context, List<LiveBean> list) {
         super(context, list);
@@ -63,10 +63,10 @@ public class MainHomeLiveRecomAdapter extends RefreshAdapter<LiveBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mCover = (ImageView) itemView.findViewById(R.id.cover);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mNum = (TextView) itemView.findViewById(R.id.num);
+            mCover = itemView.findViewById(R.id.cover);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mNum = itemView.findViewById(R.id.num);
             mRecom = itemView.findViewById(R.id.icon_recom);
             itemView.setOnClickListener(mOnClickListener);
         }

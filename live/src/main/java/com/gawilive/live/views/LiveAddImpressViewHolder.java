@@ -32,10 +32,10 @@ public class LiveAddImpressViewHolder extends AbsLivePageViewHolder {
 
     private LinearLayout mGroup;
     private String mToUid;
-    private LinkedList<Integer> mLinkedList;
+    private final LinkedList<Integer> mLinkedList;
     private HttpCallback mHttpCallback;
     private View.OnClickListener mOnClickListener;
-    private LayoutInflater mInflater;
+    private final LayoutInflater mInflater;
     private boolean mChanged;
     private boolean mUpdated;
 
@@ -57,7 +57,7 @@ public class LiveAddImpressViewHolder extends AbsLivePageViewHolder {
     @Override
     public void init() {
         super.init();
-        mGroup = (LinearLayout) findViewById(R.id.group);
+        mGroup = findViewById(R.id.group);
         findViewById(R.id.btn_save).setOnClickListener(this);
         mOnClickListener = new View.OnClickListener() {
             @Override

@@ -28,11 +28,11 @@ public class GuardAdapter extends RefreshAdapter<GuardUserBean> {
 
     private static final int HEAD = 1;
     private static final int NORMAL = 0;
-    private String mVotesName;
-    private String mWeekContributeString;//本周贡献
-    private boolean mDialog;
-    private Drawable mGuardDrawable0;
-    private Drawable mGuardDrawable1;
+    private final String mVotesName;
+    private final String mWeekContributeString;//本周贡献
+    private final boolean mDialog;
+    private final Drawable mGuardDrawable0;
+    private final Drawable mGuardDrawable1;
 
     public GuardAdapter(Context context, boolean dialog) {
         super(context);
@@ -87,11 +87,11 @@ public class GuardAdapter extends RefreshAdapter<GuardUserBean> {
 
         public HeadVh(@NonNull View itemView) {
             super(itemView);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
-            mVotes = (TextView) itemView.findViewById(R.id.votes);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
+            mVotes = itemView.findViewById(R.id.votes);
         }
 
         void setData(GuardUserBean bean) {
@@ -118,12 +118,12 @@ public class GuardAdapter extends RefreshAdapter<GuardUserBean> {
 
         public Vh(@NonNull View itemView) {
             super(itemView);
-            mIcon = (ImageView) itemView.findViewById(R.id.icon);
-            mAvatar = (ImageView) itemView.findViewById(R.id.avatar);
-            mName = (TextView) itemView.findViewById(R.id.name);
-            mSex = (ImageView) itemView.findViewById(R.id.sex);
-            mLevel = (ImageView) itemView.findViewById(R.id.level);
-            mVotes = (TextView) itemView.findViewById(R.id.votes);
+            mIcon = itemView.findViewById(R.id.icon);
+            mAvatar = itemView.findViewById(R.id.avatar);
+            mName = itemView.findViewById(R.id.name);
+            mSex = itemView.findViewById(R.id.sex);
+            mLevel = itemView.findViewById(R.id.level);
+            mVotes = itemView.findViewById(R.id.votes);
         }
 
         void setData(GuardUserBean bean) {

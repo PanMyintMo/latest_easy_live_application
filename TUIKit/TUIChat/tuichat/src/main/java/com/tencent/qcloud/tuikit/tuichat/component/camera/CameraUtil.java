@@ -21,7 +21,7 @@ public class CameraUtil {
     public static final int STATE_RECORDING = -1;
     public static final int STATE_NO_PERMISSION = -2;
     public static final int STATE_SUCCESS = 1;
-    private static CameraSizeComparator sizeComparator = new CameraSizeComparator();
+    private static final CameraSizeComparator sizeComparator = new CameraSizeComparator();
 
     private CameraUtil() {}
 

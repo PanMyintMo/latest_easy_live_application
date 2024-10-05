@@ -39,24 +39,24 @@ public class ActiveCommentAdapter extends RefreshAdapter<ActiveCommentBean> {
 
     private static final int PARENT = 1;
     private static final int CHILD = 2;
-    private Drawable mLikeDrawable;
-    private Drawable mUnLikeDrawable;
-    private int mLikeColor;
-    private int mUnLikeColor;
-    private ScaleAnimation mLikeAnimation;
-    private View.OnClickListener mOnClickListener;
-    private View.OnLongClickListener mOnLongClickListener;
-    private View.OnClickListener mLikeClickListener;
-    private View.OnClickListener mExpandClickListener;
-    private View.OnClickListener mCollapsedClickListener;
-    private View.OnClickListener mAvatarClickListener;
+    private final Drawable mLikeDrawable;
+    private final Drawable mUnLikeDrawable;
+    private final int mLikeColor;
+    private final int mUnLikeColor;
+    private final ScaleAnimation mLikeAnimation;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnLongClickListener mOnLongClickListener;
+    private final View.OnClickListener mLikeClickListener;
+    private final View.OnClickListener mExpandClickListener;
+    private final View.OnClickListener mCollapsedClickListener;
+    private final View.OnClickListener mAvatarClickListener;
     private ActionListener mActionListener;
     private ImageView mCurLikeImageView;
     private int mCurLikeCommentPosition;
     private ActiveCommentBean mCurLikeCommentBean;
-    private HttpCallback mLikeCommentCallback;
-    private ActiveAdapter mActiveAdapter;
-    private ActiveBean mActiveBean;
+    private final HttpCallback mLikeCommentCallback;
+    private final ActiveAdapter mActiveAdapter;
+    private final ActiveBean mActiveBean;
 
     public ActiveCommentAdapter(Context context, ActiveBean activeBean) {
         super(context);
@@ -336,8 +336,8 @@ public class ActiveCommentAdapter extends RefreshAdapter<ActiveCommentBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mName = (TextView) itemView.findViewById(com.gawilive.video.R.id.name);
-            mContent = (TextView) itemView.findViewById(com.gawilive.video.R.id.content);
+            mName = itemView.findViewById(com.gawilive.video.R.id.name);
+            mContent = itemView.findViewById(com.gawilive.video.R.id.content);
             mAvatar = itemView.findViewById(R.id.avatar);
             if (mAvatar != null) {
                 mAvatar.setOnClickListener(mAvatarClickListener);
@@ -374,8 +374,8 @@ public class ActiveCommentAdapter extends RefreshAdapter<ActiveCommentBean> {
 
         public ParentVh(View itemView) {
             super(itemView);
-            mBtnLike = (ImageView) itemView.findViewById(com.gawilive.video.R.id.btn_like);
-            mLikeNum = (TextView) itemView.findViewById(com.gawilive.video.R.id.like_num);
+            mBtnLike = itemView.findViewById(com.gawilive.video.R.id.btn_like);
+            mLikeNum = itemView.findViewById(com.gawilive.video.R.id.like_num);
             mBtnLike.setOnClickListener(mLikeClickListener);
             mAvatar = itemView.findViewById(com.gawilive.video.R.id.avatar);
         }

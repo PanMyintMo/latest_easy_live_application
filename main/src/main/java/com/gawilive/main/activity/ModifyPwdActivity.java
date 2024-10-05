@@ -46,9 +46,9 @@ public class ModifyPwdActivity extends AbsActivity implements View.OnClickListen
     @Override
     protected void main() {
         setTitle(WordUtil.getString(R.string.modify_pwd));
-        mEditOld = (EditText) findViewById(R.id.edit_old);
-        mEditNew = (EditText) findViewById(R.id.edit_new);
-        mEditConfirm = (EditText) findViewById(R.id.edit_confirm);
+        mEditOld = findViewById(R.id.edit_old);
+        mEditNew = findViewById(R.id.edit_new);
+        mEditConfirm = findViewById(R.id.edit_confirm);
         mBtnConfirm = findViewById(R.id.btn_confirm);
         mBtnConfirm.setOnClickListener(this);
         TextWatcher textWatcher = new TextWatcher() {

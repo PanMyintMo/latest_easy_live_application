@@ -22,8 +22,8 @@ import java.util.List;
 public class LuckPanWinAdapter extends RecyclerView.Adapter<LuckPanWinAdapter.Vh> {
 
     private final Context mContext;
-    private List<TurntableGiftBean> mList;
-    private LayoutInflater mInflater;
+    private final List<TurntableGiftBean> mList;
+    private final LayoutInflater mInflater;
 
 
     public LuckPanWinAdapter(Context context, List<TurntableGiftBean> list) {

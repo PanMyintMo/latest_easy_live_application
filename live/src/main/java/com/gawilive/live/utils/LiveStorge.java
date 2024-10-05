@@ -14,7 +14,7 @@ import java.util.Map;
 public class LiveStorge {
 
     private static LiveStorge sInstance;
-    private Map<String, List<LiveBean>> mMap;
+    private final Map<String, List<LiveBean>> mMap;
 
     private LiveStorge() {
         mMap = new HashMap<>();

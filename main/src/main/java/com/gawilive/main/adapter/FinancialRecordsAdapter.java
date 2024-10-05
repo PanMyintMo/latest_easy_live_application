@@ -33,9 +33,9 @@ public class FinancialRecordsAdapter extends AppAdapter<TransferListModel> {
     private final class ViewHolder extends AppAdapter<?>.ViewHolder {
 
 
-        private TextView mTvDesc;
-        private TextView mTvTime;
-        private TextView mTvMoney;
+        private final TextView mTvDesc;
+        private final TextView mTvTime;
+        private final TextView mTvMoney;
 
         private ViewHolder() {
             super(R.layout.item_financial_record);

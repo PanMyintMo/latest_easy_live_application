@@ -6,8 +6,8 @@ package com.gawilive.game.event;
 
 public class GameWindowChangedEvent {
 
-    private boolean mOpen;
-    private int mGameViewHeight;
+    private final boolean mOpen;
+    private final int mGameViewHeight;
 
     public GameWindowChangedEvent(boolean open, int gameViewHeight) {
         mOpen = open;

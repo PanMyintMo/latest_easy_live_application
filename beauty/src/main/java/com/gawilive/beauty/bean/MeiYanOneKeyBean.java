@@ -5,11 +5,11 @@ import com.meihu.beautylibrary.bean.MHCommonBean;
 
 public class MeiYanOneKeyBean extends MHCommonBean {
 
-    private int mName;
-    private int mThumb;
+    private final int mName;
+    private final int mThumb;
     private boolean mChecked;
     private MeiYanOneKeyValue mValue;
-    private MeiYanValueBean mResultValue;
+    private final MeiYanValueBean mResultValue;
     private int mProgress = 50;
 
     public MeiYanOneKeyBean(int name, int thumb,String key) {

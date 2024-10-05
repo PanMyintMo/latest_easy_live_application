@@ -33,7 +33,7 @@ public class LiveAdminListActivity extends AbsActivity {
         if (TextUtils.isEmpty(liveUid)) {
             return;
         }
-        LiveAdminListViewHolder liveAdminListViewHolder = new LiveAdminListViewHolder(mContext, (ViewGroup) findViewById(R.id.container), liveUid);
+        LiveAdminListViewHolder liveAdminListViewHolder = new LiveAdminListViewHolder(mContext, findViewById(R.id.container), liveUid);
         liveAdminListViewHolder.addToParent();
         liveAdminListViewHolder.subscribeActivityLifeCycle();
         liveAdminListViewHolder.loadData();

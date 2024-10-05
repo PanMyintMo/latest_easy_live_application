@@ -90,7 +90,7 @@ public class ChatListViewHolder extends AbsViewHolder implements View.OnClickLis
 
     @Override
     public void init() {
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mAdapter = new ImListAdapter(mContext);

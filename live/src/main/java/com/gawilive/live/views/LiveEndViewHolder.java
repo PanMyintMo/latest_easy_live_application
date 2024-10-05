@@ -45,14 +45,14 @@ public class LiveEndViewHolder extends AbsViewHolder implements View.OnClickList
 
     @Override
     public void init() {
-        mAvatar1 = (ImageView) findViewById(R.id.avatar_1);
-        mAvatar2 = (ImageView) findViewById(R.id.avatar_2);
-        mName = (TextView) findViewById(R.id.name);
-        mDuration = (TextView) findViewById(R.id.duration);
-        mVotes = (TextView) findViewById(R.id.votes);
-        mWatchNum = (TextView) findViewById(R.id.watch_num);
+        mAvatar1 = findViewById(R.id.avatar_1);
+        mAvatar2 = findViewById(R.id.avatar_2);
+        mName = findViewById(R.id.name);
+        mDuration = findViewById(R.id.duration);
+        mVotes = findViewById(R.id.votes);
+        mWatchNum = findViewById(R.id.watch_num);
         findViewById(R.id.btn_back).setOnClickListener(this);
-        TextView votesName = (TextView) findViewById(R.id.votes_name);
+        TextView votesName = findViewById(R.id.votes_name);
         votesName.setText(WordUtil.getString(R.string.live_votes) + CommonAppConfig.getInstance().getVotesName());
     }
 

@@ -103,7 +103,7 @@ public class InputViewHolder extends AbsViewHolder implements View.OnClickListen
     @Override
     public void init() {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        ViewGroup topGroup = (ViewGroup) findViewById(R.id.group_top);
+        ViewGroup topGroup = findViewById(R.id.group_top);
         View topView = inflater.inflate(mTopLayoutId, topGroup, false);
         mTopView = topView;
         mEditText = topView.findViewById(R.id.edit);

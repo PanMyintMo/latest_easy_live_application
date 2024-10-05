@@ -22,7 +22,7 @@ import java.util.List;
 public class MainHomeLiveFollowAdapter extends RefreshAdapter<LiveBean> {
 
 
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
 
     public MainHomeLiveFollowAdapter(Context context, List<LiveBean> list) {
         super(context,list);
@@ -62,8 +62,8 @@ public class MainHomeLiveFollowAdapter extends RefreshAdapter<LiveBean> {
 
         public Vh(View itemView) {
             super(itemView);
-            mCover = (ImageView) itemView.findViewById(R.id.cover);
-            mNum = (TextView) itemView.findViewById(R.id.num);
+            mCover = itemView.findViewById(R.id.cover);
+            mNum = itemView.findViewById(R.id.num);
             itemView.setOnClickListener(mOnClickListener);
         }
 

@@ -19,9 +19,9 @@ import java.util.List;
 
 public class GoodsCommentTypeAdapter extends RefreshAdapter<GoodsCommentTypeBean> {
 
-    private int mCheckedColor;
-    private int mUnCheckedColor;
-    private View.OnClickListener mOnClickListener;
+    private final int mCheckedColor;
+    private final int mUnCheckedColor;
+    private final View.OnClickListener mOnClickListener;
     private int mCheckedPosition;
 
     public GoodsCommentTypeAdapter(Context context) {

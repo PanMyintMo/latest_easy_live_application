@@ -23,7 +23,7 @@ public class GamePresenter {
     private GameParam mGameParam;
     private List<Integer> mGameList;
     private AbsGameViewHolder mGameViewHolder;
-    private GameSoundPool mGameSoundPool;
+    private final GameSoundPool mGameSoundPool;
     private boolean mEnd;
     private BankerBean mBankerBean;
     private String mBankerLimitString;

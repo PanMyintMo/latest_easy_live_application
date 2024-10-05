@@ -29,13 +29,13 @@ public class VideoReportAdapter extends RecyclerView.Adapter {
     private static final int NORMAL = 0;
     private static final int NORMAL_LAST = 1;
 
-    private List<VideoReportBean> mList;
-    private LayoutInflater mInflater;
-    private Drawable mCheckedDrawable;
-    private Drawable mUnCheckedDrawable;
+    private final List<VideoReportBean> mList;
+    private final LayoutInflater mInflater;
+    private final Drawable mCheckedDrawable;
+    private final Drawable mUnCheckedDrawable;
     private int mCheckedPosition;
-    private View.OnClickListener mOnClickListener;
-    private View.OnClickListener mReportListener;
+    private final View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mReportListener;
     private FootVh mFootVh;
     private ActionListener mActionListener;
     private VideoReportBean mCurVideoReportBean;
