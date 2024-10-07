@@ -285,7 +285,7 @@ public class LiveReadyViewHolder extends AbsViewHolder implements View.OnClickLi
             }
         };
         if (mLiveSdk == Constants.LIVE_SDK_TX) {
-            MediaUtil.getImageByAlumb((AbsActivity) mContext, imageResultCallback);
+            MediaUtil.getImageByAlbum((AbsActivity) mContext, imageResultCallback);
         } else {
             DialogUitl.showStringArrayDialog(mContext, new Integer[]{
                     R.string.alumb, R.string.camera}, new DialogUitl.StringArrayDialogCallback() {
@@ -294,7 +294,7 @@ public class LiveReadyViewHolder extends AbsViewHolder implements View.OnClickLi
                     if (tag == R.string.camera) {
                         MediaUtil.getImageByCamera((AbsActivity) mContext, imageResultCallback);
                     } else {
-                        MediaUtil.getImageByAlumb((AbsActivity) mContext, imageResultCallback);
+                        MediaUtil.getImageByAlbum((AbsActivity) mContext, imageResultCallback);
                     }
                 }
             });

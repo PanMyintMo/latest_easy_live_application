@@ -288,7 +288,7 @@ public class ShopApplyActivity extends AbsActivity {
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(ShopApplyActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(ShopApplyActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(ShopApplyActivity.this, false, mImageResultCallback);
                 }
             }
         });

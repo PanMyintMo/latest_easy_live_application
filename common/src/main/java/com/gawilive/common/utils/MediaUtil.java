@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import androidx.fragment.app.FragmentActivity;
 import androidx.core.content.FileProvider;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.yalantis.ucrop.UCrop;
 import com.yalantis.ucrop.util.FileUtils;
@@ -101,7 +102,7 @@ public class MediaUtil {
     /**
      * 相册获取图片
      */
-    public static void getImageByAlumb(final FragmentActivity activity, final boolean needCrop, final ImageResultCallback imageResultCallback) {
+    public static void getImageByAlbum(final FragmentActivity activity, final boolean needCrop, final ImageResultCallback imageResultCallback) {
         //请求存储的权限的回调
         PermissionCallback permissionCallback = new PermissionCallback() {
             @Override
@@ -110,8 +111,10 @@ public class MediaUtil {
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
                 intent.setType("image/*");
                 if (Build.VERSION.SDK_INT < 19) {
+                    Log.d("IMAGE","sDK IS NOT GREATER THAN 19");
                     intent.setAction(Intent.ACTION_GET_CONTENT);
                 } else {
+                    Log.d("IMAGE","GREATER THAN 19");
                     intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
                 }
                 ActivityResultUtil.startActivityForResult(activity, intent, new ActivityResultCallback() {
@@ -145,16 +148,17 @@ public class MediaUtil {
         PermissionUtil.request(
                 activity,
                 permissionCallback,
-                Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
+                Manifest.permission.READ_MEDIA_IMAGES,
+                Manifest.permission.READ_MEDIA_VIDEO,
+                Manifest.permission.READ_MEDIA_AUDIO
         );
     }
 
     /**
      * 相册获取图片
      */
-    public static void getImageByAlumb(FragmentActivity activity, ImageResultCallback imageResultCallback) {
-        getImageByAlumb(activity, true, imageResultCallback);
+    public static void getImageByAlbum(FragmentActivity activity, ImageResultCallback imageResultCallback) {
+        getImageByAlbum(activity, true, imageResultCallback);
     }
 
     /**

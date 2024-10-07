@@ -365,7 +365,7 @@ public class SellerAddGoodsActivity extends AbsActivity {
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(SellerAddGoodsActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(SellerAddGoodsActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(SellerAddGoodsActivity.this, false, mImageResultCallback);
                 }
             }
         });

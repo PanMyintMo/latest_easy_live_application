@@ -52,12 +52,12 @@
     <string name="pay_paypal_not_enable">Paypal ကို ပြုပြင်မထားပါ။</string>
     <string name="copy_link">လင့်ခ်ကို ကူးယူပါ။</string>
     <string name="copy_success">အောင်မြင်စွာ ကူးယူထားပါသည်။</string>
-    <string name="edit_profile">အချက်အလက်ကို တည်းဖြတ်ပါ။</string>
-    <string name="edit_profile_avatar">ကိုယ်ပွား</string>
+    <string name="edit_profile">ပုံပြင်ရန်</string>
+    <string name="edit_profile_avatar">ပုံ</string>
     <string name="edit_profile_nickname">အမည်ပြောင်</string>
     <string name="edit_profile_update_nickname">အသုံးပြုသူအမည်ကိုပြောင်းပါ။</string>
     <string name="edit_profile_update_sign">လက်မှတ်ကို ပြင်ဆင်ပါ။</string>
-    <string name="edit_profile_sign">လက္ခဏာ</string>
+    <string name="edit_profile_sign">ကိုယ်ရေးအချက်အလက်</string>
     <string name="edit_profile_birthday">မွေးနေ့</string>
     <string name="edit_profile_sex">ကျား၊</string>
     <string name="edit_profile_city">တည်နေရာ</string>

@@ -185,7 +185,7 @@ public class GoodsAddOutSideActivity extends AbsActivity implements View.OnClick
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(GoodsAddOutSideActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(GoodsAddOutSideActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(GoodsAddOutSideActivity.this, false, mImageResultCallback);
                 }
             }
         });

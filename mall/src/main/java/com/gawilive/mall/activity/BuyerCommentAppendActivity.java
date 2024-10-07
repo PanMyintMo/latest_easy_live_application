@@ -157,7 +157,7 @@ public class BuyerCommentAppendActivity extends AbsActivity implements View.OnCl
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(BuyerCommentAppendActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(BuyerCommentAppendActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(BuyerCommentAppendActivity.this, false, mImageResultCallback);
                 }
             }
         });

@@ -1,92 +1,96 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
-INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
 	package
 		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:3:11-56
 		INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml
 		INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-46:12
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:6:5-45:19
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:7:5-46:19
 activity#com.tencent.qcloud.tuikit.timcommon.component.activities.SelectionActivity
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:8:9-11:55
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:9:9-12:55
 	android:screenOrientation
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:11:17-53
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:12:17-53
 	android:exported
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:10:13-36
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:11:13-36
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:9:17-106
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:10:17-106
 activity#com.tencent.qcloud.tuikit.timcommon.component.activities.ImageSelectActivity
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:12:9-15:55
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:13:9-16:55
 	android:screenOrientation
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:15:17-53
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:16:17-53
 	android:exported
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:14:13-36
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:15:13-36
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:13:17-108
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:14:17-108
 activity#com.tencent.qcloud.tuikit.timcommon.component.activities.SelectionMinimalistActivity
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:17:9-20:55
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:18:9-21:55
 	android:screenOrientation
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:20:17-53
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:21:17-53
 	android:exported
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:19:13-36
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:18:17-116
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:19:17-116
 activity#com.tencent.qcloud.tuikit.timcommon.component.activities.ImageSelectMinimalistActivity
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:21:9-24:55
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:22:9-25:55
 	android:screenOrientation
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:24:17-53
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:25:17-53
 	android:exported
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:23:13-36
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:22:17-118
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:23:17-118
 activity#com.tencent.qcloud.tuikit.timcommon.util.ActivityResultResolver$ActivityResultProxyActivity
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:26:9-33:78
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:27:9-34:78
 	android:multiprocess
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:30:17-44
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:31:17-44
 	android:launchMode
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:31:17-48
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:32:17-48
 	android:windowSoftInputMode
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:33:17-76
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:34:17-76
 	android:exported
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:28:13-36
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:29:13-36
 	android:configChanges
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:29:17-78
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:30:17-78
 	android:theme
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:32:17-63
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:33:17-63
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:27:17-123
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:28:17-123
 provider#com.tencent.qcloud.tuikit.timcommon.util.FileProvider
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:35:9-43:20
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:36:9-44:20
 	android:grantUriPermissions
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:39:17-51
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:40:17-51
 	android:authorities
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:37:17-78
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:38:17-78
 	android:exported
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:38:17-41
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:39:17-41
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:36:17-85
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:37:17-85
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:40:13-42:64
+ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:41:13-43:64
 	android:resource
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:42:21-62
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:43:21-62
 	android:name
-		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:41:21-71
+		ADDED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml:42:21-71
 uses-sdk
 INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TIMCommon\timcommon\src\main\AndroidManifest.xml

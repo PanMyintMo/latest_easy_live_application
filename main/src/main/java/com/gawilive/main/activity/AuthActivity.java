@@ -133,7 +133,7 @@ public class AuthActivity extends AbsActivity implements View.OnClickListener {
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(AuthActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(AuthActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(AuthActivity.this, false, mImageResultCallback);
                 }
             }
         });

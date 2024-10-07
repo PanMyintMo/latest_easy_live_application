@@ -135,7 +135,7 @@ public class FamilyApplyActivity extends AbsActivity implements View.OnClickList
                 if (tag == com.gawilive.mall.R.string.camera) {
                     MediaUtil.getImageByCamera(FamilyApplyActivity.this, false, mImageResultCallback);
                 } else if (tag == com.gawilive.mall.R.string.alumb) {
-                    MediaUtil.getImageByAlumb(FamilyApplyActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(FamilyApplyActivity.this, false, mImageResultCallback);
                 }
             }
         });

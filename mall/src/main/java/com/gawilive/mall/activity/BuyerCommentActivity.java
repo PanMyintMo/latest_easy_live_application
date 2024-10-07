@@ -199,7 +199,7 @@ public class BuyerCommentActivity extends AbsActivity implements View.OnClickLis
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(BuyerCommentActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(BuyerCommentActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(BuyerCommentActivity.this, false, mImageResultCallback);
                 }
             }
         });

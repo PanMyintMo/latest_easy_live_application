@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -158,7 +157,7 @@ public class PayContentPubActivity extends AbsActivity implements View.OnClickLi
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(PayContentPubActivity.this,false,mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(PayContentPubActivity.this,false,mImageResultCallback);
+                    MediaUtil.getImageByAlbum(PayContentPubActivity.this,false,mImageResultCallback);
                 }
             }
         });

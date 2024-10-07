@@ -170,7 +170,7 @@ public class BuyerRefundOfficialActivity extends AbsActivity implements View.OnC
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(BuyerRefundOfficialActivity.this,false,mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(BuyerRefundOfficialActivity.this,false,mImageResultCallback);
+                    MediaUtil.getImageByAlbum(BuyerRefundOfficialActivity.this,false,mImageResultCallback);
                 }
             }
         });

@@ -156,7 +156,7 @@ public class UserHomeBgActivity extends AbsActivity implements View.OnClickListe
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(UserHomeBgActivity.this, false, mImageResultCallback);
                 } else if (tag == R.string.alumb) {
-                    MediaUtil.getImageByAlumb(UserHomeBgActivity.this, false, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(UserHomeBgActivity.this, false, mImageResultCallback);
                 }
             }
         });

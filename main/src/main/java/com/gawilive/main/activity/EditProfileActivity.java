@@ -173,7 +173,7 @@ public class EditProfileActivity extends AbsActivity {
                 if (tag == R.string.camera) {
                     MediaUtil.getImageByCamera(EditProfileActivity.this, mImageResultCallback);
                 } else {
-                    MediaUtil.getImageByAlumb(EditProfileActivity.this, mImageResultCallback);
+                    MediaUtil.getImageByAlbum(EditProfileActivity.this, mImageResultCallback);
                 }
             }
         });

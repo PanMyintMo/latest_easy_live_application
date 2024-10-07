@@ -54,12 +54,12 @@
     <string name="pay_paypal_not_enable">Paypal is not configured</string>
     <string name="copy_link">Copy Link</string>
     <string name="copy_success">Copy succeeded</string>
-    <string name="edit_profile">Edit data</string>
-    <string name="edit_profile_avatar">avatar:</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile_avatar">Image:</string>
     <string name="edit_profile_nickname">Nickname:</string>
     <string name="edit_profile_update_nickname">Modify nickname</string>
     <string name="edit_profile_update_sign">Modify signature</string>
-    <string name="edit_profile_sign">Personal signature:</string>
+    <string name="edit_profile_sign">Bio:</string>
     <string name="edit_profile_birthday">Birthday:</string>
     <string name="edit_profile_sex">Gender:</string>
     <string name="edit_profile_city">Location</string>
