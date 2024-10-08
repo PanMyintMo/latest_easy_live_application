@@ -6,152 +6,152 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml
+8-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="34" />
-9-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml
+9-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-11-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:5:5-81
-11-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:5:22-78
+11-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:5:5-81
+11-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.CAMERA" />
-12-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:7:5-65
-12-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:7:22-62
+12-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:7:5-65
+12-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:7:22-62
 13    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-13-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:8:5-71
-13-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:8:22-68
+13-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:8:5-71
+13-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:8:22-68
 14    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-14-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:9:5-80
-14-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:9:22-77
+14-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:9:5-80
+14-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:9:22-77
 15
 16    <application>
-16-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:11:5-91:19
+16-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:11:5-91:19
 17        <activity
-17-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:12:9-16:47
+17-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:12:9-16:47
 18            android:name="com.tencent.qcloud.tuikit.tuichat.component.imagevideoscan.ImageVideoScanActivity"
-18-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:13:13-109
+18-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:13:13-109
 19            android:configChanges="screenSize|keyboardHidden|orientation"
-19-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:15:13-74
+19-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:15:13-74
 20            android:exported="true"
-20-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:14:13-36
+20-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:14:13-36
 21            android:launchMode="singleTask" />
-21-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:16:13-44
+21-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:16:13-44
 22
 23        <!-- **************** Classic UI Start **************** -->
 24        <activity
-24-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:20:9-24:70
+24-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:20:9-24:70
 25            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.MessageReplyDetailActivity"
-25-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:21:13-103
+25-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:21:13-103
 26            android:exported="true"
-26-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:22:13-36
+26-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:22:13-36
 27            android:screenOrientation="portrait"
-27-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:23:13-49
+27-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:23:13-49
 28            android:windowSoftInputMode="adjustResize|stateHidden" />
-28-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:24:13-67
+28-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:24:13-67
 29        <activity
-29-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:25:9-28:52
+29-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:25:9-28:52
 30            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.TUIForwardChatActivity"
-30-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:26:13-99
+30-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:26:13-99
 31            android:exported="true"
-31-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:27:13-36
+31-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:27:13-36
 32            android:screenOrientation="portrait" />
-32-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:28:13-49
+32-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:28:13-49
 33        <activity
-33-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:29:9-34:55
+33-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:29:9-34:55
 34            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.TUIC2CChatActivity"
-34-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:30:13-95
+34-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:30:13-95
 35            android:exported="true"
-35-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:31:13-36
+35-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:31:13-36
 36            android:launchMode="singleTask"
-36-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:32:13-44
+36-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:32:13-44
 37            android:screenOrientation="portrait"
-37-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:33:13-49
+37-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:33:13-49
 38            android:windowSoftInputMode="adjustPan" />
-38-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:34:13-52
+38-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:34:13-52
 39        <activity
-39-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:37:9-42:71
+39-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:37:9-42:71
 40            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.TUIGroupChatActivity"
-40-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:38:13-97
+40-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:38:13-97
 41            android:exported="true"
-41-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:39:13-36
+41-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:39:13-36
 42            android:launchMode="singleTask"
-42-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:40:13-44
+42-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:40:13-44
 43            android:screenOrientation="portrait"
-43-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:41:13-49
+43-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:41:13-49
 44            android:windowSoftInputMode="adjustNothing|stateHidden" />
-44-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:42:13-68
+44-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:42:13-68
 45        <activity
-45-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:44:9-47:52
+45-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:44:9-47:52
 46            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.MessageReceiptDetailActivity"
-46-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:45:13-105
+46-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:45:13-105
 47            android:exported="true"
-47-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:46:13-36
+47-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:46:13-36
 48            android:screenOrientation="portrait" />
-48-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:47:13-49
+48-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:47:13-49
 49        <activity
-49-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:48:9-51:52
+49-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:48:9-51:52
 50            android:name="com.tencent.qcloud.tuikit.tuichat.component.camera.CameraActivity"
-50-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:49:13-93
+50-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:49:13-93
 51            android:exported="true"
-51-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:50:13-36
+51-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:50:13-36
 52            android:screenOrientation="portrait" />
-52-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:51:13-49
+52-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:51:13-49
 53
 54        <!-- **************** Classic UI End **************** -->
 55
 56
 57        <!-- **************** Minimalist UI Start **************** -->
 58        <activity
-58-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:57:9-62:71
+58-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:57:9-62:71
 59            android:name="com.tencent.qcloud.tuikit.tuichat.minimalistui.widget.messagepopmenu.ChatPopActivity"
-59-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:58:13-112
+59-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:58:13-112
 60            android:exported="true"
-60-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:61:13-36
+60-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:61:13-36
 61            android:launchMode="singleTask"
-61-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:59:13-44
+61-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:59:13-44
 62            android:theme="@style/ChatTransparentPopActivityStyle"
-62-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:60:13-67
+62-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:60:13-67
 63            android:windowSoftInputMode="adjustNothing|stateHidden" />
-63-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:62:13-68
+63-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:62:13-68
 64        <activity
-64-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:64:9-69:71
+64-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:64:9-69:71
 65            android:name="com.tencent.qcloud.tuikit.tuichat.minimalistui.page.TUIC2CChatMinimalistActivity"
-65-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:65:13-108
+65-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:65:13-108
 66            android:exported="true"
-66-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:66:13-36
+66-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:66:13-36
 67            android:launchMode="singleTask"
-67-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:67:13-44
+67-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:67:13-44
 68            android:screenOrientation="portrait"
-68-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:68:13-49
+68-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:68:13-49
 69            android:windowSoftInputMode="adjustNothing|stateHidden" />
-69-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:69:13-68
+69-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:69:13-68
 70        <activity
-70-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:71:9-76:71
+70-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:71:9-76:71
 71            android:name="com.tencent.qcloud.tuikit.tuichat.minimalistui.page.TUIGroupChatMinimalistActivity"
-71-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:72:13-110
+71-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:72:13-110
 72            android:exported="true"
-72-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:73:13-36
+72-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:73:13-36
 73            android:launchMode="singleTask"
-73-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:74:13-44
+73-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:74:13-44
 74            android:screenOrientation="portrait"
-74-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:75:13-49
+74-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:75:13-49
 75            android:windowSoftInputMode="adjustNothing|stateHidden" />
-75-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:76:13-68
+75-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:76:13-68
 76        <activity
-76-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:78:9-81:52
+76-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:78:9-81:52
 77            android:name="com.tencent.qcloud.tuikit.tuichat.minimalistui.page.MessageDetailMinimalistActivity"
-77-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:79:13-111
+77-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:79:13-111
 78            android:exported="true"
-78-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:80:13-36
+78-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:80:13-36
 79            android:screenOrientation="portrait" />
-79-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:81:13-49
+79-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:81:13-49
 80        <activity
-80-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:83:9-86:52
+80-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:83:9-86:52
 81            android:name="com.tencent.qcloud.tuikit.tuichat.minimalistui.page.TUIForwardChatMinimalistActivity"
-81-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:84:13-112
+81-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:84:13-112
 82            android:exported="true"
-82-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:85:13-36
+82-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:85:13-36
 83            android:screenOrientation="portrait" />
-83-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:86:13-49
+83-->D:\latest_easy_live_application\TUIKit\TUIChat\tuichat\src\main\AndroidManifest.xml:86:13-49
 84
 85        <!-- **************** Minimalist UI End **************** -->
 86

@@ -6,55 +6,55 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+8-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="34" />
-9-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+9-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 10
 11    <application>
-11-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:6:5-31:19
+11-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:6:5-31:19
 12        <activity
-12-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:7:9-13:75
+12-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:7:9-13:75
 13            android:name="com.tencent.qcloud.tuicore.permission.PermissionActivity"
-13-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:8:13-84
+13-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:8:13-84
 14            android:configChanges="orientation|keyboardHidden|screenSize"
-14-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:9:13-74
+14-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:9:13-74
 15            android:exported="true"
-15-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:11:13-36
+15-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:11:13-36
 16            android:launchMode="singleTask"
-16-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:10:13-44
+16-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:10:13-44
 17            android:theme="@style/CoreActivityTranslucent"
-17-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:12:13-59
+17-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:12:13-59
 18            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
-18-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:13:13-72
+18-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:13:13-72
 19        <activity
-19-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:15:9-22:75
+19-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:15:9-22:75
 20            android:name="com.tencent.qcloud.tuicore.util.PermissionRequester$PermissionActivity"
-20-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:16:13-98
+20-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:16:13-98
 21            android:configChanges="orientation|keyboardHidden|screenSize"
-21-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:17:13-74
+21-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:17:13-74
 22            android:exported="true"
-22-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:20:13-36
+22-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:20:13-36
 23            android:launchMode="singleTask"
-23-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:19:13-44
+23-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:19:13-44
 24            android:multiprocess="true"
-24-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:18:13-40
+24-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:18:13-40
 25            android:theme="@style/CoreActivityTranslucent"
-25-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:21:13-59
+25-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:21:13-59
 26            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
-26-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:22:13-72
+26-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:22:13-72
 27
 28        <provider
-28-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:24:9-29:38
+28-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:24:9-29:38
 29            android:name="com.tencent.qcloud.tuicore.ServiceInitializer"
-29-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:25:13-73
+29-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:25:13-73
 30            android:authorities="${applicationId}.TUICore.Init"
-30-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:26:13-64
+30-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:26:13-64
 31            android:enabled="true"
-31-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:28:13-35
+31-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:28:13-35
 32            android:exported="true"
-32-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:29:13-36
+32-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:29:13-36
 33            android:initOrder="99999" />
-33-->D:\duoyuyan-new_ui-main_latest_code\duoyuyan-new_ui-main\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:27:13-38
+33-->D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:27:13-38
 34    </application>
 35
 36</manifest>
