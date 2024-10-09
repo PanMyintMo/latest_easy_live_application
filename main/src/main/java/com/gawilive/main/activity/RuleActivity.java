@@ -64,7 +64,20 @@ public class RuleActivity extends AbsActivity {
                 if (code == 0) {
                     RuleBean bean = JSONObject.parseObject(info[0], RuleBean.class);
                     setTitle(bean.getPost_title());
-                    tvContent.setText(bean.getPost_content());
+                    String bulletPointContent =  bean.getPost_content().replace("111", "") + "\n"
+                            + "• EZLIVE တွင် 7 ရက် ပြည့်တိုင်း မဲတစ်ခါနှိုက်မည်။ \n"
+                            + "• Diamond 49 ပေးပြီး မဲတစ်ကြိမ် နှိုက်နိုင်မည်။ \n"
+                            + "• နေ့စဉ် Login ၀င်ပြီးစိန်တလုံးရယူပါ။\n"
+                            + "• live သုံးမိနစ်ကြည့်ပီး စိန်တလုံး ရယူပါ။ စုစုပေါင်းစိန်သုံးလုံးရယူပါ။\n"
+                            + "• user များသည် 7 ရက်လျှင် စိန် 49 လုံး ရရှိန်ုင်ပါသည်။ \n"
+
+                            + "• ပါ၀င်သူ အရေအတွက်များလာသည်နှင့်အမျှ ဆုလက်ဆောင်များလည်း တိုးလာန်ုင်သည်။\n"
+
+                            + "* စည်းကမ်းမှတ်ချက် : Free Diamond ကို Account register လုပ်ပြီး မှ ရယူနိုင်ပါသည်။ ";
+
+
+
+                    tvContent.setText(bulletPointContent);
                 }
             }
         });

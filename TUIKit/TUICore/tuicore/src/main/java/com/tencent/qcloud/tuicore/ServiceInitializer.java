@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.tencent.qcloud.tuicore.annotations.TUIInitializerDependency;
 import com.tencent.qcloud.tuicore.annotations.TUIInitializerID;
 import com.tencent.qcloud.tuicore.annotations.TUIInitializerPriority;
@@ -20,8 +21,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.ServiceLoader;
 import java.util.Set;
 
@@ -40,23 +39,29 @@ public class ServiceInitializer extends ContentProvider {
     /**
      * LightTheme id
      */
-    public int getLightThemeResId() {
-        return R.style.TUIBaseLightTheme;
-    }
+
+    //edit by panpan
+//    public int getLightThemeResId() {
+//        return R.style.TUIBaseLightTheme;
+//    }
 
     /**
      * LivelyTheme id
      */
-    public int getLivelyThemeResId() {
-        return R.style.TUIBaseLivelyTheme;
-    }
+
+    //edid by panpan
+//    public int getLivelyThemeResId() {
+//        return R.style.TUIBaseLivelyTheme;
+//    }
 
     /**
      * SeriousTheme id
      */
-    public int getSeriousThemeResId() {
-        return R.style.TUIBaseSeriousTheme;
-    }
+
+    //Edit by panpan
+//    public int getSeriousThemeResId() {
+//        return R.style.TUIBaseSeriousTheme;
+//    }
 
     /////////////////////////////////////////////////////////////////////////////////
     //             The following methods do not need to be overridden              //
@@ -78,9 +83,11 @@ public class ServiceInitializer extends ContentProvider {
         TUILogin.init(appContext);
         TUIRouter.init(appContext);
         TUIConfig.init(appContext);
-        TUIThemeManager.addLightTheme(getLightThemeResId());
-        TUIThemeManager.addLivelyTheme(getLivelyThemeResId());
-        TUIThemeManager.addSeriousTheme(getSeriousThemeResId());
+
+        //Edit By Pan Pan
+//        TUIThemeManager.addLightTheme(getLightThemeResId());
+//        TUIThemeManager.addLivelyTheme(getLivelyThemeResId());
+//        TUIThemeManager.addSeriousTheme(getSeriousThemeResId());
         TUIThemeManager.setTheme(appContext);
         if (!hasInitComponents) {
             hasInitComponents = true;

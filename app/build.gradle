@@ -91,9 +91,9 @@ android {
     buildToolsVersion rootProject.ext.android.buildToolsVersion
     signingConfigs {
         release {
-            keyAlias 'test'
+            keyAlias 'ninepurplephoenix'
             keyPassword 'dx5948555'
-            storeFile file('../test.jks')
+            storeFile file('D:\\latest_easy_live_application\\ninepurplephoenix.keystore')
             storePassword 'dx5948555'
         }
     }

@@ -294,7 +294,8 @@ public class TUIThemeManager {
         }
         Resources.Theme theme = context.getTheme();
         if (theme == null) {
-            context.setTheme(R.style.TUIBaseTheme);
+            //edit by panpan
+          //  context.setTheme(R.style.TUIBaseTheme);
             theme = context.getTheme();
         }
         mergeTheme(theme);
