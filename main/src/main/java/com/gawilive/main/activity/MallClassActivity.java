@@ -267,6 +267,4 @@ public class MallClassActivity extends AbsActivity implements View.OnClickListen
         MainHttpUtil.cancel(MainHttpConsts.GET_SHOP_CLASS_LIST);
         super.onDestroy();
     }
-
-
 }
