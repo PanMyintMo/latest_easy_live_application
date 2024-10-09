@@ -3,6 +3,7 @@ package com.gawilive.main.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.widget.*;
@@ -147,7 +148,10 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
         });
 
         mTvLjgd.setOnClickListener(v -> {
-            ToastUtil.show("Click Learn More Activity");
+            String url = "http://yszc.ezwel.live/index.html";
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
+            v.getContext().startActivity(intent);
         });
 
         // 缴费记录
