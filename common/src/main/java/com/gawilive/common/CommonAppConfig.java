@@ -376,7 +376,7 @@ public class CommonAppConfig {
         if (mEmptyUserBean == null) {
             UserBean bean = new UserBean();
             bean.setId(Constants.NOT_LOGIN_UID);
-            bean.setUserNiceName("游客");
+            bean.setUserNiceName("User");
             bean.setLevel(1);
             bean.setLevelAnchor(1);
             String defaultAvatar = CommonAppConfig.HOST + "/default.jpg";
