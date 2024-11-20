@@ -185,6 +185,11 @@ public class UserHomeBgActivity extends AbsActivity implements View.OnClickListe
                             }
                         });
                     }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
+                    }
                 }, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }

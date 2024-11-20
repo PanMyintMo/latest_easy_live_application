@@ -60,9 +60,9 @@ public class RulePopupWindow extends CenterPopupView {
             public void onSuccess(int code, String msg, String[] info) {
                 if (code == 0) {
                     List<RuleModel> list = JSON.parseArray(Arrays.toString(info), RuleModel.class);
-                    mTvTitleOne.setText("一、" + list.get(0).getKey());
+                    mTvTitleOne.setText("" + "Event Time");
                     mTvTime.setText(list.get(0).getValue());
-                    mTvTitleTwo.setText("二、" + list.get(1).getKey());
+                    mTvTitleTwo.setText("" + "Event Summary");
                     mTvContent.setText(list.get(1).getValue());
                 }
             }

@@ -956,6 +956,11 @@ public class LiveAudienceActivity extends LiveActivity implements LiveFunctionCl
                         public void onAllGranted() {
                             voiceApplyUpMic();
                         }
+
+                        @Override
+                        public void onDenied(List<String> deniedPermissions) {
+
+                        }
                     },
                     Manifest.permission.RECORD_AUDIO,
                     Manifest.permission.CAMERA);

@@ -27,9 +27,7 @@ import com.gawilive.common.event.InitEvent;
 import com.project.codeinstallsdk.CodeInstall;
 
 import com.tencent.rtmp.ITXLivePlayListener;
-import com.tencent.rtmp.TXLiveBase;
 import com.tencent.rtmp.TXLiveConstants;
-import com.tencent.rtmp.TXLivePlayer;
 import com.tencent.rtmp.TXVodPlayer;
 import com.tencent.rtmp.ui.TXCloudVideoView;
 import com.gawilive.common.CommonAppConfig;
@@ -97,8 +95,6 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //下面的代码是为了防止一个bug:
-        // 收到极光通知后，点击通知，如果没有启动app,则启动app。然后切后台，再次点击桌面图标，app会重新启动，而不是回到前台。
         Intent intent = getIntent();
         if (!isTaskRoot()
                 && intent != null
@@ -140,7 +136,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
         };
         String[] uidAndToken = SpUtil.getInstance().getMultiStringValue(
                 SpUtil.UID, SpUtil.TOKEN);
-        //已登录，显示引导页
+
         if (!TextUtils.isEmpty(uidAndToken[0]) && !TextUtils.isEmpty(uidAndToken[1])
                 && CommonAppConfig.getInstance().isLogin()
         ) {
@@ -148,7 +144,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
             AppContext.initSdk();
             mHandler.sendEmptyMessageDelayed(WHAT_GET_CONFIG, 1000);
         } else {
-            //未登录，显示隐私条款
+
             OnShelfLoginTipDialogFragment fragment = new OnShelfLoginTipDialogFragment();
             fragment.setOnConfirmClick(new Runnable() {
                 @Override
@@ -215,9 +211,8 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        Log.e("multilanguage", "attachBaseContext");
         super.attachBaseContext(MultiLanguageUtil.attachBaseContext(newBase));
-        //app杀进程启动后会调用Activity attachBaseContext
+
         MultiLanguageUtil.getInstance().setConfiguration(newBase);
     }
 
@@ -295,9 +290,6 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
                         forwardMainActivity();
                     }
 
-
-
-                    
                 });
             } else {
                 forwardMainActivity();
@@ -334,7 +326,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
         }
         mLauncherAdViewHolder = null;
         super.onDestroy();
-        L.e(TAG, "----------> onDestroy");
+
     }
 
     /**
@@ -543,7 +535,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
             public void onPlayEvent(int e, Bundle bundle) {
                 if (e == TXLiveConstants.PLAY_EVT_PLAY_END) {//获取到视频播放完毕的回调
                     checkUidAndToken();
-                    L.e(TAG, "视频播放结束------>");
+
                 } else if (e == TXLiveConstants.PLAY_EVT_CHANGE_RESOLUTION) {////获取到视频宽高回调
                     float videoWidth = bundle.getInt("EVT_PARAM1", 0);
                     float videoHeight = bundle.getInt("EVT_PARAM2", 0);
@@ -572,7 +564,7 @@ public class LauncherActivity extends AppCompatActivity implements View.OnClickL
                 } else if (e == TXLiveConstants.PLAY_EVT_PLAY_PROGRESS) {
                     int progress = bundle.getInt("EVT_PLAY_PROGRESS_MS");
                     if (mVideoLastProgress == progress) {
-                        L.e(TAG, "视频播放结束------>");
+
                         checkUidAndToken();
                     } else {
                         mVideoLastProgress = progress;

@@ -226,6 +226,11 @@ public class BuyerCommentActivity extends AbsActivity implements View.OnClickLis
                             }
                         });
                     }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
+                    }
                 }, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.CAMERA,

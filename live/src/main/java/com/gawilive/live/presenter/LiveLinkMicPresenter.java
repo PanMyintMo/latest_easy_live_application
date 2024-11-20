@@ -52,6 +52,8 @@ import com.gawilive.live.views.LiveLinkMicPushTxViewHolder;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.util.List;
+
 /**
  * Created by cxf on 2018/10/25.
  * 观众和主播连麦的逻辑
@@ -496,6 +498,11 @@ public class LiveLinkMicPresenter implements View.OnClickListener {
                         public void onAllGranted() {
                             SocketLinkMicUtil.audienceApplyLinkMic(mSocketClient);
                             ToastUtil.show(R.string.link_mic_apply);
+                        }
+
+                        @Override
+                        public void onDenied(List<String> deniedPermissions) {
+
                         }
                     },
                     Manifest.permission.READ_EXTERNAL_STORAGE,

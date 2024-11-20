@@ -1256,7 +1256,7 @@
     <string name="mall_413">Sharing commission settings</string>
     <string name="mall_414">Commission (yuan)</string>
     <string name="login_tip_001">Service Agreement and Privacy Policy</string>
-    <string name="login_tip_002">Please read carefully and fully understand the terms of the service agreement and privacy policy, including but not limited to providing you with instant messaging, content sharing, and other services. We need to collect your device and personal information, which you can view and manage your authorization in the settings.You can read the Privacy Policy and Service Agreement for detailed information. If you agree, please click Agree to accept our services.</string>
+    <string name="login_tip_002">To provide location-based services, ezlive collects and uploads your phone number to the Tencent LBS SDK. This data helps us enhance features such as [list relevant features, e.g., personalized content, messaging, etc.]. You can learn more about how we handle your data in our [Privacy Policy] and [Service Agreement].\n If you agree, please tap &quot;Agree&quot; to continue.</string>
 
     <string name="login_tip_003">By logging in, you agree to the Privacy Policy and Service Agreement</string>
     <string name="login_tip_004">Privacy Policy</string>

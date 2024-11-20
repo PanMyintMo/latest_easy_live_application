@@ -49,6 +49,7 @@ import com.gawilive.main.http.MainHttpConsts;
 import com.gawilive.main.http.MainHttpUtil;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by cxf on 2019/4/29.
@@ -338,6 +339,11 @@ public class ThreeDistributActivity extends AbsActivity implements View.OnClickL
                             fragment.setActionListener(ThreeDistributActivity.this);
                             fragment.show(getSupportFragmentManager(), "LiveShareDialogFragment");
                         }
+                    }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
                     }
                 }, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE);

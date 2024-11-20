@@ -42,6 +42,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by cxf on 2019/2/28.
@@ -222,6 +223,11 @@ public abstract class AbsVideoPlayActivity extends AbsVideoCommentActivity {
                                 mDownloadVideoDialog = null;
                             }
                         });
+                    }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
                     }
                 }, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE);

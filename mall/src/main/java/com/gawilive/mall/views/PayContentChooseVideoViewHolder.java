@@ -171,6 +171,11 @@ public class PayContentChooseVideoViewHolder extends AbsLivePageViewHolder imple
                             }
                         });
                     }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
+                    }
                 },
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,

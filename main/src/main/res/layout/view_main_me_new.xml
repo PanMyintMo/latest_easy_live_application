@@ -110,7 +110,7 @@
                                 android:ellipsize="end"
                                 android:maxWidth="130dp"
                                 android:singleLine="true"
-                                android:text="这是昵称"
+                                android:text="Name"
                                 android:textColor="@android:color/white"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />

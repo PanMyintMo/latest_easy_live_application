@@ -184,6 +184,11 @@ public class BuyerCommentAppendActivity extends AbsActivity implements View.OnCl
                             }
                         });
                     }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
+                    }
                 }, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.CAMERA,

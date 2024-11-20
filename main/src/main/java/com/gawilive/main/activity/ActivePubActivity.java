@@ -1,13 +1,21 @@
 package com.gawilive.main.activity;
 
+
+
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
@@ -18,10 +26,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-
 import com.luck.picture.lib.basic.PictureSelector;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.config.SelectMimeType;
@@ -72,6 +80,8 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
     private static final int REQUEST_CODE_VIDEO = 10002;
     private static final int REQUEST_CODE_LOCATION = 10003;
     private static final int REQUEST_CODE_TOPIC = 10004;
+    private static final int REQUEST_CODE_VOICE_PERMISSIONS = 1001; // Unique request code for voice permissions
+
     private EditText mEditText;
     private TextView mTextCount;
     private View mOptionGroup;
@@ -294,6 +304,7 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
         } else if (i == R.id.btn_video) {
             chooseVideo();
         } else if (i == R.id.btn_voice) {
+
             clickVoice();
         } else if (i == R.id.btn_topic) {
             chooseTopic();
@@ -311,27 +322,110 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
      */
     private void clickVoice() {
         if (!FloatWindowHelper.checkVoice(false)) {
+            //L.e("CHECK", "Voice click blocked by FloatWindowHelper.checkVoice()");
             return;
         }
-        PermissionUtil.request(this, new PermissionCallback() {
-                    @Override
-                    public void onAllGranted() {
-                        if (mRecordVoiceViewHolder == null) {
-                            mRecordVoiceViewHolder = new ActiveRecordVoiceViewHolder2(mContext, findViewById(R.id.root));
-                            mRecordVoiceViewHolder.subscribeActivityLifeCycle();
-                        }
-                        if (!mRecordVoiceViewHolder.isShowing()) {
-                            mRecordVoiceViewHolder.addToParent();
-                        }
-                    }
-                },
-                Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.CAMERA,
-                Manifest.permission.RECORD_AUDIO
-        );
 
+        // Check permissions and request as needed
+        List<String> permissions = new ArrayList<>();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) { // Android 13+
+            permissions.add(Manifest.permission.READ_MEDIA_IMAGES);
+            permissions.add(Manifest.permission.READ_MEDIA_VIDEO);
+            permissions.add(Manifest.permission.READ_MEDIA_AUDIO);
+        } else { // Android 12 and below
+            permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+            permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+        permissions.add(Manifest.permission.CAMERA);
+        permissions.add(Manifest.permission.RECORD_AUDIO);
+
+        requestPermissionsManually(permissions);
     }
+
+    private void requestPermissionsManually(List<String> permissions) {
+        // Filter permissions that are not yet granted
+        List<String> permissionsToRequest = new ArrayList<>();
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
+                permissionsToRequest.add(permission);
+            }
+        }
+
+        // Request permissions if there are any ungranted
+        if (!permissionsToRequest.isEmpty()) {
+            ActivityCompat.requestPermissions(this, permissionsToRequest.toArray(new String[0]), REQUEST_CODE_VOICE_PERMISSIONS);
+        } else {
+            // All permissions already granted
+            initializeVoiceFeature();
+        }
+    }
+
+    // Handle the result of the permission request
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_CODE_VOICE_PERMISSIONS) {
+            boolean allGranted = true;
+            for (int result : grantResults) {
+                if (result != PackageManager.PERMISSION_GRANTED) {
+                    allGranted = false;
+                    break;
+                }
+            }
+            if (allGranted) {
+                initializeVoiceFeature();
+            } else {
+                Toast.makeText(this, "Required permissions are not granted", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void initializeVoiceFeature() {
+        try {
+            if (mRecordVoiceViewHolder == null) {
+                View rootView = findViewById(R.id.root);
+                if (rootView != null) {
+                    mRecordVoiceViewHolder = new ActiveRecordVoiceViewHolder2(mContext, (ViewGroup) rootView);
+                    mRecordVoiceViewHolder.subscribeActivityLifeCycle();
+                } else {
+                    //  L.e("CHECK", "Error: rootView is null. Check R.id.root in your layout.");
+                    return;
+                }
+            }
+            if (!mRecordVoiceViewHolder.isShowing()) {
+                mRecordVoiceViewHolder.addToParent();
+            }
+        } catch (Exception e) {
+            //L.e("CHECK", "Exception in initializing voice view holder: " + e.getMessage());
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    private static @NonNull List<String> getStrings() {
+        List<String> permissions = new ArrayList<>();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) { // Android 13 or higher
+            permissions.add(Manifest.permission.READ_MEDIA_IMAGES);
+            permissions.add(Manifest.permission.READ_MEDIA_VIDEO);
+            permissions.add(Manifest.permission.READ_MEDIA_AUDIO);
+        } else {
+            permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+            permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+        permissions.add(Manifest.permission.CAMERA);
+        permissions.add(Manifest.permission.RECORD_AUDIO);
+        return permissions;
+    }
+
 
     /**
      * 选择图片
@@ -343,8 +437,8 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
                 .setCompressEngine(new ImageFileCompressEngine())
                 .setImageEngine(GlideEngine.createGlideEngine())
                 .setMaxSelectNum(9)
-                .setMinSelectNum(1) // 设置最小选择数量
-                .setImageSpanCount(4) // 设置每行显示的图片数量
+                .setMinSelectNum(1) // Set minimum selection quantity
+                .setImageSpanCount(4) //Set the number of images displayed in each row
 
                 .forResult(new OnResultCallbackListener<LocalMedia>() {
                     @Override
@@ -402,8 +496,8 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
                 .setCompressEngine(new ImageFileCompressEngine())
                 .setImageEngine(GlideEngine.createGlideEngine())
                 .setMaxSelectNum(1)
-                .setMinSelectNum(1) // 设置最小选择数量
-                .setImageSpanCount(4) // 设置每行显示的图片数量
+                .setMinSelectNum(1) // Set minimum selection quantity
+                .setImageSpanCount(4) // Set the number of images displayed in each row
                 .setFilterVideoMinSecond(1)
                 .setFilterVideoMaxSecond(15)
                 .setRecordVideoMaxSecond(15)
@@ -467,6 +561,11 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
             public void onAllGranted() {
                 startActivityForResult(new Intent(mContext, ChooseLocationActivity.class), REQUEST_CODE_LOCATION);
             }
+
+            @Override
+            public void onDenied(List<String> deniedPermissions) {
+
+            }
         }, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION);
     }
 
@@ -495,6 +594,7 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
     /**
      * 选择图片
      */
+
     private void setImage(File file) {
         List<String> imagePathList = new ArrayList<>();
         imagePathList.add(file.getAbsolutePath());
@@ -959,6 +1059,11 @@ public class ActivePubActivity extends AbsActivity implements View.OnClickListen
                     @Override
                     public void onAllGranted() {
                         LocationUtil.getInstance().startLocation();
+                    }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
                     }
                 },
                 Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION

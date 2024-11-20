@@ -139,16 +139,19 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
 
         // 抽奖
         mBtnCj.setOnClickListener(v -> {
-            if (isOpenTheLottery) {
-                showPurchaseLotteryDialog();
-            } else {
-                ToastUtils.show("本期已结束");
-            }
+            showPurchaseLotteryDialog();
+//    if (isOpenTheLottery) {
+//
+//                showPurchaseLotteryDialog();
+//            } else {
+//
+//                ToastUtils.show("This issue has ended");
+//            }
 
         });
 
         mTvLjgd.setOnClickListener(v -> {
-            String url = "http://yszc.ezwel.live/index.html";
+            String url = "https://yszc.ezwel.live/index.html";
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(url));
             v.getContext().startActivity(intent);
@@ -267,8 +270,6 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
 
     private DrawWinLotteryModel basicModel;
 
-
-    // 是否开启抽奖
     private boolean isOpenTheLottery;
 
 
@@ -301,7 +302,7 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
                         setAnimation(mTvNo3, TextUtils.isEmpty(basicModel.getNumber_three()) ? "0" : basicModel.getNumber_three());
                         setAnimation(mTvNo4, TextUtils.isEmpty(basicModel.getNumber_four()) ? "0" : basicModel.getNumber_four());
                         setAnimation(mTvNo5, TextUtils.isEmpty(basicModel.getNumber_five()) ? "0" : basicModel.getNumber_five());
-                        // 启动倒计时
+
                         setCountdown(basicModel.getDraw_time());
                     } else {
                         mTvDjs.setText(WordUtil.getString(R.string.new_57));
@@ -352,9 +353,7 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
                 countDownTimer = new CountDownTimer(timeDiff, 1000) {
                     @Override
                     public void onTick(long millisUntilFinished) {
-                        // 这里你可以更新UI，显示剩余时间
-                        // 例如："00:00:00"的格式
-                       String hms = String.format("%02d:%02d:%02d",
+                        String hms = String.format("%02d:%02d:%02d",
                                 TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
                                 TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) -
                                         TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
@@ -367,7 +366,6 @@ public class DrawALotteryOrRaffleActivity extends AbsActivity {
 
                     @Override
                     public void onFinish() {
-                        // 倒计时完成时的操作
                         countDownTimer.cancel();
                         if (countDownTimer != null) {
                             countDownTimer = null;

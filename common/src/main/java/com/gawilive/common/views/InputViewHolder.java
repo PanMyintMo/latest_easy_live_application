@@ -36,6 +36,8 @@ import com.gawilive.common.utils.ScreenDimenUtil;
 import com.gawilive.common.utils.ToastUtil;
 import com.gawilive.common.utils.WordUtil;
 
+import java.util.List;
+
 public class InputViewHolder extends AbsViewHolder implements View.OnClickListener, OnFaceClickListener {
 
     private static final String TAG = "InputViewHolder";
@@ -419,6 +421,11 @@ public class InputViewHolder extends AbsViewHolder implements View.OnClickListen
                         mBtnVoice.setImageDrawable(mKeyBoardDrawable);
                     }
                     mShowVoice = true;
+                }
+
+                @Override
+                public void onDenied(List<String> deniedPermissions) {
+
                 }
             };
         }

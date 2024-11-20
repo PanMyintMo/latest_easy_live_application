@@ -26,6 +26,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Created by cxf on 2018/9/29.
@@ -78,6 +79,11 @@ public class MediaUtil {
                         ToastUtil.show(R.string.img_camera_cancel);
                     }
                 });
+            }
+
+            @Override
+            public void onDenied(List<String> deniedPermissions) {
+
             }
         };
 
@@ -138,6 +144,11 @@ public class MediaUtil {
                         ToastUtil.show(R.string.img_alumb_cancel);
                     }
                 });
+
+            }
+
+            @Override
+            public void onDenied(List<String> deniedPermissions) {
 
             }
         };
@@ -216,6 +227,11 @@ public class MediaUtil {
                         ToastUtil.show(R.string.record_cancel);
                     }
                 });
+            }
+
+            @Override
+            public void onDenied(List<String> deniedPermissions) {
+
             }
         };
         PermissionUtil.request(

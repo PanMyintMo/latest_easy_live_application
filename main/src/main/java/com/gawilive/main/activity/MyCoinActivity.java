@@ -267,6 +267,11 @@ public class MyCoinActivity extends AbsActivity implements View.OnClickListener 
                             public void onAllGranted() {
                                 isRealName(2);
                             }
+
+                            @Override
+                            public void onDenied(List<String> deniedPermissions) {
+
+                            }
                         },
                         Manifest.permission.CAMERA);
             }
@@ -289,7 +294,7 @@ public class MyCoinActivity extends AbsActivity implements View.OnClickListener 
         OkHttp.getAsync(CommonAppConfig.HOST2 + "?act=findUser&phone=" + CommonAppConfig.getInstance().getUserBean().getMobile(), new OkHttp.DataCallBack() {
             @Override
             public void requestSuccess(String result) throws Exception {
-                Log.d("查询用户信息返回数据", result);
+
                 JsonObject object = new JsonParser().parse(result).getAsJsonObject();
                 int code = object.get("code").getAsInt();
                 if (code == -3) { // 进行信息同步
@@ -307,7 +312,7 @@ public class MyCoinActivity extends AbsActivity implements View.OnClickListener 
 
             @Override
             public void requestFailure(Request request, IOException e) {
-                Log.d("查询用户信息返回数据", "出错了");
+
             }
         });
     }
@@ -471,7 +476,8 @@ public class MyCoinActivity extends AbsActivity implements View.OnClickListener 
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.btn_tip) {
-            WebViewActivity.forward(mContext, HtmlConfig.CHARGE_PRIVCAY);
+            WebViewActivity.forward(mContext, "https://yszc.ezwel.live/");
+
         } else if (i == R.id.btn_charge) {
             charge();
         } else if (i == R.id.btn_charge_first) {

@@ -323,6 +323,11 @@ public class ActiveAdapter extends RefreshAdapter<ActiveBean> {
                                         }
                                     });
                                 }
+
+                                @Override
+                                public void onDenied(List<String> deniedPermissions) {
+
+                                }
                             },
                             Manifest.permission.READ_EXTERNAL_STORAGE,
                             Manifest.permission.WRITE_EXTERNAL_STORAGE);

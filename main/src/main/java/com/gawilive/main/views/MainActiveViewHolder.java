@@ -192,5 +192,4 @@ public class MainActiveViewHolder extends AbsMainHomeParentViewHolder implements
         }
     }
 
-
 }

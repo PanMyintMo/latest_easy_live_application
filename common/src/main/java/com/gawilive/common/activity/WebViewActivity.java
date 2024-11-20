@@ -31,6 +31,7 @@ import okhttp3.Request;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -176,6 +177,11 @@ public class WebViewActivity extends AbsActivity {
                     @Override
                     public void onAllGranted() {
                         QRCodeUtils.saveImageToGallery(WebViewActivity.this, bitmap, "payCode.jpg");
+                    }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
                     }
                 }, Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE);

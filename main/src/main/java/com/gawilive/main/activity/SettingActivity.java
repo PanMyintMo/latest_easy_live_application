@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 
 import com.alibaba.fastjson.JSON;
-//import com.umeng.analytics.MobclickAgent;
 import com.gawilive.common.CommonAppConfig;
 import com.gawilive.common.Constants;
 import com.gawilive.common.activity.AbsActivity;
@@ -71,7 +70,7 @@ public class SettingActivity extends AbsActivity implements SettingAdapter.Actio
                 bean1.setName(WordUtil.getString(R.string.setting_msg_ring));
                 bean1.setChecked(SpUtil.getInstance().isImMsgRingOpen());
                 list.add(bean1);
-                list.addAll(list0);
+                //list.addAll(list0);
                 SettingBean bean = new SettingBean();
                 bean.setName(WordUtil.getString(R.string.setting_exit));
                 bean.setLast(true);
@@ -88,7 +87,8 @@ public class SettingActivity extends AbsActivity implements SettingAdapter.Actio
     public void onItemClick(SettingBean bean, int position) {
         String href = bean.getHref();
         if (TextUtils.isEmpty(href)) {
-            if (bean.isLast()) {//退出登录
+            if (bean.isLast()) {
+                //Log out
                 new DialogUitl.Builder(mContext)
                         .setContent(WordUtil.getString(R.string.logout_confirm))
                         .setConfrimString(WordUtil.getString(R.string.logout_confirm_2))
@@ -112,11 +112,13 @@ public class SettingActivity extends AbsActivity implements SettingAdapter.Actio
                 clearCache(position);
             }
         } else {
-            if (bean.getId() == 19) {//注销账号
+            if (bean.getId() == 19) {
+                //Cancel account
                 CancelConditionActivity.forward(mContext, href);
                 return;
             }
-            if (bean.getId() == 17) {//意见反馈要在url上加版本号和设备号
+            if (bean.getId() == 17) {
+                //For feedback, please add the version number and device number to the URL.
                 if (!href.contains("?")) {
                     href = StringUtil.contact(href, "?");
                 }
@@ -164,11 +166,11 @@ public class SettingActivity extends AbsActivity implements SettingAdapter.Actio
         ImPushUtil.getInstance().logout();
         CommonHttpUtil.updatePushId("");
         CommonAppConfig.getInstance().clearLoginInfo();
-        //退出极光
+        //exit aurora
         ImMessageUtil.getInstance().logoutImClient();
-        //友盟统计登出
+        //Umeng Statistics Logout
 //        MobclickAgent.onProfileSignOff();
-        // 退出聊天登录
+        // Log out chat login
         CommonAppConfig.logoutIm();
         EventBus.getDefault().post(new LoginChangeEvent(false, false));
         finish();

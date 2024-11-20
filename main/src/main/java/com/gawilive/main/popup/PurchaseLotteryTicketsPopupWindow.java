@@ -49,7 +49,7 @@ public class PurchaseLotteryTicketsPopupWindow extends BottomPopupView {
             String number = tvNumber.getText().toString().trim();
             String str = BigDecimalUtils.add(number, "1", 0);
             if (Integer.parseInt(str) > 5) {
-                ToastUtil.show("一次最多购买5张奖券");
+                ToastUtil.show("You can buy 5 tickets at once");
                 return;
             }
             tvNumber.setText(str);
@@ -65,7 +65,7 @@ public class PurchaseLotteryTicketsPopupWindow extends BottomPopupView {
             tvJf.setText(BigDecimalUtils.mul(unitCoin, str, 0));
             tvNumber.setText(str);
         });
-        mTvMyJF.setText("剩余" + myCoin + "积分");
+        mTvMyJF.setText("Remaining" + myCoin + "point");
     }
 
     private void initView() {
@@ -77,11 +77,11 @@ public class PurchaseLotteryTicketsPopupWindow extends BottomPopupView {
         tvNumber = findViewById(R.id.tvNumber);
         tvJf = findViewById(R.id.tvJf);
         tvJFDesc = findViewById(R.id.tvJFDesc);
-        tvJFDesc.setText("1张奖券/" + unitCoin + "积分");
+        tvJFDesc.setText("1ticket/" + unitCoin + "point");
         mTvConfirm.setOnClickListener(v -> {
             String number = tvNumber.getText().toString().trim();
             if ("0".equals(number)) {
-                ToastUtil.show("至少抽奖一次");
+                ToastUtil.show("Draw at least once\n");
                 return;
             }
             onConfirmClickListener.onConfirm(number);

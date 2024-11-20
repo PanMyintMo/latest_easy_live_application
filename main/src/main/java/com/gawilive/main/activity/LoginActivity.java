@@ -206,7 +206,8 @@ public class LoginActivity extends AbsActivity implements OnItemClickListener<Mo
 
                                     @Override
                                     public void onClick(View widget) {
-                                        WebViewActivity.forward(mContext, msgItem.getString("url"));
+                                        WebViewActivity.forward(mContext, "https://yszc.ezwel.live/");
+
                                     }
                                 };
                                 int endIndex = startIndex + title.length();

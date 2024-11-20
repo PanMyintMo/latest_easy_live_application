@@ -10,8 +10,8 @@
       "apkData": {
         "type": "MAIN",
         "splits": [],
-        "versionCode": 194,
-        "versionName": "1.2.4",
+        "versionCode": 200,
+        "versionName": "20.0.0",
         "outputFile": "timcommon-debug.aar",
         "fullName": "debug",
         "baseName": "debug",

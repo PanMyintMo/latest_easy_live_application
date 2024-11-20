@@ -28,6 +28,7 @@ import com.gawilive.common.utils.StringUtil;
 import com.gawilive.common.utils.ToastUtil;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by cxf on 2018/11/28.
@@ -151,6 +152,11 @@ public class ImagePreviewDialog extends AbsDialogFragment implements View.OnClic
 
                                                             }
                                                         });
+                                                    }
+
+                                                    @Override
+                                                    public void onDenied(List<String> deniedPermissions) {
+
                                                     }
                                                 },
                                                 Manifest.permission.READ_EXTERNAL_STORAGE,

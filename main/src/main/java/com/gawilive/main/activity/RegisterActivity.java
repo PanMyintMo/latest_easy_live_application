@@ -29,6 +29,7 @@ import com.gawilive.common.utils.ToastUtil;
 import com.gawilive.common.utils.WordUtil;
 import com.gawilive.main.R;
 import com.gawilive.main.dialog.LoginTipDialogFragment;
+import com.gawilive.main.dialog.OnShelfLoginTipDialogFragment;
 import com.gawilive.main.event.RegSuccessEvent;
 import com.gawilive.main.http.MainHttpConsts;
 import com.gawilive.main.http.MainHttpUtil;
@@ -140,7 +141,8 @@ public class RegisterActivity extends AbsActivity {
         mDialog = DialogUitl.loadingDialog(mContext, getString(R.string.reg_register_ing));
         EventBus.getDefault().register(this);
 
-        LoginTipDialogFragment fragment = new LoginTipDialogFragment();
+        OnShelfLoginTipDialogFragment fragment = new OnShelfLoginTipDialogFragment();
+
         fragment.show(getSupportFragmentManager(), "LoginTipDialogFragment");
     }
 

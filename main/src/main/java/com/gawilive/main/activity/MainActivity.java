@@ -310,6 +310,11 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
                         public void onAllGranted() {
                             forwardLive();
                         }
+
+                        @Override
+                        public void onDenied(List<String> deniedPermissions) {
+
+                        }
                     },
                     Permission.READ_MEDIA_IMAGES,
                     Permission.READ_MEDIA_VIDEO,
@@ -328,6 +333,11 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
                         public void onAllGranted() {
                             startActivity(new Intent(mContext, VideoRecordActivity.class));
                         }
+
+                        @Override
+                        public void onDenied(List<String> deniedPermissions) {
+
+                        }
                     },
                     Permission.READ_MEDIA_IMAGES,
                     Permission.READ_MEDIA_VIDEO,
@@ -343,6 +353,11 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
                         @Override
                         public void onAllGranted() {
                             forwardVoiceLive();
+                        }
+
+                        @Override
+                        public void onDenied(List<String> deniedPermissions) {
+
                         }
                     },
                     Permission.READ_MEDIA_IMAGES,
@@ -639,6 +654,11 @@ public class MainActivity extends AbsActivity implements MainAppBarLayoutListene
                     @Override
                     public void onAllGranted() {
                         LocationUtil.getInstance().startLocation();
+                    }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
                     }
                 },
                 Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION

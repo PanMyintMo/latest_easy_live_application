@@ -1,81 +1,81 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:3:9-45
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:3:9-45
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:1-32:12
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:6:5-31:19
+ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:6:5-31:19
 activity#com.tencent.qcloud.tuicore.permission.PermissionActivity
-ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:7:9-13:75
+ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:7:9-13:75
 	android:launchMode
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:10:13-44
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:10:13-44
 	android:windowSoftInputMode
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:13:13-72
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:13:13-72
 	android:exported
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:11:13-36
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:11:13-36
 	android:configChanges
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:9:13-74
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:9:13-74
 	android:theme
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:12:13-59
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:12:13-59
 	android:name
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:8:13-84
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:8:13-84
 activity#com.tencent.qcloud.tuicore.util.PermissionRequester$PermissionActivity
-ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:15:9-22:75
+ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:15:9-22:75
 	android:multiprocess
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:18:13-40
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:18:13-40
 	android:launchMode
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:19:13-44
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:19:13-44
 	android:windowSoftInputMode
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:22:13-72
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:22:13-72
 	android:exported
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:20:13-36
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:20:13-36
 	android:configChanges
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:17:13-74
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:17:13-74
 	android:theme
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:21:13-59
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:21:13-59
 	android:name
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:16:13-98
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:16:13-98
 provider#com.tencent.qcloud.tuicore.ServiceInitializer
-ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:24:9-29:38
+ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:24:9-29:38
 	android:enabled
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:28:13-35
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:28:13-35
 	android:authorities
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:26:13-64
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:26:13-64
 	android:exported
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:29:13-36
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:29:13-36
 	android:initOrder
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:27:13-38
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:27:13-38
 	android:name
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:25:13-73
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml:25:13-73
 uses-sdk
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		ADDED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
-		INJECTED from D:\latest_easy_live_application\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		ADDED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml
+		INJECTED from D:\ezlive_update\TUIKit\TUICore\tuicore\src\main\AndroidManifest.xml

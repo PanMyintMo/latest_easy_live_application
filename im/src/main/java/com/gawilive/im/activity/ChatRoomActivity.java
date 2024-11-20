@@ -26,6 +26,7 @@ import com.gawilive.im.utils.ImMessageUtil;
 import com.gawilive.im.views.ChatRoomViewHolder;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by cxf on 2018/10/24.
@@ -98,6 +99,11 @@ public class ChatRoomActivity extends AbsActivity implements KeyBoardUtil.KeyBoa
                             public void onAllGranted() {
                                 forwardChooseImage();
                             }
+
+                            @Override
+                            public void onDenied(List<String> deniedPermissions) {
+
+                            }
                         },
                         Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -118,6 +124,11 @@ public class ChatRoomActivity extends AbsActivity implements KeyBoardUtil.KeyBoa
                             public void onAllGranted() {
                                 openVoiceInputDialog();
                             }
+
+                            @Override
+                            public void onDenied(List<String> deniedPermissions) {
+
+                            }
                         },
                         Manifest.permission.READ_EXTERNAL_STORAGE,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -131,6 +142,11 @@ public class ChatRoomActivity extends AbsActivity implements KeyBoardUtil.KeyBoa
                     @Override
                     public void onAllGranted() {
                         forwardLocation();
+                    }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
                     }
                 }, Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION);
             }

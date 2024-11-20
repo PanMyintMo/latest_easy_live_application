@@ -982,6 +982,11 @@ public class VideoRecordActivity extends AbsActivity implements
                     public void onAllGranted() {
                         LocationUtil.getInstance().startLocation();
                     }
+
+                    @Override
+                    public void onDenied(List<String> deniedPermissions) {
+
+                    }
                 },
                 Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION
         );
